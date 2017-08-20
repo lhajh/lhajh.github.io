@@ -65,7 +65,7 @@ Win7 64 with sp1
 
 打开「控制面板」--「程序」--「打开或关闭 Windows 功能」，勾选「Internet 信息服务」，**确认「万维网服务」--「应用程序开发功能」--「CGI」是勾选状态**，然后点「确定」安装。
 
-![](/images/posts/php/iis.png)
+![](/assets/images/posts/php/iis.png)
 
 #### 配置 PHP
 
@@ -104,7 +104,7 @@ Win7 64 with sp1
 
    打开「控制面板」--「系统和安全」--「管理工具」--「Internet 信息服务(IIS)管理器」--「处理程序映射」，点击右方的「添加模块映射」，填写如下并确认：
 
-   ![fastcgi](/images/posts/php/fastcgi.png)
+   ![fastcgi](/assets/images/posts/php/fastcgi.png)
 
 #### 配置 MySQL
 
@@ -116,39 +116,39 @@ Win7 64 with sp1
 
 选择 Custom 自定义安装。
 
-![custom](/images/posts/php/mysql-1.png)
+![custom](/assets/images/posts/php/mysql-1.png)
 
 更改安装路径。
 
-![install-path](/images/posts/php/mysql-2.png)
+![install-path](/assets/images/posts/php/mysql-2.png)
 
 选择 MySQL 运行模式：Server Machine。
 
-![server-machine](/images/posts/php/mysql-3.png)
+![server-machine](/assets/images/posts/php/mysql-3.png)
 
 选择 MySQL 数据库默认存储方式：Non-Trans Only (MYISAM)。
 
-![non-trans](/images/posts/php/mysql-4.png)
+![non-trans](/assets/images/posts/php/mysql-4.png)
 
 设定 MySQL 的最大连接数，一般设置为 128 - 512 之间的整数。
 
-![connections](/images/posts/php/mysql-5.png)
+![connections](/assets/images/posts/php/mysql-5.png)
 
 设定网络参数，注意：勾消掉「Enable Strict Mode」。而「Add firewall exception for this port」仅在需要外连 MySQL 的时候勾上。
 
-![networking](/images/posts/php/mysql-6.png)
+![networking](/assets/images/posts/php/mysql-6.png)
 
 设定默认字符集，我根据官方文档选择了 gbk。
 
-![character set](/images/posts/php/mysql-7.png)
+![character set](/assets/images/posts/php/mysql-7.png)
 
 将 Bin 目录添加到 PATH。
 
-![path](/images/posts/php/mysql-8.png)
+![path](/assets/images/posts/php/mysql-8.png)
 
 设置 root 用户密码，推荐设置复杂一点。
 
-![password](/images/posts/php/mysql-9.png)
+![password](/assets/images/posts/php/mysql-9.png)
 
 测试 MySQL 工作是否正常，在 CMD 运行
 
@@ -194,7 +194,7 @@ net start mysql
 
 在「Internet 信息服务(IIS)管理器」中右击「网站」，选「添加网站」：
 
-![add-website](/images/posts/php/add-website.png)
+![add-website](/assets/images/posts/php/add-website.png)
 
 然后在新建的网站的「默认文档」里添加 index.php。
 
@@ -208,7 +208,7 @@ phpinfo();
 
 打开浏览器访问 <http://localhost/phpinfo.php>，如果能显示如下网页表示环境已经准备就绪。
 
-![](/images/posts/php/phpinfo.png)
+![](/assets/images/posts/php/phpinfo.png)
 
 #### 安装 Zend Optimizer
 
@@ -224,7 +224,7 @@ phpinfo();
 
 安装完成后直接访问 <http://localhost> 就能看到熟悉的界面了：
 
-![discuz](/images/posts/php/discuz.png)
+![discuz](/assets/images/posts/php/discuz.png)
 
 **配置确认**
 
@@ -278,4 +278,4 @@ $cfg['blowfish_secret'] = 'hello';
 
 2. 为网站添加本机 IP 绑定
 
-   ![](/images/posts/php/nat-bind-ip.png)
+   ![](/assets/images/posts/php/nat-bind-ip.png)
