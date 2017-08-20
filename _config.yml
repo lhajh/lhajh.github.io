@@ -7,13 +7,13 @@
 
 # Site settings
 title: I am Chuan !
-name: DONGChuan
-email: dongchuan55@gmail.com
-location: Nice, France
-company: Gfi Informatique
-company_url: http://www.gfi.fr/en/
-github_url: https://github.com/DONGChuan
-description: This is personnel website of DONG Chuan
+name: lhajh
+email: lhajh@qq.com
+location: Hokkaido, Japan
+company: glodon
+company_url: http://www.glodon.com/
+github_url: https://github.com/lhajh
+description: This is personnel website of lhajh
 favicon: favicon.png # Image must be in assets/images
 
 url: https://lhajh.github.io # the base hostname & protocol for your site
@@ -43,7 +43,7 @@ kramdown:
   enable_coderay: true
 
 # Disque
-disque: httpdongchuangithubio.disqus.com
+disque: httplhajhgithubio.disqus.com
 
 # Pagination
 paginate: 10
@@ -72,7 +72,7 @@ navs:
     label: About
 
 # Sidebar to show popular repo
-side_bar_repo_limit: 5 # Number of repos to show
+side_bar_repo_limit: 8 # Number of repos to show
 
 # Google Analytics
 analytics :
