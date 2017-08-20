@@ -6,7 +6,7 @@ description: 操作 Excel 的常用函数总结。
 keywords: Excel
 ---
 
-### 查找
+## 查找
 
 1. FIND 函数
 
@@ -22,7 +22,7 @@ keywords: Excel
 
    `=FIND("ha", B2)`
 
-### 替换
+## 替换
 
 1. REPLACE 函数
 
@@ -52,7 +52,7 @@ keywords: Excel
 
    `=SUBSTITUTE(B2, "helo", "hello")`
 
-### 去掉单元格里的空格
+## 去掉单元格里的空格
 
 1. TRIM 函数
 
