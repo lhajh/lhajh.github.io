@@ -67,7 +67,7 @@ atom-ternjs 插件对项目配置做了可视化，可以通过菜单来操作�
 
 2. Package > Atom Ternjs > Configure project
 
-   ![](/images/posts/node/ternjs-configure-project.jpeg)
+   ![](/assets/images/posts/node/ternjs-configure-project.jpeg)
 
    Save & Restart server 之后会在项目根目录生成 .tern-project 文件，该配置文件里常用字段：
 
