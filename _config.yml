@@ -16,7 +16,7 @@ github_url: https://github.com/DONGChuan
 description: This is personnel website of DONG Chuan
 favicon: favicon.png # Image must be in assets/images
 
-url: http://dongchuan.github.io # the base hostname & protocol for your site
+url: https://lhajh.github.io # the base hostname & protocol for your site
 
 ## Gem
 gems:
