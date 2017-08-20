@@ -17,7 +17,7 @@ Win7 64 with sp1
 * TOC
 {:toc}
 
-### 使用软件
+## 使用软件
 
 1. Discuz! X3.2
 
@@ -59,15 +59,15 @@ Win7 64 with sp1
 
    下载地址：<http://www.phpmyadmin.net/home_page/downloads.php>
 
-### 详细步骤
+## 详细步骤
 
-#### 安装 IIS
+### 安装 IIS
 
 打开「控制面板」--「程序」--「打开或关闭 Windows 功能」，勾选「Internet 信息服务」，**确认「万维网服务」--「应用程序开发功能」--「CGI」是勾选状态**，然后点「确定」安装。
 
 ![](/assets/images/posts/php/iis.png)
 
-#### 配置 PHP
+### 配置 PHP
 
 1. 解压前面下载的 PHP 的 zip 包，放在合适的地方。
 
@@ -106,7 +106,7 @@ Win7 64 with sp1
 
    ![fastcgi](/assets/images/posts/php/fastcgi.png)
 
-#### 配置 MySQL
+### 配置 MySQL
 
 如果需要安装 MySQL，首先确认有没有 MySQL 的历史残留文件，C:\ProgramData\MySQL 目录如果存在，删除之。不然 MySQL 的安装有可能总是在最后一步失败，提示 `error Nr. 1045` 和 `Access denied for user 'root'@localhost'(using password:No)` 之类的问题。
 
@@ -190,7 +190,7 @@ net start mysql
 
 将 D:\Discuz\MySQL\lib\libmysql.dll 复制到 C:\Windows\System32 目录下。
 
-#### 检测环境是否准备好
+### 检测环境是否准备好
 
 在「Internet 信息服务(IIS)管理器」中右击「网站」，选「添加网站」：
 
@@ -210,13 +210,13 @@ phpinfo();
 
 ![](/assets/images/posts/php/phpinfo.png)
 
-#### 安装 Zend Optimizer
+### 安装 Zend Optimizer
 
 运行 Zend Optimizer 的安装包，安装到 D:\discuz\Zend，安装过程中需要指定你配置的 php.ini 的目标位置为 D:\discuz\PHP，指定 IIS 网站根目录位置为 D:\discuz\wwwroot。
 
 安装时会重启 IIS 服务。
 
-#### 部署 Discuz!
+### 部署 Discuz!
 
 将前面下载的 Discuz! 包解压，把 upload 文件夹里的内容复制到 D:\discuz\wwwroot下，当然你也可以新建子目录来放置。
 
@@ -246,7 +246,7 @@ define('UC_DBPW', '你的数据库密码');
 define('UC_DBPW', '你的数据库密码');
 ```
 
-#### 部署 phpMyAdmin（可选）
+### 部署 phpMyAdmin（可选）
 
 将下载的 phpMyAdmin 文件解压到 D:\discuz\wwwroot\phpmyadmin 下，将 config.sample.inc.php 更名为 config.inc.php，找到 blowfish\_secret 并为它设置一个值，比如：
 
@@ -256,7 +256,7 @@ $cfg['blowfish_secret'] = 'hello';
 
 打开 <http://localhost/phpmyadmin> 用你的 MySQL 管理员账户密码登录就行了。
 
-#### 常用入口
+### 常用入口
 
 打开论坛 <http://localhost>
 
@@ -266,7 +266,7 @@ $cfg['blowfish_secret'] = 'hello';
 
 打开UCenter <http://localhost/uc_server>
 
-#### 让 Discuz! 局域网内可访问
+### 让 Discuz! 局域网内可访问
 
 完成如上步骤后，在局域网内使用 http://ip:port 并不能访问我们装好的 Discuz!，完成这个需要两个步骤：
 
