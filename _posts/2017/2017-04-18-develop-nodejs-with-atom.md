@@ -107,7 +107,7 @@ atom-ternjs 插件对项目配置做了可视化，可以通过菜单来操作�
 
 最终效果：
 
-![](/images/posts/node/ternjs-auto-completion.jpeg)
+![](/assets/images/posts/node/ternjs-auto-completion.jpeg)
 
 ## Q & A
 
