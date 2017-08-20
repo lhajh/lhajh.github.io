@@ -11,7 +11,7 @@ keywords: Windows, Skill
 * TOC
 {:toc}
 
-### Win7 不按 Shift，右键显示 "在此处打开命令窗口 (W)"
+## Win7 不按 Shift，右键显示 "在此处打开命令窗口 (W)"
 
 <img src="/assets/images/posts/windowsskill/rclick.png" alt="Windows Skills" />
 
@@ -56,11 +56,11 @@ Windows Registry Editor Version 5.00
 
    在注册表 HKEY_CLASSES_ROOT\LibraryFolder\background 下建立和第一条的 Directory\Background 中相同的键值
 
-### Win7 搜索文件内容
+## Win7 搜索文件内容
 
 控制面板 -- 索引选项 -- 高级 -- 文件类型 -- 找到你想要搜索内容的文件后缀名，点中它，然后选中下面的「为属性和文件内容添加索引」。
 
-### 将 Caps Lock 映射为 Ctrl
+## 将 Caps Lock 映射为 Ctrl
 
 **注：**经验证此方法也适用于 Win10，但是完成后需要**重启**。
 
@@ -79,7 +79,7 @@ Windows Registry Editor Version 5.00
 
 再说原理：
 
-Scancode Map 这个键值的讲解实例参见 [Keyboard and mouse class drivers (Windows Drivers)](https://msdn.microsoft.com/en-us/library/windows/hardware/jj128267(v=vs.85).aspx#code-snippet-1)，我们这里填写的值
+Scancode Map 这个键值的讲解实例参见 [Keyboard and mouse class drivers (Windows Drivers)](https://msdn.microsoft.com/en-us/library/windows/hardware/jj128267.aspx#code-snippet-1)，我们这里填写的值
 
 ```
 00000000 00000000 02000000 1d003a00 00000000
