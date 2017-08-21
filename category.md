@@ -7,4 +7,4 @@ comments: false
 menu: category
 ---
 
-{% include category.html %}
+{% include about.html %}
