@@ -64,8 +64,8 @@ navs:
     label: Blog
     
   -
-    href: /categories
-    label: Categories
+    href: /category
+    label: Category
 
   -
     href: /bookmark
