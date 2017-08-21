@@ -3,7 +3,11 @@
     list-style-type: none;
     padding-top: 10px;
     padding-left: 10px;
+}
+#search_box {
 	min-height: 34px;
+    padding: 7px 8px;
+    font-size: 13px;
     color: #333;
     vertical-align: middle;
     background-color: #fff;
