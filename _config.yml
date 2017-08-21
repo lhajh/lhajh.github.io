@@ -62,6 +62,10 @@ navs:
   -
     href: /blog
     label: Blog
+    
+  -
+    href: /categories
+    label: Categories
 
   -
     href: /bookmark
