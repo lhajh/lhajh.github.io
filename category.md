@@ -23,3 +23,4 @@ permalink: /categories/
 {% endfor %}
 </section>
 <!-- /section.content -->
+{% include category.html %}
