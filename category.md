@@ -1,5 +1,5 @@
 ---
-layout: category
+layout: page
 title: Category
 menu: category
 ---
