@@ -4,4 +4,4 @@ title: Category
 menu: category
 ---
 
-{% include about.html %}
+{% include category.html %}
