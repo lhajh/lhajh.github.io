@@ -109,8 +109,36 @@ $('#schedule_tree').treegrid({
         } else {
             _this.changeDownDisabled = false
         }
-	  
 	}
 })
 ```
 这样相当于将上移、下移按钮显示状态和实际与后台处理分开来做。只要上移、下移按钮可以点击，在函数moveUp和moveDown中不用再判断了，就可以直接处理
+## 优化
+上面代码仍然有问题，当有多个同级的根节点时，所有的根节点都不可以上下移
+![](http://i.imgur.com/1GkQh9f.png)
+上图中管理工具-应用和管理工具-权限是同级的根节点，正常情况应该是管理工具-应用不能上移，但可以下移，而且在其下的子节点再创建子节点，也会有问题
+![](http://i.imgur.com/s2yPH2y.png)
+企业形象（定制VI）正常应该是可以上下移的，此时只可以上移，而他同级的项目列表只可以下移
+优化后代码：
+```
+$('#schedule_tree').treegrid({
+	onClickRow: function (node) {
+	    // 节点高亮选择时触发
+        let selectRow = $('.datagrid-row-selected');
+        // 此处获得之前所有同级有属性[node-id]的tr(有可能没有),关键
+        let pre = selectRow.prevAll('tr[node-id]');
+        // 此处获得之后所有同级有属性[node-id]的tr(有可能没有),关键
+        let next = selectRow.nextAll('tr[node-id]');
+        if (pre.length) {
+            _this.changeUpDisabled = false
+        } else {
+            _this.changeUpDisabled = true
+        }
+        if (next.length) {
+            _this.changeDownDisabled = false
+        } else {
+            _this.changeDownDisabled = true
+        }
+	}
+})
+```
