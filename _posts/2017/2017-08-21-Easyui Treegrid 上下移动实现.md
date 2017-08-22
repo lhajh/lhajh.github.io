@@ -12,9 +12,9 @@ Easyui Treegrid 上下移动实现
 上面是源码地址，由于自己使用Vue，使用源码有问题，故自己又加工了一下
  
 首先是项目框架
-![](http://i.imgur.com/JFHv8CS.png)
+![](/assets/images/posts/jquery/JFHv8CS.png)
 点击下移之后
-![](http://i.imgur.com/2YMSjfI.png)
+![](/assets/images/posts/jquery/2YMSjfI.png)
 当然上移也是可以的，下面看看代码
 ```
 function move(o) { // 将此方法加入上下移的按钮事件即可  
@@ -115,9 +115,9 @@ $('#schedule_tree').treegrid({
 这样相当于将上移、下移按钮显示状态和实际与后台处理分开来做。只要上移、下移按钮可以点击，在函数moveUp和moveDown中不用再判断了，就可以直接处理
 ## 优化
 上面代码仍然有问题，当有多个同级的根节点时，所有的根节点都不可以上下移
-![](http://i.imgur.com/1GkQh9f.png)
+![](/assets/images/posts/jquery/1GkQh9f.png)
 上图中管理工具-应用和管理工具-权限是同级的根节点，正常情况应该是管理工具-应用不能上移，但可以下移，而且在其下的子节点再创建子节点，也会有问题
-![](http://i.imgur.com/s2yPH2y.png)
+![](/assets/images/posts/jquery/s2yPH2y.png)
 企业形象（定制VI）正常应该是可以上下移的，此时只可以上移，而他同级的项目列表只可以下移
 优化后代码：
 ```
