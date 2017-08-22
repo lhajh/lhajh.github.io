@@ -56,12 +56,12 @@ navs:
     label: Home
 
   -
-    href: /open-source
-    label: Open-Source
-
-  -
     href: /blog
     label: Blog
+    
+  -
+    href: /open-source
+    label: Open-Source
     
   -
     href: /bookmark
