@@ -142,3 +142,9 @@ $('#schedule_tree').treegrid({
 	}
 })
 ```
+
+## treegrid分级问题
+- treegrid根据_parentId来分级
+- 树子节点的_parentId和其父节点的id对应
+- 根节点的_parentId为null
+- 一个节点的id和_parentId不能相同
