@@ -43,7 +43,7 @@ kramdown:
   enable_coderay: true
 
 # Disque
-disque: https://lhajh.github.io.disqus.com
+disque: httpslhajhgithubio.disqus.com
 
 # Pagination
 paginate: 10
