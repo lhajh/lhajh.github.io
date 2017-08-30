@@ -99,12 +99,12 @@ data () {
 let _this = this
 $('#schedule_tree').treegrid({
 	onClickRow: function (node) {
-	    // 节点高亮选择时触发
+	// 节点高亮选择时触发
         let selectRow = $('.datagrid-row-selected');
         let pre = selectRow.prev(); // 此处获得上一节点，关键
         let next = selectRow.next(); // 此处获得下一节点，关键
         if (typeof(pre.attr("node-id")) === "undefined" || pre.attr("node-id").indexOf("L") === 0) {
-			// 由于这里的this指向不是Vue的实例对象，所以在外面将_this指向Vue的实例对象，下同
+	    // 由于这里的this指向不是Vue的实例对象，所以在外面将_this指向Vue的实例对象，下同
             _this.changeUpDisabled = true
         } else {
             _this.changeUpDisabled = false
@@ -130,7 +130,7 @@ $('#schedule_tree').treegrid({
 ```
 $('#schedule_tree').treegrid({
 	onClickRow: function (node) {
-	    // 节点高亮选择时触发
+	// 节点高亮选择时触发
         let selectRow = $('.datagrid-row-selected');
         // 此处获得之前所有同级有属性[node-id]的tr(有可能没有),关键
         let pre = selectRow.prevAll('tr[node-id]');
@@ -228,7 +228,7 @@ moveUp() {
             message: '上移成功'
         });
         setTimeout(() => {
-			// 手动修改选中列，如果不延迟，选中列(选中列的颜色)会先移动，然后需要移动的列才会移动
+	    // 手动修改选中列，如果不延迟，选中列的颜色会先移动，然后需要移动的列才会移动
             $('#schedule_tree').treegrid('select', replaceId)
         }, 30)
     }).catch((error) => {
