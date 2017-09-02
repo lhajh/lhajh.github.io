@@ -21,7 +21,7 @@ and the repository exists.
 不要着急，问题千千万，但解决问题的方法有可能是同一个。就像这次，每次push都需要输入用户名和密码，是因为当初 clone 时，使用的是 HTTPS 方式克隆的，出于安全考虑需要每次都输入用户名和密码；而出现上面的问题，是因为 clone 时，使用的是 SSH 方式克隆的，使用此方式克隆，在克隆前会先到 GitHub 的 SSH and GPG keys 查找是否有本机的 SSH Key，如果有，直接克隆；如果没有，就会报上面错误。  
 这下就明白了吧，两种方式各有利弊，但第二种方式只需一次设置，终身受益，快来 get 新技能吧  
 解决方法如下：
-1. 首先重新在 git 设置一下身份的名字和邮箱(不是必要的，可有可无。如果以前设置过，请忽略；如果忘记了名字和邮箱，必须要设置)
+1. 首先重新在 git 设置一下身份的名字和邮箱(不是必要的，可有可无。如果以前设置过，请忽略；如果忘记了名字和邮箱，可以在`https://github.com/settings/profile`中找到)
 ```
 git config --global user.name "username"
 git config --global user.email“user@email.com"
