@@ -51,5 +51,5 @@ Enter file in which to save the key (/c/Users/username/.ssh/id_rsa):
 ![](/assets/images/posts/github/hC4In5.png)
 6. 由于现在只是在 GitHub 上添加了 SSH Key，本地仓库和远程仓库需要链接一下才能激活 SSH Key
 ![](/assets/images/posts/github/Ppgy3wl.png)
-上图红线圈出的为没有激活的 SSH Key
+上图红线圈出的为没有激活的 SSH Key  
 执行git clone url命令就可以激活了。当然url是 SSH 格式的路径，如`git@github.com:lhajh/lhajh.github.io.git`，而不是 HTTPS格式的路径
