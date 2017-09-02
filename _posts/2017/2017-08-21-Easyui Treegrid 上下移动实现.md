@@ -191,16 +191,8 @@ changeUpDown(_this) {
         let pre = selectRow.prevAll('tr[node-id]');
         // 此处获得之后所有同级有属性[node-id]的tr(有可能没有),关键
         let next = selectRow.nextAll('tr[node-id]');
-        if (pre.length) {
-            _this.changeUpDisabled = false
-        } else {
-            _this.changeUpDisabled = true
-        }
-        if (next.length) {
-            _this.changeDownDisabled = false
-        } else {
-            _this.changeDownDisabled = true
-        }
+        _this.changeUpDisabled = pre.length < 1
+        _this.changeDownDisabled = next.length < 1
     } else {
         _this.changeUpDisabled = _this.changeDownDisabled = true;
     }
