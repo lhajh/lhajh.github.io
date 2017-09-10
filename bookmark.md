@@ -5,39 +5,6 @@ subtitle: <span class="mega-octicon octicon-repo"></span>&nbsp;&nbsp; To mark us
 menu: Bookmark
 ---
 
-## Java
-- [Dom4j](https://dom4j.github.io/) - Flexible XML framework
-- [Gson](https://github.com/google/gson) - Google Library to support JSON
-- [Xstream](http://x-stream.github.io/index.html) -  Serialize objects to XML and back again
-- [JAXB](https://jaxb.java.net/) - Java Architecture for XML Binding
-
-## Android
-- [Universal-Image-Loader](https://github.com/nostra13/Android-Universal-Image-Loader) - Powerful and flexible library for loading, caching and displaying images
-- [greenDAO](http://greendao-orm.com/) - greenDAO is a light and fast ORM solution that maps objects to SQLite databases
-- [EventBus](http://greenrobot.github.io/EventBus/) - Android optimized event bus that simplifies communication
-- [Transitions-Everywhere](https://github.com/andkulikov/Transitions-Everywhere) - Backport of Android Transitions API for animations
-- [Battery Historian](https://github.com/google/battery-historian) - Analyze battery consumers using Android "bugreport" files
-- [Facebook Rebound](http://facebook.github.io/rebound/) - Spring Animations for Android
-- [Dagger](http://google.github.io/dagger/) - Dagger is a fully static, compile-time dependency injection framework for both Java and Android
-- [Retrofit](http://square.github.io/retrofit/) - A type-safe HTTP client for Android and Java
-- [OkHttp](http://square.github.io/okhttp/) - An HTTP & HTTP/2 client for Android and Java applications
-- [Butter Knife](http://jakewharton.github.io/butterknife/) - Annotate fields with @BindView and a view ID for Butter Knife to find and automatically cast the corresponding view in your layout.
-- [MPAndroidChart](https://github.com/PhilJay/MPAndroidChart) - Powerful & easy to use chart library for Android
-- [Robolectric](http://robolectric.org/) - Unit test framework
-
-## IOS
-- [Popping](https://github.com/schneiderandre/popping) - A collection of animation examples for iOS apps.
-
-## PHP
-- [Idiorm](https://github.com/j4mie/idiorm/) - A lightweight nearly-zero-config object-relational mapper and fluent query builder for PHP5
-- [GitElephant](https://github.com/matteosister/GitElephant) - An abstraction layer to manage your git repositories with php
-- [Propel](https://github.com/propelorm/Propel) - ORM for PHP5
-- [SimpleDOM](https://code.google.com/archive/p/simpledom/) - Built upon SimpleXML and provids DOM methods using SimpleXML's syntax.
-
-### Symfony
-- [NelmioApiDocBundle](https://github.com/nelmio/NelmioApiDocBundle) - Generate a decent documentation for your APIs
-- [FOSRestBundle](http://symfony.com/doc/current/bundles/FOSRestBundle/index.html) - Creat a REST API with Symfony2
-
 ## Javascript
 - [fullPage.js](http://alvarotrigo.com/fullPage/) - To create fullscreen scrolling websites / single page websites
 - [lunr.js](http://lunrjs.com/) - Simple full-text search
@@ -45,13 +12,11 @@ menu: Bookmark
 - [Moment.js](http://momentjs.com/) - Parse, validate, manipulate, and display dates in JavaScript.
 - [Underscore.js](http://underscorejs.org/) - It provides a whole mess of useful functional programming helpers without extending any built-in objects.
 
-### AngularJs
-- [Protractor](http://angular.github.io/protractor) - End-to-end test framework for AngularJS applications
-- [angular-media-player](https://github.com/colthreepv/angular-media-player) - Directive for audio and video
-- [Smart table](http://lorenzofox3.github.io/smart-table-website/) - Module to easily display data in a table
-- [ng-table](http://esvit.github.io/ng-table/#/) - Module to easily display data in a table
-- [ngToast](https://github.com/tameraydin/ngToast) - AngularJS toast
-- [ANGM-GENERATOR](http://newaeonweb.com.br/generator-angm/) - AngularJS Yeoman Generator
+## webpack
+- [Practice of separation development environment based on webpack](https://mp.weixin.qq.com/s?__biz=MzAxODE2MjM1MA==&mid=2651552516&idx=2&sn=d183f7190a8430f3bf2e1729f29ef9ee&pass_ticket=H45s%2Fvpm4mT1AvAjYR1gUS%2FPTKCqw9gOjrF2Jvqyt%2FwHOwYvMOfnM5VA2CMkMiZM)
+
+## Git
+- [An hour to learn Git](http://www.cnblogs.com/best/p/7474442.html)
 
 ### Node.js
 - [utility](https://github.com/node-modules/utility) - A collection of useful utilities
@@ -66,6 +31,7 @@ menu: Bookmark
 - [Load Awesome](http://github.danielcardoso.net/load-awesome/animations.html) - Pure CSS Loaders and Spinners 
 - [Hover.css](http://ianlunn.github.io/Hover/) - Collection of CSS3 powered hover effects
 - [Animate.css](https://github.com/daneden/animate.css) - Bunch of cool, fun, and cross-browser animation. 
+- [Write your own code library](http://web.jobbole.com/92156/) - CSS3 common animation implementation
 
 ## Front-end web UI/Framework
 - [Bootstrap](http://getbootstrap.com/) - HTML, CSS, and JS framework for developing responsive, mobile first projects on the web
