@@ -4,12 +4,7 @@
 {% include head.html %}
 
     <body>
-
-    {% include header.html %}
-
-        <div class="content">
-            {{ content }}
-            <canvas id="mycanvas"></canvas>
+<canvas id="mycanvas"></canvas>
     <script type="text/javascript">
         var mycanvas = document.getElementById("mycanvas");
 		var cWidth = document.documentElement.clientWidth - 20
@@ -70,6 +65,10 @@
             };
          },20);
     </script>
+    {% include header.html %}
+
+        <div class="content">
+            {{ content }}
         </div>
 
     {% include footer.html %}
