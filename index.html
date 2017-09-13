@@ -114,7 +114,7 @@ css: ['index.css', 'sidebar-popular-repo.css']
 				 var circleArr = [];
 				 //鼠标移动事件
 				 mycanvas.onmousemove = function(event){
-					new Circle(event.clientX,event.clientY,30,"orange");
+					new Circle(event.clientX + window.scrollX,event.clientY + window.scrollY,30,"orange");
 				 }
 				 //设置定时器每20毫秒更新和渲染
 				 setInterval(function(){
