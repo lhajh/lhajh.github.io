@@ -1,3 +1,11 @@
+---
+layout: post
+title: canvas-bubble
+categories: canvas
+description: canvas-bubble
+keywords: canvas, bubble
+---
+
 <!doctype html>
 <html>
 	<head>
@@ -27,31 +35,31 @@
 				mycanvas.width = cWidth;
 				mycanvas.height = cHeight;
 					var ctx = mycanvas.getContext("2d");
-					//Ô²ĞÎÀà
+					//åœ†å½¢ç±»
 					 function Circle(x,y,r,color){
 						this.x = x;
 						this.y = y;
 						this.r = r;
-						// ÑÕÉ«µÄÈ¡Öµ·¶Î§
+						// é¢œè‰²çš„å–å€¼èŒƒå›´
 						this.color = "rgb("+ (parseInt(Math.random() * 240 ) + 9) + ","+ (parseInt(Math.random() * 220 )+18) +",203)";
-						//Ëæ»ú·½Ïò
+						//éšæœºæ–¹å‘
 						this.dx = Math.random() * 12 - 7;
 						this.dy = Math.random() * 12 - 7;
-						//ÍùÊı×éÖĞpush×Ô¼º
+						//å¾€æ•°ç»„ä¸­pushè‡ªå·±
 						circleArr.push(this);
 					 }
-					 //äÖÈ¾
+					 //æ¸²æŸ“
 					 Circle.prototype.render = function(){
-						//ĞÂ½¨Ò»ÌõÂ·¾¶
+						//æ–°å»ºä¸€æ¡è·¯å¾„
 						ctx.beginPath();
-						//´´½¨Ò»¸öÔ²
+						//åˆ›å»ºä¸€ä¸ªåœ†
 						ctx.arc(this.x, this.y, this.r, 0, Math.PI*2, true);
-						//ÉèÖÃÑùÊ½ÑÕÉ«
+						//è®¾ç½®æ ·å¼é¢œè‰²
 						ctx.fillStyle = this.color;
-						//Í¨¹ıÌî³äÂ·¾¶µÄÄÚÈİÇøÓòÉú³ÉÊµĞÄµÄÍ¼ĞÎ
+						//é€šè¿‡å¡«å……è·¯å¾„çš„å†…å®¹åŒºåŸŸç”Ÿæˆå®å¿ƒçš„å›¾å½¢
 						ctx.fill();
 					 }
-					 //¸üĞÂ
+					 //æ›´æ–°
 					 Circle.prototype.update = function(){
 						this.x += this.dx;
 						this.y += this.dy;
@@ -66,13 +74,13 @@
 						}
 						return true;
 					 }
-					 //´´½¨Ò»¸öÊı×é
+					 //åˆ›å»ºä¸€ä¸ªæ•°ç»„
 					 var circleArr = [];
-					 //Êó±êÒÆ¶¯ÊÂ¼ş
+					 //é¼ æ ‡ç§»åŠ¨äº‹ä»¶
 					 mycanvas.onmousemove = function(event){
 						new Circle(event.clientX + window.scrollX,event.clientY + window.scrollY,30,"orange");
 					 }
-					 //ÉèÖÃ¶¨Ê±Æ÷Ã¿20ºÁÃë¸üĞÂºÍäÖÈ¾
+					 //è®¾ç½®å®šæ—¶å™¨æ¯20æ¯«ç§’æ›´æ–°å’Œæ¸²æŸ“
 					 setInterval(function(){
 						ctx.clearRect(0, 0, cWidth, cHeight)
 						for (var i = 0; i < circleArr.length; i++) {
