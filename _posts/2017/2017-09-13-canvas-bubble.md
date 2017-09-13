@@ -1,5 +1,5 @@
 ---
-layout: post
+layout: page
 title: canvas-bubble
 categories: canvas
 description: canvas-bubble
