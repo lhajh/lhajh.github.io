@@ -27,10 +27,12 @@ keywords: canvas, bubble
 		<script type="text/javascript">
 			window.onload = function () {
 				var mycanvas = document.getElementById("mycanvas");
+				// 将 canvas 的宽高设置为容器的宽高
 				if (document.getElementsByClassName("content").length) {
 					var content = document.getElementsByClassName("content")[0];
 					var cWidth = content.clientWidth;
 					var cHeight = content.clientHeight;
+				// 或者设置为整个文档的宽高
 				} else {
 					var cWidth = document.documentElement.scrollWidth;
 					var cHeight = document.documentElement.scrollHeight;
