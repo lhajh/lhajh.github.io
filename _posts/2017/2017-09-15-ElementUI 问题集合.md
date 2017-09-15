@@ -1,9 +1,9 @@
 ---
 layout: post
-title: ElementUI table + pagination 序号问题
+title: ElementUI 问题集合
 categories: UI
-description: ElementUI table + pagination 序号问题
-keywords: ElementUI, table, pagination, 序号
+description: ElementUI 问题集合
+keywords: ElementUI
 ---
 
 ElementUI 问题集合
