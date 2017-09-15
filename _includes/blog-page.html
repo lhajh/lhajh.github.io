@@ -4,7 +4,7 @@
 
         <!-- Blog list -->
         <ul id="posts-list">
-            {% for post in paginator.posts %}
+            {% for post in site.posts %}
             <li class="posts-list-item">
                 <div class="posts-content">
                     <span class="posts-list-meta">{{ post.date | date: "%Y-%m-%d" }}</span>
