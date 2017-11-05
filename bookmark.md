@@ -18,6 +18,7 @@ menu: Bookmark
 ## Git
 - [An hour to learn Git](http://www.cnblogs.com/best/p/7474442.html)
 - [猴子都能懂的git](https://backlogtool.com/git-tutorial/cn/contents/)
+- [廖雪峰-史上最浅显易懂的Git教程！](https://www.liaoxuefeng.com/wiki/0013739516305929606dd18361248578c67b8067c8c017b000)
 
 ## Node.js
 - [utility](https://github.com/node-modules/utility) - A collection of useful utilities
