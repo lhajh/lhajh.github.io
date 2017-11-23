@@ -74,7 +74,7 @@ company.employees.push(nickSmith);
 
 在上面的代码中，你可以找到一个组合（address属性）的示例，一个关联（parent属性）的示例和一个聚合（employees属性）的示例。
 
-至于封装，JavaScript 对象是支持数据和函数的实体，但它们没有高级的本地支持来隐藏内部细节。JavaScript 对象不关心隐私。如果不谨慎的话，所有的属性和方法都可以公开访问。但是，我们可以应用若干技术来定义对象的内部状态，并保护对象以防外部访问：使用 getter 和 setter 来利用[闭包](https://lhajh.github.io/vscode/2017/11/23/Javascript%E9%97%AD%E5%8C%85%E6%B7%B1%E5%85%A5%E8%A7%A3%E6%9E%90%E5%8F%8A%E5%AE%9E%E7%8E%B0%E6%96%B9%E6%B3%95.html)。
+至于封装，JavaScript 对象是支持数据和函数的实体，但它们没有高级的本地支持来隐藏内部细节。JavaScript 对象不关心隐私。如果不谨慎的话，所有的属性和方法都可以公开访问。但是，我们可以应用若干技术来定义对象的内部状态，并保护对象以防外部访问：使用 getter 和 setter 来利用[闭包](https://lhajh.github.io/js/2017/11/23/Javascript%E9%97%AD%E5%8C%85%E6%B7%B1%E5%85%A5%E8%A7%A3%E6%9E%90%E5%8F%8A%E5%AE%9E%E7%8E%B0%E6%96%B9%E6%B3%95.html)。
 
 通过所谓的原型继承，JavaScript 在基本层中支持继承。即使有些开发人员认为它有点简单，但 JavaScript  的继承机制是完全有效的，并允许你得到与大多数公认的 OOP 语言相同的结果。任凭你怎么想，JavaScript 有一个机制，通过这个机制 `一个对象从一个或多个其他对象获取一些或所有的功能`，这就是继承。
 
