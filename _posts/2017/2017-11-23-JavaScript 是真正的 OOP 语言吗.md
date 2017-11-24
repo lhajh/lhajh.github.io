@@ -1,7 +1,7 @@
 ---
 layout: post
 title: JavaScript 是真正的 OOP 语言吗
-categories: [js]
+categories: [JS]
 description: JavaScript 是真正的 OOP 语言吗
 keywords: js
 ---
@@ -9,6 +9,8 @@ keywords: js
 JavaScript 是真正的 OOP 语言吗
 
 ## 序言
+
+面向对象编程（Object Oriented Programming，OOP，面向对象程序设计）是一种计算机编程架构。
 
 JavaScript面向对象还是不面向对象，这是个问题。好吧，这就是我们将要在这篇文章中讨论的主题。
 
