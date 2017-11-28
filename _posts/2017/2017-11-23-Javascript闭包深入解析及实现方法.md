@@ -1,12 +1,12 @@
 ---
 layout: post
-title: Javascript闭包深入解析及实现方法
+title: JavaScript 闭包深入解析及实现方法
 categories: [JS]
-description: Javascript闭包深入解析及实现方法
+description: JavaScript 闭包深入解析及实现方法
 keywords: JS, 闭包
 ---
 
-Javascript闭包深入解析及实现方法
+JavaScript 闭包深入解析及实现方法
 
 ## 一、什么是闭包和闭包的几种写法和用法
 

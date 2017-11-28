@@ -6,10 +6,6 @@ description: JavaScript 是真正的 OOP 语言吗
 keywords: js
 ---
 
-JavaScript 是真正的 OOP 语言吗
-
-## 序言
-
 JavaScript面向对象还是不面向对象，这是个问题。好吧，这就是我们将要在这篇文章中讨论的主题。
 
 我知道，这个话题已经被讨论过太多次了。但是，它总是被不断地提及。每当 Java 或 C# 或任何其他 OOP 语言的开发人员与 JavaScript 接触时，这些开发人员都会抱怨连连。他们说，用 JavaScript 工作简直是一团乱，没有类型，结构不合理，有些怪异，对象支持不给力，它绝对不是 OOP 语言。
