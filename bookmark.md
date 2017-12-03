@@ -5,7 +5,10 @@ subtitle: <span class="mega-octicon octicon-repo"></span>&nbsp;&nbsp; To mark us
 menu: Bookmark
 ---
 
+## [web 前端学习资源分享](https://segmentfault.com/a/1190000010880049)
+
 ## Javascript
+- [javascript 常用实例的实现与封装](https://segmentfault.com/a/1190000010225928)
 - [fullPage.js](http://alvarotrigo.com/fullPage/) - To create fullscreen scrolling websites / single page websites
 - [lunr.js](http://lunrjs.com/) - Simple full-text search
 - [Trip.js](http://eragonj.github.io/Trip.js/index.html) - Help you customize a tutorial trip easily with more flexibilities
