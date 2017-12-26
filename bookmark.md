@@ -7,6 +7,11 @@ menu: Bookmark
 
 ## [web 前端学习资源分享](https://segmentfault.com/a/1190000010880049)
 
+##  JavaScript 代码片段
+- [精心收集的 48 个 JavaScript 代码片段，仅需 30 秒就可理解](http://mp.weixin.qq.com/s/LxdDsgPAGTx19T5BZnw6EQ)
+- [30 seconds of code](https://github.com/Chalarangelo/30-seconds-of-code#anagrams-of-string-with-duplicates)
+- [打造自己的JavaScript武器库](https://segmentfault.com/a/1190000011966867)
+
 ## Javascript
 - [javascript 常用实例的实现与封装](https://segmentfault.com/a/1190000010225928)
 - [fullPage.js](http://alvarotrigo.com/fullPage/) - To create fullscreen scrolling websites / single page websites
