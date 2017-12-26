@@ -156,7 +156,7 @@ console.log(John.constructor === Person);  // true
 ```
 在上面的例子中，Student 原型中的 `constructor` 被修改为指向到 Person，导致检测不出实例对象 John 真实的构造函数。
 
-****同时，使用 `instaceof` 和 `construcor`,被判断的 array 必须是在当前页面声明的！**** 比如，一个页面（父页面）有一个框架，框架中引用了一个页面（子页面），在子页面中声明了一个 array，并将其赋值给父页面的一个变量，这时判断该变量，`Array == object.constructor;` 会返回 false；
+**同时，使用 `instaceof` 和 `construcor`,被判断的 array 必须是在当前页面声明的！** 比如，一个页面（父页面）有一个框架，框架中引用了一个页面（子页面），在子页面中声明了一个 array，并将其赋值给父页面的一个变量，这时判断该变量，`Array == object.constructor;` 会返回 false；
 
 原因：
 
