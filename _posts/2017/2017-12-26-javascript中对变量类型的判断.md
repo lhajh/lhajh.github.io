@@ -194,7 +194,7 @@ console.log(
 
 上面的规范定义了 Object.prototype.toString 的行为：首先，取得对象的一个内部属性[[Class]]，然后依据这个属性，返回一个类似于 "[object Array]" 的字符串作为结果（看过ECMA标准的应该都知道，[[]]用来表示语言内部用到的、外部不可直接访问的属性，称为“内部属性”）。利用这个方法，再配合 call，我们可以取得任何对象的内部属性 [[Class]]，然后把类型检测转化为字符串比较，以达到我们的目的。
 
-5. jQuery 中 $.type 的实现
+## 5. jQuery 中 $.type 的实现
 
 在 jQuery 中提供了一个 $.type 的接口，来让我们检测变量的类型：
 ```
@@ -221,7 +221,7 @@ console.log(
 |:---|:---|:---|:---|:---|:---|
 |num	|number	|false	|true	|[object Number]	|number
 |str	|string	|false	|true	|[object String]	|string
-|bool	|boolean	|false	|true	|[object |Boolean]	|boolean
+|bool	|boolean	|false	|true	|[object Boolean]	|boolean
 |arr	|object	|true	|true	|[object Array]	|array
 |json	|object	|true	|true	|[object Object]	|object
 |func	|function	|true	|true	|[object Function]	|function
