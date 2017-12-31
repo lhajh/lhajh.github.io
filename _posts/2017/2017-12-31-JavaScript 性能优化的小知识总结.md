@@ -607,35 +607,35 @@ function create() {
 
 ## 性能方面的注意事项
 
-1、尽量使用原生方法
+1. 尽量使用原生方法
 
-2、switch 语句相对 if 较快
+2. switch 语句相对 if 较快
 
-  通过将 case 语句按照最可能到最不可能的顺序进行组织
+    通过将 case 语句按照最可能到最不可能的顺序进行组织
 
-3、位运算较快
+3. 位运算较快
 
-  当进行数字运算时，位运算操作要比任何布尔运算或者算数运算快
+    当进行数字运算时，位运算操作要比任何布尔运算或者算数运算快
 
-4、巧用 `||` 和 `&&` 布尔运算符
+4. 巧用 `||` 和 `&&` 布尔运算符
 
-  ```
-  function eventHandler(e) {
-    if (!e) e = window.event;
-  }
+    ```
+    function eventHandler(e) {
+      if (!e) e = window.event;
+    }
 
-  //可以替换为：
-  function eventHandler(e) {
-    e = e || window.event;
-  }
+    //可以替换为：
+    function eventHandler(e) {
+      e = e || window.event;
+    }
 
-  if (myobj) {
-    doSomething(myobj);
-  }
+    if (myobj) {
+      doSomething(myobj);
+    }
 
-  //可以替换为：
-  myobj && doSomething(myobj);
-  ```
+    //可以替换为：
+    myobj && doSomething(myobj);
+    ```
 
 ## 避免错误应注意的地方
 
