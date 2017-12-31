@@ -480,77 +480,77 @@ init 在执行的时候，当前上下文我们叫做 context。这个时候，c
 
 下面 2 种方法可以解决循环引用：
 
-1、置空 dom 对象
+1. 置空 dom 对象
 
-  ```
-  function init() {
-    var el = document.getElementById('MyElement');
-    el.onclick = function () {
-      //……
+    ```
+    function init() {
+      var el = document.getElementById('MyElement');
+      el.onclick = function () {
+        //……
+      }
     }
-  }
-  init();
+    init();
 
-  //可以替换为：
-  function init() {
-    var el = document.getElementById('MyElement');
-    el.onclick = function () {
-      //……
-    }
-    el = null;
-  }
-  init();
-  ```
-  将 el 置空，context 中不包含对 dom 对象的引用，从而打断循环应用。
-
-  如果我们需要将 dom 对象返回，可以用如下方法：
-  ```
-  function init() {
-    var el = document.getElementById('MyElement');
-    el.onclick = function () {
-      //……
-    }
-    return el;
-  }
-  init();
-
-  //可以替换为：
-  function init() {
-    var el = document.getElementById('MyElement');
-    el.onclick = function () {
-      //……
-    }
-    try {
-      return el;
-    } finally {
+    //可以替换为：
+    function init() {
+      var el = document.getElementById('MyElement');
+      el.onclick = function () {
+        //……
+      }
       el = null;
     }
-  }
-  init();
-  ```
+    init();
+    ```
+    将 el 置空，context 中不包含对 dom 对象的引用，从而打断循环应用。
 
-2、构造新的 context
+    如果我们需要将 dom 对象返回，可以用如下方法：
+    ```
+    function init() {
+      var el = document.getElementById('MyElement');
+      el.onclick = function () {
+        //……
+      }
+      return el;
+    }
+    init();
 
-  ```
-  function init() {
-    var el = document.getElementById('MyElement');
-    el.onclick = function () {
+    //可以替换为：
+    function init() {
+      var el = document.getElementById('MyElement');
+      el.onclick = function () {
+        //……
+      }
+      try {
+        return el;
+      } finally {
+        el = null;
+      }
+    }
+    init();
+    ```
+
+2. 构造新的 context
+
+    ```
+    function init() {
+      var el = document.getElementById('MyElement');
+      el.onclick = function () {
+        //……
+      }
+    }
+    init();
+
+    //可以替换为：
+    function elClickHandler() {
       //……
     }
-  }
-  init();
-
-  //可以替换为：
-  function elClickHandler() {
-    //……
-  }
-  function init() {
-    var el = document.getElementById('MyElement');
-    el.onclick = elClickHandler;
-  }
-  init();
-  ```
-  把 function 抽到新的 context 中，这样，function 的 context 就不包含对 el 的引用，从而打断循环引用。
+    function init() {
+      var el = document.getElementById('MyElement');
+      el.onclick = elClickHandler;
+    }
+    init();
+    ```
+    把 function 抽到新的 context 中，这样，function 的 context 就不包含对 el 的引用，从而打断循环引用。
 
 ## 通过 javascript 创建的 dom 对象，必须 append 到页面中
 
@@ -589,21 +589,21 @@ function create() {
 
 ## 松散耦合
 
-1、解耦 HTML/JavaScript
+1. 解耦 HTML/JavaScript
 
-  JavaScript 和 HTML 的紧密耦合：直接写在 HTML 中的 JavaScript、使用包含内联代码的 `<script> 元素`、使用 HTML 属性来分配事件处理程序等
+    JavaScript 和 HTML 的紧密耦合：直接写在 HTML 中的 JavaScript、使用包含内联代码的 `<script> 元素`、使用 HTML 属性来分配事件处理程序等
 
-  HTML 和 JavaScript 的紧密耦合：JavaScript 中包含 HTML，然后使用 innerHTML 来插入一段 html 文本到页面
+    HTML 和 JavaScript 的紧密耦合：JavaScript 中包含 HTML，然后使用 innerHTML 来插入一段 html 文本到页面
 
-  其实应该是保持层次的分离，这样可以很容易的确定错误的来源，所以我们应确保 HTML 呈现应该尽可能与 JavaScript 保持分离
+    其实应该是保持层次的分离，这样可以很容易的确定错误的来源，所以我们应确保 HTML 呈现应该尽可能与 JavaScript 保持分离
 
-2、解耦 CSS/JavaScript
+2. 解耦 CSS/JavaScript
 
-  显示问题的唯一来源应该是 CSS，行为问题的唯一来源应该是 JavaScript，层次之间保持松散耦合才可以让你的应用程序更加易于维护，所以像以下的代码 element.style.color="red" 尽量改为 element.className="edit"，而且不要在 css 中通过表达式嵌入 JavaScript
+    显示问题的唯一来源应该是 CSS，行为问题的唯一来源应该是 JavaScript，层次之间保持松散耦合才可以让你的应用程序更加易于维护，所以像以下的代码 element.style.color="red" 尽量改为 element.className="edit"，而且不要在 css 中通过表达式嵌入 JavaScript
 
-3、解耦应用程序/事件处理程序
+3. 解耦应用程序/事件处理程序
 
-  将应用逻辑和事件处理程序相分离：一个事件处理程序应该从事件对象中提取，并将这些信息传送给处理应用逻辑的某个方法中。这样做的好处首先可以让你更容易更改触发特定过程的事件，其次可以在不附加事件的情况下测试代码，使其更易创建单元测试
+    将应用逻辑和事件处理程序相分离：一个事件处理程序应该从事件对象中提取，并将这些信息传送给处理应用逻辑的某个方法中。这样做的好处首先可以让你更容易更改触发特定过程的事件，其次可以在不附加事件的情况下测试代码，使其更易创建单元测试
 
 ## 性能方面的注意事项
 
@@ -639,40 +639,40 @@ function create() {
 
 ## 避免错误应注意的地方
 
-1、if 语句加 {}
+1. if 语句加 {}
 
-  在 if 语句中，即使条件表达式只有一条语句也要用 {} 把它括起来，以免后续如果添加了语句之后造成逻辑错误
+    在 if 语句中，即使条件表达式只有一条语句也要用 {} 把它括起来，以免后续如果添加了语句之后造成逻辑错误
 
-2、使用 + 号时需谨慎
+2. 使用 + 号时需谨慎
 
-  JavaScript 和其他编程语言不同的是，在 JavaScript 中，'+'除了表示数字值相加，字符串相连接以外，还可以作一元运算符用，把字符串转换为数字。因而如果使用不当，则可能与自增符'++'混淆而引起计算错误
-  ```
-  var valueA = 20;
-  var valueB = "10";
-  console.log(valueA + valueB);     //ouput: 2010 
-  console.log(valueA + (+valueB));  //output: 30 
-  console.log(valueA + +valueB);    //output: 30 
-  console.log(valueA ++ valueB);     //Compile error
-  ```
+    JavaScript 和其他编程语言不同的是，在 JavaScript 中，'+'除了表示数字值相加，字符串相连接以外，还可以作一元运算符用，把字符串转换为数字。因而如果使用不当，则可能与自增符'++'混淆而引起计算错误
+    ```
+    var valueA = 20;
+    var valueB = "10";
+    console.log(valueA + valueB);     //ouput: 2010 
+    console.log(valueA + (+valueB));  //output: 30 
+    console.log(valueA + +valueB);    //output: 30 
+    console.log(valueA ++ valueB);     //Compile error
+    ```
 
-3、使用 return 语句需要注意
+3. 使用 return 语句需要注意
 
-  一条有返回值的 return 语句不要用 () 括号来括住返回值，如果返回表达式，则表达式应与 return 关键字在同一行，以避免压缩时，压缩工具自动加分号而造成返回与开发人员不一致的结果
-  ```
-  function F1() {
-    var valueA = 1;
-    var valueB = 2;
-    return valueA + valueB;
-  }
-  function F2() {
-    var valueA = 1;
-    var valueB = 2;
-    return
-    valueA + valueB;
-  }
-  alert(F1());  //output: 3 
-  alert(F2());  //ouput: undefined
-  ```
+    一条有返回值的 return 语句不要用 () 括号来括住返回值，如果返回表达式，则表达式应与 return 关键字在同一行，以避免压缩时，压缩工具自动加分号而造成返回与开发人员不一致的结果
+    ```
+    function F1() {
+      var valueA = 1;
+      var valueB = 2;
+      return valueA + valueB;
+    }
+    function F2() {
+      var valueA = 1;
+      var valueB = 2;
+      return
+      valueA + valueB;
+    }
+    alert(F1());  //output: 3 
+    alert(F2());  //ouput: undefined
+    ```
 
 ## == 和 === 的区别
 
