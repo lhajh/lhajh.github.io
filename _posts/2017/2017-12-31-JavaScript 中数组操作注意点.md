@@ -24,7 +24,7 @@ JavaScript 中数组操作注意点
 
 	尽管理论上 JavaScript 使用对象的形式储存数组，JavaScript 引擎还是会对数组这一非常常用的内置对象特别优化。
 	
-	[可以看到使用 for_in 遍历数组要比使用下标遍历数组慢 50 倍以上](ttps://jsperf.com/for-in-vs-for-of-vs-foreach)
+	[可以看到使用 for_in 遍历数组要比使用下标遍历数组慢 50 倍以上](https://jsperf.com/for-in-vs-for-of-vs-foreach)
 
 PS：你可能是想找 [for_of](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/for...of)
 

@@ -528,6 +528,7 @@ init 在执行的时候，当前上下文我们叫做 context。这个时候，c
   }
   init();
   ```
+
 2. 构造新的 context
 
   ```
@@ -590,19 +591,19 @@ function create() {
 
 1. 解耦 HTML/JavaScript
 
-JavaScript 和 HTML 的紧密耦合：直接写在 HTML 中的 JavaScript、使用包含内联代码的 `<script> 元素`、使用 HTML 属性来分配事件处理程序等
+  JavaScript 和 HTML 的紧密耦合：直接写在 HTML 中的 JavaScript、使用包含内联代码的 `<script> 元素`、使用 HTML 属性来分配事件处理程序等
 
-HTML 和 JavaScript 的紧密耦合：JavaScript 中包含 HTML，然后使用 innerHTML 来插入一段 html 文本到页面
+  HTML 和 JavaScript 的紧密耦合：JavaScript 中包含 HTML，然后使用 innerHTML 来插入一段 html 文本到页面
 
-其实应该是保持层次的分离，这样可以很容易的确定错误的来源，所以我们应确保 HTML 呈现应该尽可能与 JavaScript 保持分离
+  其实应该是保持层次的分离，这样可以很容易的确定错误的来源，所以我们应确保 HTML 呈现应该尽可能与 JavaScript 保持分离
 
 2. 解耦 CSS/JavaScript
 
-显示问题的唯一来源应该是 CSS，行为问题的唯一来源应该是 JavaScript，层次之间保持松散耦合才可以让你的应用程序更加易于维护，所以像以下的代码 element.style.color="red" 尽量改为 element.className="edit"，而且不要在 css 中通过表达式嵌入 JavaScript
+  显示问题的唯一来源应该是 CSS，行为问题的唯一来源应该是 JavaScript，层次之间保持松散耦合才可以让你的应用程序更加易于维护，所以像以下的代码 element.style.color="red" 尽量改为 element.className="edit"，而且不要在 css 中通过表达式嵌入 JavaScript
 
 3. 解耦应用程序/事件处理程序
 
-将应用逻辑和事件处理程序相分离：一个事件处理程序应该从事件对象中提取，并将这些信息传送给处理应用逻辑的某个方法中。这样做的好处首先可以让你更容易更改触发特定过程的事件，其次可以在不附加事件的情况下测试代码，使其更易创建单元测试
+  将应用逻辑和事件处理程序相分离：一个事件处理程序应该从事件对象中提取，并将这些信息传送给处理应用逻辑的某个方法中。这样做的好处首先可以让你更容易更改触发特定过程的事件，其次可以在不附加事件的情况下测试代码，使其更易创建单元测试
 
 ## 性能方面的注意事项
 
@@ -616,6 +617,7 @@ HTML 和 JavaScript 的紧密耦合：JavaScript 中包含 HTML，然后使用 i
   当进行数字运算时，位运算操作要比任何布尔运算或者算数运算快
 
 4. 巧用 ||和 && 布尔运算符
+
   ```
   function eventHandler(e) {
     if (!e) e = window.event;
