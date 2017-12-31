@@ -14,6 +14,7 @@ menu: Bookmark
 
 ## Javascript
 - [javascript 常用实例的实现与封装](https://segmentfault.com/a/1190000010225928)
+- [基础进阶系列](https://yangbo5207.github.io/wutongluo/ji-chu-jin-jie-xi-lie.html)
 - [fullPage.js](http://alvarotrigo.com/fullPage/) - To create fullscreen scrolling websites / single page websites
 - [lunr.js](http://lunrjs.com/) - Simple full-text search
 - [Trip.js](http://eragonj.github.io/Trip.js/index.html) - Help you customize a tutorial trip easily with more flexibilities
