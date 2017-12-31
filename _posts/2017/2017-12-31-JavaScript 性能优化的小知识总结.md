@@ -90,7 +90,7 @@ obj.property2 = 2;
 
 ```
 var myVar = "3.14159",
-str = "" + myVar, //  to string  
+str = '' + myVar, //  to string  
 i_int = ~ ~myVar,  //  to integer  
 f_float = 1 * myVar,  //  to float  
 b_bool = !!myVar,  /*  to boolean - any string with length and any number except 0 are true */
@@ -224,6 +224,7 @@ var node = element.firstChild;
 while (node) {
   //……
   node = node.nextSibling;
+}
 ```
 
 ## 删除 DOM 节点
@@ -528,6 +529,7 @@ init 在执行的时候，当前上下文我们叫做 context。这个时候，c
   init();
   ```
 2. 构造新的 context
+
   ```
   function init() {
     var el = document.getElementById('MyElement');
