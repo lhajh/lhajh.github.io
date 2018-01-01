@@ -7,6 +7,7 @@ menu: Bookmark
 
 ## [web 前端学习资源分享](https://segmentfault.com/a/1190000010880049)
 ## [w3cplus](https://www.w3cplus.com/)
+## [js, css 黑科技](https://github.com/jawil/blog)
 
 ##  JavaScript 代码片段
 - [精心收集的 48 个 JavaScript 代码片段，仅需 30 秒就可理解](http://mp.weixin.qq.com/s/LxdDsgPAGTx19T5BZnw6EQ)
