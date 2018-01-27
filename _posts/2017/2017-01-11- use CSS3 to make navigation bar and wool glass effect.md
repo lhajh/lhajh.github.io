@@ -10,7 +10,7 @@ keywords: CSS3, 导航条, 毛玻璃
 
 把导航条和毛玻璃效果在一篇文章中分享其实是有原因的。因为这两个效果的实现离不开一个重要的思想。
 
-** 用语言来描述就是：父元素设置position:relative，其伪元素（after 或者before）设置 position:absolute，并且让 top,bottom,left,right 都为 0，伪元素占满父元素的整个空间，最后设置 z-index 将背景放在父元素后边。 **
+**用语言来描述就是：父元素设置position:relative，其伪元素（after 或者before）设置 position:absolute，并且让 top,bottom,left,right 都为 0，伪元素占满父元素的整个空间，最后设置 z-index 将背景放在父元素后边。**
 
 具体代码如下：
 ```
