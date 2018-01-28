@@ -1,8 +1,8 @@
 ---
 layout: post
-title: 32 ways to write display
+title: display 的 32 种写法
 categories: [CSS]
-description: 32 ways to write display
+description: display 的 32 种写法
 keywords: display
 ---
 
