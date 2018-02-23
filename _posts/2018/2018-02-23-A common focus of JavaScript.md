@@ -200,9 +200,9 @@ config.prop1 = config.prop1 || 233;
 config.prop2 = config.prop2 || 'balabala';
 ```
 expr1 || expr2 的意思是：如果 expr1 能转换成 true 则返回 expr1，否则返回 expr2
-
+```
 expr1 || expr2 <=> Boolean(expr1) ? expr1 : expr2
-
+```
 哪些值不能转换为 true 呢？
 
 - null
@@ -220,4 +220,6 @@ config.prop2 = config.prop2 !== undefined ? config.prop2 : 'balabala';
 ```
 很长。。。你可以搞个全局的函数简化这一操作，或者考虑使用 lodash 的 [defaults](https://lodash.com/docs/4.17.5#defaults) 方法
 
+## 参考资料
 
+- [给初学者：JavaScript 的常见注意点](https://segmentfault.com/a/1190000012730162)
