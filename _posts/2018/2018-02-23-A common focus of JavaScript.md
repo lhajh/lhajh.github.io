@@ -123,7 +123,7 @@ isNaN({}) // true
 
 建议对于数值转换一概使用强制转换函数 Number，如果你 JS 用 6 了可以使用 +（正号）。
 
-如果需要对某个数字取整，建议使用 [Math.trunc](https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Math/trunc)。如果你能确定数值在 32 位以内，可以使用 x | 0 或 ~~x 等方式
+如果需要对某个数字取整，建议使用 [Math.trunc](https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Math/trunc)。如果你能确定数值在 32 位以内，可以使用 `x | 0` 或 `~~ x` 等方式
 
 ![](/assets/images/posts/js/1047484547-5a50bd32b05ba_articlex.png)
 
