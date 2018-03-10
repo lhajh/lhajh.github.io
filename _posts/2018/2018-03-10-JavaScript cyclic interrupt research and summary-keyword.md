@@ -8,7 +8,7 @@ keywords: JavaScript, 循环
 
 面向对象编程语法中我们会碰到 break ,continue, return 这三个常用的关键字，那么关于这三个关键字的使用具体的操作是什么呢？我们在使用这三关键字的时候需要注意和需要理解的规则是什么呢？
 
-具体在循环或函数中的用法请见[下篇]()
+具体在循环或函数中的用法请见[下篇](https://lhajh.github.io/js/2018/03/10/JavaScript-cyclic-interrupt-research-and-summary-usage.html)
 
 ## [break](https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Statements/break)
 
