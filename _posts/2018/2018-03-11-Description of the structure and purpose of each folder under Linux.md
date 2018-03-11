@@ -190,3 +190,7 @@ keywords: Linux
 ## /usr/local
 
 这里主要存放那些手动安装的软件，即 不是通过“新立得”或 apt-get 安装的软件 。 它和 /usr 目录具有相类似的目录结构 。让软件包管理器来管理 /usr 目录，而把自定义的脚本(scripts)放到 /usr/local 目录下面，我想这应该是个不错的主意。
+
+## 参考资料
+
+- [linux下各文件夹的结构说明及用途介绍](http://www.cnblogs.com/xningge/p/8331631.html)
