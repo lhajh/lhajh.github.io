@@ -1,8 +1,8 @@
 ---
 layout: post
-title: 前端表单验证常用的正则表达式
+title: 正则-前端表单验证常用的正则表达式
 categories: JS
-description: 前端表单验证常用的正则表达式
+description: 正则-前端表单验证常用的正则表达式
 keywords: JS, 正则
 ---
 
