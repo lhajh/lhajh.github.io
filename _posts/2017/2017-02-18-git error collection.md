@@ -69,3 +69,69 @@ $ git init
 $ git add .
 ```
 但我在实践中发现：直接运行 `$ git config --gobal core.autocrlf false`，不用删除生成的 .git 文件也可以，当然也不用执行 git init
+
+## nothing added to commit but untracked files present
+
+### 问题
+```
+Untracked files: 
+../target/ 
+../zblog.iml 
+nothing added to commit but untracked files present
+```
+大致的意思是说文件被追踪，但是没有被添加 git 中。
+
+### 解决方案
+
+#### 1. 不想提交文件
+
+添加 git 忽略文件 .gitignore 
+
+将不想提交的文件写入到 .gitgnore 文件中。记得要把 .gitignore 也添加进来
+
+主要步骤： 
+1. git status 列出当前目录所有还没有被 git 管理的文件和被 git 管理且被修改但还未提交(git commit)的文件.
+    ```
+    $ git status
+    On branch master
+    Your branch is up-to-date with 'origin/master'.
+    Untracked files:
+      (use "git add <file>..." to include in what will be committed)
+            /target/
+            zblog.iml
+    nothing added to commit but untracked files present (use "git add" to track)
+    ```
+
+2. 将要忽略的文件写入到 .gitignore
+
+    `vim .gitignore`
+
+    追加如下内容（根据自己的提示添加）
+
+    ```
+    /target/ 
+    zblog.iml
+    ```
+
+PS:注意实际路径可以用 * 模糊操作
+
+#### 2. 想提交文件
+
+1. git status 列出当前目录所有还没有被 git 管理的文件和被 git 管理且被修改但还未提交(git commit)的文件.
+    ```
+    $ git status
+    On branch master
+    Your branch is up-to-date with 'origin/master'.
+    Untracked files:
+      (use "git add <file>..." to include in what will be committed)
+            /target/
+            zblog.iml
+    nothing added to commit but untracked files present (use "git add" to track)
+    ```
+    
+2. 将这些文件或文件夹 add 进去
+
+    ```
+    git add /target/.
+    git add zblog.iml
+    ```
