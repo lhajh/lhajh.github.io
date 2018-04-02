@@ -113,7 +113,7 @@ nothing added to commit but untracked files present
     zblog.iml
     ```
 
-PS:注意实际路径可以用 * 模糊操作
+PS: 注意实际路径可以用 * 模糊操作
 
 #### 2. 想提交文件
 
@@ -135,3 +135,5 @@ PS:注意实际路径可以用 * 模糊操作
     git add /target/.
     git add zblog.iml
     ```
+
+PS: git add 一次可以添加多个文件，如：`git add a.html b.html c.html`
