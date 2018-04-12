@@ -23,6 +23,37 @@ ElementUI 问题集合
 
 [解决](https://jsfiddle.net/xf9j7x9r/1/)
 
+例子：
+```
+<el-table-column
+  align="center"
+  prop="createDate"
+  :formatter="(row, column) => formatTime(row, column, 'createDate')"
+  label="创建日期"
+  min-width="150">
+</el-table-column>
+
+一般 column 不常用，只需要传入需要格式化的值即可，即下面这种写法
+
+<el-table-column
+  align="center"
+  prop="publishDate"
+  :formatter="row => formatTime(row['publishDate'])"
+  label="发布时间"
+  min-width="100">
+</el-table-column>
+
+methods: {
+  formatTime (value, type) {
+    if (value === null || value === '') {
+      value = new Date()
+    }
+    type = type || 'YYYY-MM-DD'
+    return this.$moment(value).format(type)
+  }
+}
+```
+
 ## Pagination 分页
 
 ### 问题
