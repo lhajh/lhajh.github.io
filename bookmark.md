@@ -17,11 +17,21 @@ menu: Bookmark
 ## Javascript
 - [javascript 常用实例的实现与封装](https://segmentfault.com/a/1190000010225928)
 - [基础进阶系列](https://yangbo5207.github.io/wutongluo/ji-chu-jin-jie-xi-lie.html)
+- [DOM操作成本到底高在哪儿？](https://segmentfault.com/a/1190000014070240#articleHeader0)
 - [fullPage.js](http://alvarotrigo.com/fullPage/) - To create fullscreen scrolling websites / single page websites
 - [lunr.js](http://lunrjs.com/) - Simple full-text search
 - [Trip.js](http://eragonj.github.io/Trip.js/index.html) - Help you customize a tutorial trip easily with more flexibilities
 - [Moment.js](http://momentjs.com/) - Parse, validate, manipulate, and display dates in JavaScript.
 - [Underscore.js](http://underscorejs.org/) - It provides a whole mess of useful functional programming helpers without extending any built-in objects.
+
+## 面试
+- [面试分享：2018阿里巴巴前端面试总结(题目+答案)](https://blog.ihoey.com/posts/Interview/2018-02-28-alibaba-interview.html)
+- [前端面试题-url、href、src](https://segmentfault.com/a/1190000013845173)
+- [2018 浅谈前端面试那些事](https://segmentfault.com/a/1190000013857582)
+- [50道CSS基础面试题（附答案）](https://segmentfault.com/a/1190000013325778)
+- [从输入URL到页面加载的过程？如何由一道题完善自己的前端知识体系！](http://www.dailichun.com/2018/03/12/whenyouenteraurl.html)
+- [JavaScript 面试必须知道的 10 个概念](http://web.jobbole.com/92594/)
+- [一道面试题引发的对 javascript 类型转换的思考](http://web.jobbole.com/90654/)
 
 ## webpack
 - [Practice of separation development environment based on webpack](https://mp.weixin.qq.com/s?__biz=MzAxODE2MjM1MA==&mid=2651552516&idx=2&sn=d183f7190a8430f3bf2e1729f29ef9ee&pass_ticket=H45s%2Fvpm4mT1AvAjYR1gUS%2FPTKCqw9gOjrF2Jvqyt%2FwHOwYvMOfnM5VA2CMkMiZM)
