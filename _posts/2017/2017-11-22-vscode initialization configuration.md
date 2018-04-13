@@ -208,6 +208,9 @@ VSCode初始化配置
 - C + D: 删除右侧字符
 - C + B: 删除左侧字符
 - C + S + F5: 重启
+- S + A + O: 删除未使用的导入并对剩余的导入进行排序, 该命令适用于JavaScript和TypeScript的ES6模块。
+
+![](/assets/images/posts/vscode/ts-organize-imports.gif)
 
 ```
 // 将键绑定放入此文件中以覆盖默认值
@@ -314,6 +317,7 @@ VSCode初始化配置
 - C + D: 删除右侧字符
 - C + B: 删除左侧字符
 - C + S + F5: 重启
+- S + O + 字母O: 删除未使用的导入并对剩余的导入进行排序, 该命令适用于JavaScript和TypeScript的ES6模块。
 
 ```
 // 将键绑定放入此文件中以覆盖默认值
@@ -388,3 +392,7 @@ VSCode初始化配置
     }
 ]
 ```
+
+## 一些小技巧
+
+- [VsCode中使用Emmet神器快速编写HTML代码](https://www.cnblogs.com/summit7ca/p/6944215.html)
