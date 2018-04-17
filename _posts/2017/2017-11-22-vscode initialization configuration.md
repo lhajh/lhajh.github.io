@@ -6,7 +6,7 @@ description: VSCode 初始化配置
 keywords: vscode
 ---
 
-VSCode初始化配置
+VSCode 初始化配置
 
 ## 代码片段
 
@@ -189,6 +189,8 @@ VSCode初始化配置
 
 常用快捷键
 
+- C + S + p or F1: 打开命令面板
+- C + p: 快速打开文件
 - C + S + /: 切换块注释
 - C + /: 切换行注释
 - C + d: 删除当前行
@@ -215,7 +217,9 @@ VSCode初始化配置
 - C + D: 删除右侧字符
 - C + B: 删除左侧字符
 - C + S + F5: 重启
-- S + A + O: 删除未使用的导入并对剩余的导入进行排序, 该命令适用于JavaScript和TypeScript的ES6模块。
+- S + A + O: 删除未使用的导入并对剩余的导入进行排序, 该命令适用于 JavaScript 和 TypeScript 的 ES6 模块。
+- C + 鼠标左键: 多行编辑 (适用于每行编辑位置不一样)
+- C + A + UA / DA: 多行编辑 (适用于每行编辑位置都一样)
 
 ![](/assets/images/posts/vscode/ts-organize-imports.gif)
 
@@ -298,6 +302,8 @@ VSCode初始化配置
 
 常用快捷键
 
+- C + S + p or F1: 打开命令面板
+- C + p: 快速打开文件
 - O + S + /: 切换块注释
 - C + /: 切换行注释
 - C + d: 删除当前行
@@ -324,7 +330,9 @@ VSCode初始化配置
 - C + D: 删除右侧字符
 - C + B: 删除左侧字符
 - C + S + F5: 重启
-- S + O + 字母O: 删除未使用的导入并对剩余的导入进行排序, 该命令适用于JavaScript和TypeScript的ES6模块。
+- S + O + 字母O: 删除未使用的导入并对剩余的导入进行排序, 该命令适用于 JavaScript 和 TypeScript 的 ES6 模块。
+- C + 鼠标左键: 多行编辑 (适用于每行编辑位置不一样)
+- C + O + UA / DA: 多行编辑 (适用于每行编辑位置都一样)
 
 ```
 // 将键绑定放入此文件中以覆盖默认值
@@ -402,4 +410,20 @@ VSCode初始化配置
 
 ## 一些小技巧
 
-- [VsCode中使用Emmet神器快速编写HTML代码](https://www.cnblogs.com/summit7ca/p/6944215.html)
+- [VsCode 中使用 Emmet 神器快速编写 HTML 代码](https://www.cnblogs.com/summit7ca/p/6944215.html)
+- [微软 VS Code 开发技巧集锦](https://juejin.im/entry/5abca6d36fb9a028c675c96a)
+- [VS Code Tips and Tricks](https://github.com/Microsoft/vscode-tips-and-tricks)
+- [能让你开发效率翻倍的 VSCode 插件配置（上）](https://juejin.im/post/5a08d1d6f265da430f31950e)
+- [能让你开发效率翻倍的 VSCode 插件配置（中）](https://juejin.im/post/5ad13d8a6fb9a028ce7c0721)
+- [VS Code折腾记 - (1)扯淡](https://juejin.im/post/586cf732128fe10066602d43)
+- [VS Code折腾记 - (2) 快捷键大全，没有更全](https://juejin.im/post/586e5a5cb123db005d0f2bd1)
+- [VS Code折腾记 - (3) 多图解VSCode基础功能](https://juejin.im/post/5880d3b9128fe10065ccaf27)
+- [VS Code折腾记 - (4) 常用必备插件推荐【前端】](https://juejin.im/post/58a691f461ff4b006c4981a0)
+- [VS Code折腾记 - (5) Angular 2+ && Typescript 2+必备插件推荐](https://juejin.im/post/58a6f518ac502e006cc4ee2a)
+- [VS Code 折腾记 - (6) 基本配置/快捷键定义/代码片段的录入（snippet）](https://juejin.im/post/58aeeca22f301e006cf65c8b)
+- [VS Code 折腾记 - (7) 内置Debug功能深入【调教angular-cli 最新版】](https://juejin.im/post/58c0c2e344d90400697213f2)
+- [VS Code 折腾记 - (8) 新一波实用插件推荐（前端）|NG2+|TS2|Vue|React|Node|版本控制|主题](https://juejin.im/post/592542c58d6d810058025d06)
+- [VS Code 折腾记 - (9) 新一轮前端插件(代码质量|正则|版本控制|NG|Vue|React)](https://juejin.im/post/59a61edc5188252428611c6a)
+- [VS Code 折腾记 - (10) 你想发布自己捣鼓的snippets到VSCode插件市场!](https://juejin.im/post/5a198dd36fb9a04504079336)
+- [VS Code 折腾记 - (11) 再来一波插件推荐!(代码片段,框架,Node,touchbar,TS,Git,数据库,python!!)](https://juejin.im/post/5a1b869351882533d022c7f5)
+- [VS Code 折腾记 - (12) 春节前的最后一波插件推荐(前端/协作/主题)](https://juejin.im/post/5a704d84518825734f5300c8)
