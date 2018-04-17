@@ -93,11 +93,18 @@ VSCode初始化配置
 
 - Vetur
   - Vue 代码片段，语法高亮
-  - Doc: [https://vuejs.github.io/vetur](https://vuejs.github.io/vetur)
+  - [Doc](https://vuejs.github.io/vetur)
 - ESLint
   - 语法检查
 - JavaScript (ES6) code snippets
   - ES6 代码片段
+- vscode-element-helper
+  - 一款 ElementUi 的 VS Code 插件
+  - [Doc](https://github.com/ElemeFE/vscode-element-helper)
+- vscode-pangu
+  - 一款给中英文间加空格的 VS Code 插件
+  - [Doc](https://github.com/baurine/vscode-pangu)
+  - [如何实现一个给中英文间加空格的 VS Code 扩展](https://juejin.im/post/5a43718cf265da43310e1a34)
 - Document This
   - 为 js 中的函数自动生成注释
 - vscode-fileheader
