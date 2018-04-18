@@ -14,11 +14,11 @@ Chrome 会在客户登陆过某网站之后, 会自动记住密码. 当你下次
 
 变色前：
 
-![](/asstes/images/posts/css/20180418-183300@2x.png)
+![](/assets/images/posts/css/20180418-183300@2x.png)
 
 变色后：
 
-![](/asstes/images/posts/css/20180418-183348@2x.png)
+![](/assets/images/posts/css/20180418-183348@2x.png)
 
 ## 样式分析
 
