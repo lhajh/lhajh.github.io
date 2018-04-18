@@ -108,7 +108,7 @@ input:-webkit-autofill {
 }
 ```
 
-意思是让颜色永远在transparent到transparent进行循环动画。
+意思是让颜色永远在 transparent 到 transparent 进行循环动画。
 
 ## 5. 通过 js 控制
 
@@ -127,11 +127,11 @@ input:-webkit-autofill {
 </script>
 ```
 
-将这段代码加到head里面，Stack Overflow上的大神写的
+将这段代码加到 head 里面，Stack Overflow 上的大神写的
 
 但需要用到 jQuery, 在现在这个 MVVM 框架流行的年代, jQuery 真的是不推荐使用
 
 ## 参考资料
 
-- [chrom input输入框黄色背景去除?](https://www.zhihu.com/question/48914902?from=profile_question_card)
-- [chrome浏览器表单自动填充默认样式-autofill](https://blog.csdn.net/zhangdongxu999/article/details/73741390)
+- [chrom input 输入框黄色背景去除?](https://www.zhihu.com/question/48914902?from=profile_question_card)
+- [chrome 浏览器表单自动填充默认样式 - autofill](https://blog.csdn.net/zhangdongxu999/article/details/73741390)
