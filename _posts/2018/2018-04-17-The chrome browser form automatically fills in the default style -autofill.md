@@ -1,0 +1,137 @@
+---
+layout: post
+title: chrome 浏览器表单自动填充默认样式 - autofill
+categories: [CSS, Chrome]
+description: chrome 浏览器表单自动填充默认样式 - autofill
+keywords: chrome, autofill
+---
+
+Chrome 会在客户登陆过某网站之后, 会自动记住密码. 当你下次再次进入该网站的时候, 可以自由的选择登陆的账号, Chrome 会为你自动填充密码. 而你无需再输入密码
+这本身是一个很好的功能, 但是对于开发者而言, 却有一个很让人难受的问题.
+当你选择账号密码之后, 你的输入框会变成黄色, 这样自己设置的背景颜色就被覆盖了.
+
+## 样式对比
+
+变色前：
+
+![](/asstes/images/posts/css/20180418-183300@2x.png)
+
+变色后：
+
+![](/asstes/images/posts/css/20180418-183348@2x.png)
+
+## 样式分析
+
+之所以出现这样的样式, 是因为 Chrome 会自动为 input 增加如下样式.
+
+```
+input:-webkit-autofill, textarea:-webkit-autofill, select:-webkit-autofill {
+  background-color: rgb(250, 255, 189);
+  background-image: none;
+  color: rgb(0, 0, 0);
+}
+```
+
+这个样式的优先级也比较高. 无法通过 important 覆盖 (这就比较恶心了).
+
+## 解决方法
+
+### 1. 关闭浏览器自带填充表单功能
+
+如果你的网站安全级别高一些, 可以直接关闭. 也不需要再调样式了.
+
+```
+<!-- 对整个表单的设置 -->
+<form autocomplete="off">
+<!-- 单独对某个组件设置 -->
+<input type="text" autocomplete="off">
+```
+
+PS: 毕竟是一个很好的功能, 关了多不方便.
+
+### 2. 通过纯色的阴影覆盖底 (huang) 色
+
+```
+input:-webkit-autofill,
+textarea:-webkit-autofill,
+select:-webkit-autofill {
+  -webkit-box-shadow: 0 0 0 1000px white inset;
+  -webkit-text-fill-color: #333;
+}
+input[type=text]:focus, input[type=password]:focus, textarea:focus {
+  -webkit-box-shadow: 0 0 0 1000px white inset;
+}
+```
+[BoxShadow 参考资料](http://www.w3school.com.cn/cssref/pr_box-shadow.asp)
+
+注: 这种只适用于纯色背景的输入框, 无法设为透明.
+
+### 3. 通过设置 input 样式动画
+
+推荐使用这种的. 因为基本上没有人会等那么久…
+
+```
+/*
+  99999s 基本上就是一个无限长的时间
+  通过延长增加自动填充背景色的方式, 使用户感受不到样式的变化
+*/
+input:-webkit-autofill,
+input:-webkit-autofill:hover,
+input:-webkit-autofill:focus,
+input:-webkit-autofill:active {
+  -webkit-transition-delay: 99999s;
+  -webkit-transition: color 99999s ease-out, background-color 99999s ease-out;
+}
+```
+
+### 4. 通过设置 animation 动画
+
+方法 3 在大多数情况下都是没问题的,
+
+可要是真有人无聊开着网页几小时不动，不就露馅了嘛。
+
+既然 transition 能用，何不试试 animation？
+
+```
+input:-webkit-autofill {
+  -webkit-animation: autofill-fix 1s infinite;
+  -webkit-text-fill-color: #ccc;
+}
+
+@-webkit-keyframes autofill-fix {
+  from {
+    background-color: transparent
+  }
+  to {
+    background-color: transparent
+  }
+}
+```
+
+意思是让颜色永远在transparent到transparent进行循环动画。
+
+## 5. 通过 js 控制
+
+```
+<script type="text/javascript">
+  if (navigator.userAgent.toLowerCase().indexOf("chrome") >= 0) {
+    $(window).load(function(){
+      $('input:-webkit-autofill').each(function(){
+        var text = $(this).val();
+        var name = $(this).attr('name');
+        $(this).after(this.outerHTML).remove();
+        $('input[name=' + name + ']').val(text);
+      });
+    });
+  }
+</script>
+```
+
+将这段代码加到head里面，Stack Overflow上的大神写的
+
+但需要用到 jQuery, 在现在这个 MVVM 框架流行的年代, jQuery 真的是不推荐使用
+
+## 参考资料
+
+- [chrom input输入框黄色背景去除?](https://www.zhihu.com/question/48914902?from=profile_question_card)
+- [chrome浏览器表单自动填充默认样式-autofill](https://blog.csdn.net/zhangdongxu999/article/details/73741390)
