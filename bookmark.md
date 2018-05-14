@@ -34,6 +34,8 @@ menu: Bookmark
 - [JavaScript 面试必须知道的 10 个概念](http://web.jobbole.com/92594/)
 - [一道面试题引发的对 javascript 类型转换的思考](http://web.jobbole.com/90654/)
 - [JS 高级必须知道的几个点！](https://segmentfault.com/a/1190000014405410)
+- [37 个 JavaScript 基本面试问题和解答](https://www.zcfy.cc/article/37-essential-javascript-interview-questions-and-answers)
+- [37 Essential JavaScript Interview Questions](https://www.toptal.com/javascript/interview-questions)
 
 ## 箴言
 - [懂得这 40 条编程箴言才称得上优秀程序员](http://www.itboth.com/d/fmyyemZ7zMba)
