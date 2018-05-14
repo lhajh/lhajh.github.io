@@ -1,26 +1,30 @@
 ---
 layout: post
-title: markdown简明教程
+title: markdown 简明教程
 categories: markdown
-description: markdown简明教程
+description: markdown 简明教程
 keywords: markdown, 教程
 ---
 
 # Markdown 学习
-Markdown 是一种轻量级的「标记语言」，它的优点很多，目前也被越来越多的写作爱好者，撰稿者广泛使用。看到这里请不要被「标记」、「语言」所迷惑，Markdown 的语法十分简单。常用的标记符号也不超过十个，这种相对于更为复杂的HTML 标记语言来说，Markdown 可谓是十分轻量的，学习成本也不需要太多，且一旦熟悉这种语法规则，会有一劳永逸的效果。
+
+Markdown 是一种轻量级的「标记语言」，它的优点很多，目前也被越来越多的写作爱好者，撰稿者广泛使用。看到这里请不要被「标记」、「语言」所迷惑，Markdown 的语法十分简单。常用的标记符号也不超过十个，这种相对于更为复杂的 HTML 标记语言来说，Markdown 可谓是十分轻量的，学习成本也不需要太多，且一旦熟悉这种语法规则，会有一劳永逸的效果。
 
 ## 使用 Markdown 的优点
+
 - 专注你的文字内容而不是排版样式。
 - 轻松的导出 HTML、PDF 和本身的 .md 文件。
 - 纯文本内容，兼容所有的文本编辑器与字处理软件。
 - 可读，直观。适合所有人的写作语言。
 
-## 工具 
+## 工具
+
 工具茫茫多
 - windows 下 [markdownPad2](http://markdownpad.com/)
 - 在线 [dillinger.io](http://dillinger.io/)
 
 ## MarkdownPad2.5 注册码
+
 邮箱：
 Soar360@live.com
 
@@ -28,37 +32,49 @@ Soar360@live.com
 GBPduHjWfJU1mZqcPM3BikjYKF6xKhlKIys3i1MU2eJHqWGImDHzWdD6xhMNLGVpbP2M5SN6bnxn2kSE8qHqNY5QaaRxmO3YSMHxlv2EYpjdwLcPwfeTG7kUdnhKE0vVy4RidP6Y2wZ0q74f47fzsZo45JE2hfQBFi2O9Jldjp1mW8HUpTtLA2a5/sQytXJUQl/QKO0jUQY4pa5CCx20sV1ClOTZtAGngSOJtIOFXK599sBr5aIEFyH0K7H4BoNMiiDMnxt1rD8Vb/ikJdhGMMQr0R4B+L3nWU97eaVPTRKfWGDE8/eAgKzpGwrQQoDh+nzX1xoVQ8NAuH+s4UcSeQ==
 
 ## 语法
+
 ### 标题
+
 标题有六级
+
 由 # 组成
-类比于 h1 ~ h6  
+
+类比于 h1 ~ h6
+
 例如：
+
 ```
-# 这是一级标题（H1，通常用于文档标题）  
-## 这是二级标题（H2，有些渲染器会为二级标题添加 hr 底线）  
-### 这是三级标题（H3）  
-#### 这是四级标题（H4）  
-##### 这是五级标题（H5） 
+# 这是一级标题（H1，通常用于文档标题）
+## 这是二级标题（H2，有些渲染器会为二级标题添加 hr 底线）
+### 这是三级标题（H3）
+#### 这是四级标题（H4）
+##### 这是五级标题（H5）
 ###### 这是六级标题（H6）
 ```
+
 效果：
-# 这是一级标题（H1，通常用于文档标题）  
-## 这是二级标题（H2，有些渲染器会为二级标题添加 hr 底线）  
-### 这是三级标题（H3）  
-#### 这是四级标题（H4）  
-##### 这是五级标题（H5） 
+
+# 这是一级标题（H1，通常用于文档标题）
+## 这是二级标题（H2，有些渲染器会为二级标题添加 hr 底线）
+### 这是三级标题（H3）
+#### 这是四级标题（H4）
+##### 这是五级标题（H5）
 ###### 这是六级标题（H6）
-**注：在#后加一个空格再跟标题**
+
+** 注：在 # 后加一个空格再跟标题 **
 
 ### 首行缩进
-&emsp;&emsp;写文章时，我们常常希望能够首行缩进，这时可以在段首加入`&ensp;`或`&nbsp`来输入一个空格.加入`&emsp;`来输入两个空格。这里的空格是英文状态的空格，英文状态的两个空格相当于中文状态的一个空格
+
+&emsp;&emsp; 写文章时，我们常常希望能够首行缩进，这时可以在段首加入 `&ensp;` 或 `&nbsp` 来输入一个空格. 加入 `&emsp;` 来输入两个空格。这里的空格是英文状态的空格，英文状态的两个空格相当于中文状态的一个空格
 
 ### 添加空行
+
 添加空行可以结束先前的格式状态。个人建议在改变格式时，均添加一个空行
 
 例如：
+
 ```
->引用状态
+> 引用状态
 [空行]
 ### 标题状态
 [空行]
@@ -68,8 +84,10 @@ GBPduHjWfJU1mZqcPM3BikjYKF6xKhlKIys3i1MU2eJHqWGImDHzWdD6xhMNLGVpbP2M5SN6bnxn2kSE
 - 列表状态
 [空行]
 ```
+
 效果：
->引用状态
+
+> 引用状态
 
 ### 标题状态
 
@@ -79,17 +97,23 @@ GBPduHjWfJU1mZqcPM3BikjYKF6xKhlKIys3i1MU2eJHqWGImDHzWdD6xhMNLGVpbP2M5SN6bnxn2kSE
 - 列表状态
 
 ### 换行
-换行的时候 结尾要加上 两个空格。  
+
+换行的时候 结尾要加上 两个空格。
 
 ### 斜体与粗体
-斜体：使用 两个星号 `**` 中间夹杂的就是 斜体, 例如：*斜体*    
-粗体： 使用 四个星号 `****` 中间夹杂的就是 粗体, 例如：**粗体** 
+
+- 斜体：使用 两个星号 `**` 中间夹杂的就是 斜体, 例如：`* 斜体 *` * 斜体 *
+- 粗体： 使用 四个星号 `****` 中间夹杂的就是 粗体, 例如：`** 粗体 **` ** 粗体 **
+- 粗斜体文本: 使用 四个星号 `****` 中间夹杂的就是 粗斜体文本, 例如：`**** 粗斜体文本 ****` **** 粗斜体文本 ****
 
 ### 无序列表
+
 使用 `+ - *` 都表示无序列表
-**注：后面也需要跟一个空格**
+
+** 注：后面也需要跟一个空格 **
 
 例如：
+
 ```
 - 使用 - 号
 	- 吃饭
@@ -106,7 +130,9 @@ GBPduHjWfJU1mZqcPM3BikjYKF6xKhlKIys3i1MU2eJHqWGImDHzWdD6xhMNLGVpbP2M5SN6bnxn2kSE
 	* 睡觉
 	* 打豆豆
 ```
+
 效果：
+
 - 使用 - 号
 	- 吃饭
 	- 睡觉
@@ -123,10 +149,13 @@ GBPduHjWfJU1mZqcPM3BikjYKF6xKhlKIys3i1MU2eJHqWGImDHzWdD6xhMNLGVpbP2M5SN6bnxn2kSE
 	* 打豆豆
 
 ### 有序列表
+
 使用 `1. 2. 3. ` 可以表示有序列表
-**注：后面也需要跟一个空格**
+
+** 注：后面也需要跟一个空格 **
 
 例如：
+
 ```
 1. 买菜
 2. 洗菜
@@ -135,7 +164,9 @@ GBPduHjWfJU1mZqcPM3BikjYKF6xKhlKIys3i1MU2eJHqWGImDHzWdD6xhMNLGVpbP2M5SN6bnxn2kSE
 5. 吃菜
 6. 洗碗
 ```
+
 效果：
+
 1. 买菜
 2. 洗菜
 3. 切菜
@@ -143,12 +174,13 @@ GBPduHjWfJU1mZqcPM3BikjYKF6xKhlKIys3i1MU2eJHqWGImDHzWdD6xhMNLGVpbP2M5SN6bnxn2kSE
 5. 吃菜
 6. 洗碗
 
-### 引用 
+### 引用
+
 使用 `>` 表示引用
 
 例如：
 
-`> 海明威曾经写过：我可以被杀死，但是不可以被打败`
+`> 海明威曾经写过：我可以被杀死，但是不可以被打败 `
 
 效果：
 
@@ -158,48 +190,53 @@ GBPduHjWfJU1mZqcPM3BikjYKF6xKhlKIys3i1MU2eJHqWGImDHzWdD6xhMNLGVpbP2M5SN6bnxn2kSE
 
 ```
 
-|默认对齐|居左对齐|居中对齐|居右对齐|
+| 默认对齐 | 居左对齐 | 居中对齐 | 居右对齐 |
 |---|:---|:---:|---:|
-|窗前|明月|光|，|
-|疑是|地上|霜|，|
+| 窗前 | 明月 | 光 |，|
+| 疑是 | 地上 | 霜 |，|
 
-|姓名|性别|年纪|班级|
+| 姓名 | 性别 | 年纪 | 班级 |
 |--|:--|:--:|--|
-|张三|男|29|0830|
-|李四|女|28|0830|
+| 张三 | 男 | 29|0830|
+| 李四 | 女 | 28|0830|
 
-|时间|地点|人物|事件事件事件事件事件事件事件|
+| 时间 | 地点 | 人物 | 事件事件事件事件事件事件事件 |
 |--|--|--|:--:|
-|上午|北京|我|吃面|
+| 上午 | 北京 | 我 | 吃面 |
 
 ```
+
 效果：
 
-|默认对齐|居左对齐|居中对齐|居右对齐|
+| 默认对齐 | 居左对齐 | 居中对齐 | 居右对齐 |
 |---|:---|:---:|---:|
-|窗前|明月|光|，|
-|疑是|地上|霜|，|
+| 窗前 | 明月 | 光 |，|
+| 疑是 | 地上 | 霜 |，|
 
-|姓名|性别|年纪|班级|
+| 姓名 | 性别 | 年纪 | 班级 |
 |--|:--|:--:|--|
-|张三|男|29|0830|
-|李四|女|28|0830|
+| 张三 | 男 | 29|0830|
+| 李四 | 女 | 28|0830|
 
-|时间|地点|人物|事件事件事件事件事件事件事件|
+| 时间 | 地点 | 人物 | 事件事件事件事件事件事件事件 |
 |--|--|--|:--:|
-|上午|北京|我|吃面|
+| 上午 | 北京 | 我 | 吃面 |
 
-**注：表格开始与结尾都需要一行空行**
+** 注：表格开始与结尾都需要一行空行 **
 
 ### 插入代码
+
 插入代码的方式有两种
-1. 在每行代码前加入4个空格或者添加一个制表符（TAB键）
+
+1. 在每行代码前加入 4 个空格或者添加一个制表符（TAB 键）
 2. 在代码两侧添加三个反引号‘```’。
 
 #### 方式一
+
 其缩进是相对于当前格式状态下的。
 
 例如：
+
 ```
 - 列表项
 - 列表项
@@ -207,12 +244,15 @@ GBPduHjWfJU1mZqcPM3BikjYKF6xKhlKIys3i1MU2eJHqWGImDHzWdD6xhMNLGVpbP2M5SN6bnxn2kSE
 ```
 
 效果：
+
 - 列表项
 - 列表项
 		printf("hello world!");
-在列表项状态下，需要输入两次TAB键(制表符)才能以代码格式插入。
 
-#### 方式2
+在列表项状态下，需要输入两次 TAB 键 (制表符) 才能以代码格式插入。
+
+#### 方式 2
+
 反引号最好在代码的前后行添加，而不是直接加在代码两边。
 
 - 使用这个符号 ` 中间夹着代码
@@ -221,58 +261,65 @@ GBPduHjWfJU1mZqcPM3BikjYKF6xKhlKIys3i1MU2eJHqWGImDHzWdD6xhMNLGVpbP2M5SN6bnxn2kSE
 
 ```
 <ul>
-	<li>好好学习</li>
-	<li>天天向上</li>
-	<li>锻炼身体</li>
+	<li> 好好学习 </li>
+	<li> 天天向上 </li>
+	<li> 锻炼身体 </li>
 </ul>
 ```
 
 ### 连接
 
 下面是行内链接示例:
+
 ```
 [百度](http://www.baidu.com)
 http://www.baidu.com
 ```
+
 [百度](http://www.baidu.com)
 
 http://www.baidu.com
 
 下面是一个参考链接的示例:
+
 ```
 [链接到百度][1]
 
-[链接到Google][2]
+[链接到 Google][2]
 
 [还是链接到百度][1]
 
-[1]:https://www.baidu.com  
+[1]:https://www.baidu.com
 [2]:https://www.google.com
+
 注：
-'[1]:https://www.baidu.com' 和 '[2]:https://www.google.com' 这几个链接可以写到文章的最后，就相当于word中的引用
+'[1]:https://www.baidu.com' 和 '[2]:https://www.google.com' 这几个链接可以写到文章的最后，就相当于 word 中的引用
 ```
+
 效果：
 
 [链接到百度][1]
 
-[链接到Google][2]
+[链接到 Google][2]
 
 [还是链接到百度][1]
 
-[1]:https://www.baidu.com  
-[2]:https://www.google.com 
+[1]:https://www.baidu.com
+[2]:https://www.google.com
 
 ### 图片
 
 ```
-![图片的alt](图片的路径，可以是相对路径，也可以是绝对路径 "图片的title")
+![图片的 alt](图片的路径，可以是相对路径，也可以是绝对路径 "图片的 title")
 例如：
 ![无名](/assets/images/posts/markdown/6G0U014.jpg "无名")
-其中图片的alt和title可以不写
+其中图片的 alt 和 title 可以不写
 例如：
 ![](/assets/images/posts/markdown/6G0U014.jpg)
 ```
+
 效果：
+
 ![无名](/assets/images/posts/markdown/6G0U014.jpg "无名")
 
 图片也可以使用参考链接的形式
@@ -284,40 +331,46 @@ http://www.baidu.com
 ```
 
 #### 限制图片大小并居中
-许多 MarkDown 编辑器中直接按原图大小显示图片，造成版面凌乱。使用该命令`<img src="图片地址" width="图片显示宽度" height="显示高度" alt="图片名称"/>`设置图片大小，再用`<div style="text-align:center"></div>`命令包裹达到居中效果。
 
-```
+许多 MarkDown 编辑器中直接按原图大小显示图片，造成版面凌乱。使用该命令 `<img src="图片地址" width="图片显示宽度" height="显示高度" alt="图片名称"/>` 设置图片大小，再用 `<div style="text-align:center"></div>` 命令包裹达到居中效果。
+
+```html
 <div style="text-align:center"><img src="/assets/images/posts/markdown/88070423gw1ep30aw8an7g204d04gkgd.gif" width="157" height="160" alt="亦菲表演机器猫"/></div>
 ```
+
 <div style="text-align:center"><img src="/assets/images/posts/markdown/88070423gw1ep30aw8an7g204d04gkgd.gif" width="157" height="160" alt="亦菲表演机器猫"/></div>
 
 ### 使用表情
 
-Git中的Markdown语法扩展中包括了一些表情包。
+Git 中的 Markdown 语法扩展中包括了一些表情包。
+
 用法：使用两个冒号将表情夹杂起来即可
 
 例如：
 
-`表情一：:+1:,表情二：:o:`
+` 表情一：:+1:, 表情二：:o:`
 
 效果：
 
-表情一： :+1: ,表情二： :o:  
+表情一： :+1: , 表情二： :o:
 
-更多表情可以查看[表情大全](https://www.webpagefx.com/tools/emoji-cheat-sheet/)
+更多表情可以查看 [表情大全](https://www.webpagefx.com/tools/emoji-cheat-sheet/)
 
-### 忽略Markdown关键字
+### 忽略 Markdown 关键字
 
-和C语言printf函数一样，如果我们不想让某个字符转换成Markdown关键字，可以在前面加上`\` .比如我们想输入两个\*,就可以用：
-`\*\*取消Markdown关键字`
+和 C 语言 printf 函数一样，如果我们不想让某个字符转换成 Markdown 关键字，可以在前面加上 `\` . 比如我们想输入两个 \*, 就可以用：
 
-效果：\*\*取消Markdown关键字
+`\*\* 取消 Markdown 关键字 `
+
+效果：\*\* 取消 Markdown 关键字
 
 ### 实践
-简书 	http://www.jianshu.com/  
+
+简书 	http://www.jianshu.com/
 github 	   https://github.com/
 
 ## 参考资料
+
 官网地址： http://wowubuntu.com/markdown/basic.html
 
 

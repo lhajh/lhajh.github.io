@@ -49,7 +49,7 @@ keywords: css
 在流程的 CSS 框架，比如 Bootstrap 和 Foundation 中，你会经常看到对这一策略的应用。
 
 在流程框架中可以看到这样一些例子：
-```
+```css
 .hide { display: none; }
 .text-center { text-align: center; }
 ```
@@ -58,7 +58,7 @@ keywords: css
 我们已经创建了自己的工具文件并在各个应用之间共用，我们使用一些公共工具来减少为每个元素写特定样式的需求。
 
 关于这点，有一个不错的例子，使用 margin 和 padding 工具。这里我们有一个 padding 工具的示例（我们也定义了 margin 相关的工具，以及只有 padding-left 和 padding-right 的工具等）：
-```
+```css
 .padding-0 { padding: 0; }
 .padding-xxs { padding: 5px; }
 .padding-xs { padding: 10px; }
@@ -77,11 +77,11 @@ keywords: css
 有一些复选框的表单。 在这个特定的情况下，你需要你的复选框内联（并排）。
 
 你要是试图像这样写你的风格：
-```
+```css
 .user-form li a { color: red; }
 ```
 你意识到你需要列表元素中的一个链接实际上是黑色的。 所以你试图写一个黑色链接的工具类：
-```
+```css
 .link--black { color: black; }
 ```
 这个 .link - 黑色链接将被CSS的特殊性所覆盖，并且将无法压倒 .user-form li 风格。
@@ -91,7 +91,7 @@ keywords: css
 通过上面的例子，你应该明白锚标签的颜色应该是一个远离默认链接颜色的变体。
 
 所以，在这种情况下，我会100％确定一个额外的工具类来处理红色链接。所以这是一个在实践中看起来像什么的例子：
-```
+```css
 a { 
   color: blue;
   &:hover {
@@ -113,11 +113,13 @@ a {
 使用 BEM 的一个例子是当你使用一个具有很多具体样式的组件时，它会变得很复杂很混乱并且无法使用 utilitiy 。
 
 举个上述那样的例子：
-```
+```html
 // HTML snippet
 <div class=”profile”>
   <img src=”person.jpg” class=”profile__photo”/>
 </div>
+```
+```css
 // BEM CSS
 .profile {
   background-color: white;
