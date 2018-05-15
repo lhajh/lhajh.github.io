@@ -78,7 +78,7 @@ GBPduHjWfJU1mZqcPM3BikjYKF6xKhlKIys3i1MU2eJHqWGImDHzWdD6xhMNLGVpbP2M5SN6bnxn2kSE
 [空行]
 ### 标题状态
 [空行]
-------
+---
 [空行]
 - 列表状态
 - 列表状态
@@ -91,7 +91,7 @@ GBPduHjWfJU1mZqcPM3BikjYKF6xKhlKIys3i1MU2eJHqWGImDHzWdD6xhMNLGVpbP2M5SN6bnxn2kSE
 
 ### 标题状态
 
-------
+---
 
 - 列表状态
 - 列表状态
@@ -99,6 +99,27 @@ GBPduHjWfJU1mZqcPM3BikjYKF6xKhlKIys3i1MU2eJHqWGImDHzWdD6xhMNLGVpbP2M5SN6bnxn2kSE
 ### 换行
 
 换行的时候 结尾要加上 两个空格。
+
+在当前行的结尾加 2 个空格  
+这行就会新起一行
+
+### 分隔符
+
+如果你有写分割线的习惯，可以新起一行输入三个减号 `-`。当前后都有段落时，请空出一行：
+
+```
+前面的段落
+[空行]
+---
+[空行]
+后面的段落
+```
+
+前面的段落
+
+---
+
+后面的段落
 
 ### 强调
 
@@ -109,7 +130,7 @@ GBPduHjWfJU1mZqcPM3BikjYKF6xKhlKIys3i1MU2eJHqWGImDHzWdD6xhMNLGVpbP2M5SN6bnxn2kSE
 
 但是，如果你的 `*` 、 `_` 和 `~` 两边都有空白的话，它们就只会被当成普通的符号：这是一段* 文本强调 *的说明示例。
 
-如果要在文字前后直接插入普通的星号或底线，你可以用反斜线（转义符）：\*this text is surrounded by literal asterisks\*
+`\*如果要在文字前后直接插入普通的星号或底线，你可以用反斜线（转义符）\*`：\*如果要在文字前后直接插入普通的星号或底线，你可以用反斜线（转义符）\*
 
 
 ### 无序列表
@@ -165,10 +186,10 @@ GBPduHjWfJU1mZqcPM3BikjYKF6xKhlKIys3i1MU2eJHqWGImDHzWdD6xhMNLGVpbP2M5SN6bnxn2kSE
 ```
 1. 买菜
 2. 洗菜
-3. 切菜
+6. 切菜
 4. 炒菜
 5. 吃菜
-6. 洗碗
+9. 洗碗
 ```
 
 效果：
@@ -179,6 +200,54 @@ GBPduHjWfJU1mZqcPM3BikjYKF6xKhlKIys3i1MU2eJHqWGImDHzWdD6xhMNLGVpbP2M5SN6bnxn2kSE
 4. 炒菜
 5. 吃菜
 6. 洗碗
+
+**注：前面数字可以不按顺序来**
+
+### 列表嵌套
+
+```
+1. 列出所有元素：
+    - 无序列表元素 A
+        1. 元素 A 的有序子列表
+    - 前面加四个空格
+2. 列表里的多段换行：
+    前面必须加四个空格，
+    这样换行，整体的格式不会乱
+3. 列表里引用：
+
+    > 前面空一行
+
+    > 仍然需要在 >  前面加四个空格
+
+4. 列表里代码段：
+
+    ```
+    前面四个空格，之后按代码语法 ``` 书写
+    ```
+
+        或者直接空八个，引入代码块
+```
+
+1. 列出所有元素：
+    - 无序列表元素 A
+        1. 元素 A 的有序子列表
+    - 前面加四个空格
+2. 列表里的多段换行：
+    前面必须加四个空格，
+    这样换行，整体的格式不会乱
+3. 列表里引用：
+
+    > 前面空一行
+
+    > 仍然需要在 >  前面加四个空格
+
+4. 列表里代码段：
+
+    ```
+    前面四个空格，之后按代码语法 ``` 书写
+    ```
+
+        或者直接空八个，引入代码块
 
 ### 引用
 
@@ -191,6 +260,50 @@ GBPduHjWfJU1mZqcPM3BikjYKF6xKhlKIys3i1MU2eJHqWGImDHzWdD6xhMNLGVpbP2M5SN6bnxn2kSE
 效果：
 
 > 海明威曾经写过：我可以被杀死，但是不可以被打败
+
+### 引用嵌套
+
+```
+- 引用里嵌套引用
+
+> 最外层引用
+> > 多一个 > 嵌套一层引用
+> > > 可以嵌套很多层
+
+- 引用里嵌套列表
+
+> - 这是引用里嵌套的一个列表
+> - 还可以有子列表
+>     * 子列表需要从 - 之后延后四个空格开始
+
+- 引用里嵌套代码块
+
+>     同样的，在前面加四个空格形成代码块
+>  
+> ```
+> 或者使用 ``` 形成代码块
+> ```
+```
+
+- 引用里嵌套引用
+
+> 最外层引用
+> > 多一个 > 嵌套一层引用
+> > > 可以嵌套很多层
+
+- 引用里嵌套列表
+
+> - 这是引用里嵌套的一个列表
+> - 还可以有子列表
+>     * 子列表需要从 - 之后延后四个空格开始
+
+- 引用里嵌套代码块
+
+>     同样的，在前面加四个空格形成代码块
+>  
+> ```
+> 或者使用 ``` 形成代码块
+> ```
 
 ### 表格
 
@@ -234,7 +347,7 @@ GBPduHjWfJU1mZqcPM3BikjYKF6xKhlKIys3i1MU2eJHqWGImDHzWdD6xhMNLGVpbP2M5SN6bnxn2kSE
 
 插入代码的方式有两种
 
-1. 在每行代码前加入 4 个空格或者添加一个制表符（TAB 键）
+1. 在每行代码前加入 4 个空格或者添加一个制表符（TAB 键）.制表符长度为 4
 2. 在代码两侧添加三个反引号‘```’。
 
 #### 方式一
@@ -246,31 +359,85 @@ GBPduHjWfJU1mZqcPM3BikjYKF6xKhlKIys3i1MU2eJHqWGImDHzWdD6xhMNLGVpbP2M5SN6bnxn2kSE
 ```
 - 列表项
 - 列表项
-  [TAB][TAB]printf("hello world!");
+[空行]
+[TAB][TAB]printf("hello world!");
+[空行]
+本例中制表符长度为 2
 ```
 
 效果：
 
 - 列表项
 - 列表项
-		printf("hello world!");
 
-在列表项状态下，需要输入两次 TAB 键 (制表符) 才能以代码格式插入。
+		printf("hello world!");
 
 #### 方式 2
 
-反引号最好在代码的前后行添加，而不是直接加在代码两边。
+如果你只想高亮语句中的某个函数名或关键字，可以使用这个符号 \` 中间夹着代码 \`function_name()\` `function_name()` 实现
 
-- 使用这个符号 ` 中间夹着代码
-	- `<br>`
-- 使用 三个 ` 符号成对夹代码
+通常编辑器根据代码片段适配合适的高亮方法，但你也可以用 \`\`\` 包裹一段代码，并指定一种语言
 
+
+\`\`\`js
+
+$(document).ready(function () {
+
+  alert('hello world');
+
+});
+
+\`\`\`
+
+
+```js
+// js
+$(document).ready(function () {
+    alert('hello world');
+});
 ```
+
+```html
+<!-- html -->
 <ul>
 	<li> 好好学习 </li>
 	<li> 天天向上 </li>
 	<li> 锻炼身体 </li>
 </ul>
+```
+
+```css
+/* css */
+a {
+	color: red;
+}
+
+```
+
+支持的语言：`1c, abnf, accesslog, actionscript, ada, apache, applescript, arduino, armasm, asciidoc, aspectj, autohotkey, autoit, avrasm, awk, axapta, bash, basic, bnf, brainfuck, cal, capnproto, ceylon, clean, clojure, clojure-repl, cmake, coffeescript, coq, cos, cpp, crmsh, crystal, cs, csp, css, d, dart, delphi, diff, django, dns, dockerfile, dos, dsconfig, dts, dust, ebnf, elixir, elm, erb, erlang, erlang-repl, excel, fix, flix, fortran, fsharp, gams, gauss, gcode, gherkin, glsl, go, golo, gradle, groovy, haml, handlebars, haskell, haxe, hsp, htmlbars, http, hy, inform7, ini, irpf90, java, javascript, json, julia, kotlin, lasso, ldif, leaf, less, lisp, livecodeserver, livescript, llvm, lsl, lua, makefile, markdown, mathematica, matlab, maxima, mel, mercury, mipsasm, mizar, mojolicious, monkey, moonscript, n1ql, nginx, nimrod, nix, nsis, objectivec, ocaml, openscad, oxygene, parser3, perl, pf, php, pony, powershell, processing, profile, prolog, protobuf, puppet, purebasic, python, q, qml, r, rib, roboconf, rsl, ruby, ruleslanguage, rust, scala, scheme, scilab, scss, smali, smalltalk, sml, sqf, sql, stan, stata, step21, stylus, subunit, swift, taggerscript, tap, tcl, tex, thrift, tp, twig, typescript, vala, vbnet, vbscript, vbscript-html, verilog, vhdl, vim, x86asm, xl, xml, xquery, yaml, zephir`
+
+反引号最好在代码的前后行添加，而不是直接加在代码两边。
+
+如你不需要代码高亮，可以用下面的方法禁用：
+
+\`\`\`
+nohighlight
+
+// js
+
+$(document).ready(function () {
+
+alert('hello world');
+
+});
+
+\`\`\`
+
+```nohighlight
+// js
+$(document).ready(function () {
+    alert('hello world');
+});
 ```
 
 ### 连接
@@ -362,7 +529,7 @@ Git 中的 Markdown 语法扩展中包括了一些表情包。
 
 更多表情可以查看 [表情大全](https://www.webpagefx.com/tools/emoji-cheat-sheet/)
 
-### 忽略 Markdown 关键字
+### 忽略 Markdown 关键字 (转义)
 
 和 C 语言 printf 函数一样，如果我们不想让某个字符转换成 Markdown 关键字，可以在前面加上 `\` . 比如我们想输入两个 \*, 就可以用：
 
@@ -377,7 +544,9 @@ github 	   https://github.com/
 
 ## 参考资料
 
-官网地址： http://wowubuntu.com/markdown/basic.html
+- [官网地址](http://wowubuntu.com/markdown/basic.html)
+- [Markdown 编辑器语法指南](https://segmentfault.com/markdown)
+
 
 
 
