@@ -20,8 +20,18 @@ Markdown 是一种轻量级的「标记语言」，它的优点很多，目前�
 ## 工具
 
 工具茫茫多
-- windows 下 [markdownPad2](http://markdownpad.com/)
-- 在线 [dillinger.io](http://dillinger.io/)
+- windows
+	- [markdownPad2](http://markdownpad.com/)
+	- [MarkPad](http://code52.org/DownmarkerWPF/)
+- Linux
+	- [ReText](http://sourceforge.net/p/retext/home/ReText/)
+- Mac
+	- [Mou](http://mouapp.com/)
+- 在线
+	- [Dillinger.io](http://dillinger.io/)
+	- [Markable.in](http://markable.in/)
+- 浏览器插件
+	- [MaDe](https://chrome.google.com/webstore/detail/oknndfeeopgpibecfjljjfanledpbkog) (chrome)
 
 ## MarkdownPad2.5 注册码
 
@@ -105,20 +115,29 @@ GBPduHjWfJU1mZqcPM3BikjYKF6xKhlKIys3i1MU2eJHqWGImDHzWdD6xhMNLGVpbP2M5SN6bnxn2kSE
 
 ### 分隔符
 
-如果你有写分割线的习惯，可以新起一行输入三个减号 `-`。当前后都有段落时，请空出一行：
+你可以在一行中用三个以上的星号、减号、底线来建立一个分隔线，行内不能有其他东西。你也可以在星号或是减号中间插入空格。当前后都有段落时，请空出一行。下面每种写法都可以建立分隔线：
 
 ```
 前面的段落
 [空行]
----
+* * *
+***
+*****
+- - -
+---------------------------------------
 [空行]
 后面的段落
+
 ```
 
 前面的段落
 
 ---
-
+* * *
+***
+*****
+- - -
+---------------------------------------
 后面的段落
 
 ### 强调
@@ -447,11 +466,14 @@ $(document).ready(function () {
 ```
 [百度](http://www.baidu.com)
 http://www.baidu.com
+<http://www.baidu.com>
 ```
 
 [百度](http://www.baidu.com)
 
 http://www.baidu.com
+
+<http://www.baidu.com>
 
 下面是一个参考链接的示例:
 
@@ -508,10 +530,10 @@ http://www.baidu.com
 许多 MarkDown 编辑器中直接按原图大小显示图片，造成版面凌乱。使用该命令 `<img src="图片地址" width="图片显示宽度" height="显示高度" alt="图片名称"/>` 设置图片大小，再用 `<div style="text-align:center"></div>` 命令包裹达到居中效果。
 
 ```html
-<div style="text-align:center"><img src="/assets/images/posts/markdown/88070423gw1ep30aw8an7g204d04gkgd.gif" width="157" height="160" alt="亦菲表演机器猫"/></div>
+<div style="text-align:center"><img src="/assets/images/posts/markdown/aw8an.gif" width="157" height="160" alt="亦菲表演机器猫"/></div>
 ```
 
-<div style="text-align:center"><img src="/assets/images/posts/markdown/88070423gw1ep30aw8an7g204d04gkgd.gif" width="157" height="160" alt="亦菲表演机器猫"/></div>
+<div style="text-align:center"><img src="/assets/images/posts/markdown/aw8an.gif" width="157" height="160" alt="亦菲表演机器猫"/></div>
 
 ### 使用表情
 
@@ -544,9 +566,10 @@ Git 中的 Markdown 语法扩展中包括了一些表情包。
 
 ## 参考资料
 
-- [官网地址](http://wowubuntu.com/markdown/basic.html)
+- [简明版 Markdown 语法说明(简体中文版)](http://wowubuntu.com/markdown/basic.html)
+- [完整版 Markdown 语法说明(简体中文版)](http://wowubuntu.com/markdown/index.html)
 - [Markdown 编辑器语法指南](https://segmentfault.com/markdown)
-
+- [怎样引导新手使用 Markdown？](https://www.zhihu.com/question/20409634)
 
 
 
