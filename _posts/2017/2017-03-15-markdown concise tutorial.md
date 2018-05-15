@@ -440,7 +440,7 @@ $(document).ready(function () {
 });
 ```
 
-### 连接
+### 链接
 
 下面是行内链接示例:
 
@@ -539,8 +539,8 @@ Git 中的 Markdown 语法扩展中包括了一些表情包。
 
 ### 实践
 
-简书 	http://www.jianshu.com/
-github 	   https://github.com/
+- [简书](http://www.jianshu.com/)
+- [github](https://github.com/)
 
 ## 参考资料
 
