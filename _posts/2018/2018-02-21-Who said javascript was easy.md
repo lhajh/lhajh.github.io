@@ -31,7 +31,7 @@ new Date() 可以接受：
 
 ## 3. Replace 并不“替代”
 
-```
+```js
 let s = "bob"
 const replaced = s.replace('b', 'l')
 replaced === "lob"
@@ -40,13 +40,13 @@ s === "bob"
 我觉得这是一件好事，因为我不喜欢函数改变它们的输入。 你还应该知道 replace 只会替换第一个匹配的字符串:
 
 如果你想替换所有匹配的字符串，你可以使用带 `/g` 标志的正则表达式 :
-```
+```js
 "bob".replace(/b/g, 'l') === 'lol' // 替换所有匹配的字符串
 ```
 
 ## 4. 比较的时候要注意
 
-```
+```js
 // These are ok
 'abc' === 'abc' // true
 1 === 1         // true
@@ -59,7 +59,7 @@ s === "bob"
 
 ## 5. 数组不是[原始数据类型](https://developer.mozilla.org/zh-CN/docs/Glossary/Primitive)
 
-```
+```js
 typeof {} === 'object'  // true
 typeof 'a' === 'string' // true
 typeof 1 === number     // true
@@ -71,7 +71,7 @@ typeof [] === 'object'  // true
 ## 6. 闭包
 
 这是一个很有名的面试题：
-```
+```js
 const Greeters = []
 for (var i = 0 ; i < 10 ; i++) {
   Greeters.push(function () { return console.log(i) })
@@ -89,7 +89,7 @@ Greeters[2]() // 10
     > let和var的不同在于作用域。var的作用域是最近的函数块，let的作用域是最近的封闭块，封闭块可以小于函数块（如果不在任何块中，则let和var都是全局的）。（来源）
 
 - 替代方法: 用 bind:
-    ```
+    ```js
     Greeters.push(console.log.bind(null, i))
     ```
 还有很多其他方法。这只是我的两个首选
@@ -97,7 +97,7 @@ Greeters[2]() // 10
 ## 7. 谈到 bind
 
 你认为这个会输出什么？
-```
+```js
 class Foo {
   constructor (name) {
     this.name = name
@@ -120,16 +120,16 @@ new Foo('dog').asyncGreet()
 原因： greet 没有在正确的上下文中运行。同样，这个问题依然有很多解决方案。
 
 我个人喜欢
-```
+```js
 asyncGreet () {
-this.someThingAsync()
-.then(this.greet.bind(this))
+  this.someThingAsync()
+  .then(this.greet.bind(this))
 }
 ```
 这样可以确保类的实例作为上下文调用 greet。
 
 如果你认为 greet 不应该在实例上下文之外运行, 你可以在类的 constructor 中绑定它:
-```
+```js
 class Foo {
   constructor (name) {
     this.name = name
@@ -138,7 +138,7 @@ class Foo {
 }
 ```
 你还应该知道箭头函数（ => ）可以用来保留上下文。这个方法也可以：
-```
+```js
 asyncGreet () {
   this.someThingAsync()
   .then(() => {

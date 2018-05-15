@@ -17,11 +17,11 @@ keywords: JavaScript, API
 ### 1.简单
 
 操作某个元素的css属性，下面是原生的方法:
-```
+```js
 document.querySelector('#id').style.color = 'red';
 ```
 封装之后
-```
+```js
 function a (selector, color) {
   document.querySelector(selector).style.color = color
 }
@@ -34,7 +34,7 @@ a('#a', 'red')
 ### 2.可阅读性
 
 `a(‘#a’, ‘red’)` 是个好函数，帮助我们简单实用地改变某个元素，但问题来了，如果第一次使用该函数的人来说会比较困惑，a 函数是啥函数，没有人告诉他。开发接口有必要知道一点，人都是懒惰的，从颜色赋值这个函数来说，虽然少写了代码，但是增加了记忆成本。每次做这件事情的时候都需要有映射关系。 `a—->color`. 如果是简单的几个无所谓，但是通常一套框架都有几十甚至上百的 api，映射成本增加会使得程序员哥哥崩溃。 我们需要的就是使得接口有意义，下面我们改写一下 a 函数：
-```
+```js
 function letSomeElementChangeColor(selector, color) {
   document.querySelectorAll(selector, color);
 }
@@ -44,7 +44,7 @@ letSomeElementChangeColor 相对于 a 来说被赋予了语言意义，任何人
 ### 3.减少记忆成本
 
 我们刚刚的函数也是这样的它太长了，letSomeElementChangeColor 虽然减少了映射成本，但是增加了记忆成本。要知道，包括学霸在内，任何人都不喜欢被单词。原生获取 dom 的 api 也同样有这个问题 `document.getElementsByClassName`、 `document.getElementsByName`、`document.querySelectorAll` 这些 api 给人的感觉就是单词太长了，虽然他给出的意义是很清晰，然而这种做法是建立在牺牲简易性的基础上进行的。于是我们又再次改写这个之前函数
-```
+```js
 function setColor(selector, color) {
   xxxxxxxxxxxx
 }
@@ -54,7 +54,7 @@ function setColor(selector, color) {
 ### 4.可延伸
 
 所谓延伸就是指函数的使用像流水一样按照书写的顺序执行形成执行链条:
-```
+```js
 document.getElementById('id').style.color = 'red';
 
 document.getElementById('id').style.fontSize = '12px';
@@ -62,7 +62,7 @@ document.getElementById('id').style.fontSize = '12px';
 document.getElementById('id').style.backgourdColor = 'pink';
 ```
 用我们之前的之前的方法是再次封装两个函数 `setFontSize`, `setbackgroundColor`; 然后执行它们 `setColor(‘id’, ‘red’);` `setFontSiez(‘id’, ’12px’);` `setbackgroundColor(‘id’, ‘pink’);` 显然，这样的做法没有懒出境界来；id 元素每次都需要重新获取，影响性能，失败；每次都需要添加新的方法， 失败 每次还要调用这些方法，还是失败。下面我们将其改写为可以延伸的函数 首先将获取 id 方法封装成对象,然后在对象的每个方法中返回这个对象：
-```
+```js
 function getElement(selector) {
   this.style = document.querySelecotrAll(selector).style;
 }
@@ -90,7 +90,7 @@ el.color('red').background('pink').fontSize('12px');
 简单、流畅、易读后面我们会在参数里面讲到如何继续优化。所以，大家都比较喜欢用 jQuery 的 api，虽然一个 `$` 符号并不代表任何现实意义，但简单的符号有利于我们的使用。它体现了以上的多种原则，简单，易读，易记，链式写法，多参处理。
 
 nightmare:
-```
+```js
 document.getElementById('id').style.color = 'red';
 
 document.getElementById('id').style.fontSize = '12px';
@@ -98,7 +98,7 @@ document.getElementById('id').style.fontSize = '12px';
 document.getElementById('id').style.backgourdColor = 'pink';
 ```
 dream:
-```
+```js
 $('id').css({color:'red', fontSize:'12px', backgroundColor:'pink'})
 ```
 
@@ -141,7 +141,7 @@ set.........
 判断参数的类型为你的程序提供稳定的保障
 
 //我们规定，color 接受字符串类型
-```
+```js
 function setColor(color) {
   if(typeof color !== 'string') return;
   dosomething
@@ -151,11 +151,11 @@ function setColor(color) {
 ### 2.使用 json 方式传参
 
 使用 json 的方式传值很多好处，它可以给参数命名，可以忽略参数的具体位置，可以给参数默认值等等 比如下面这种糟糕的情况:
-```
+```js
 function fn(param1, param2...............paramN)
 ```
 你必须对应地把每一个参数按照顺序传入，否则你的方法就会偏离你预期去执行，正确的方法是下面的做法。
-```
+```js
 function fn(json) {
   //为必须的参数设置默认值
    var default = extend({
@@ -172,7 +172,7 @@ function fn(json) {
 ### 1.可扩展的接口
 
 软件设计最重要的原则之一：永远不修改接口，只扩展它！可扩展性同时会要求接口的职责单一，多职责的接口很难扩展。 举个栗子：
-```
+```js
 //需要同时改变某个元素的字体和背景
 // Nightmare:
 function set(selector, color) {
@@ -220,7 +220,7 @@ sayBonjour.call||apply(obj);//1
 ### 2.抛出错误
 
 大多数开发者不希望出错了还需要自己去找带对应得代码，最好方式是直接在 console 中输出，告诉用户发生了什么事情。我们可以用到浏览器的输出 api: console.log/warn/error。你还可以为自己的程序留些后路: try…catch。
-```
+```js
 function error (a) {
   if(typeof a !== 'string') {
     console.error('param a must be type of string')
@@ -239,7 +239,7 @@ function error() {
 ## 六、可预见性
 
 可预见性味程序接口提供健壮性，为保证你的代码顺利执行，必须为它考虑到非正常预期的情况。我们看下不可以预见的代码和可预见的代码的区别, 用之前的 setColor
-```
+```js
 //nighware
 function set(selector, color) {
   document.getElementById(selector).style.color = color;
@@ -292,7 +292,7 @@ zepto.init = function(selector, context) {
 ## 七、注释和文档的可读性
 
 一个最好的接口是不需要文档我们也会使用它，但是往往接口量一多和业务增加，接口使用起来也会有些费劲。所以接口文档和注释是需要认真书写的。注释遵循简单扼要地原则，给多年后的自己也给后来者看：
-```
+```js
 //注释接口，为了演示 PPT 用
 
 function commentary() {

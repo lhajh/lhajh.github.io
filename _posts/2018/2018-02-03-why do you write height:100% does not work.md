@@ -77,7 +77,7 @@ Web 浏览器在计算有效宽度时会考虑浏览器窗口的打开宽度。�
 要特别注意的一点是，在 `<body>` 之中的元素的父元素并不仅仅只是 `<body>`，还包括了 `<html>`。
 
 所以我们要同时设置这两者的 height，只设置其中一个是不行的：
-```
+```css
 html,body{
   height: 100%;
   margin: 0;
@@ -89,7 +89,7 @@ html,body{
 
 ## 5.关于line-height居中的一点误解？
 
-```
+```html
 <!DOCTYPE html>
 <html lang="en">
 
@@ -131,7 +131,7 @@ html,body{
 
 这时候要想居中，可以如下，做一个 div 嵌套，一个负责高度，一个负责居中，虽然感觉并不会这样用到，但是居中还是很灵验的~
 
-```
+```html
 <!DOCTYPE html>
 <html lang="en">
 

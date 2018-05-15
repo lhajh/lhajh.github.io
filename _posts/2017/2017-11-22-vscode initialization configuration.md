@@ -410,6 +410,20 @@ VSCode 初始化配置
 
 ## 一些小技巧
 
+### [CSS region folding](https://code.visualstudio.com/updates/v1_23#_css-region-folding)
+
+You can now use `/* #region */` and `/* #endregion */` to mark a region as foldable in CSS/SCSS/Less. In SCSS/Less, you can also use `// #region` and `// #endregion` as folding markers.
+
+![css-folding](/assets/images/posts/vscode/css-folding.gif)
+
+### [Markdown workspace symbol search](https://code.visualstudio.com/updates/v1_23#_markdown-workspace-symbol-search)
+
+Markdown now has support for workspace symbol search. After opening a Markdown file for the first time, you can use (`⌘T`) to search through the headers of all Markdown files in the current workspace:
+
+![markdown-workspace-symbol-search](/assets/images/posts/vscode/markdown-workspace-symbol-search.png)
+
+## 参考资料
+
 - [VsCode 中使用 Emmet 神器快速编写 HTML 代码](https://www.cnblogs.com/summit7ca/p/6944215.html)
 - [微软 VS Code 开发技巧集锦](https://juejin.im/entry/5abca6d36fb9a028c675c96a)
 - [VS Code Tips and Tricks](https://github.com/Microsoft/vscode-tips-and-tricks)

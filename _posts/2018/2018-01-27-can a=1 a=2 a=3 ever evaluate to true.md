@@ -18,7 +18,7 @@ keywords: ==
 ### 修改 toString()
 
 利用松散相等运算符 == 的工作原理，你可以简单地创建一个带有自定义 toString (或者 valueOf ) 函数的对象，在每一次使用它时候改变它所的返回值，使其满足所有三个条件。
-```
+```js
 const a = {
   i: 1,
   toString: function () {
@@ -35,7 +35,7 @@ if(a == 1 && a == 2 && a == 3) {
 ### 利用 toString 调用 .join 
 
 == 调用 toString 调用 .join 数组：
-```
+```js
 a = [1,2,3];
 a.join = a.shift;
 console.log(a == 1 && a == 2 && a == 3);
@@ -44,14 +44,14 @@ console.log(a == 1 && a == 2 && a == 3);
 ### Symbol.toPrimitive
 
 使用 Symbol.toPrimitive 它是一个 ES6 相当于 toString/valueOf：
-```
+```js
 let a = {[Symbol.toPrimitive]: ((i) => () => ++i) (0)};
 console.log(a == 1 && a == 2 && a == 3);
 ```
 
 ### 正则 + valueOf
 
-```
+```js
 var a = {
   r: /\d/g, 
   valueOf: function(){
@@ -69,7 +69,7 @@ if (a == 1 && a == 2 && a == 3) {
 ## 解法二：
 
 我不可否认——其他答案无疑是正确的，但你真的不能过错下面的代码：
-```
+```js
 var aﾠ = 1;
 var a = 2;
 var ﾠa = 3;
@@ -80,7 +80,7 @@ if(aﾠ==1 && a== 2 &&ﾠa==3) {
 请注意 if 语句中的奇怪间距。它是半宽度韩文 =,=。这是一个 Unicode 空格字符，但是 ECMAScript 不将其解释为一个空格 —— 这意味着它是一个有效的标识符。因此有三个完全不同的变量，一个是 a 后加半宽度韩文，一个是 a， 一个是 a 前加半宽度韩文。。。
 
 用下划线 _ 替代半宽度韩文，增加可读性，相同的代码看起来像这样：
-```
+```js
 var a_ = 1;
 var a = 2;
 var _a = 3;
@@ -89,7 +89,7 @@ if(a_==1 && a== 2 &&_a==3) {
 }
 ```
 类似的还有：
-```
+```js
 var a = 1;
 var ａ = 2;
 var а = 3;
@@ -108,7 +108,7 @@ if(a == 1 && ａ == 2 && а == 3) {
 这里有一整套的同形异义攻击（Homoglyph Attacks），通常是伪造的域名（例如 `wikipediа.org`（Cyrillic）vs `wikipedia.org`（Latin）），但也可以用代码表示。
 
 还有这样的：
-```
+```js
 var a = 1;
 var ﾠ1 = a;
 var ﾠ2 = a;
@@ -120,7 +120,7 @@ console.log( a ==ﾠ1 && a ==ﾠ2 && a ==ﾠ3 );
 ## 解法三：
 
 这是完全可能的！
-```
+```js
 var val = 0;
 Object.defineProperty(window, 'a', {
   get: function() {
@@ -132,7 +132,7 @@ if (a == 1 && a == 2 && a == 3) {
 }
 ```
 或者这样：
-```
+```js
 var i = 0;
 with({
   get a() {
@@ -150,7 +150,7 @@ with({
 在 JavaScript 中，没有[整数](https://stackoverflow.com/questions/33773296/is-there-or-isnt-there-an-integer-type-in-javascript/33774009#33774009)，但只有 Number，这是作为双精度浮点数实现的。
 
 这意味着如果一个数字 a 足够大，它可以被认为等于 3 个连续的整数：
-```
+```js
 a = 100000000000000000
 if (a == a+1 && a == a+2 && a == a+3){
   console.log("Precision loss!");
