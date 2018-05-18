@@ -24,7 +24,7 @@
     border: 6px solid #4183c4;
     border-radius: 50%;
     display: block;
-    position: absolute;
+    /* position: absolute; */
 }
 
 .posts-list-meta {
@@ -33,7 +33,7 @@
     left: -158px;
     font-size: 0.95em;
     line-height: 20px;
-    position: absolute;
+    /* position: absolute; */
 }
 
 .tooltip, .tooltip-inner {
