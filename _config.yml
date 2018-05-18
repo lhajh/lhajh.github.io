@@ -74,6 +74,15 @@ navs:
 # Sidebar to show popular repo
 side_bar_repo_limit: 8 # Number of repos to show
 
+# ---------------- #
+#      Search      #
+# ---------------- #
+simple_jekyll_search:
+  # 是否支持全文搜索
+  fulltext: false
+  # 最多显示多少条搜索结果
+  limit: 30
+
 # Google Analytics
 analytics :
   provider : google
