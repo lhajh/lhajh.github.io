@@ -1,7 +1,7 @@
 <div class="row">
 
     <div class="col-md-8">
-        <section class="container posts-content">
+        <section class="posts-content">
             {% assign sorted_categories = site.categories | sort %} {% for category in sorted_categories %}
             <h3>{{ category | first }}</h3>
             <ol class="posts-list" id="{{ category[0] }}">
