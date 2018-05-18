@@ -1,9 +1,21 @@
 <div class="row">
 
     <div class="col-md-8">
-
+        <section class="container posts-content">
+            {% assign sorted_categories = site.categories | sort %} {% for category in sorted_categories %}
+            <h3>{{ category | first }}</h3>
+            <ol class="posts-list" id="{{ category[0] }}">
+                {% for post in category.last %}
+                <li class="posts-list-item">
+                    <span class="posts-list-meta">{{ post.date | date:"%Y-%m-%d" }}</span>
+                    <a class="posts-list-name" href="{{ site.url }}{{ post.url }}">{{ post.title }}</a>
+                </li>
+                {% endfor %}
+            </ol>
+            {% endfor %}
+        </section>
         <!-- Blog list -->
-        <ul id="posts-list">
+        <!-- <ul id="posts-list">
             {% for post in site.posts %}
             <li class="posts-list-item">
                 <div class="posts-content">
@@ -13,7 +25,7 @@
                 </div>
             </li>
             {% endfor %}
-        </ul>
+        </ul> -->
 
         <!-- Pagination -->
         {% include pagination.html %}
@@ -24,13 +36,12 @@
     </div>
 
     <div class="col-md-4">
-		{% include sidebar-search.html %}
-        {% include sidebar-post-tag.html %}
+        {% include sidebar-search.html %} {% include sidebar-post-tag.html %}
     </div>
 
 </div>
 <script>
-    $(document).ready(function(){
+    $(document).ready(function () {
 
         // Enable bootstrap tooltip
         $("body").tooltip({ selector: '[data-toggle=tooltip]' });
