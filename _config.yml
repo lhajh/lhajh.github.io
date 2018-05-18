@@ -5,7 +5,9 @@
 # For technical reasons, this file is *NOT* reloaded automatically when you use
 # 'jekyll serve'. If you change this file, please restart the server process.
 
-# Site settings
+# ---------------- #
+#  Site settings   #
+# ---------------- #
 title: lhajh
 name: lhajh
 email: lh69jh@gmail.com
@@ -18,7 +20,9 @@ favicon: favicon.png # Image must be in assets/images
 
 url: https://lhajh.github.io # the base hostname & protocol for your site
 
-## Gem
+# ---------------- #
+#   Gem settings   #
+# ---------------- #
 gems:
   - jekyll-paginate
   - jekyll-geo-pattern
@@ -26,7 +30,9 @@ gems:
   - kramdown
   - jekyll-github-metadata
 
-# Build settings
+# ---------------- #
+#  Build settings  #
+# ---------------- #
 markdown: kramdown
 highlighter: rouge
 lsi:         false
@@ -42,14 +48,20 @@ kramdown:
   input: GFM
   enable_coderay: true
 
-# Disque
+# ---------------- #
+#  Disque settings #
+# ---------------- #
 disque: httpslhajhgithubio.disqus.com
 
-# Pagination
+# ----------------- #
+#Pagination settings#
+# ----------------- #
 paginate: 10
 paginate_path: 'page:num'
 
-# Navigation
+# ----------------- #
+#Navigation settings#
+# ----------------- #
 navs:
   -
     href: /
@@ -71,7 +83,9 @@ navs:
     href: /about
     label: About
 
-# Sidebar to show popular repo
+# ----------------- #
+#  Sidebar settings #
+# ----------------- #
 side_bar_repo_limit: 8 # Number of repos to show
 
 # ---------------- #
@@ -83,7 +97,9 @@ simple_jekyll_search:
   # 最多显示多少条搜索结果
   limit: 30
 
-# Google Analytics
+# ----------------- #
+# Analytics settings#
+# ----------------- #
 analytics :
   provider : google
   google :
