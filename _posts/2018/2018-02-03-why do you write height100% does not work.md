@@ -20,7 +20,7 @@ keywords: height
 ## 2.width:100%;
 
 我们写下这样一段代码，随意设置一个背景色便于观察元素
-```
+```html
 <body>
   <div style="width:100%;height:100%;background-color:blueviolet;">
     width:100%;height:100%;
@@ -33,7 +33,7 @@ keywords: height
 </div>
 
 
-```
+```html
 <body>
   <div style="width:100%;height:200px;background-color:blueviolet;">
     width:100%;height:200px;
@@ -51,7 +51,7 @@ keywords: height
 
 Web 浏览器在计算有效宽度时会考虑浏览器窗口的打开宽度。如果你不给宽度设定任何缺省值，对于块元素，那浏览器会自动将页面内容平铺填满整个横向宽度。即我们不设置宽，会自动填满整个横向宽度，如下：
 
-```
+```html
 <div style="height:100%;background-color:blueviolet;">
   height:100%;
 </div>
