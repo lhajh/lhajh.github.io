@@ -19,6 +19,7 @@ menu: Bookmark
 - [javascript 常用实例的实现与封装](https://segmentfault.com/a/1190000010225928)
 - [基础进阶系列](https://yangbo5207.github.io/wutongluo/ji-chu-jin-jie-xi-lie.html)
 - [DOM 操作成本到底高在哪儿？](https://segmentfault.com/a/1190000014070240#articleHeader0)
+- [前端JS代码规范](https://segmentfault.com/a/1190000012576194)
 - [fullPage.js](http://alvarotrigo.com/fullPage/) - To create fullscreen scrolling websites / single page websites
 - [lunr.js](http://lunrjs.com/) - Simple full-text search
 - [Trip.js](http://eragonj.github.io/Trip.js/index.html) - Help you customize a tutorial trip easily with more flexibilities
@@ -36,6 +37,10 @@ menu: Bookmark
 - [JS 高级必须知道的几个点！](https://segmentfault.com/a/1190000014405410)
 - [37 个 JavaScript 基本面试问题和解答](https://www.zcfy.cc/article/37-essential-javascript-interview-questions-and-answers)
 - [37 Essential JavaScript Interview Questions](https://www.toptal.com/javascript/interview-questions)
+- [现代 js 框架存在的根本原因](https://zcfy.cc/article/the-deepest-reason-why-modern-javascript-frameworks-exist)
+
+## 移动端
+- [手机端页面在项目中遇到的一些问题及解决办法（持续更新）](https://segmentfault.com/a/1190000015178877)
 
 ## 箴言
 - [懂得这 40 条编程箴言才称得上优秀程序员](http://www.itboth.com/d/fmyyemZ7zMba)
@@ -46,6 +51,7 @@ menu: Bookmark
 
 ## webpack
 - [Practice of separation development environment based on webpack](https://mp.weixin.qq.com/s?__biz=MzAxODE2MjM1MA==&mid=2651552516&idx=2&sn=d183f7190a8430f3bf2e1729f29ef9ee&pass_ticket=H45s%2Fvpm4mT1AvAjYR1gUS%2FPTKCqw9gOjrF2Jvqyt%2FwHOwYvMOfnM5VA2CMkMiZM)
+- [如何写好.babelrc？Babel的presets和plugins配置解析](https://excaliburhan.com/post/babel-preset-and-plugins.html)
 
 ## Git
 - [An hour to learn Git](http://www.cnblogs.com/best/p/7474442.html)
