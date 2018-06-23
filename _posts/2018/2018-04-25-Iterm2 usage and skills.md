@@ -1,9 +1,9 @@
 ---
 layout: post
-title: iterm2 用法与技巧
+title: iTerm2 用法与技巧
 categories: [mac]
-description: iterm2 用法与技巧
-keywords: mac, iterm2
+description: iTerm2 用法与技巧
+keywords: mac, iTerm2
 ---
 
 iTerm2 is a replacement for Terminal and the successor to iTerm. It works on Macs with macOS 10.10 or newer. iTerm2 brings the terminal into the modern age with features you never knew you always wanted.
@@ -190,10 +190,10 @@ Oh My Zsh 提供了一套系统别名（alias），来达到相同的功能。�
 
 ### 选中即复制
 
-iterm2 有 2 种好用的选中即复制模式。
+iTerm2 有 2 种好用的选中即复制模式。
 
-- 一种是用鼠标，在 iterm2 中，选中某个路径或者某个词汇，那么，iterm2 就自动复制了。
-- 另一种是无鼠标模式，command+f, 弹出 iterm2 的查找模式，输入要查找并复制的内容的前几个字母，确认找到的是自己的内容之后，输入 tab，查找窗口将自动变化内容，并将其复制。如果输入的是 shift+tab，则自动将查找内容的左边选中并复制。
+- 一种是用鼠标，在 iTerm2 中，选中某个路径或者某个词汇，那么，iTerm2 就自动复制了。
+- 另一种是无鼠标模式，command+f, 弹出 iTerm2 的查找模式，输入要查找并复制的内容的前几个字母，确认找到的是自己的内容之后，输入 tab，查找窗口将自动变化内容，并将其复制。如果输入的是 shift+tab，则自动将查找内容的左边选中并复制。
 
 ### 智能选中和打开
 
