@@ -1,7 +1,7 @@
 ---
 layout: post
 title: git本地分支和远程分支建立映射关系
-categories: Blog
+categories: Git
 description: git本地分支和远程分支建立映射关系
 keywords: git, 本地分支, 远程分支, 映射关系
 ---

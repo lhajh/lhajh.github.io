@@ -1,7 +1,7 @@
 ---
 layout: post
 title: git 错误集合
-categories: GitHub
+categories: Git
 description: git 错误集合
 keywords: git, error
 ---
@@ -18,8 +18,10 @@ git 错误集合
 ### 原因分析
 
 分析 git pull 的原理，实际上 git pull 是分了两步走的:
+
 1. 从远程 pull 下 origin/master 分支
 2. 将远程的 origin/master 分支与本地 master 分支进行合并  
+
 以上的错误，是出在了第二步，本地与远程文件合并时存在冲突
 
 ### 解决方法
@@ -73,6 +75,7 @@ $ git add .
 ## nothing added to commit but untracked files present
 
 ### 问题
+
 ```
 Untracked files: 
 ../target/ 

@@ -1,7 +1,7 @@
 ---
 layout: post
 title: git基本指令
-categories: Blog
+categories: Git
 description: git基本指令
 keywords: git, 指令
 ---
