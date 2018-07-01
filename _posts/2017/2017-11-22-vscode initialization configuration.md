@@ -12,11 +12,11 @@ VSCode 初始化配置
 
 此代码片段默认缩进是 2 个空格，如需要修改为 4 个空格，直接添加空格即可。
 
-注：不支持 tab 缩进，使用 tab 缩进会报错
+**注：不支持 tab 缩进，使用 tab 缩进会报错**
 
 ### HTML5 代码片段
 
-```
+```json
 "html5": {
   "prefix": "html5",
   "body": [
@@ -42,7 +42,7 @@ VSCode 初始化配置
 
 ### vue 代码片段
 
-```
+```json
 "initVue": {
 	"prefix": "initVue",
 	"body": [
@@ -91,6 +91,9 @@ VSCode 初始化配置
 
 ## 插件
 
+- Vim
+  - vim 被誉为『编辑器之神』，一旦学会了 vim 的指法，会让你终身受益，至少在你敲代码的年代会收益，毫无夸张, 它会让你摆脱烦人的，在敲代码的时候频繁的移动鼠标，这也是 vim 的设计理念之一 -- 脱离鼠标。
+  - [每日一 Vim](https://lhajh.github.io/vim/2018/05/08/the-notes-of-a-daily-vim.html)
 - Vetur
   - Vue 代码片段，语法高亮
   - [Doc](https://vuejs.github.io/vetur)
@@ -109,7 +112,7 @@ VSCode 初始化配置
   - 为 js 中的函数自动生成注释
 - vscode-fileheader
   - 文件头部注释
-- GitLens
+- GitLens — Git supercharged
   - Git 可视化工具，自带 diff 功能
 - Path Intellisense
   - 路径自动补全
@@ -141,34 +144,62 @@ VSCode 初始化配置
 
 ## 系统设置
 
-```
+```json
 {
-    // 字体
-    "editor.fontSize": 20,
-    "editor.fontFamily": "Consolas, Menlo, Monaco, 'Courier New', monospace",
-    // 一个制表符等于的空格数
-    "editor.tabSize": 2,
-    // 在“打开的编辑器”窗格中显示的编辑器数量。将其设置为 0 可隐藏窗格。
-    "explorer.openEditors.visible": 0,
-    // 自动保存（失焦保存）
-    "files.autoSave": "onFocusChange",
-    // 图标 插件名：VSCode Great Icons
-    "workbench.iconTheme": "vscode-great-icons",
-    // 主题 系统自带
-    "workbench.colorTheme": "Monokai Dimmed",
-    // 文件头部注释 插件名：vscode-fileheader 快捷键：control + option + i
-    // 文件作者
-    "fileheader.Author": "lhajh",
-    // 最后修改者
-    "fileheader.LastModifiedBy": "lhajh",
-    // 最后生成样式
-    "fileheader.tpl": "/*\r\n * @Author: {author}\r\n * @File: 文件描述\r\n * @Date: {createTime}\r\n * @Last Modified by: {lastModifiedBy}\r\n * @Last Modified time: {updateTime}\r\n */\r\n",
-    // 为函数生成注释 插件名：Document This 快捷键：control + option + d 两遍
-    // 注释添加描述
-    "docthis.includeDescriptionTag": true,
-    // 注释添加作者
-    "docthis.includeAuthorTag": true,
-    "docthis.authorName": "lhajh"
+  // 字体
+  "editor.fontSize": 20,
+  // 系统需要安装 Fira Code 字体, 如果你需要这个字体
+  // https://github.com/tonsky/FiraCode
+  "editor.fontFamily": "Fira Code, Consolas, Menlo, Monaco, 'Courier New', monospace",
+  "editor.fontLigatures": true,
+  // 一个制表符等于的空格数
+  "editor.tabSize": 2,
+  // 在“打开的编辑器”窗格中显示的编辑器数量。将其设置为 0 可隐藏窗格。
+  "explorer.openEditors.visible": 0,
+  // 自动保存（失焦保存）
+  "files.autoSave": "onFocusChange",
+  // 图标 插件名：VSCode Great Icons
+  "workbench.iconTheme": "vscode-great-icons",
+  // 主题 系统自带
+  "workbench.colorTheme": "Monokai Dimmed",
+  // 文件头部注释 插件名：vscode-fileheader 快捷键：control + option + i
+  // 文件作者
+  "fileheader.Author": "lhajh",
+  // 最后修改者
+  "fileheader.LastModifiedBy": "lhajh",
+  // 最后生成样式
+  "fileheader.tpl": "/*\r\n * @Author: {author}\r\n * @File: 文件描述\r\n * @Date: {createTime}\r\n * @Last Modified by: {lastModifiedBy}\r\n * @Last Modified time: {updateTime}\r\n */\r\n",
+  // 为函数生成注释 插件名：Document This 快捷键：control + option + d 两遍
+  // 注释添加描述
+  "docthis.includeDescriptionTag": true,
+  // 注释添加作者
+  "docthis.includeAuthorTag": true,
+  "docthis.authorName": "lhajh",
+  // gitlens 指定应该禁止哪些消息
+  "gitlens.advanced.messages": {
+    "suppressCommitHasNoPreviousCommitWarning": false,
+    "suppressCommitNotFoundWarning": false,
+    "suppressFileNotUnderSourceControlWarning": false,
+    "suppressGitVersionWarning": false,
+    "suppressLineUncommittedWarning": false,
+    "suppressNoRepositoryWarning": false,
+    "suppressResultsExplorerNotice": false,
+    "suppressShowKeyBindingsNotice": true,
+    "suppressUpdateNotice": false,
+    "suppressWelcomeNotice": true
+  },
+  // 控制键入时是否应自动显示建议
+  "editor.quickSuggestions": {
+    "strings": true
+  },
+  // element-helper 版本
+  "element-helper.version": "2.3",
+  // 控制是否显示工作台底部状态栏中的 Twitter 反馈 (笑脸图标)。
+  "workbench.statusBar.feedback.visible": false,
+  // 在默认不支持 Emmet 的语言中启用 Emmet 缩写功能。在此添加该语言与受支持的语言间的映射。
+  "emmet.includeLanguages": {
+    "vue-html": "html"
+  }
 }
 ```
 
@@ -223,69 +254,69 @@ VSCode 初始化配置
 
 ![](/assets/images/posts/vscode/ts-organize-imports.gif)
 
-```
+```json
 // 将键绑定放入此文件中以覆盖默认值
 [
-    {
-        "key": "ctrl+shift+oem_2",
-        "command": "editor.action.blockComment",
-        "when": "editorTextFocus && !editorReadonly"
-    },
-    {
-        "key": "shift+alt+a",
-        "command": "-editor.action.blockComment",
-        "when": "editorTextFocus && !editorReadonly"
-    },
-    {
-        "key": "ctrl+d",
-        "command": "editor.action.deleteLines",
-        "when": "editorTextFocus && !editorReadonly"
-    },
-    {
-        "key": "ctrl+shift+k",
-        "command": "-editor.action.deleteLines",
-        "when": "editorTextFocus && !editorReadonly"
-    },
-    {
-        "key": "ctrl+up",
-        "command": "editor.action.copyLinesUpAction",
-        "when": "editorTextFocus && !editorReadonly"
-    },
-    {
-        "key": "shift+alt+up",
-        "command": "-editor.action.copyLinesUpAction",
-        "when": "editorTextFocus && !editorReadonly"
-    },
-    {
-        "key": "alt+up",
-        "command": "editor.action.moveLinesUpAction",
-        "when": "editorTextFocus && !editorReadonly"
-    },
-    {
-        "key": "alt+up",
-        "command": "-editor.action.moveLinesUpAction",
-        "when": "editorTextFocus && !editorReadonly"
-    },
-    {
-        "key": "ctrl+down",
-        "command": "editor.action.copyLinesDownAction",
-        "when": "editorTextFocus && !editorReadonly"
-    },
-    {
-        "key": "shift+alt+down",
-        "command": "-editor.action.copyLinesDownAction",
-        "when": "editorTextFocus && !editorReadonly"
-    },
-    {
-        "key": "alt+down",
-        "command": "editor.action.moveLinesDownAction",
-        "when": "editorTextFocus && !editorReadonly"
-    },
-    {
-        "key": "alt+down",
-        "command": "-editor.action.moveLinesDownAction",
-        "when": "editorTextFocus && !editorReadonly"
-    }
+  {
+    "key": "ctrl+shift+oem_2",
+    "command": "editor.action.blockComment",
+    "when": "editorTextFocus && !editorReadonly"
+  },
+  {
+    "key": "shift+alt+a",
+    "command": "-editor.action.blockComment",
+    "when": "editorTextFocus && !editorReadonly"
+  },
+  {
+    "key": "ctrl+d",
+    "command": "editor.action.deleteLines",
+    "when": "editorTextFocus && !editorReadonly"
+  },
+  {
+    "key": "ctrl+shift+k",
+    "command": "-editor.action.deleteLines",
+    "when": "editorTextFocus && !editorReadonly"
+  },
+  {
+    "key": "ctrl+up",
+    "command": "editor.action.copyLinesUpAction",
+    "when": "editorTextFocus && !editorReadonly"
+  },
+  {
+    "key": "shift+alt+up",
+    "command": "-editor.action.copyLinesUpAction",
+    "when": "editorTextFocus && !editorReadonly"
+  },
+  {
+    "key": "alt+up",
+    "command": "editor.action.moveLinesUpAction",
+    "when": "editorTextFocus && !editorReadonly"
+  },
+  {
+    "key": "alt+up",
+    "command": "-editor.action.moveLinesUpAction",
+    "when": "editorTextFocus && !editorReadonly"
+  },
+  {
+    "key": "ctrl+down",
+    "command": "editor.action.copyLinesDownAction",
+    "when": "editorTextFocus && !editorReadonly"
+  },
+  {
+    "key": "shift+alt+down",
+    "command": "-editor.action.copyLinesDownAction",
+    "when": "editorTextFocus && !editorReadonly"
+  },
+  {
+    "key": "alt+down",
+    "command": "editor.action.moveLinesDownAction",
+    "when": "editorTextFocus && !editorReadonly"
+  },
+  {
+    "key": "alt+down",
+    "command": "-editor.action.moveLinesDownAction",
+    "when": "editorTextFocus && !editorReadonly"
+  }
 ]
 ```
 ### Mac
@@ -334,77 +365,77 @@ VSCode 初始化配置
 - C + 鼠标左键: 多行编辑 (适用于每行编辑位置不一样)
 - C + O + UA / DA: 多行编辑 (适用于每行编辑位置都一样)
 
-```
+```json
 // 将键绑定放入此文件中以覆盖默认值
 [
-    {
-        "key": "shift+alt+/",
-        "command": "editor.action.blockComment",
-        "when": "editorTextFocus && !editorReadonly"
-    },
-    {
-        "key": "shift+alt+a",
-        "command": "-editor.action.blockComment",
-        "when": "editorTextFocus && !editorReadonly"
-    },
-    {
-        "key": "cmd+d",
-        "command": "editor.action.deleteLines",
-        "when": "editorTextFocus && !editorReadonly"
-    },
-    {
-        "key": "shift+cmd+k",
-        "command": "-editor.action.deleteLines",
-        "when": "editorTextFocus && !editorReadonly"
-    },
-    {
-        "key": "cmd+up",
-        "command": "editor.action.copyLinesUpAction",
-        "when": "editorTextFocus && !editorReadonly"
-    },
-    {
-        "key": "shift+alt+up",
-        "command": "-editor.action.copyLinesUpAction",
-        "when": "editorTextFocus && !editorReadonly"
-    },
-    {
-        "key": "alt+up",
-        "command": "editor.action.moveLinesUpAction",
-        "when": "editorTextFocus && !editorReadonly"
-    },
-    {
-        "key": "alt+up",
-        "command": "-editor.action.moveLinesUpAction",
-        "when": "editorTextFocus && !editorReadonly"
-    },
-    {
-        "key": "cmd+down",
-        "command": "editor.action.copyLinesDownAction",
-        "when": "editorTextFocus && !editorReadonly"
-    },
-    {
-        "key": "shift+alt+down",
-        "command": "-editor.action.copyLinesDownAction",
-        "when": "editorTextFocus && !editorReadonly"
-    },
-    {
-        "key": "alt+down",
-        "command": "editor.action.moveLinesDownAction",
-        "when": "editorTextFocus && !editorReadonly"
-    },
-    {
-        "key": "alt+down",
-        "command": "-editor.action.moveLinesDownAction",
-        "when": "editorTextFocus && !editorReadonly"
-    },
-    {
-        "key": "cmd+h",
-        "command": "editor.action.startFindReplaceAction"
-    },
-    {
-        "key": "alt+cmd+f",
-        "command": "-editor.action.startFindReplaceAction"
-    }
+  {
+    "key": "shift+alt+/",
+    "command": "editor.action.blockComment",
+    "when": "editorTextFocus && !editorReadonly"
+  },
+  {
+    "key": "shift+alt+a",
+    "command": "-editor.action.blockComment",
+    "when": "editorTextFocus && !editorReadonly"
+  },
+  {
+    "key": "cmd+d",
+    "command": "editor.action.deleteLines",
+    "when": "editorTextFocus && !editorReadonly"
+  },
+  {
+    "key": "shift+cmd+k",
+    "command": "-editor.action.deleteLines",
+    "when": "editorTextFocus && !editorReadonly"
+  },
+  {
+    "key": "cmd+up",
+    "command": "editor.action.copyLinesUpAction",
+    "when": "editorTextFocus && !editorReadonly"
+  },
+  {
+    "key": "shift+alt+up",
+    "command": "-editor.action.copyLinesUpAction",
+    "when": "editorTextFocus && !editorReadonly"
+  },
+  {
+    "key": "alt+up",
+    "command": "editor.action.moveLinesUpAction",
+    "when": "editorTextFocus && !editorReadonly"
+  },
+  {
+    "key": "alt+up",
+    "command": "-editor.action.moveLinesUpAction",
+    "when": "editorTextFocus && !editorReadonly"
+  },
+  {
+    "key": "cmd+down",
+    "command": "editor.action.copyLinesDownAction",
+    "when": "editorTextFocus && !editorReadonly"
+  },
+  {
+    "key": "shift+alt+down",
+    "command": "-editor.action.copyLinesDownAction",
+    "when": "editorTextFocus && !editorReadonly"
+  },
+  {
+    "key": "alt+down",
+    "command": "editor.action.moveLinesDownAction",
+    "when": "editorTextFocus && !editorReadonly"
+  },
+  {
+    "key": "alt+down",
+    "command": "-editor.action.moveLinesDownAction",
+    "when": "editorTextFocus && !editorReadonly"
+  },
+  {
+    "key": "cmd+h",
+    "command": "editor.action.startFindReplaceAction"
+  },
+  {
+    "key": "alt+cmd+f",
+    "command": "-editor.action.startFindReplaceAction"
+  }
 ]
 ```
 
@@ -416,11 +447,71 @@ You can now use `/* #region */` and `/* #endregion */` to mark a region as folda
 
 ![css-folding](/assets/images/posts/vscode/css-folding.gif)
 
+最近发现 Markdown 的标题也可以这样收缩, 这个简直就是爽啊
+
+![](/assets/images/posts/vscode/34ftg.gif)
+
 ### [Markdown workspace symbol search](https://code.visualstudio.com/updates/v1_23#_markdown-workspace-symbol-search)
 
 Markdown now has support for workspace symbol search. After opening a Markdown file for the first time, you can use (`⌘T`) to search through the headers of all Markdown files in the current workspace:
 
 ![markdown-workspace-symbol-search](/assets/images/posts/vscode/markdown-workspace-symbol-search.png)
+
+
+## Emmet 的应用
+
+vscode 中集成了 Emmet。 Emmet 可以有效提升输入速度。正常情况下，编写 HTML 或者 CSS 时，需要输入很多字符。而现在有了 Emmet，通过输入简写就行了。
+
+[Emmet-前端开发神器](https://segmentfault.com/a/1190000007812543)
+
+### 快速输入 HTML
+
+如果熟悉 CSS 的语法，你会发现 Emmet 就是很容易上手。
+
+- `元素(Elements)`：生成一个 HTML 元素
+- `>` ：生成子元素
+- `+` ：生成元素的兄弟节点
+- `*` ：生成多个相同的元素
+
+你可以 `.` 或者 `#` 来修饰元素，给元素加上 `class` 或者 `id`
+
+比如我们输入 `div.test>h3.title+ul>li*3>span.text`，效果如下。
+```html
+<div class="test">
+  <h3 class="title"></h3>
+  <ul>
+    <li><span class="text"></span></li>
+    <li><span class="text"></span></li>
+    <li><span class="text"></span></li>
+  </ul>
+</div>
+```
+
+![](/assets/images/posts/vscode/v2-81e8.gif)
+
+有些 HTML 元素有许多的属性，在输入的过程中，通过在标签后面加上 `:属性名` 就指定了元素的属性。
+
+![](/assets/images/posts/vscode/v2-e904.gif)
+
+### 快速输入 CSS
+
+对于一些属性的名称较短的，例如：`display` 与 `visibility`，输入属性首字母与值的首字母即可。比如：`df` 是 `display: block;` ，`dn` 是 `display: none;`。
+
+对于一些属性的值是数值，例如：`padding`，`margin`，`left`，`width` 等，输入属性首字母与值即可。比如，`m1` 是 `margin: 1px;`。单位默认是 `px`，不过你可以指定一下单位，比如：`w2vw` 就是 `width: 2vw;`。当值是百分比时比较特殊，字母 `p` 代表 `%`，比如：`w5p` 就是 `width: 5%;`。
+
+名称较长的属性往往含有连字符（-），输入连字符前后两个单词的首字母再加上值即可。比如：`pt10` 是 `padding-top: 10px;`。
+
+![](/assets/images/posts/vscode/v2-3f4.gif)
+
+默认情况下，不能在 js 文件中使用 Emmet。在开发 React 项目时，这会带来不便。所以，再调整一下 系统设置。
+```json
+{
+  "emmet.includeLanguages": {
+    "javascript": "javascriptreact"
+  }
+}
+```
+这里只是介绍一部分 Emmet 规则，完整的列表点击[这里](https://docs.emmet.io/cheat-sheet/)。当你觉得有些输入很繁琐，不妨查阅一下文档，看看有无快捷输入的方式。
 
 ## 参考资料
 
