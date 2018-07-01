@@ -141,7 +141,27 @@ source ~/.zshrc
 
 Oh My Zsh 提供了一套系统别名（alias），来达到相同的功能。比如 `gst` 作为 `git status` 的别名。而且 Git 插件是 Oh My Zsh 默认启用的，相当于你使用了 Oh My Zsh，你就拥有了一套高效率的别名，而且还是全球通用的。
 
-自带大部分 git 命令的缩写，命令内容可以参考[完整列表](https://github.com/robbyrussell/oh-my-zsh/wiki/Plugin:git)
+下面是一些我常用的别名：
+
+| Alias                | Command                                                                                                                                 |
+|:---------------------|:---------------------------------------|
+| gl                   | git pull                                                                                                                                |
+| gaa                  | git add --all                                                                                                                           |
+| gcmsg                | git commit -m                                                                                                                           |
+| gcam                 | git commit -a -m                                                                                                                        |
+| gp                   | git push                                                                                                                                |
+| gco                  | git checkout                                                                                                                            |
+| gm                   | git merge                                                                                                                               |
+| gss                  | git status -s                                                                                                                           |
+| gba                  | git branch -a                                                                                                                           |
+| gcf                  | git config --list                                                                                                                       |
+| gcl                  | git clone --recursive                                                                                                                   |
+| gd                   | git diff                                                                                                                                |
+| ghh                  | git help                                                                                                                                |
+| glg                  | git log --stat --color                                                                                                                  |
+
+
+自带大部分 git 命令的缩写，命令内容可以参考[完整列表](https://github.com/robbyrussell/oh-my-zsh/wiki/Plugin:git)或本地资源: `~/.oh-my-zsh/plugins/git/git.plugin.zsh`
 
 ## 单词跳转和单词删除
 
@@ -257,3 +277,4 @@ Tab 切换：`⌘ + arrow` 或者 `⌘ + shift + [`
 - [Mac OS 终端利器 iTerm2](https://www.cnblogs.com/xishuai/p/mac-iterm2.html)
 - [关于 iTerm2 你不知道的一些事](https://www.jianshu.com/p/3436bcb17a03)
 - [MAC 下使用 iTerm2 和 zsh](https://blog.csdn.net/u014102846/article/details/77964493)
+- [zsh 全程指南](https://wdxtub.com/2016/02/18/oh-my-zsh/)
