@@ -6,6 +6,10 @@ description: 每日一Vim笔记
 keywords: Vim
 ---
 
+读[每日一 Vim](http://liuzhijun.iteye.com/category/270228)笔记
+
+本笔记是在 VS Code 上装的 Vim 插件, 有些功能好像没用
+
 ## [每日一Vim（0）入门操作](http://liuzhijun.iteye.com/blog/1826508)
 
 ### 基本操作
@@ -72,8 +76,6 @@ keywords: Vim
 - `A`: 在当前行行尾插入
 - `r`: 单字符替换
 - `R`：替换当前光标的字符直到退出插入模式（按ESC）
-- `:r filename`：把文件名为filename的内容插入当当前行的下一行
-- `:r! command`：把command返回的结果插入到当前行的下一行
 
 ### 拷贝一个单词、行首、行尾、整行
 
@@ -145,3 +147,68 @@ keywords: Vim
 - `:g/^$/d`: 这里的`g`表示对文章中所有符合要求字符串执行替换操作，`^`表示行首,`$`表示行尾，整个意思是：将所有的空行删除.
 
 ## [每日一Vim（4）多文件编辑](http://liuzhijun.iteye.com/blog/1828467)
+
+## [每日一Vim（5）c命令](http://liuzhijun.iteye.com/blog/1829008)
+
+- `C or c$`: 表示修改当前行上光标后面的部分. 进入编辑状态.
+- `c0 or c^`: 表示从光标处到当前行行首的部分进行修改，`^` 代表首个非空格处。
+- `cc OR S`: 修改当前行. 进入编辑状态.
+- `cw`: 从光标所在的位置开始到该单词结束进行修改. 进入编辑状态
+- `cfx / cFx`: 这里的 `x` 为一任意字符, `cfx` 表示修改从光标到下一个字符 `x` 之间的文本; `cFx` 表示修改从光标到上一个字符 `x` 之间的文本.
+- `cn|`: 修改从光标到当前行的第 `n` 个字符(不包括该字符)间的所有字符, `n` 正整数.
+- `cnG / cG`: 这里的 `n` 为一任意自然数, `cnG` 表示修改光标所在位置到第 `n` 行(不包括)之间的所有行; cG 表示修改当前行直至末行. 
+
+`c` 命令所删除的数据都存在缓冲区, 可以结合`p/P`命令构成剪切粘贴操作, 方法是:
+
+先进行 `c` 命令, 再按 `Esc` 键返回命令模式, 最后才进行 `p/P` 命令.
+
+## [每日一Vim（6）常用命令总结](http://liuzhijun.iteye.com/blog/1829695)
+
+### 搜索
+
+- `/word`: 从顶部往底部搜索word
+- `?word`: 从底部往顶部搜索word 
+- `/jo[ha]n`: 搜索john或joan
+
+    在 VS Code 中, 目前发现 `\<` `\>` 无效
+
+- `/\< the`: 搜索the或theatre 或then（只要是the开头就行）
+- `/the\>`: 搜索the或breathe（只要是the结尾就行）
+- `/\< the\>`: 只搜索the
+- `/\< ....\>`: 搜索长度为4个字符的字符串
+- `/\<fred\>`: 搜索fred，alfred 或者 frederick都不能匹配
+- `/fred\|joe`: 搜fred或joe
+- `/\<\d\d\d\d\>`: 搜索4位数字的字符串
+- `/^\n\{3}`: 查找3个空行的地方
+
+### 替换
+
+- `:%s/old/new/g`: 用new替换文件中出现的所有old
+- `:%s/old/new/gc`: 与上面这条的作用一样，只不过每替换一个就要确认一次, 貌似 VS Code 没有
+- `:2,35s/old/new/g`: 用new替换2到35行的new
+- `:5,$s/old/new/g`: 替换4行之后所有old
+- `:%s/^/hello/g`: 用hello替换所有行首，相当于在行首插入hello
+- `:%s/$/Harry/g`: 在所有行末加入Harray
+- `:%s/onward/forward/gi`: 用forward替换onward，忽略大小写
+- `:%s/ *$//g`: 删除所有行末的空格
+- `:%s/^ *//g`: 删除所有行首的空格
+- `:g/string/d`: 删除所有出现有string的行
+- `:v/string/d`: 删除所有不包含string的行
+- `:s/Bill/Steve/`: 用Steve替换当前行首次出现的Bill
+- `:s/Bill/Steve/g`: 用Steve替换当前行出现的所有Bill
+- `:%s#<[^>]\+>##g`: 删除所有HTMl标签，保留文本
+- `dit`: 保留当前行html标签，删除文本
+- `:%s/^\(.*\)\n\1$/\1/`: Delete lines which appears twice
+- `Ctrl+a`: 递增当前光标出的数字
+- `Ctrl+x`: 递减当前光标处的数字
+- `ggVGg?`: 将全文转换为rot13码，这是一种简单暗号语Rot13，重复执行此命令回复原样
+
+### 大小写
+
+- `Vu`: 当前行转换为小写
+- `VU`: 当前行转换为大写，当然对中文无效
+- `g~~`: 大小写置换
+- `vEU`: 选择性的转换为大小，从光标起始处到
+- `vE~`: 也是将选中的大写转小写，小写转大写。
+- `ggguG`: 全文小写，其实我们可以拆分3个命令gg/gu/来记忆
+- `:set ignorecase`: 搜索时忽略大小写
