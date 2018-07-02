@@ -153,6 +153,7 @@ Oh My Zsh 提供了一套系统别名（alias），来达到相同的功能。�
 | gco                  | git checkout                                                                                                                            |
 | gm                   | git merge                                                                                                                               |
 | gss                  | git status -s                                                                                                                           |
+| grh                  | git reset HEAD                                                                                                                           |
 | gba                  | git branch -a                                                                                                                           |
 | gcf                  | git config --list                                                                                                                       |
 | gcl                  | git clone --recursive                                                                                                                   |
