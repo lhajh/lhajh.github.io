@@ -153,13 +153,13 @@ Oh My Zsh 提供了一套系统别名（alias），来达到相同的功能。�
 | gco                  | git checkout                                                                                                                            |
 | gm                   | git merge                                                                                                                               |
 | gss                  | git status -s                                                                                                                           |
-| grh                  | git reset HEAD                                                                                                                           |
+| glol                 | git log --graph --pretty = format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit      |
+| grh                  | git reset HEAD                                                                                                                          |
 | gba                  | git branch -a                                                                                                                           |
 | gcf                  | git config --list                                                                                                                       |
 | gcl                  | git clone --recursive                                                                                                                   |
 | gd                   | git diff                                                                                                                                |
 | ghh                  | git help                                                                                                                                |
-| glg                  | git log --stat --color                                                                                                                  |
 
 
 自带大部分 git 命令的缩写，命令内容可以参考[完整列表](https://github.com/robbyrussell/oh-my-zsh/wiki/Plugin:git)或本地资源: `~/.oh-my-zsh/plugins/git/git.plugin.zsh`
