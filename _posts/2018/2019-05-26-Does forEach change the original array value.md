@@ -8,7 +8,7 @@ keywords: forEach, array
 
 以前查 forEach 和 map 的区别时, 总能看到这样一句话:
 
-> forEach()方法不会返回执行结果，而是undefined。也就是说，forEach()会修改原来的数组。而map()方法会得到一个新的数组并返回。
+> forEach() 方法不会返回执行结果，而是 undefined。也就是说，forEach() 会修改原来的数组。而 map() 方法会得到一个新的数组并返回。
 
 我的理解就是使用 forEach 遍历一个数组, 修改 item 的值, 就会改变原数组, 但最近发现并不一定会改变, 所以就做了一些测试
 
@@ -51,7 +51,7 @@ console.log(arr1, arr)
 
 咦? arr 这个原数组的值为什么也改变了呢?
 
-[在网上搜了一下](https://segmentfault.com/q/1010000013170900?utm_source=index-hottest), 原来是上面的 map 方法不够“纯粹”，实际上还是直接修改了每个 item 的属性，要想不影响原有对象，应该这么写：
+[在网上搜了一下](https://segmentfault.com/q/1010000013170900?utm_source=index-hottest), 原来是上面的 map 方法不够 “纯粹”，实际上还是直接修改了每个 item 的属性，要想不影响原有对象，应该这么写：
 ```js
 arr1 = arr.map(item => (
 	{
@@ -69,7 +69,7 @@ emmmm, 这样就不影响原数组了
 
 ## 测试二
 
-上面的测试都是修改原数组中某一个对象的某一个属相, 那如果直接修改数组的某一个对象呢?
+上面的测试都是修改原数组中某一个对象的某一个属性, 那如果直接修改数组的某一个对象呢?
 
 ```js
 arr.forEach(item => {
