@@ -4,6 +4,50 @@
     font-family: Microsoft YaHei,"Helvetica Neue",Helvetica,"Segoe UI",Arial,freesans,sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol";
 }
 
+/* 滚动条 */
+body,
+html {
+  height: 100%;
+  /* 三角箭头的颜色 */
+  scrollbar-arrow-color: #3dffff;
+  /* 立体滚动条的颜色  */
+  scrollbar-face-color: #3dffff;
+  /* 立体滚动条亮边的颜色 */
+  scrollbar-3dlight-color: #3dffff;
+  /* 滚动条空白部分的颜色   */
+  scrollbar-highlight-color: #3dffff;
+  /* 立体滚动条阴影的颜色 */
+  scrollbar-shadow-color: #3dffff;
+  /* 立体滚动条强阴影的颜色 */
+  scrollbar-darkshadow-color: #3dffff;
+  /* 立体滚动条背景颜色 */
+  scrollbar-track-color: #a3ffff;
+  /* 滚动条的基本色 */
+  scrollbar-base-color:#3dffff;
+  -ms-overflow-style: -ms-autohiding-scrollbar;
+}
+
+/* 整个滚动条 */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+  background: transparent;
+}
+/* 滚动条上的滚动滑块 */
+::-webkit-scrollbar-thumb {
+  -webkit-border-radius: 4px;
+  border-radius: 4px;
+  background: #3bffff;
+}
+/* 滚动条上的按钮 (上下箭头) */
+::-webkit-scrollbar-button {
+  display: none;
+}
+/* 当同时有垂直滚动条和水平滚动条时交汇的部分 */
+::-webkit-scrollbar-corner {
+  background: transparent;
+}
+
 /** Header **/
 .site-header{
     padding-top:20px;
