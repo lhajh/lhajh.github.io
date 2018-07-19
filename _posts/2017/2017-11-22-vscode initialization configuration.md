@@ -99,6 +99,10 @@ VSCode 初始化配置
   - [Doc](https://vuejs.github.io/vetur)
 - ESLint
   - 语法检查
+- Prettier - Code formatter
+  - [自以为是的代码格式化程序](https://prettier.io/)
+  - [prettier 的配置选项（参数）官网直译](https://segmentfault.com/a/1190000012909159)
+  - [vscode + prettier 专治代码洁癖](https://juejin.im/post/5a791d566fb9a0634853400e)
 - JavaScript (ES6) code snippets
   - ES6 代码片段
 - vscode-element-helper
@@ -122,46 +126,95 @@ VSCode 初始化配置
   - 编辑器右下角显示时间，Mac 开发有用
 - VSCode Great Icons
   - 图标
+- Chinese (Simplified) Language Pack for Visual Studio Code
+  - 适用于 VS Code 1.23 以后的中文（简体）语言包
 
 以下为一些有点用处的插件
 
 - Auto Close Tag
-	- 标签自动闭合
+  - 标签自动闭合
 - Auto Rename Tag
-	- 前后标签同时修改
+  - 前后标签同时修改
 - Autoprefixer
-	- 为 css 属性添加浏览器兼容前缀， webpack PostCSS 也具有相同功能
+  - 为 css 属性添加浏览器兼容前缀， webpack PostCSS 也具有相同功能
 - JS-CSS-HTML-Formatter
-	- 格式化插件，保存后自动格式，但会和 vue 脚手架安装的 ESLint 冲突
+  - 格式化插件，保存后自动格式，但会和 vue 脚手架安装的 ESLint 冲突
 - Live Server
-	- 启动一个本地服务，用于测试调试
+  - 启动一个本地服务，用于测试调试
 - PostCSS Sorting
-	- 对 css 按一定规则属性进行排序
+  - 对 css 按一定规则属性进行排序
 - Prettify jSON
-	- 格式化 JSON
+  - 格式化 JSON
 - View In Browser
-	- html 在浏览器打开 html 页面
+  - html 在浏览器打开 html 页面
 
 ## 系统设置
 
 ```json
 {
+  // ------------------------ 样式 ------------------------
   // 字体
   "editor.fontSize": 20,
   // 系统需要安装 Fira Code 字体, 如果你需要这个字体
   // https://github.com/tonsky/FiraCode
   "editor.fontFamily": "Fira Code, Consolas, Menlo, Monaco, 'Courier New', monospace",
   "editor.fontLigatures": true,
-  // 一个制表符等于的空格数
-  "editor.tabSize": 2,
-  // 在“打开的编辑器”窗格中显示的编辑器数量。将其设置为 0 可隐藏窗格。
-  "explorer.openEditors.visible": 0,
-  // 自动保存（失焦保存）
-  "files.autoSave": "onFocusChange",
   // 图标 插件名：VSCode Great Icons
   "workbench.iconTheme": "vscode-great-icons",
   // 主题 系统自带
   "workbench.colorTheme": "Monokai Dimmed",
+
+  // ------------------------ 格式化代码 ------------------------
+  // 一个制表符等于的空格数
+  "editor.tabSize": 2,
+  // 启用后，保存文件时在文件末尾插入一个最终新行。
+  "files.insertFinalNewline": true,
+  // 启用后，保存文件时将删除在最终新行后的所有新行。
+  "files.trimFinalNewlines": true,
+  // 启用后，将在保存文件时剪裁尾随空格。
+  "files.trimTrailingWhitespace": true,
+  // eslint 保存自动格式化 插件名: ESLint
+  // enables auto fix on save. Please note auto fix on save is only available if VS Code's
+  // files.autoSave is either off, onFocusChange or onWindowChange. It will not work with afterDelay.
+  "eslint.autoFixOnSave": true,
+  "eslint.validate": [
+    "javascript",
+    "javascriptreact",
+    {
+      "language": "html",
+      "autoFix": true
+    },
+    {
+      "language": "vue",
+      "autoFix": true
+    }
+  ],
+  // prettier 设置 插件名: Prettier - Code formatter
+  // 使用 'prettier-eslint' 而不是 'prettier'。其他设置只有在无法从 eslint 规则中推断时才会是后备选择。仅限 JavaScript 和 TypeScript
+  "prettier.eslintIntegration": true,
+  // 是否在每行末尾加一个分号
+  "prettier.semi": false,
+  // 使用单引号
+  "prettier.singleQuote": true,
+  // 换行字符串阈值
+  "prettier.printWidth": 100,
+  // vetru 设置格式化 html 插件名: Vetur
+  // 目前 vetur 的 template 格式化还没有很好的支持 prettier，应该说目前官方只推荐使用 js-beautify-html
+  "vetur.format.defaultFormatter.html": "js-beautify-html",
+
+  // ------------------------ 系统相关 ------------------------
+  // 在“打开的编辑器”窗格中显示的编辑器数量。将其设置为 0 可隐藏窗格。
+  "explorer.openEditors.visible": 0,
+  // 自动保存（失焦保存）
+  "files.autoSave": "onFocusChange",
+  // 控制键入时是否应自动显示建议
+  "editor.quickSuggestions": {
+    "strings": true // 字符串建议
+  },
+  // 控制是否显示工作台底部状态栏中的 Twitter 反馈 (笑脸图标)。
+  "workbench.statusBar.feedback.visible": false,
+
+  // ------------------------ 插件相关 ------------------------
   // 文件头部注释 插件名：vscode-fileheader 快捷键：control + option + i
   // 文件作者
   "fileheader.Author": "lhajh",
@@ -169,13 +222,15 @@ VSCode 初始化配置
   "fileheader.LastModifiedBy": "lhajh",
   // 最后生成样式
   "fileheader.tpl": "/*\r\n * @Author: {author}\r\n * @File: 文件描述\r\n * @Date: {createTime}\r\n * @Last Modified by: {lastModifiedBy}\r\n * @Last Modified time: {updateTime}\r\n */\r\n",
+
   // 为函数生成注释 插件名：Document This 快捷键：control + option + d 两遍
   // 注释添加描述
   "docthis.includeDescriptionTag": true,
   // 注释添加作者
   "docthis.includeAuthorTag": true,
   "docthis.authorName": "lhajh",
-  // gitlens 指定应该禁止哪些消息
+
+  // gitlens 指定应该禁止哪些消息 插件名: GitLens — Git supercharged
   "gitlens.advanced.messages": {
     "suppressCommitHasNoPreviousCommitWarning": false,
     "suppressCommitNotFoundWarning": false,
@@ -188,24 +243,25 @@ VSCode 初始化配置
     "suppressUpdateNotice": false,
     "suppressWelcomeNotice": true
   },
-  // 控制键入时是否应自动显示建议
-  "editor.quickSuggestions": {
-    "strings": true
-  },
-  // element-helper 版本
+  // Specifies whether to show avatar images instead of status icons in the `GitLens File History` explorer
+  "gitlens.historyExplorer.enabled": false,
+
+  // element-helper 版本 插件名: vscode-element-helper
   "element-helper.version": "2.3",
-  // 控制是否显示工作台底部状态栏中的 Twitter 反馈 (笑脸图标)。
-  "workbench.statusBar.feedback.visible": false,
+
   // 在默认不支持 Emmet 的语言中启用 Emmet 缩写功能。在此添加该语言与受支持的语言间的映射。
   "emmet.includeLanguages": {
     "vue-html": "html"
-  }
+  },
+  // vim 插件名: Vim
+  // Override VSCode's copy command with our own copy command, which works better with VSCodeVim. Turn this off if copying is not working.
+  "vim.overrideCopy": false
 }
 ```
 
 ## 修改键盘快捷键
 
-注：`+` 表示需要点击下一个键时，上一个或多个键仍是按下去状态；`空格` 表示点击下一个键时，上一个或多个键可以放开
+注：`+` 表示需要  点击下一个键时，上一个或多个键仍是按下去状态；`空格` 表示点击下一个键时，上一个或多个键可以放开
 
 ### Windows
 
@@ -319,6 +375,7 @@ VSCode 初始化配置
   }
 ]
 ```
+
 ### Mac
 
 - C: command
@@ -361,7 +418,7 @@ VSCode 初始化配置
 - C + D: 删除右侧字符
 - C + B: 删除左侧字符
 - C + S + F5: 重启
-- S + O + 字母O: 删除未使用的导入并对剩余的导入进行排序, 该命令适用于 JavaScript 和 TypeScript 的 ES6 模块。
+- S + O + 字母 O: 删除未使用的导入并对剩余的导入进行排序, 该命令适用于 JavaScript 和 TypeScript 的 ES6 模块。
 - C + 鼠标左键: 多行编辑 (适用于每行编辑位置不一样)
 - C + O + UA / DA: 多行编辑 (适用于每行编辑位置都一样)
 
@@ -457,7 +514,6 @@ Markdown now has support for workspace symbol search. After opening a Markdown f
 
 ![markdown-workspace-symbol-search](/assets/images/posts/vscode/markdown-workspace-symbol-search.png)
 
-
 ## Emmet 的应用
 
 vscode 中集成了 Emmet。 Emmet 可以有效提升输入速度。正常情况下，编写 HTML 或者 CSS 时，需要输入很多字符。而现在有了 Emmet，通过输入简写就行了。
@@ -476,6 +532,7 @@ vscode 中集成了 Emmet。 Emmet 可以有效提升输入速度。正常情况
 你可以 `.` 或者 `#` 来修饰元素，给元素加上 `class` 或者 `id`
 
 比如我们输入 `div.test>h3.title+ul>li*3>span.text`，效果如下。
+
 ```html
 <div class="test">
   <h3 class="title"></h3>
@@ -504,6 +561,7 @@ vscode 中集成了 Emmet。 Emmet 可以有效提升输入速度。正常情况
 ![](/assets/images/posts/vscode/v2-3f4.gif)
 
 默认情况下，不能在 js 文件中使用 Emmet。在开发 React 项目时，这会带来不便。所以，再调整一下 系统设置。
+
 ```json
 {
   "emmet.includeLanguages": {
@@ -511,24 +569,25 @@ vscode 中集成了 Emmet。 Emmet 可以有效提升输入速度。正常情况
   }
 }
 ```
+
 这里只是介绍一部分 Emmet 规则，完整的列表点击[这里](https://docs.emmet.io/cheat-sheet/)。当你觉得有些输入很繁琐，不妨查阅一下文档，看看有无快捷输入的方式。
 
 ## 参考资料
 
 - [VsCode 中使用 Emmet 神器快速编写 HTML 代码](https://www.cnblogs.com/summit7ca/p/6944215.html)
-- [微软 VS Code 开发技巧集锦](https://juejin.im/entry/5abca6d36fb9a028c675c96a)
+- [微软 VS Code 开发技巧集锦](https://zhuanlan.zhihu.com/p/34989844)
 - [VS Code Tips and Tricks](https://github.com/Microsoft/vscode-tips-and-tricks)
 - [能让你开发效率翻倍的 VSCode 插件配置（上）](https://juejin.im/post/5a08d1d6f265da430f31950e)
 - [能让你开发效率翻倍的 VSCode 插件配置（中）](https://juejin.im/post/5ad13d8a6fb9a028ce7c0721)
-- [VS Code折腾记 - (1) 扯淡](https://juejin.im/post/586cf732128fe10066602d43)
-- [VS Code折腾记 - (2) 快捷键大全，没有更全](https://juejin.im/post/586e5a5cb123db005d0f2bd1)
-- [VS Code折腾记 - (3) 多图解VSCode基础功能](https://juejin.im/post/5880d3b9128fe10065ccaf27)
-- [VS Code折腾记 - (4) 常用必备插件推荐【前端】](https://juejin.im/post/58a691f461ff4b006c4981a0)
-- [VS Code折腾记 - (5) Angular 2+ && Typescript 2+必备插件推荐](https://juejin.im/post/58a6f518ac502e006cc4ee2a)
+- [VS Code 折腾记 - (1) 扯淡](https://juejin.im/post/586cf732128fe10066602d43)
+- [VS Code 折腾记 - (2) 快捷键大全，没有更全](https://juejin.im/post/586e5a5cb123db005d0f2bd1)
+- [VS Code 折腾记 - (3) 多图解 VSCode 基础功能](https://juejin.im/post/5880d3b9128fe10065ccaf27)
+- [VS Code 折腾记 - (4) 常用必备插件推荐【前端】](https://juejin.im/post/58a691f461ff4b006c4981a0)
+- [VS Code 折腾记 - (5) Angular 2+ && Typescript 2+必备插件推荐](https://juejin.im/post/58a6f518ac502e006cc4ee2a)
 - [VS Code 折腾记 - (6) 基本配置/快捷键定义/代码片段的录入（snippet）](https://juejin.im/post/58aeeca22f301e006cf65c8b)
-- [VS Code 折腾记 - (7) 内置Debug功能深入【调教angular-cli 最新版】](https://juejin.im/post/58c0c2e344d90400697213f2)
+- [VS Code 折腾记 - (7) 内置 Debug 功能深入【调教 angular-cli 最新版】](https://juejin.im/post/58c0c2e344d90400697213f2)
 - [VS Code 折腾记 - (8) 新一波实用插件推荐（前端）/NG2+/TS2/Vue/React/Node/版本控制/主题](https://juejin.im/post/592542c58d6d810058025d06)
 - [VS Code 折腾记 - (9) 新一轮前端插件(代码质量/正则/版本控制/NG/Vue/React)](https://juejin.im/post/59a61edc5188252428611c6a)
-- [VS Code 折腾记 - (10) 你想发布自己捣鼓的snippets到VSCode插件市场!](https://juejin.im/post/5a198dd36fb9a04504079336)
+- [VS Code 折腾记 - (10) 你想发布自己捣鼓的 snippets 到 VSCode 插件市场!](https://juejin.im/post/5a198dd36fb9a04504079336)
 - [VS Code 折腾记 - (11) 再来一波插件推荐!(代码片段,框架,Node,touchbar,TS,Git,数据库,python!!)](https://juejin.im/post/5a1b869351882533d022c7f5)
 - [VS Code 折腾记 - (12) 春节前的最后一波插件推荐(前端/协作/主题)](https://juejin.im/post/5a704d84518825734f5300c8)
