@@ -52,7 +52,7 @@ menu: Bookmark
 
 - [2018 年最值得关注的 JavaScript 趋势](http://36kr.com/p/5110763.html)
 - [数组的遍历你都会用了，那Promise版本的呢](https://segmentfault.com/a/1190000014598785)
-- [经验分享 | JavaScript反调试技巧](http://www.freebuf.com/articles/system/163579.html)
+- [JavaScript反调试技巧](http://www.freebuf.com/articles/system/163579.html)
 - [WebView缓存原理分析和应用](https://unclechen.github.io/2017/05/13/WebView%E7%BC%93%E5%AD%98%E5%8E%9F%E7%90%86%E5%88%86%E6%9E%90%E5%92%8C%E5%BA%94%E7%94%A8/)
 - [Javascript 将html转成pdf,下载,支持多页哦](https://segmentfault.com/a/1190000009211079)
 - [利用 javascript 实现富文本编辑器](http://eux.baidu.com/blog/fe/%E5%88%A9%E7%94%A8-javascript-%E5%AE%9E%E7%8E%B0%E5%AF%8C%E6%96%87%E6%9C%AC%E7%BC%96%E8%BE%91%E5%99%A8)
