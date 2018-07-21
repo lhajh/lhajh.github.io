@@ -93,6 +93,7 @@ VSCode 初始化配置
 
 - Vim
   - vim 被誉为『编辑器之神』，一旦学会了 vim 的指法，会让你终身受益，至少在你敲代码的年代会收益，毫无夸张, 它会让你摆脱烦人的，在敲代码的时候频繁的移动鼠标，这也是 vim 的设计理念之一 -- 脱离鼠标。
+  - [每日一 Vim 笔记](https://lhajh.github.io/vim/2018/05/08/the-notes-of-a-daily-vim.html)
   - [每日一 Vim](https://lhajh.github.io/vim/2018/05/08/the-notes-of-a-daily-vim.html)
 - Vetur
   - Vue 代码片段，语法高亮
@@ -103,6 +104,7 @@ VSCode 初始化配置
   - [自以为是的代码格式化程序](https://prettier.io/)
   - [prettier 的配置选项（参数）官网直译](https://segmentfault.com/a/1190000012909159)
   - [vscode + prettier 专治代码洁癖](https://juejin.im/post/5a791d566fb9a0634853400e)
+  - [在 vscode 中 vue 编码风格统一的方法介绍](http://www.php.cn/js-tutorial-405449.html)
 - JavaScript (ES6) code snippets
   - ES6 代码片段
 - vscode-element-helper
@@ -201,8 +203,21 @@ VSCode 初始化配置
   // vetru 设置格式化 html 插件名: Vetur
   // 目前 vetur 的 template 格式化还没有很好的支持 prettier，应该说目前官方只推荐使用 js-beautify-html
   "vetur.format.defaultFormatter.html": "js-beautify-html",
+  // Options for all default formatters
+  "vetur.format.defaultFormatterOptions": {
+    "js-beautify-html": {
+      // 对属性进行换行
+      // auto: 仅在超出行长度时才对属性进行换行
+      // force: 对除第一个属性外的其他每个属性进行换行
+      // force-aligned: 对除第一个属性外的其他每个属性进行换行，并保持对齐
+      // force-expand-multiline: 对每个属性进行换行
+      "wrap_attributes": "force"
+    }
+  },
 
-  // ------------------------ 系统相关 ------------------------
+  // ------------------------ 编辑器相关 ------------------------
+  // 执行文字相关的导航或操作时将用作文字分隔符的字符(比如双击选中文字, 只会选中下面分隔符中的文字)
+  "editor.wordSeparators": "`~!@#$%^&*()=+[{]}\\|;:'\",.<>/?",
   // 在“打开的编辑器”窗格中显示的编辑器数量。将其设置为 0 可隐藏窗格。
   "explorer.openEditors.visible": 0,
   // 自动保存（失焦保存）
