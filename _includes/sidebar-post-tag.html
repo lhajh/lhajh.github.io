@@ -4,7 +4,7 @@
     {% assign sorted_categories = site.categories | sort %}
     {% for category in sorted_categories %}
     <li class="list-group-item">
-    <a href="#{{ category[0] }}">{{ category | first }}</a>
+    <a class="jumper" href="#{{ category[0] }}">{{ category | first }}</a>
     <span class="badge">{{ category[1].size }}</span>
     </li>
     {% endfor %}
@@ -14,5 +14,15 @@
 <script type="text/javascript">
   $(document).ready(function(){
     $("#blog-categories li").css('text-transform','capitalize')
+
+    $("a.jumper").on("click", function( e ) {
+
+      e.preventDefault();
+
+      $("body, html").animate({
+        scrollTop: ($( $(this).attr('hre') ).offset().top - 100)
+      }, 600);
+
+      });
   });
 </script>
