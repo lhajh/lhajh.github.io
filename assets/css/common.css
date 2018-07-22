@@ -9,21 +9,21 @@ body,
 html {
   height: 100%;
   /* 三角箭头的颜色 */
-  scrollbar-arrow-color: #3dffff;
+  scrollbar-arrow-color: hsla(220,4%,58%,.3);
   /* 立体滚动条的颜色  */
-  scrollbar-face-color: #3dffff;
+  scrollbar-face-color: hsla(220,4%,58%,.3);
   /* 立体滚动条亮边的颜色 */
-  scrollbar-3dlight-color: #3dffff;
+  scrollbar-3dlight-color: hsla(220,4%,58%,.3);
   /* 滚动条空白部分的颜色   */
-  scrollbar-highlight-color: #3dffff;
+  scrollbar-highlight-color: hsla(220,4%,58%,.3);
   /* 立体滚动条阴影的颜色 */
-  scrollbar-shadow-color: #3dffff;
+  scrollbar-shadow-color: hsla(220,4%,58%,.3);
   /* 立体滚动条强阴影的颜色 */
-  scrollbar-darkshadow-color: #3dffff;
+  scrollbar-darkshadow-color: hsla(220,4%,58%,.3);
   /* 立体滚动条背景颜色 */
-  scrollbar-track-color: #a3ffff;
+  scrollbar-track-color: hsla(220,4%,58%,.3);
   /* 滚动条的基本色 */
-  scrollbar-base-color:#3dffff;
+  scrollbar-base-color:hsla(220,4%,58%,.3);
   -ms-overflow-style: -ms-autohiding-scrollbar;
 }
 
@@ -37,7 +37,7 @@ html {
 ::-webkit-scrollbar-thumb {
   -webkit-border-radius: 4px;
   border-radius: 4px;
-  background: #3bffff;
+  background: hsla(220,4%,58%,.3);
 }
 /* 滚动条上的按钮 (上下箭头) */
 ::-webkit-scrollbar-button {

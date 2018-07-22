@@ -1,7 +1,7 @@
 ---
 layout: post
 title: 配置 Node.js 开发环境——使用 Atom
-categories: Node.js
+categories: Node
 description: 如何将 Atom 配置成为好用的 Node.js 开发环境。
 keywords: Atom, Node.js, ternjs
 ---
