@@ -4,7 +4,7 @@
     {% assign sorted_categories = site.categories | sort %}
     {% for category in sorted_categories %}
     <li class="list-group-item">
-    <a class="jumper" href="#{{ category[0] }}">{{ category | first }}</a>
+    <a class="jumper" hre="#{{ category[0] }}">{{ category | first }}</a>
     <span class="badge">{{ category[1].size }}</span>
     </li>
     {% endfor %}
