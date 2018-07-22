@@ -165,3 +165,11 @@
     background-color: #777;
     border-radius: 10px;
 }
+
+.sidebar-post-tag {
+    position: fixed;
+    top: 450px;
+    right: 30px;
+    bottom: 20px;
+    overflow: auto;
+}
