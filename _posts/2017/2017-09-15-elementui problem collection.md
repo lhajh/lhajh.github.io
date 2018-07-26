@@ -225,6 +225,51 @@ getValidCurrentPage(value) {
 
 ## 自定义滚动条
 
-[Vue 的自定义滚动，我用 el-scrollbar](https://qiqihaobenben.github.io/Front-End-Basics/project/el-scrollbar)
+介绍: [Vue 的自定义滚动，我用 el-scrollbar](https://qiqihaobenben.github.io/Front-End-Basics/project/el-scrollbar)
 
-[vue element 隐藏组件滚动条 scrollbar 使用](https://blog.csdn.net/zhongguohaoshaonian/article/details/79734787)
+使用: [vue element 隐藏组件滚动条 scrollbar 使用](https://blog.csdn.net/zhongguohaoshaonian/article/details/79734787)
+
+以下为我自己设置的全局样式
+
+```css
+.el-scrollbar {
+  height: 100%;
+  /* margin-right 配合下面的 padding-right 使用, 防止滚动条遮挡内容 */
+  margin-right: -10px;
+}
+/* 查看官方网站发现是 auto, 而且也能隐藏掉横向的滚动条, 那就用 auto 吧 */
+.el-scrollbar .el-scrollbar__wrap {
+  overflow-x: auto;
+}
+.el-scrollbar__view {
+  padding-right: 10px;
+}
+```
+
+但由于这个滚动条是 Element Ui 内部使用的, 目前发现就 `el-select-dropdown` 中在使用, 随意修改全局样式肯定会影响人家原有样式的. 比如这样:
+
+下拉框最后一个显示不全, `hover` 后超出界线框
+
+![](/assets/images/posts/elementUi/2CCEC5.png)
+
+目前解决办法就三种:
+
+1. 不修改全局样式, 局部修改样式, 哪里使用滚动条哪里修改, 但毕竟需要滚动条的地方比 select-dropdown 要多, 不划算
+2. 封装成组件, 在组件内部修改, 但这已经是一个组件了, 有点画蛇添足
+3. 还是修改全局样式, 只不过在 select-dropdown 中重写样式, 使用原来的样式
+
+```css
+/* 修改 scrollbar 在 select 下显示不全问题 */
+.el-select-dropdown {
+  .el-scrollbar {
+    height: auto;
+    margin-right: 0;
+    .el-scrollbar__wrap {
+      overflow: scroll;
+      .el-scrollbar__view {
+        padding-right: 0;
+      }
+    }
+  }
+}
+```
