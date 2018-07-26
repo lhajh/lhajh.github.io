@@ -229,6 +229,8 @@ getValidCurrentPage(value) {
 
 使用: [vue element 隐藏组件滚动条 scrollbar 使用](https://blog.csdn.net/zhongguohaoshaonian/article/details/79734787)
 
+### 问题一
+
 以下为我自己设置的全局样式
 
 ```css
@@ -273,3 +275,9 @@ getValidCurrentPage(value) {
   }
 }
 ```
+
+## 问题二
+
+如果布局使用的是百分比布局, 那使用滚动条也会有问题.
+
+比如两个子元素高度都是 `50%`, 如果使用 `el-scrillbar` 包裹子元素的话, 子元素的父元素会变成 `el-scrollbar__view`, 而这个元素是没有设置高度的, 会导致子元素的 `50%` 失效, 从而被内容撑开, 解决办法就是给 `el-scrollbar__view` 设置高度为 `100%`
