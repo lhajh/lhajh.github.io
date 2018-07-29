@@ -37,8 +37,17 @@ css: ['sidebar-post-nav.css']
 <script>
     $(document).ready(function () {
         $(window).scroll(function () {
-            let top = 450 - $(window).scrollTop() >= 100 ? 450 - $(window).scrollTop() : 100
-            $('.sidebar-post-tag').css('top', top)
+            let top = 450 - $(window).scrollTop()
+            if (top >= 100) {
+                $('.sidebar-post-tag').css({
+                    position: 'static'
+                })
+            } else {
+                $('.sidebar-post-tag').css({
+                    position: 'fix!important',
+                    top: top
+                })
+            }
         })
     });
 </script>

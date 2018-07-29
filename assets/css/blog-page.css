@@ -151,6 +151,10 @@
     float: right;
 }
 
+.list-group-item .jumper {
+    cursor: pointer;
+}
+
 .badge {
     display: inline-block;
     min-width: 10px;
