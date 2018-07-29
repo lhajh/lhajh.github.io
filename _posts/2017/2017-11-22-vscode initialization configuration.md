@@ -105,6 +105,7 @@ VSCode 初始化配置
   - [prettier 的配置选项（参数）官网直译](https://segmentfault.com/a/1190000012909159)
   - [vscode + prettier 专治代码洁癖](https://juejin.im/post/5a791d566fb9a0634853400e)
   - [在 vscode 中 vue 编码风格统一的方法介绍](http://www.php.cn/js-tutorial-405449.html)
+  - [vscode 中编写 vue 项目标签属性如果格式化换行？](https://segmentfault.com/q/1010000012437190)
 - JavaScript (ES6) code snippets
   - ES6 代码片段
 - vscode-element-helper
