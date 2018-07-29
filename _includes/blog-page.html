@@ -37,30 +37,30 @@
         // Enable bootstrap tooltip
         $("body").tooltip({ selector: '[data-toggle=tooltip]' });
 
-        var fixmeTop = $('.sidebar-post-tag').offset().top - 100;       // get initial position of the element
+        // var fixmeTop = $('.sidebar-post-tag').offset().top - 100;       // get initial position of the element
 
-        $(window).scroll(function() {                  // assign scroll event listener
+        // $(window).scroll(function() {                  // assign scroll event listener
 
-            var currentScroll = $(window).scrollTop(); // get current position
+        //     var currentScroll = $(window).scrollTop(); // get current position
 
-            if (currentScroll >= fixmeTop) {           // apply position: fixed if you
-                $('.sidebar-post-tag').css({      // scroll to that element or below it
-                    top: '100px',
-                    bottom: '20px',
-                    position: 'fixed',
-                    right: '30px'
-                });
-            } else {                                   // apply position: static
-                $('.sidebar-post-tag').css({      // if you scroll above it
-                    position: 'inherit'
-                });
-            }
+        //     if (currentScroll >= fixmeTop) {           // apply position: fixed if you
+        //         $('.sidebar-post-tag').css({      // scroll to that element or below it
+        //             top: '100px',
+        //             bottom: '20px',
+        //             right: '30px',
+        //             position: 'fixed'
+        //         });
+        //     } else {                                   // apply position: static
+        //         $('.sidebar-post-tag').css({      // if you scroll above it
+        //             position: 'inherit'
+        //         });
+        //     }
 
-        });
+        // });
 
-        // $(window).scroll(function () {
-        //     let top = 450 - $(window).scrollTop() >= 100 ? 450 - $(window).scrollTop() : 100
-        //     $('.sidebar-post-tag').css('top', top)
-        // })
+        $(window).scroll(function () {
+            let top = 450 - $(window).scrollTop() >= 100 ? 450 - $(window).scrollTop() : 100
+            $('.sidebar-post-tag').css('top', top)
+        })
     });
 </script>
