@@ -38,15 +38,15 @@ css: ['sidebar-post-nav.css']
     $(document).ready(function () {
         $(window).scroll(function () {
             let top = $('.sidebar-post-tag').offset().top - $(window).scrollTop()
-            if (top >= 100) {
-                $('.sidebar-post-tag').css({
-                    position: 'static'
-                })
-            } else {
+            if (top < 100) {
+                // $('.sidebar-post-tag').css({
+                //     position: 'static'
+                // })
                 $('.sidebar-post-tag').css({
                     position: 'fixed',
                     top: 100
                 })
+            } else {
             }
         })
     });
