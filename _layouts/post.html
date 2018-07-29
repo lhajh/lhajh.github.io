@@ -36,17 +36,19 @@ css: ['sidebar-post-nav.css']
 
 <script>
     $(document).ready(function () {
+        var top = $('.sidebar-post-tag').offset().top
         $(window).scroll(function () {
-            let top = $('.sidebar-post-tag').offset().top - $(window).scrollTop()
-            if (top < 100) {
-                // $('.sidebar-post-tag').css({
-                //     position: 'static'
-                // })
+            var scrollTop = top - $(window).scrollTop()
+            if (scrollTop < 100) {
                 $('.sidebar-post-tag').css({
                     position: 'fixed',
                     top: 100
                 })
             } else {
+                $('.sidebar-post-tag').css({
+                    position: 'fixed',
+                    top: scrollTop
+                })
             }
         })
     });
