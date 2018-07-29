@@ -1,9 +1,9 @@
 ---
 layout: post
-title: chrome 浏览器表单自动填充默认样式 - autofill
-categories: [CSS, Chrome]
-description: chrome 浏览器表单自动填充默认样式 - autofill
-keywords: chrome, autofill
+title: 修改浏览器默认滚动条
+categories: [CSS, 滚动条]
+description: 修改浏览器默认滚动条
+keywords: CSS, 滚动条
 ---
 
 作为一个有理想的程序员, 页面好看与否直接决定了你是不是一个合格的前端, 而作为页面一部分 -- 滚动条, 直接影响了页面的美观
