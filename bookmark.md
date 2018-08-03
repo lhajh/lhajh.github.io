@@ -88,6 +88,7 @@ menu: Bookmark
 - [Vue.js 最佳实践（五招让你成为 Vue.js 大师）](https://segmentfault.com/a/1190000014085613)
 - [在 VueJS 应用中管理用户权限](https://zcfy.cc/article/managing-user-permissions-in-a-vuejs-app#)
 - [VUE 使用中踩过的坑](https://segmentfault.com/a/1190000013008420)
+- [Vue 之 slot 深度复制](https://cnodejs.org/topic/58c0ad17d282728c0ec4029a)
 
 ## React
 
