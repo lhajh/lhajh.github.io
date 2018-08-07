@@ -101,7 +101,7 @@ keywords: CSS, width
 
     会增加代码量
 
-## 使用 `margin` 负值
+### 使用 `margin` 负值
 
 ```css
 .box {
@@ -113,7 +113,7 @@ keywords: CSS, width
 
 其计算程度之复杂, 以及最后一个元素多出的负 `margin` 值等问题，这个方法不适合大规模使用。
 
-## 让闭合标签吃胶囊
+### 让闭合标签吃胶囊
 
 如下处理：
 
@@ -139,7 +139,7 @@ keywords: CSS, width
 
 好吧，虽然感觉上有点怪怪的，但是，这是 OK 的。
 
-注: 使用这种方法的条件: **标签不能嵌套自身**
+注: 使用这种方法的条件: **标签不能嵌套自身**
 
 如下面示例:
 
@@ -169,7 +169,7 @@ keywords: CSS, width
 
 可以看到, `a` 标签和 `p` 标签按照预期渲染, 而 `span` 元素却是嵌套的. 这是由于 `a` 标签和 `p` 标签不能包含自身, 所以遇到下一个和自身相同的标签后, 会自动闭合; 而 `span` 可以包含自身, 所以会一直嵌套下去
 
-## font-size:0
+### font-size:0
 
 ```css
 .box1 {
@@ -182,7 +182,7 @@ keywords: CSS, width
 
 这个方法，基本上可以解决大部分浏览器下内联元素之间的间距 (IE7 等浏览器有时候会有 1 像素的间距)。
 
-## letter-spacing
+### letter-spacing
 
 ```css
 .box1 {
@@ -195,7 +195,7 @@ keywords: CSS, width
 
 负值视具体浏览器而定, 但一般 `-10` 以下其兼容性上的差异就可以被忽略
 
-## word-spacing
+### word-spacing
 
 ```css
 .box1 {
@@ -208,7 +208,7 @@ keywords: CSS, width
 
 一个是字符间距 (letter-spacing), 一个是单词间距 (word-spacing)，大同小异。也是负值大到一定程度兼容性上的差异就可以被忽略
 
-## 浮动
+### 浮动
 
 ```css
 .box {
@@ -218,7 +218,7 @@ keywords: CSS, width
 
 父元素要注意是否需要清除浮动带来的影响
 
-## 其他成品方法
+### 其他成品方法
 
 下面展示的是 [YUI 3 CSS Grids](http://yuilibrary.com/yui/docs/cssgrids/) 使用 `letter-spacing` 和 `word-spacing` 去除格栅单元见间隔方法（注意，其针对的是 `block` 水平的元素，因此对 IE8 - 浏览器做了 hack 处理）：
 
