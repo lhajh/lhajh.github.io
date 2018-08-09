@@ -1,7 +1,7 @@
 ---
 layout: post
 title: 修改浏览器默认滚动条
-categories: [CSS, 滚动条]
+categories: [CSS]
 description: 修改浏览器默认滚动条
 keywords: CSS, 滚动条
 ---
