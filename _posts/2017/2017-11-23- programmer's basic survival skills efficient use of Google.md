@@ -1,7 +1,7 @@
 ---
 layout: post
 title: 程序员的基础生存技能：高效用 Google
-categories: [Google]
+categories: [Google, Chrome]
 description: 程序员的基础生存技能：高效用 Google
 keywords: Google
 ---
@@ -29,7 +29,8 @@ keywords: Google
 ## 站内搜索
 
 1. 比如针对程序员查 bug，stackoverflow 是我个人觉得可信度最高也最全面的一个网站，所以我就经常使用 site 的魔法，像 `"mysql foreign key" site:stackoverflow.com` 就会返回对应网站内所有关于 `mysql foreign key` 的文章。
-2. tab 键的妙用。chrome 默认搜索引擎是 Google，但由于某些原因，在国内是无法使用的；一般使用最多的是百度和 360。可以在地址栏输入 `baidu.com`，然后按下 tab 键，可以实现使用百度搜索。同理可以使用几乎任何一个你使用过的网页搜索引擎。
+2. tab 键的妙用。chrome 默认搜索引擎是 Google，但由于某些原因，在国内是无法使用的；一般使用最多的是百度和 360。可以在地址栏输入 `baidu.com`，然后按下 tab 键，可以实现使用百度搜索。
+3. 在 `chrome://settings/searchEngines` 页面列表中的关键字即为 site. 也可以修改关键字, 也可以自定义搜索
 
 ## 语言和日期
 
@@ -42,4 +43,3 @@ keywords: Google
 最后留个福利吧，曾经被人偷偷问过，谷歌的安全搜索怎么关闭；网上有一些繁复的攻略，对我们程序员，搜索网址加个参数：`&safe=off`，一招就可日天。
 
 祝大家 Google 快乐。
-

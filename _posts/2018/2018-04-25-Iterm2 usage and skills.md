@@ -1,7 +1,7 @@
 ---
 layout: post
 title: iTerm2 用法与技巧
-categories: [mac]
+categories: [Mac]
 description: iTerm2 用法与技巧
 keywords: mac, iTerm2
 ---

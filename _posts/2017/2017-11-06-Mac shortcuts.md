@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Mac 常用快捷键
-categories: [mac]
+categories: [Mac]
 description: Mac 常用快捷键
 keywords: mac
 ---

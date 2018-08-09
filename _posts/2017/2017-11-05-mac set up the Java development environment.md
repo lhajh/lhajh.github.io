@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Mac 下搭建 Java 开发环境
-categories: [mac, java]
+categories: [Mac, java]
 description: Mac 下搭建 Java 开发环境
 keywords: mac, java, 环境
 ---
@@ -173,10 +173,10 @@ alias ls='ls -G'
 输入：
 :wq
 重启终端程序
- 
+
 修改MySQL的管理员密码：
 mysqladmin -u root -p123456
- 
+
 卸载MySQL：
 sudo rm /usr/local/mysql
 sudo rm -rf /usr/local/mysql*
