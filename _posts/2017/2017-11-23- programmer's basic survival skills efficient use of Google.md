@@ -29,8 +29,8 @@ keywords: Google
 ## 站内搜索
 
 1. 比如针对程序员查 bug，stackoverflow 是我个人觉得可信度最高也最全面的一个网站，所以我就经常使用 site 的魔法，像 `"mysql foreign key" site:stackoverflow.com` 就会返回对应网站内所有关于 `mysql foreign key` 的文章。
-2. tab 键的妙用。chrome 默认搜索引擎是 Google，但由于某些原因，在国内是无法使用的；一般使用最多的是百度和 360。可以在地址栏输入 `baidu.com`，然后按下 tab 键，可以实现使用百度搜索。
-3. 在 `chrome://settings/searchEngines` 页面列表中的关键字即为 site. 也可以修改关键字, 也可以自定义搜索
+2. tab / 空格 键的妙用。chrome 默认搜索引擎是 Google，但由于某些原因，在国内是无法使用的；一般使用最多的是百度和 360。可以在地址栏输入 `baidu.com`，然后按下 tab / 空格 键，可以实现使用百度搜索。
+3. 在 `chrome://settings/searchEngines` 页面列表中的关键字即为 site. 也可以修改关键字, 也可以[自定义搜索](https://sspai.com/post/44922#ss-H2-1528390729934)
 
 ## 语言和日期
 
