@@ -10,9 +10,9 @@ keywords: mac, Karabiner-Elements
 
 ## 基本介绍
 
-[安装](https://pqrs.org/osx/karabiner/document.html#usage)完后会有两个应用，一个是 `Karabiner-Elements`，另一个是 `Karabiner-EventViewer`。
+[安装](https://pqrs.org/osx/karabiner/document.html#usage) 完后会有两个应用，一个是 `Karabiner-Elements`，另一个是 `Karabiner-EventViewer`。
 
-第一个是改键用的主程序，第二个是键鼠事件的监听器，当你不知道目前键盘的某个按键对应的是哪个键位, 可以使用这个查看。
+第一个是改键用的主程序，第二个是键鼠事件的监听器，当你不知道目前键盘的某个物理按键对应的是哪个键位, 可以使用这个查看。
 
 ## Karabiner-Elements
 
@@ -52,6 +52,7 @@ keywords: mac, Karabiner-Elements
 4. 重复第一步和第二步, 你可以选择 `s` 作为触发键, 也可以选择 `d` 作为触发键, 或者两者都作为触发键
 5. 无法正常使用? 其实官网展开后的键位使用说明最后有这么一句话: Please change your `simultaneous_threshold_milliseconds` setting in Karabiner-Elements → Complex Modifications → Parameters; A value between 150 and 500 is recommended for this mode. 说白了就是两个按键之间的等待值, 默认是 `50ms`, 但一般人没法做到组合键这么小的间隔, 就只能调高等待值, 我一般设置为 `300`, 既不影响打字, 也不影响组合键
 6. 如果不想要某一个组合键, 点击右侧的 `Remove` 即可移除. 下面的 `Up` 和 `Down` 可以排序
+7. 当然官网还有很多组合键, 可以找到自己需要的
 
 ### [Devices](https://pqrs.org/osx/karabiner/document.html#configuration-devices)
 
@@ -59,6 +60,42 @@ keywords: mac, Karabiner-Elements
 
 如果连接了外部键盘，也可以禁用 MacBook 内置键盘。
 
+在 `Disable the built-in keyboard while one of the following selected devices is connected.` 列表中选择需要使用的键盘, 即可禁用内置键盘, 如果都不勾选, 默认都可以使用
+
 ### Virtual Keyboard
 
+虚拟键盘
+
+这个一般不需要修改
+
+但如果使用了具有相同 `vendor`(供应商) id (Ox16cO) 和 `product` (产品) id (Ox27db) 的其他设备, 那就需要修改了
+
 ### Profiles
+
+配置列表
+
+在界面上的 `Profiles` 标签内，可以添加、删除和选中某个配置，`select` 选中某个配置之后，所有对键位的更改都会保存在当前 `select` 的这套配置内，比如可以根据使用的键盘不同维护多套配置，以便在使用不同输入设备时切换。
+
+另外，Karabiner 的所有配置都以 `JSON` 格式文件保存在：`~/.config/karabiner/karabiner.json` 目录，如果在网上看到别人给出的配置需要编辑 `karabiner.json` 文件加到其中，如果需要备份配置则可以直接备份这个目录。
+
+也可以通过点击菜单栏图标来切换配置
+
+![](/assets/images/posts/mac/00cf5b10b4a55530.png)
+
+### [Misc](https://pqrs.org/osx/karabiner/document.html#quit)
+
+其他配置, 包含重置 / 退出 / 更新 / 卸载等
+
+### Log
+
+日志, 纪录软件运行的一些参数
+
+## Karabiner-EventViewer
+
+Karabiner 提供了查看每个键位代码名称的工具 `Karabiner-EventViewer`，打开该工具，随后的所有按键操作都会在界面上显示明细，如果有不清楚名称的按键，查看界面中 `name` 一栏，配置映射时选择对应名称的键位即可。
+
+## 参考资料
+
+- [Karabiner Elements](https://pqrs.org/osx/karabiner/document.html)
+- [让键盘变成你想要的样子：改键利器 Karabiner-Elements](https://sspai.com/post/42921s)
+- [Karabiner Elements 键位定制神器](https://www.jianshu.com/p/47d5de7f12bc)
