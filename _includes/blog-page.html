@@ -58,9 +58,13 @@
 
         // });
 
-        $(window).scroll(function () {
+        $(window).scroll(scroll())
+
+        scroll()
+
+        function scroll() {
             let top = 450 - $(window).scrollTop() >= 100 ? 450 - $(window).scrollTop() : 100
             $('.sidebar-post-tag').css('top', top)
-        })
+        }
     });
 </script>
