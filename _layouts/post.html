@@ -37,7 +37,10 @@ css: ['sidebar-post-nav.css']
 <script>
     $(document).ready(function () {
         var top = $('.sidebar-post-tag').offset().top
-        $(window).scroll(function () {
+        scroll()
+        $(window).scroll(scroll)
+
+        function scroll () {
             var scrollTop = top - $(window).scrollTop()
             if (scrollTop < 100) {
                 $('.sidebar-post-tag').css({
@@ -50,6 +53,6 @@ css: ['sidebar-post-nav.css']
                     top: scrollTop
                 })
             }
-        })
+        }
     });
 </script>
