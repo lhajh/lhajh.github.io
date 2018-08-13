@@ -81,6 +81,7 @@ menu: Bookmark
 
 ## Vue
 
+- [Vue2.x源码解析系列](https://github.com/lihongxun945/myblog/issues/22)
 - [Vue 相关开源项目库汇总](https://github.com/opendigg/awesome-github-vue)
 - [一个 Vue 页面的内存泄露分析](https://www.yinchengli.com/2018/06/25/vue-memory-leak/)
 - [Vue 兼容 ie9 的全面解决方案](https://my.oschina.net/u/171860/blog/1831843)
@@ -88,10 +89,24 @@ menu: Bookmark
 - [在 VueJS 应用中管理用户权限](https://zcfy.cc/article/managing-user-permissions-in-a-vuejs-app#)
 - [VUE 使用中踩过的坑](https://segmentfault.com/a/1190000013008420)
 - [Vue 之 slot 深度复制](https://cnodejs.org/topic/58c0ad17d282728c0ec4029a)
+- [Vue超快速学习](https://segmentfault.com/a/1190000015740490)
+- [Vue 项目架构设计与工程化实践](https://github.com/berwin/Blog/issues/14)
 
 ## React
 
 - [图解 React](https://zhuanlan.zhihu.com/p/39658720)
+
+## 微信小程序
+
+- [微信小程序开发01-小程序的执行流程是怎么样的？](https://www.cnblogs.com/yexiaochai/p/9346043.html)
+- [微信小程序开发02-小程序基本介绍](https://www.cnblogs.com/yexiaochai/p/9374374.html)
+- [微信小程序开发03-这是一个组件](https://www.cnblogs.com/yexiaochai/p/9382862.html)
+- [微信小程序开发04-打造自己的UI库](https://www.cnblogs.com/yexiaochai/p/9393212.html)
+- [微信小程序开发05-日历组件的实现](https://www.cnblogs.com/yexiaochai/p/9412951.html)
+- [微信小程序开发06-一个业务页面的完成](https://www.cnblogs.com/yexiaochai/p/9419368.html)
+- [微信小程序开发07-列表页面怎么做](https://www.cnblogs.com/yexiaochai/p/9431816.html)
+- [【微信小程序项目实践总结】30分钟从陌生到熟悉](https://www.cnblogs.com/yexiaochai/p/9437101.html)
+- [vue和微信小程序的区别、比较](https://segmentfault.com/a/1190000015684864)
 
 ## CSS
 
@@ -136,6 +151,8 @@ menu: Bookmark
 - [现代 js 框架存在的根本原因](https://zcfy.cc/article/the-deepest-reason-why-modern-javascript-frameworks-exist)
 - [FE-interview](https://github.com/qiu-deqing/FE-interview)
 - [44 个 Javascript 变态题解析](https://github.com/xiaoyu2er/blog/issues/1)
+- [面试官：请手写一个webpack4.0配置](https://segmentfault.com/a/1190000015611030)
+- [前端面试总结——http、html和浏览器篇](https://github.com/forthealllight/blog/issues/19)
 
 ## 移动端
 
