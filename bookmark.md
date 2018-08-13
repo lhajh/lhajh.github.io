@@ -36,7 +36,6 @@ menu: Bookmark
 - [不要再问我跨域的问题了](https://segmentfault.com/a/1190000015597029)
 - [ajax 跨域，这应该是最全的解决方案了](https://segmentfault.com/a/1190000012469713)
 - [用信鸽来解释 HTTPS](https://www.oschina.net/translate/https-explained-with-carrier-pigeons)
-- [身份证号码的正则表达式及验证详解 (JavaScript，Regex)](http://www.42du.cn/p/41)
 - [10 种最常见的 Javascript 错误](http://elevenbeans.github.io/2018/02/05/top-10-javascript-errors/)
 - [JavaScript 错误处理和堆栈追踪](https://github.com/dwqs/blog/issues/49)
 - [从一个 JSON.parse 错误深入研究 JavaScript 的转义字符](https://zhuanlan.zhihu.com/p/31030352)
