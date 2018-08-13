@@ -54,7 +54,7 @@ Command 是 Mac 里最重要的修饰键，在大多数情况下相当于 Window
 - C + S + z: 重做，C + z 的逆向操作
 - C + h: 隐藏当前窗口
 - C + O + h: 隐藏其它窗口
-- C + O + esc: 强制推出窗口（程序无响应时）
+- C + O + esc: 强制退出窗口（程序无响应时）
 
 ## 文本
 
@@ -91,3 +91,8 @@ Command 是 Mac 里最重要的修饰键，在大多数情况下相当于 Window
 - C + t: 打开空白页
 - C + S + D: 清空缓存
 - C + d: 为此页添加书签
+
+## 参考资料
+
+- [Mac 键盘快捷键](https://support.apple.com/zh-cn/HT201236)
+- [macOS (OS X) 有哪些常用的快捷键？](https://www.zhihu.com/question/20021861)

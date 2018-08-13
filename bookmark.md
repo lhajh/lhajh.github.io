@@ -29,8 +29,10 @@ menu: Bookmark
 - [别再为了 this 发愁了 ------JS 中的 this 机制](http://www.cnblogs.com/front-Thinking/p/4364337.html)
 - [闭包，是真的美](https://github.com/prettyEcho/deep-js/issues/4)
 - [你应该知道的 setTimeout 秘密](http://web.jobbole.com/89878/)
+- [10 分钟理解 JS 引擎的执行机制](https://segmentfault.com/a/1190000012806637)
 - [javascript 常用实例的实现与封装](https://segmentfault.com/a/1190000010225928)
 - [简单粗暴地理解 js 原型链 --js 面向对象编程](http://www.cnblogs.com/qieguo/archive/2016/05/03/5451626.html)
+- [一篇文章理解 JS 继承](https://segmentfault.com/a/1190000015727237)
 - [如何继承 Date 对象？由一道题彻底弄懂 JS 继承](http://www.dailichun.com/2018/01/15/howtoextenddate.html)
 - [JavaScript 创建对象的七种方式](https://xxxgitone.github.io/2017/06/10/JavaScript%E5%88%9B%E5%BB%BA%E5%AF%B9%E8%B1%A1%E7%9A%84%E4%B8%83%E7%A7%8D%E6%96%B9%E5%BC%8F/)
 - [不要再问我跨域的问题了](https://segmentfault.com/a/1190000015597029)
@@ -66,6 +68,10 @@ menu: Bookmark
 - [一行代码实现一个简单的模板字符串替换](https://segmentfault.com/a/1190000013516128)
 - [20 行 JS 代码实现粘贴板功能](https://zcfy.cc/article/roll-your-own-copy-to-clipboard-feature-in-20-lines-of-javascript-sitepoint#)
 - [关于负载均衡的一切：总结与思考](http://www.cnblogs.com/xybaby/p/7867735.html)
+- [在 2018 年你应该知道的 9 个关于 CSS 组件化的 JS 库](https://zcfy.cc/article/9-css-in-js-libraries-you-should-know-in-2018-bits-and-pieces)
+- [一篇文章理解 Web 缓存](https://segmentfault.com/a/1190000015809379)
+- [图片上传组件开发【思路篇】](https://segmentfault.com/a/1190000013038300)
+- [JSON Web Token 入门教程](http://www.ruanyifeng.com/blog/2018/07/json_web_token-tutorial.html)
 
 ## JavaScript
 
@@ -81,7 +87,7 @@ menu: Bookmark
 
 ## Vue
 
-- [Vue2.x源码解析系列](https://github.com/lihongxun945/myblog/issues/22)
+- [Vue2.x 源码解析系列](https://github.com/lihongxun945/myblog/issues/22)
 - [Vue 相关开源项目库汇总](https://github.com/opendigg/awesome-github-vue)
 - [一个 Vue 页面的内存泄露分析](https://www.yinchengli.com/2018/06/25/vue-memory-leak/)
 - [Vue 兼容 ie9 的全面解决方案](https://my.oschina.net/u/171860/blog/1831843)
@@ -89,24 +95,28 @@ menu: Bookmark
 - [在 VueJS 应用中管理用户权限](https://zcfy.cc/article/managing-user-permissions-in-a-vuejs-app#)
 - [VUE 使用中踩过的坑](https://segmentfault.com/a/1190000013008420)
 - [Vue 之 slot 深度复制](https://cnodejs.org/topic/58c0ad17d282728c0ec4029a)
-- [Vue超快速学习](https://segmentfault.com/a/1190000015740490)
+- [Vue 超快速学习](https://segmentfault.com/a/1190000015740490)
 - [Vue 项目架构设计与工程化实践](https://github.com/berwin/Blog/issues/14)
 
 ## React
 
 - [图解 React](https://zhuanlan.zhihu.com/p/39658720)
+- [图解 React Native](https://zhuanlan.zhihu.com/p/40398439)
+- [组件、Prop 和 State](https://zhuanlan.zhihu.com/p/41398296)
+- [React Native 基础 & 入门教程：以一个 To Do List 小例子，看 props 和 state](https://www.cnblogs.com/powertoolsteam/p/react-native-tutorials3.html)
 
 ## 微信小程序
 
-- [微信小程序开发01-小程序的执行流程是怎么样的？](https://www.cnblogs.com/yexiaochai/p/9346043.html)
-- [微信小程序开发02-小程序基本介绍](https://www.cnblogs.com/yexiaochai/p/9374374.html)
-- [微信小程序开发03-这是一个组件](https://www.cnblogs.com/yexiaochai/p/9382862.html)
-- [微信小程序开发04-打造自己的UI库](https://www.cnblogs.com/yexiaochai/p/9393212.html)
-- [微信小程序开发05-日历组件的实现](https://www.cnblogs.com/yexiaochai/p/9412951.html)
-- [微信小程序开发06-一个业务页面的完成](https://www.cnblogs.com/yexiaochai/p/9419368.html)
-- [微信小程序开发07-列表页面怎么做](https://www.cnblogs.com/yexiaochai/p/9431816.html)
-- [【微信小程序项目实践总结】30分钟从陌生到熟悉](https://www.cnblogs.com/yexiaochai/p/9437101.html)
-- [vue和微信小程序的区别、比较](https://segmentfault.com/a/1190000015684864)
+- [微信小程序开发 01 - 小程序的执行流程是怎么样的？](https://www.cnblogs.com/yexiaochai/p/9346043.html)
+- [微信小程序开发 02 - 小程序基本介绍](https://www.cnblogs.com/yexiaochai/p/9374374.html)
+- [微信小程序开发 03 - 这是一个组件](https://www.cnblogs.com/yexiaochai/p/9382862.html)
+- [微信小程序开发 04 - 打造自己的 UI 库](https://www.cnblogs.com/yexiaochai/p/9393212.html)
+- [微信小程序开发 05 - 日历组件的实现](https://www.cnblogs.com/yexiaochai/p/9412951.html)
+- [微信小程序开发 06 - 一个业务页面的完成](https://www.cnblogs.com/yexiaochai/p/9419368.html)
+- [微信小程序开发 07 - 列表页面怎么做](https://www.cnblogs.com/yexiaochai/p/9431816.html)
+- [【微信小程序项目实践总结】30 分钟从陌生到熟悉](https://www.cnblogs.com/yexiaochai/p/9437101.html)
+- [vue 和微信小程序的区别、比较](https://segmentfault.com/a/1190000015684864)
+- [小程序构建骨架屏的探索](https://segmentfault.com/a/1190000015876164)
 
 ## CSS
 
@@ -121,8 +131,11 @@ menu: Bookmark
 - [不可思议的纯 CSS 导航栏下划线跟随效果](http://web.jobbole.com/94205/)
 - [你所不知道的 CSS 滤镜技巧与细节](http://web.jobbole.com/92460/)
 - [如何用 CSS 实现多行文本的省略号显示](http://web.jobbole.com/90636/)
+- [神奇的选择器 :focus-within](http://web.jobbole.com/95025/)
+- [滚动视差？CSS 不在话下](http://web.jobbole.com/95068/)
 - [灵活的 overflow](https://www.w3cplus.com/css/flexible-overflow.html)
 - [欲练 JS，必先攻 CSS——前端修行之路](http://www.cnblogs.com/1wen/p/6839779.html)
+- [CSS3 动画卡顿性能优化解决方案](https://segmentfault.com/a/1190000013045035)
 - [前端布局基础概述](https://mp.weixin.qq.com/s/-LcNZWFFty2lWuND6uuNNA)
 - [CSS 布局解决方案（终结版）](https://segmentfault.com/a/1190000013565024)
 - [CSS 样式书写规范](http://web.jobbole.com/91792/)
@@ -151,8 +164,8 @@ menu: Bookmark
 - [现代 js 框架存在的根本原因](https://zcfy.cc/article/the-deepest-reason-why-modern-javascript-frameworks-exist)
 - [FE-interview](https://github.com/qiu-deqing/FE-interview)
 - [44 个 Javascript 变态题解析](https://github.com/xiaoyu2er/blog/issues/1)
-- [面试官：请手写一个webpack4.0配置](https://segmentfault.com/a/1190000015611030)
-- [前端面试总结——http、html和浏览器篇](https://github.com/forthealllight/blog/issues/19)
+- [面试官：请手写一个 webpack4.0 配置](https://segmentfault.com/a/1190000015611030)
+- [前端面试总结——http、html 和浏览器篇](https://github.com/forthealllight/blog/issues/19)
 
 ## 移动端
 
