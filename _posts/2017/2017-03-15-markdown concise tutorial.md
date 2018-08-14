@@ -110,7 +110,7 @@ GBPduHjWfJU1mZqcPM3BikjYKF6xKhlKIys3i1MU2eJHqWGImDHzWdD6xhMNLGVpbP2M5SN6bnxn2kSE
 
 换行的时候 结尾要加上 两个空格。
 
-在当前行的结尾加 2 个空格  
+在当前行的结尾加 2 个空格
 这行就会新起一行
 
 ### 分隔符
@@ -298,7 +298,7 @@ GBPduHjWfJU1mZqcPM3BikjYKF6xKhlKIys3i1MU2eJHqWGImDHzWdD6xhMNLGVpbP2M5SN6bnxn2kSE
 - 引用里嵌套代码块
 
 >     同样的，在前面加四个空格形成代码块
->  
+>
 > ```
 > 或者使用 ``` 形成代码块
 > ```
@@ -319,7 +319,7 @@ GBPduHjWfJU1mZqcPM3BikjYKF6xKhlKIys3i1MU2eJHqWGImDHzWdD6xhMNLGVpbP2M5SN6bnxn2kSE
 - 引用里嵌套代码块
 
 >     同样的，在前面加四个空格形成代码块
->  
+>
 > ```
 > 或者使用 ``` 形成代码块
 > ```
@@ -367,7 +367,7 @@ GBPduHjWfJU1mZqcPM3BikjYKF6xKhlKIys3i1MU2eJHqWGImDHzWdD6xhMNLGVpbP2M5SN6bnxn2kSE
 插入代码的方式有两种
 
 1. 在每行代码前加入 4 个空格或者添加一个制表符（TAB 键）.制表符长度为 4
-2. 在代码两侧添加三个反引号‘```’。
+2. 在代码两侧添加三个反引号 "```"。
 
 #### 方式一
 
@@ -396,7 +396,6 @@ GBPduHjWfJU1mZqcPM3BikjYKF6xKhlKIys3i1MU2eJHqWGImDHzWdD6xhMNLGVpbP2M5SN6bnxn2kSE
 如果你只想高亮语句中的某个函数名或关键字，可以使用这个符号 \` 中间夹着代码 \`function_name()\` `function_name()` 实现
 
 通常编辑器根据代码片段适配合适的高亮方法，但你也可以用 \`\`\` 包裹一段代码，并指定一种语言
-
 
 \`\`\`js
 
@@ -434,6 +433,8 @@ a {
 ```
 
 支持的语言：`1c, abnf, accesslog, actionscript, ada, apache, applescript, arduino, armasm, asciidoc, aspectj, autohotkey, autoit, avrasm, awk, axapta, bash, basic, bnf, brainfuck, cal, capnproto, ceylon, clean, clojure, clojure-repl, cmake, coffeescript, coq, cos, cpp, crmsh, crystal, cs, csp, css, d, dart, delphi, diff, django, dns, dockerfile, dos, dsconfig, dts, dust, ebnf, elixir, elm, erb, erlang, erlang-repl, excel, fix, flix, fortran, fsharp, gams, gauss, gcode, gherkin, glsl, go, golo, gradle, groovy, haml, handlebars, haskell, haxe, hsp, htmlbars, http, hy, inform7, ini, irpf90, java, javascript, json, julia, kotlin, lasso, ldif, leaf, less, lisp, livecodeserver, livescript, llvm, lsl, lua, makefile, markdown, mathematica, matlab, maxima, mel, mercury, mipsasm, mizar, mojolicious, monkey, moonscript, n1ql, nginx, nimrod, nix, nsis, objectivec, ocaml, openscad, oxygene, parser3, perl, pf, php, pony, powershell, processing, profile, prolog, protobuf, puppet, purebasic, python, q, qml, r, rib, roboconf, rsl, ruby, ruleslanguage, rust, scala, scheme, scilab, scss, smali, smalltalk, sml, sqf, sql, stan, stata, step21, stylus, subunit, swift, taggerscript, tap, tcl, tex, thrift, tp, twig, typescript, vala, vbnet, vbscript, vbscript-html, verilog, vhdl, vim, x86asm, xl, xml, xquery, yaml, zephir`
+
+在 [这里](https://github.com/github/linguist/blob/master/lib/linguist/languages.yml) 可以找到 github 支持的语言
 
 反引号最好在代码的前后行添加，而不是直接加在代码两边。
 
@@ -570,15 +571,3 @@ Git 中的 Markdown 语法扩展中包括了一些表情包。
 - [完整版 Markdown 语法说明(简体中文版)](http://wowubuntu.com/markdown/index.html)
 - [Markdown 编辑器语法指南](https://segmentfault.com/markdown)
 - [怎样引导新手使用 Markdown？](https://www.zhihu.com/question/20409634)
-
-
-
-
-
-
-
-
-
-
-
-
