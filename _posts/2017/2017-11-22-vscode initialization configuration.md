@@ -293,7 +293,7 @@ VSCode 初始化配置
 常用快捷键
 
 - C + S + p or F1: 打开命令面板
-- C + p: 快速打开文件
+- C + p: [快速打开文件](https://code.visualstudio.com/updates/vJanuary#_file-picker)
 - C + S + /: 切换块注释
 - C + /: 切换行注释
 - C + d: 删除当前行
@@ -407,7 +407,7 @@ VSCode 初始化配置
 常用快捷键
 
 - C + S + p or F1: 打开命令面板
-- C + p: 快速打开文件
+- C + p: [快速打开文件](https://code.visualstudio.com/updates/vJanuary#_file-picker)
 - O + S + /: 切换块注释
 - C + /: 切换行注释
 - C + d: 删除当前行
@@ -428,9 +428,13 @@ VSCode 初始化配置
 - C + k C + x: 剪裁尾随空格
 - C + ]: 行缩进
 - C + [: 行减少缩进
+- C + O + [: 折叠光标处最内部的未折叠区域
+- C + O + ]: 展开光标处的折叠区域
+- C + k C + 数字 0: 折叠编辑器中的所有区域
+- C + k C + j: 展开编辑器中的所有区域
 - CT + g: 转到行
 - C + b: 切换侧栏可见性
-- C + j: 切换终端面板
+- C + j / CT + `: 切换终端面板
 - C + D: 删除右侧字符
 - C + B: 删除左侧字符
 - C + S + F5: 重启
