@@ -232,6 +232,8 @@ VSCode 初始化配置
   // 面包屑导航
   // https://code.visualstudio.com/updates/v1_26#_breadcrumbs
   "breadcrumbs.enabled": true,
+  // 在导航路径视图中仅显示当前符号
+  "breadcrumbs.symbolPath": "last",
   // 控制是否显示工作台底部状态栏中的 Twitter 反馈 (笑脸图标)。
   "workbench.statusBar.feedback.visible": false,
 
