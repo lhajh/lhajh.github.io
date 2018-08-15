@@ -8,6 +8,8 @@ keywords: vscode
 
 VSCode 初始化配置
 
+在官网 [Visual Studio Code](https://code.visualstudio.com/) 可以查看介绍和下载
+
 ## 代码片段
 
 此代码片段默认缩进是 2 个空格，如需要修改为 4 个空格，直接添加空格即可。
@@ -227,6 +229,9 @@ VSCode 初始化配置
   "editor.quickSuggestions": {
     "strings": true // 字符串建议
   },
+  // 面包屑导航
+  // https://code.visualstudio.com/updates/v1_26#_breadcrumbs
+  "breadcrumbs.enabled": true,
   // 控制是否显示工作台底部状态栏中的 Twitter 反馈 (笑脸图标)。
   "workbench.statusBar.feedback.visible": false,
 
