@@ -170,7 +170,29 @@ Mac 的原生词典是包含《现代汉语规范词典》和《牛津英汉汉�
 
 ![](/assets/images/posts/mac/v2-4c864bff09f3016f26e36aa3fd52450a_b.gif)
 
+[如原生般，却更好用：最好的 Mac 日历应用 Fantastical 2 for Mac 评测](https://sspai.com/post/30287)
+
 下载地址: [Fantastical](https://flexibits.com/fantastical)
+
+## TaskTab: Simple To Do List
+
+TaskTab 将焦点直接放在你的待办事项列表上。我们有意让应用程序尽可能简单，以便让您能够快速添加、检查和管理任务，而不会被毫无意义的功能分散注意力，这些功能会使待办事项应用程序的关键目的过于复杂。该应用程序位于你的菜单栏中，点击一个按钮或通过其可定制的热键就可以使用。
+
+![](https://is1-ssl.mzstatic.com/image/thumb/Purple125/v4/5d/cf/06/5dcf06fc-2767-3b5e-ce1a-ae71d65d7949/pr_source.png/643x0w.png)
+
+通过菜单栏上简单的数字，你可以看到目前正在进行中的事项个数，点击图标后即可看到事项的详情。在这里，点击一个事项即可将其标记为完成，再次点击可撤销标记。而且可以在这里直接录入事项
+
+![](/assets/images/posts/mac/815185158.png)
+
+在 TaskTab 中，已完成的事项不会自动消失，如果你要清理它们，则需要进入菜单栏中的编辑（Preferences...）界面，你可以先选中需要删除的事项, 通过 Remove Tsak 来删除，也可以通过鼠标右键删除单条事项。同样, 这里也可以录入事项
+
+![](/assets/images/posts/mac/81585508.png)
+
+Preferences 里可以设置快捷键和开机自启等一些设置
+
+![](/assets/images/posts/mac/81590049.png)
+
+下载地址: [TaskTab: Simple To Do List](https://itunes.apple.com/cn/app/tasktab-simple-to-do-list/id1395414535?mt=12)
 
 ## Dr. Cleaner——磁盘清理、系统优化类软件
 
@@ -198,3 +220,17 @@ PinTab 是一个超级强大的 **免费资源集合库**。实际上它是一�
 可以说是一个超强资源集合库了。墙裂推荐！
 
 下载地址: [PinTab - Free collection resources for creatives](http://pintab.co/index)
+
+
+
+
+
+
+
+[Knock](https://link.zhihu.com/?target=http%3A//www.knocktounlock.com/) - 当 iPhone 和 Mac 在一起的时候，轻巧 iPhone 即可为 Mac 解锁（实际上是用了加速度感应器，我一般不敲，而是摇两下）。
+
+
+[坚果云官网-网盘|云盘|云服务|团队协作软件|同步共享文件夹​www.jianguoyun.com](https://link.zhihu.com/?target=http%3A//www.jianguoyun.com/s/campaign/cpclanding/main%3Fsch%3Dzhihu_qy)
+
+
+Bilibili Mac强烈推荐,看B站Mac再不发烫了
