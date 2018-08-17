@@ -422,8 +422,11 @@ VSCode 初始化配置
 - O + UA: 向上移动行
 - O + DA: 向下移动行
 - C + f: 查找
+- O + E: [查找后使用此快捷键可以立即选择所有查找结果](https://code.visualstudio.com/updates/May_2016#_select-all-find-matches)
 - F3: 查找下一个
 - S + F3: 查找上一个
+- Esc: 当焦点在查找弹窗组件时, 退出查找
+- S + Esc: 当焦点不在查找弹窗组件时,退出查找
 - C + h: 替换
 - C + S + f: 在文件中查找
 - C + S + h: 在文件中替换

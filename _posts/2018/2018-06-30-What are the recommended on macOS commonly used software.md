@@ -70,6 +70,16 @@ PopClip 是一款在 Mac 上人尽皆知的小工具，它简单高效，具有�
 
 下载地址: [PopClip](https://itunes.apple.com/cn/app/popclip/id445189367?mt=12)
 
+## BetterTouchTool: Mac 触摸板增强神器
+
+BetterTouchTool 是一款可以用来代替默认的系统操作方式（组合键、修饰键、手势等）的辅助应用，其目的是方便用户创造出更适合自身习惯的操作行为，是 Mac 上非常强大的触摸板辅助工具。但如果你希望拓展出更多丰富的功能，可能就要在购置硬件设备上投入额外资金，目前 BTT 直接支持的拓展设备有：Apple Remote、Leap Motion、普通鼠标等。如果你没有打算考虑新的硬件，那么官方开发的 BTT Remote iOS 客户端也非常值得尝试。
+
+![](/assets/images/posts/mac/183378.png)
+
+[少数派 BetterTouchTool 专栏](https://sspai.com/search/article?q=BetterTouchTool)
+
+下载地址: [BetterTouchTool](http://www.boastr.de/)
+
 ## The Unarchive：解压缩工具
 
 macOS 对于压缩文件的处理不是很好。如果你没有安装任何软件，你只能选择压缩成 `.zip` 或者解压 `.zip` 文件，可能听起来有点鸡肋。而 The Unarchiver 作为 Mac 上一款相当良心的解压工具，支持解压 `RAR`、`7-zip`、`Tar` 等常用压缩格式的文件，同时也可以打开 `ISO`、`EXE` 等类型的文件，功能齐全并且免费。
@@ -210,7 +220,6 @@ Preferences 里可以设置快捷键和开机自启等一些设置
 
 下载地址: 下载地址：[Dr. Cleaner](https://itunes.apple.com/cn/app/id921458519?mt=12)
 
-
 ## PinTab：资源神器
 
 PinTab 是一个超级强大的 **免费资源集合库**。实际上它是一个集图片、设计、代码等各种资源的标签页集合。类似于高价版的网址大全，但是上面有清晰的分类。在这里你能找到各种 **免费的商用图片、字体、图标、Photoshop、Sketch、配色、原型，甚至还有 HTML，CSS 和 Javascript 等资源**。
@@ -221,16 +230,10 @@ PinTab 是一个超级强大的 **免费资源集合库**。实际上它是一�
 
 下载地址: [PinTab - Free collection resources for creatives](http://pintab.co/index)
 
+## 一些暂时没用但可能有用的
+
+- [Knock](https://link.zhihu.com/?target=http%3A//www.knocktounlock.com/) - 当 iPhone 和 Mac 在一起的时候，轻巧 iPhone 即可为 Mac 解锁（实际上是用了加速度感应器，我一般不敲，而是摇两下）。
+- [坚果云官网-网盘/云盘/云服务/团队协作软件/同步共享文件夹](https://link.zhihu.com/?target=http%3A//www.jianguoyun.com/s/campaign/cpclanding/main%3Fsch%3Dzhihu_qy)
 
 
-
-
-
-
-[Knock](https://link.zhihu.com/?target=http%3A//www.knocktounlock.com/) - 当 iPhone 和 Mac 在一起的时候，轻巧 iPhone 即可为 Mac 解锁（实际上是用了加速度感应器，我一般不敲，而是摇两下）。
-
-
-[坚果云官网-网盘|云盘|云服务|团队协作软件|同步共享文件夹​www.jianguoyun.com](https://link.zhihu.com/?target=http%3A//www.jianguoyun.com/s/campaign/cpclanding/main%3Fsch%3Dzhihu_qy)
-
-
-Bilibili Mac强烈推荐,看B站Mac再不发烫了
+具体下载链接（附带破解版地址）已经在此制作成表格[下载地址](https://github.com/itgoyo/MacApp)，有需要的朋友可以看。
