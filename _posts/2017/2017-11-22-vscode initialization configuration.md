@@ -12,6 +12,27 @@ VSCode 初始化配置
 
 ## 代码片段
 
+### 片段变量
+
+在自定义代码段中，您现在可以使用变量。变量的语法适用于 `$name` 简单变量和 `${name:default}` 具有默认值的变量。变量计算其值，空字符串或其默认值（如果存在）。当变量未知时，我们将其作为占位符插入。
+
+可以使用以下变量：
+
+  * `TM_SELECTED_TEXT` - 当前选定的文本或空字符串。
+  * `TM_CURRENT_LINE` - 当前行的内容。
+  * `TM_CURRENT_WORD` - 光标下的单词或空字符串的内容。
+  * `TM_LINE_INDEX` - 基于零索引的行号。
+  * `TM_LINE_NUMBER` - 基于单索引的行号。
+  * `TM_FILENAME` - 当前文档的文件名。
+  * `TM_DIRECTORY` - 当前文档的目录。
+  * `TM_FILEPATH` - 当前文档的完整文件路径。
+
+以下是使用单引号围绕所选文本的代码段示例，或者，如果未选择任何文本，则插入 `type_here` -placeholder。
+
+    "in quotes": { "prefix": "inq", "body": "'${TM_SELECTED_TEXT:${1:type_here}}'" }
+
+示例:
+
 此代码片段默认缩进是 2 个空格，如需要修改为 4 个空格，直接添加空格即可。
 
 **注：不支持 tab 缩进，使用 tab 缩进会报错**
@@ -421,14 +442,25 @@ VSCode 初始化配置
 - C + DA: 向下复制行
 - O + UA: 向上移动行
 - O + DA: 向下移动行
+- 查找相关:
 - C + f: 查找
 - O + E: [查找后使用此快捷键可以立即选择所有查找结果](https://code.visualstudio.com/updates/May_2016#_select-all-find-matches)
 - F3: 查找下一个
 - S + F3: 查找上一个
+- UA: 上一个搜索关键词 history.showPrevious
+- DA: 下一个搜索关键词 history.showNext
+- O + C + 字母 c: 切换是否区分大小写 toggleSearchCaseSensitive
+- O + C + w: 切换是否全字匹配 toggleSearchWholeWord
+- O + C + r: 切换是否正则匹配 toggleSearchRegex
 - Esc: 当焦点在查找弹窗组件时, 退出查找
 - S + Esc: 当焦点不在查找弹窗组件时,退出查找
 - C + h: 替换
 - C + S + f: 在文件中查找
+- [跳转搜索结果](https://code.visualstudio.com/updates/v1_9#_search-result-navigation)
+- UA: 当焦点在搜索结果时, 跳转到上一个搜索结果
+- DA: 当焦点在搜索结果时, 跳转到下一个搜索结果
+- F4: 无论焦点是否在搜索结果, 跳转到下一个搜索结果
+- S + F4: 无论焦点是否在搜索结果, 跳转到上一个搜索结果
 - C + S + h: 在文件中替换
 - C + E: 在下面插入行
 - C + k v: 打开侧边预览
