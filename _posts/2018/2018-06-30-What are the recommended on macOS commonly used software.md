@@ -232,8 +232,14 @@ PinTab 是一个超级强大的 **免费资源集合库**。实际上它是一�
 
 ## 一些暂时没用但可能有用的
 
-- [Knock](https://link.zhihu.com/?target=http%3A//www.knocktounlock.com/) - 当 iPhone 和 Mac 在一起的时候，轻巧 iPhone 即可为 Mac 解锁（实际上是用了加速度感应器，我一般不敲，而是摇两下）。
-- [坚果云官网-网盘/云盘/云服务/团队协作软件/同步共享文件夹](https://link.zhihu.com/?target=http%3A//www.jianguoyun.com/s/campaign/cpclanding/main%3Fsch%3Dzhihu_qy)
+- [Knock](http://www.knocktounlock.com/) - 当 iPhone 和 Mac 在一起的时候，轻巧 iPhone 即可为 Mac 解锁（实际上是用了加速度感应器，我一般不敲，而是摇两下）。
+- [坚果云官网-网盘/云盘/云服务/团队协作软件/同步共享文件夹](https://www.jianguoyun.com/)
 
 
 具体下载链接（附带破解版地址）已经在此制作成表格[下载地址](https://github.com/itgoyo/MacApp)，有需要的朋友可以看。
+
+[waitsun](https://www.waitsun.com/)
+
+## 参考资料
+
+- [macOS 上有哪些值得推荐的常用软件？](https://www.zhihu.com/question/19550256#Popover127-toggle)
