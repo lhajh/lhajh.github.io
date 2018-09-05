@@ -110,7 +110,7 @@ input:-webkit-autofill {
 
 意思是让颜色永远在 transparent 到 transparent 进行循环动画。
 
-## 5. 通过 js 控制
+### 5. 通过 js 控制
 
 ```
 <script type="text/javascript">
@@ -130,6 +130,30 @@ input:-webkit-autofill {
 将这段代码加到 head 里面，Stack Overflow 上的大神写的
 
 但需要用到 jQuery, 在现在这个 MVVM 框架流行的年代, jQuery 真的是不推荐使用
+
+## 360 兼容模式
+
+最近发现 360 的兼容模式也会出现黄色填充背景色, 真的是, 好的不学, 就学些糟粕
+
+原代码:
+
+```html
+<input autocomplete="off" placeholder="密码" type="password" class="input__inner password">
+```
+
+360 兼容模式渲染后:
+
+```html
+<input class="input__inner password" style="background-color: rgb(250, 255, 189);" type="password" placeholder="密码" autocomplete="off"/>
+```
+
+竟然厚颜无耻的在内联样式里加背景颜色, 那我也只能还治其人之身了
+
+解决:
+
+```html
+<input autocomplete="off" placeholder="密码" type="password" class="input__inner password" style="background-color: transparent!important;">
+```
 
 ## 参考资料
 

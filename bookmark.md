@@ -166,12 +166,14 @@ menu: Bookmark
 - [44 个 Javascript 变态题解析](https://github.com/xiaoyu2er/blog/issues/1)
 - [面试官：请手写一个 webpack4.0 配置](https://segmentfault.com/a/1190000015611030)
 - [前端面试总结——http、html 和浏览器篇](https://github.com/forthealllight/blog/issues/19)
+- [牛客网](https://www.nowcoder.com/)
 
 ## 移动端
 
 - [手机端页面在项目中遇到的一些问题及解决办法（持续更新）](https://segmentfault.com/a/1190000015178877)
 - [了解真实的『REM』手机屏幕适配](https://github.com/hbxeagle/rem/blob/master/README.md)
 - [移动 web 开发问题和优化小结](https://segmentfault.com/a/1190000011338800)
+- [7 种方法解决移动端 Retina 屏幕 1px 边框问题](https://www.jianshu.com/p/7e63f5a32636)
 
 ## 算法
 

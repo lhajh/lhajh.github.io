@@ -121,6 +121,9 @@ VSCode 初始化配置
 - Vetur
   - Vue 代码片段，语法高亮
   - [Doc](https://vuejs.github.io/vetur)
+- VueHelper
+  - vue，vue-router 和 vuex 的代码提示
+  - [Doc](https://github.com/OYsun/vscode-VueHelper)
 - ESLint
   - 语法检查
 - Prettier - Code formatter
@@ -580,21 +583,44 @@ VSCode 初始化配置
 
 ## 一些小技巧
 
-### [CSS region folding](https://code.visualstudio.com/updates/v1_23#_css-region-folding)
+### [region](https://code.visualstudio.com/updates/v1_17#_folding-regions)
 
-You can now use `/* #region */` and `/* #endregion */` to mark a region as foldable in CSS/SCSS/Less. In SCSS/Less, you can also use `// #region` and `// #endregion` as folding markers.
+* TypeScript/JavaScript: `//#region` and `//#endregion` and `//region` and `//endregion`
 
-![css-folding](/assets/images/posts/vscode/css-folding.gif)
+    ![Region Folding](https://code.visualstudio.com/assets/updates/1_17/region-folding.gif)
+* C#: `#region` and `#endregion`
+* C/C++: `#pragma region` and `#pragma endregion`
+* F#: `//#region` and `//#endregion`
+* Powershell: `#region` and `#endregion`
+* VB: `#Region` and `#End Region`
+* [CSS/SCSS/Less](https://code.visualstudio.com/updates/v1_23#_css-region-folding): `/* #region */` and `/* #endregion */`
+* [SCSS/Less](https://code.visualstudio.com/updates/v1_23#_css-region-folding): `// #region` and `// #endregion`
 
-最近发现 Markdown 的标题也可以这样收缩, 这个简直就是爽啊
+    ![css-folding](/assets/images/posts/vscode/css-folding.gif)
+* Markdown: 标题
 
-![](/assets/images/posts/vscode/34ftg.gif)
+    ![](/assets/images/posts/vscode/34ftg.gif)
+* Coffeescript: `#region` and `#endregion`
+* PHP: `#region` and `#endregion`
+* Bat: `::#region` and `::#endregion`
+
+Note: If you don't remember a folding marker, type `#` at the beginning of a line and you will get IntelliSense suggestions. Each language proposes completion proposals or snippets.
 
 ### [Markdown workspace symbol search](https://code.visualstudio.com/updates/v1_23#_markdown-workspace-symbol-search)
 
 Markdown now has support for workspace symbol search. After opening a Markdown file for the first time, you can use (`⌘T`) to search through the headers of all Markdown files in the current workspace:
 
 ![markdown-workspace-symbol-search](/assets/images/posts/vscode/markdown-workspace-symbol-search.png)
+
+### [Automatic member property suggestions](https://code.visualstudio.com/updates/v1_20#_automatic-member-property-suggestions)
+
+Tired of typing `this.` to access class properties in JavaScript and TypeScript? Now you can just start typing to see available members.
+
+![No more need to type this. to see property suggestions](https://code.visualstudio.com/assets/updates/1_20/ts-this-dot-pre.png)
+
+Accept a member property suggestion, and VS Code automatically inserts the require `this.`.
+
+![this. is automatically inserted when you suggest a property suggestion](https://code.visualstudio.com/assets/updates/1_20/ts-this-dot-post.png)
 
 ## Emmet 的应用
 

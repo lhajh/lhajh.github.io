@@ -214,3 +214,5 @@ $：表示以什么结尾
 ## 常用规则图片
 
 ![](/assets/images/posts/js/regex-help.png)
+
+## [玩转 JavaScript 正则表达式](http://imweb.io/topic/56e804ef1a5f05dc50643106)
