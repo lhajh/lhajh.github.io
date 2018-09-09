@@ -1,6 +1,6 @@
 ---
 layout: post
-title: [翻译] 大多数项目中会用到的 webpack 小技巧
+title: 翻译 大多数项目中会用到的 webpack 小技巧
 categories: JS
 description: 几乎是所有项目都会用到的 13 条 webpack 小技巧
 keywords: webpack
