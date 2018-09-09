@@ -430,31 +430,31 @@ x(1, 2, 3, 4, 5)
 
 2. apply 方法
 
-apply 方法可以指定方法中 this 的值。该方法接收两个参数，第一个是 this 指定的对象，另一个是传入方法的参数组成的数组。
+    apply 方法可以指定方法中 this 的值。该方法接收两个参数，第一个是 this 指定的对象，另一个是传入方法的参数组成的数组。
 
-```js
-function getAge() {
-  var y = new Date().getFullYear()
-  return y - this.birth
-}
+    ```js
+    function getAge() {
+    var y = new Date().getFullYear()
+    return y - this.birth
+    }
 
-var xiaoming = {
-  name: '小明',
-  birth: 1990,
-  age: getAge
-}
+    var xiaoming = {
+    name: '小明',
+    birth: 1990,
+    age: getAge
+    }
 
-xiaoming.age() // 28
-getAge.apply(xiaoming, []) // 28, this 指向 xiaoming, 参数为空
-```
+    xiaoming.age() // 28
+    getAge.apply(xiaoming, []) // 28, this 指向 xiaoming, 参数为空
+    ```
 
 3. call 方法
 
-此外，函数还有一个 call 方法，它与 apply 方法类似，但是其不要求参数组成一个数组。
+    此外，函数还有一个 call 方法，它与 apply 方法类似，但是其不要求参数组成一个数组。
 
-那么，什么时候使用 apply 和 call？
+    那么，什么时候使用 apply 和 call？
 
-事实上，他们两个没有特别大的区别，只有当参数是数组时，apply 有天生优势。
+    事实上，他们两个没有特别大的区别，只有当参数是数组时，apply 有天生优势。
 
 ### 高阶函数
 
