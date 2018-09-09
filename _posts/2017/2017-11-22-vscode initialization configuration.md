@@ -622,6 +622,25 @@ Accept a member property suggestion, and VS Code automatically inserts the requi
 
 ![this. is automatically inserted when you suggest a property suggestion](https://code.visualstudio.com/assets/updates/1_20/ts-this-dot-post.png)
 
+### [特定于平台的键绑定](https://code.visualstudio.com/updates/v1_27#_platform-specific-keybindings)
+
+It's now possible to enable keyboard shortcuts for specific operating systems using `isLinux`, `isMac` and `isWindows` within a keybinding's `when` clause:
+
+```json
+{
+  "key": "ctrl+o",
+  "command": "workbench.action.files.openFolder",
+  "when": "!isMac"
+},
+{
+  "key": "cmd+o",
+  "command": "workbench.action.files.openFolder",
+  "when": "isMac"
+}
+```
+
+This makes it much easier to share your `keybindings.json` file across different machines.
+
 ## Emmet 的应用
 
 vscode 中集成了 Emmet。 Emmet 可以有效提升输入速度。正常情况下，编写 HTML 或者 CSS 时，需要输入很多字符。而现在有了 Emmet，通过输入简写就行了。
