@@ -60,6 +60,7 @@ menu: Bookmark
 
 - [2018 年最值得关注的 JavaScript 趋势](http://36kr.com/p/5110763.html)
 - [数组的遍历你都会用了，那 Promise 版本的呢](https://segmentfault.com/a/1190000014598785)
+- [Promise 实现原理（附源码）](https://juejin.im/post/5b83cb5ae51d4538cc3ec354)
 - [JavaScript 反调试技巧](http://www.freebuf.com/articles/system/163579.html)
 - [WebView 缓存原理分析和应用](https://unclechen.github.io/2017/05/13/WebView%E7%BC%93%E5%AD%98%E5%8E%9F%E7%90%86%E5%88%86%E6%9E%90%E5%92%8C%E5%BA%94%E7%94%A8/)
 - [Javascript 将 html 转成 pdf, 下载, 支持多页哦](https://segmentfault.com/a/1190000009211079)
@@ -72,19 +73,14 @@ menu: Bookmark
 - [一篇文章理解 Web 缓存](https://segmentfault.com/a/1190000015809379)
 - [图片上传组件开发【思路篇】](https://segmentfault.com/a/1190000013038300)
 - [JSON Web Token 入门教程](http://www.ruanyifeng.com/blog/2018/07/json_web_token-tutorial.html)
-- [当你「ping 一下」的时候，你知道它背后的逻辑吗？](https://www.cnblogs.com/jsjwk/p/9639908.html)
-
-## JavaScript
-
-- [fullPage.js](http://alvarotrigo.com/fullPage/) - To create fullscreen scrolling websites / single page websites
-- [lunr.js](http://lunrjs.com/) - Simple full-text search
-- [Trip.js](http://eragonj.github.io/Trip.js/index.html) - Help you customize a tutorial trip easily with more flexibilities
-- [Moment.js](http://momentjs.com/) - Parse, validate, manipulate, and display dates in JavaScript.
-- [Underscore.js](http://underscorejs.org/) - It provides a whole mess of useful functional programming helpers without extending any built-in objects.
+- [如何精确统计页面停留时长](https://techblog.toutiao.com/2018/06/05/ru-he-jing-que-tong-ji-ye-mian-ting-liu-shi-chang/)
+- [JavaScript 反调试技巧](http://www.freebuf.com/articles/system/163579.html)
 
 ## ES6
 
 - [ES6 javascript 实用开发技巧](https://my.oschina.net/u/171860/blog/1794697)
+- [用图表和实例解释 Await 和 Async](http://web.jobbole.com/95051/)
+- [async/await 是如何让代码更加简洁的？](http://codebay.cn/post/9762.html)
 
 ## Vue
 
@@ -98,6 +94,10 @@ menu: Bookmark
 - [Vue 之 slot 深度复制](https://cnodejs.org/topic/58c0ad17d282728c0ec4029a)
 - [Vue 超快速学习](https://segmentfault.com/a/1190000015740490)
 - [Vue 项目架构设计与工程化实践](https://github.com/berwin/Blog/issues/14)
+- [Vue 数据响应式原理](http://web.jobbole.com/95168/)
+- [Vue 面试中，经常会被问到的面试题/Vue 知识点整理](https://segmentfault.com/a/1190000016344599#articleHeader0)
+- [Vue 高版本中一些新特性的使用](https://github.com/masterkong/blog/issues/7)
+- [用 Vue 编写一个长按指令](https://github.com/OFED/translation/issues/3)
 
 ## React
 
@@ -105,6 +105,8 @@ menu: Bookmark
 - [图解 React Native](https://zhuanlan.zhihu.com/p/40398439)
 - [组件、Prop 和 State](https://zhuanlan.zhihu.com/p/41398296)
 - [React Native 基础 & 入门教程：以一个 To Do List 小例子，看 props 和 state](https://www.cnblogs.com/powertoolsteam/p/react-native-tutorials3.html)
+- [Redux进阶（一）](https://www.cnblogs.com/constantince/p/9063345.html)
+- [基于 React 的表单解决方案 noForm](https://www.oschina.net/p/noform)
 
 ## 微信小程序
 
@@ -117,7 +119,11 @@ menu: Bookmark
 - [微信小程序开发 07 - 列表页面怎么做](https://www.cnblogs.com/yexiaochai/p/9431816.html)
 - [【微信小程序项目实践总结】30 分钟从陌生到熟悉](https://www.cnblogs.com/yexiaochai/p/9437101.html)
 - [vue 和微信小程序的区别、比较](https://segmentfault.com/a/1190000015684864)
+- [小程序开发实践总结](https://segmentfault.com/a/1190000016027966)
+- [终极蛇皮上帝视角之微信小程序之告别“刀耕火种”](https://segmentfault.com/a/1190000015978833)
 - [小程序构建骨架屏的探索](https://segmentfault.com/a/1190000015876164)
+- [H5 页面在微信端的分享](https://segmentfault.com/a/1190000016199418)
+- [微信小程序之圆形进度条](https://segmentfault.com/a/1190000013219501)
 
 ## CSS
 
@@ -141,6 +147,7 @@ menu: Bookmark
 - [CSS 布局解决方案（终结版）](https://segmentfault.com/a/1190000013565024)
 - [CSS Grid 中的陷阱和绊脚石](http://www.w3cplus.com/css/css-grid-gotchas-stumbling-blocks.html)
 - [CSS 样式书写规范](http://web.jobbole.com/91792/)
+- [第三方 CSS 并不安全](https://zcfy.cc/article/third-party-css-is-not-safe)
 - [loaders.css](https://connoratherton.com/loaders) - Delightful and performance-focused pure css loading animations
 - [Load Awesome](http://github.danielcardoso.net/load-awesome/animations.html) - Pure CSS Loaders and Spinners
 - [Hover.css](http://ianlunn.github.io/Hover/) - Collection of CSS3 powered hover effects
@@ -171,6 +178,8 @@ menu: Bookmark
 - [前端面试总结——http、html 和浏览器篇](https://github.com/forthealllight/blog/issues/19)
 - [拜托，面试别再问我斐波那契数列了！！！](https://blog.csdn.net/u8AHNh95ix6lUC/article/details/82891833)
 - [牛客网](https://www.nowcoder.com/)
+- [10 秒抓人眼球的“技术类简历”怎么写？](https://blog.csdn.net/z50L2O08e2u4afToR9A/article/details/82731495)
+- [新鲜出炉的 8 月前端面试题](https://segmentfault.com/a/1190000015916686)
 
 ## 移动端
 
@@ -201,9 +210,10 @@ menu: Bookmark
 ## webpack
 
 - [webpack 详解](https://segmentfault.com/a/1190000013657042)
-- [Practice of separation development environment based on webpack](https://mp.weixin.qq.com/s?__biz=MzAxODE2MjM1MA==&mid=2651552516&idx=2&sn=d183f7190a8430f3bf2e1729f29ef9ee&pass_ticket=H45s%2Fvpm4mT1AvAjYR1gUS%2FPTKCqw9gOjrF2Jvqyt%2FwHOwYvMOfnM5VA2CMkMiZM)
+- [基于 webpack 的前后端分离开发环境实践](https://mp.weixin.qq.com/s?__biz=MzAxODE2MjM1MA==&mid=2651552516&idx=2&sn=d183f7190a8430f3bf2e1729f29ef9ee&pass_ticket=H45s%2Fvpm4mT1AvAjYR1gUS%2FPTKCqw9gOjrF2Jvqyt%2FwHOwYvMOfnM5VA2CMkMiZM)
 - [如何写好. babelrc？Babel 的 presets 和 plugins 配置解析](https://excaliburhan.com/post/babel-preset-and-plugins.html)
 - [webpack 启动代码源码解读](https://segmentfault.com/a/1190000016524677)
+- [手摸手，带你用合理的姿势使用webpack4](https://segmentfault.com/a/1190000015919863)
 
 ## Git
 
@@ -221,6 +231,11 @@ menu: Bookmark
 - [SuperAgent](http://visionmedia.github.io/superagent/) - Super Agent is light-weight progressive ajax API
 - [connect-mongo](https://github.com/kcbanner/connect-mongo) - MongoDB session store for Express and Connect
 - [Morgan](https://github.com/expressjs/morgan) - HTTP request logger middleware for node.js
+
+## 系统
+
+- [当你「ping 一下」的时候，你知道它背后的逻辑吗？](https://www.cnblogs.com/jsjwk/p/9639908.html)
+- [chmod 755 究竟是什么鬼？](https://blog.csdn.net/z50L2O08e2u4afToR9A/article/details/82504829)
 
 ## Front-end web UI/Framework
 
