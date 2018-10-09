@@ -642,6 +642,26 @@ It's now possible to enable keyboard shortcuts for specific operating systems us
 
 This makes it much easier to share your `keybindings.json` file across different machines.
 
+### Tab completion
+
+Editor Tab completion can now complete all kind of suggestions. After setting `"editor.tabCompletion": "on"`, pressing Tab will complete any prefix, not just snippets. Also, pressing Tab will insert the next suggestion and ⇧Tab will insert the previous suggestion.
+
+![Tab completion](https://code.visualstudio.com/assets/updates/1_28/tabcompletion.gif)
+
+### Navigate to last edit location
+
+A new command **Go to Last Edit Location** (`workbench.action.navigateToLastEditLocation`) was added to quickly navigate to the last location in a file that was edited. The default keybinding is `⌘K ⌘Q`.
+
+### Save without formatters
+
+The new command **Save without Formatting** (`workbench.action.files.saveWithoutFormatting`) can be used to save a file without triggering any of the save participants (for example, formatters, remove trailing whitespace, final newline). The default keybinding is `⌘K S`. This is useful when editing files outside your normal projects, which may have different formatting conventions.
+
+### IntelliSense locality bonus
+
+Suggestions can now be sorted based on their distance to the cursor. Set `"editor.suggest.localityBonus": true` and you'll see, for example, function parameters showing up at the top of the IntelliSense list.
+
+![Locality bonus](https://code.visualstudio.com/assets/updates/1_28/locality-bonus.png)
+
 ## Emmet 的应用
 
 vscode 中集成了 Emmet。 Emmet 可以有效提升输入速度。正常情况下，编写 HTML 或者 CSS 时，需要输入很多字符。而现在有了 Emmet，通过输入简写就行了。
