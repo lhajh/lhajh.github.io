@@ -15,13 +15,15 @@ Location 对象是 Window 对象的一个部分，可通过 window.location 属�
 |属性|	描述| 例子 | 返回值
 |--|--|--|--|
 |href	 |设置或返回完整的 URL。| `http://example.com:1234/test.htm#part2` | `http://example.com:1234/test.htm#part2`
-|host	 |设置或返回主机名和当前 URL 的端口号。相当于 hostname + port，当端口为 80 时，和 hostname 一样| `http://example.com:1234/test.htm#part2` |  `example.com:1234` 
+|host	 |设置或返回主机名和当前 URL 的端口号。相当于 hostname + port，当端口为 80 时，和 hostname 一样| `http://example.com:1234/test.htm#part2` |  `example.com:1234`
 |hostname	 |设置或返回当前 URL 的主机名。| `http://example.com:1234/test.htm#part2` | `example.com`
 |port	 |设置或返回当前 URL 的端口号。| `http://example.com:1234/test.htm#part2` | `1234` |
 |protocol	 |设置或返回当前 URL 的协议。| `http://example.com:1234/test.htm#part2` | `http:`
 |pathname	 |设置或返回当前 URL 的路径部分。| `http://example.com:1234/test.htm#part2` | `/test.htm`
 |hash	 |设置或返回从井号 (#) 开始的 URL（锚）。| `http://example.com:1234/test.htm#part2` | `#part2`
 |search	 |设置或返回从问号 (?) 开始的 URL（查询部分）。| `http://example.com:1234/test/t.asp?f=hdom_loc_search` | `?f=hdom_loc_search` |
+
+注: **当 URL 同时存在 `#` 和 `?` 时, 当 `?` 在 `#` 前面, `search` 能正确截取, 当 `?` 在 `#` 后面, `search` 返回为空字符串; 而 `hash` 只会从 `#` 开始截取到结尾, 不受位置影响**
 
 **当一个 Location 对象被转换成字符串，href 属性的值被返回。这意味着你可以使用表达式 location 来替代 location.href。**
 
@@ -32,4 +34,3 @@ Location 对象是 Window 对象的一个部分，可通过 window.location 属�
 |assign()	|加载新的文档。|
 |reload()	|重新加载当前文档。|
 |replace()	|用新的文档替换当前文档。|
-
