@@ -110,10 +110,10 @@ function parseURL(url) {
   var code = document.getElementById('code')
   function search() {
     if (input.value.trim()) {
-      pre.display = 'block'
+      document.getElementById('pre').display = 'block'
       code.innerHTML = JSON.stringify(parseURL(input.value), null, '\t')
     } else {
-      pre.display = 'none'
+      document.getElementById('pre').display = 'none'
       code.innerHTML = ''
     }
   }
