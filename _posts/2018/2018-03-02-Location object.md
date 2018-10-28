@@ -74,18 +74,46 @@ function parseURL(url) {
 ```
 
 你可以在下面输入框中输入需要查询的 url 来体验一下!
-
-<input id="input" oninput="search()">
-<pre>
+<style type="text/css">
+  #input {
+    -webkit-appearance: none;
+    background-color: #fff;
+    background-image: none;
+    border-radius: 4px;
+    border: 1px solid #dcdfe6;
+    box-sizing: border-box;
+    color: #606266;
+    display: inline-block;
+    font-size: inherit;
+    height: 40px;
+    line-height: 40px;
+    outline: none;
+    padding: 0 15px;
+    transition: border-color .2s cubic-bezier(.645,.045,.355,1);
+    width: 100%;
+  }
+  #input:focus {
+    outline: none;
+    border-color: #409eff;
+  }
+  #pre {
+    display: none;
+  }
+</style>
+<input id="input" type="text" autocomplete="off" placeholder="请输入内容" oninput="search()">
+<pre id="pre">
   <code id="code"></code>
 </pre>
 <script>
   var input = document.getElementById('input')
+  var pre = document.getElementById('pre')
   var code = document.getElementById('code')
   function search() {
     if (input.value.trim()) {
+      pre.display = block
       code.innerHTML = JSON.stringify(parseURL(input.value), null, '\t')
     } else {
+      pre.display = none
       code.innerHTML = ''
     }
   }
