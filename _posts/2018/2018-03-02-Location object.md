@@ -97,7 +97,7 @@ function parseURL(url) {
     border-color: #409eff;
   }
   #pre {
-    display: none;
+    height: 0;
   }
 </style>
 <input id="input" type="text" autocomplete="off" placeholder="请输入内容" oninput="search()">
@@ -110,10 +110,10 @@ function parseURL(url) {
   var code = document.getElementById('code')
   function search() {
     if (input.value.trim()) {
-      document.getElementById('pre').display = 'block'
+      pre.height = 'auto'
       code.innerHTML = JSON.stringify(parseURL(input.value), null, '\t')
     } else {
-      document.getElementById('pre').display = 'none'
+      pre.height = 0
       code.innerHTML = ''
     }
   }
