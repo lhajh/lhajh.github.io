@@ -21,7 +21,7 @@ keywords: js, upper
 </div>
 ```
 
-![clipboard.png](https://segmentfault.com/img/bVbiwcG?w=263&h=89)
+![clipboard.png](/assets/images/posts/vue/bVbiwcG.png)
 
 从这里我们可以看到，我们还在输入的时候，光标还在的时候，下面的值就已经出来了，可以说是非常地实时。
 
@@ -44,7 +44,7 @@ keywords: js, upper
 <input type="text" v-model.trim="value">
 ```
 
-![clipboard.png](https://segmentfault.com/img/bVbiwdV?w=353&h=65)
+![clipboard.png](/assets/images/posts/vue/bVbiwdV.png)
 
 为了让你更清楚的看到，我改了一下样式，不过问题不大，相信你已经清楚看到这个大大的 hello 左右两边没有空格，尽管你在 input 框里敲烂了空格键。
 
@@ -54,9 +54,9 @@ keywords: js, upper
 
 看这个名字就知道，应该是限制输入数字或者输入的东西转换成数字，but 不是辣么干的。
 
-![clipboard.png](https://segmentfault.com/img/bVbiztt?w=386&h=73)
+![clipboard.png](/assets/images/posts/vue/bVbiztt.png)
 
-![clipboard.png](https://segmentfault.com/img/bVbiztV?w=457&h=55)
+![clipboard.png](/assets/images/posts/vue/bVbiztV.png)
 
 如果你先输入数字，那它就会限制你输入的只能是数字。
 
@@ -119,7 +119,7 @@ shout(e){
 </div>
 ```
 
-![clipboard.png](https://segmentfault.com/img/bVbizKd?w=657&h=53)
+![clipboard.png](/assets/images/posts/vue/bVbizKd.png)
 
 ### .once
 
