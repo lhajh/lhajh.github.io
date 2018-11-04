@@ -1,7 +1,7 @@
 ---
 layout: post
 title: 为什么两个 width 50% 的子元素会超出父元素
-categories: [CSS, width]
+categories: [CSS]
 description: 为什么两个 width 50% 的子元素会超出父元素
 keywords: CSS, width
 ---

@@ -1,7 +1,7 @@
 ---
 layout: blog
 title: 网易云音乐的神评论
-categories: blog
+categories: Blog
 description: 网易云音乐的神评论
 keywords: 网易云音乐
 ---
