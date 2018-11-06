@@ -12,6 +12,8 @@ vue是前端开发者所追捧的框架，简单易上手，但是基于vue的�
 
 按照上述步骤就可以在页面中显示 UEditor，但此时上传仍不能使用
 
+点击上传按钮会提示 `后端配置项没有正常加载，上传插件不能正常使用！`
+
 需要在 `ueditor.config.js` 中修改 `serverUrl`
 
 例如：
@@ -20,6 +22,22 @@ vue是前端开发者所追捧的框架，简单易上手，但是基于vue的�
 , serverUrl: window.location.protocol + "//" + window.location.host + "/api/ue/config"
 ```
 这个 url 路径是和后台商量好的，保证访问这个接口可以返回 config.json
+
+注: **本人使用的是 jsp 版本 utf-8 版的, 这个 config.json 在下载文件解压后的 jsp 文件夹里面. 在这个 json 文件中是前后端通信相关的配置, 包括上传路径, 文件格式限制等**
+
+下面是 json 配置的部分代码
+
+```js
+"imageActionName": "uploadimage", /* 执行上传图片的action名称 */
+"imageFieldName": "upfile", /* 提交的图片表单名称 */
+"imageMaxSize": 2048000, /* 上传大小限制，单位B */
+"imageAllowFiles": [".png", ".jpg", ".jpeg", ".gif", ".bmp"], /* 上传图片格式显示 */
+"imageCompressEnable": true, /* 是否压缩图片,默认是true */
+"imageCompressBorder": 1600, /* 图片压缩最长边限制 */
+"imageInsertAlign": "none", /* 插入的图片浮动方式 */
+"imageUrlPrefix": "", /* 图片访问路径前缀 */
+"imagePathFormat": "/ueditor/jsp/upload/image/{yyyy}{mm}{dd}/{time}{rand:6}"
+```
 
 [这是后台上传配置](http://www.olbids.com/f/topic/view?topic=5)
 
