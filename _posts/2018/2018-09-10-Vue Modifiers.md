@@ -8,6 +8,8 @@ keywords: js, upper
 
 为了方便大家写代码，vue.js 给大家提供了很多方便的修饰符，比如我们经常用到的取消冒泡，阻止默认事件等等~
 
+建议对照[例子](https://lhajh.github.io/vue-element-extend-demo/#/Modifiers)查看
+
 ## 表单修饰符
 
 填写表单，最常用的是什么？input！v-model~ 而我们的修饰符正是为了简化这些东西而存在的
