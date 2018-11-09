@@ -260,6 +260,10 @@ VSCode 初始化配置
   "breadcrumbs.enabled": true,
   // 在导航路径视图中仅显示当前符号
   "breadcrumbs.symbolPath": "last",
+  // 控制资源管理器是否在把文件删除到废纸篓时进行确认。
+  "explorer.confirmDelete": false,
+  // 小地图最大宽度
+  "editor.minimap.maxColumn": 80,
   // 控制是否显示工作台底部状态栏中的 Twitter 反馈 (笑脸图标)。
   "workbench.statusBar.feedback.visible": false,
 
@@ -296,7 +300,7 @@ VSCode 初始化配置
   "gitlens.historyExplorer.enabled": false,
 
   // element-helper 版本 插件名: vscode-element-helper
-  "element-helper.version": "2.3",
+  "element-helper.version": "2.4",
 
   // 在默认不支持 Emmet 的语言中启用 Emmet 缩写功能。在此添加该语言与受支持的语言间的映射。
   "emmet.includeLanguages": {
@@ -304,7 +308,8 @@ VSCode 初始化配置
   },
   // vim 插件名: Vim
   // Override VSCode's copy command with our own copy command, which works better with VSCodeVim. Turn this off if copying is not working.
-  "vim.overrideCopy": false
+  "vim.overrideCopy": false,
+  "vim.startInInsertMode": true
 }
 ```
 
