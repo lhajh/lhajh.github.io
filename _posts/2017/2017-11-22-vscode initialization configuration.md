@@ -137,6 +137,15 @@ VSCode 初始化配置
   - Vue 代码片段, 语法高亮, 格式化 .vue 文件, 包括里面的 CSS、JS, 至于模板即 HTML 部分, 官方维护者说没有比较好的工具支持, 默认是不格式化的
   - [Doc](https://vuejs.github.io/vetur)
   - [Install](vscode:extension/octref.vetur)
+- [JS-CSS-HTML-Formatter](https://marketplace.visualstudio.com/items?itemName=lonefy.vscode-JS-CSS-HTML-formatter)
+  - 格式化插件, 保存后自动格式
+  - [Install](vscode:extension/lonefy.vscode-JS-CSS-HTML-formatter)
+- [PostCSS Sorting](https://marketplace.visualstudio.com/items?itemName=mrmlnc.vscode-postcss-sorting)
+  - 对 css 按一定规则属性进行排序
+  - [Install](vscode:extension/mrmlnc.vscode-postcss-sorting)
+- [Prettify JSON](https://marketplace.visualstudio.com/items?itemName=mohsen1.prettify-json)
+  - 格式化 JSON
+  - [Install](vscode:extension/mohsen1.prettify-json)
 - [vscode-pangu](https://marketplace.visualstudio.com/items?itemName=baurine.vscode-pangu)
   - 一款给中英文间加空格的 VS Code 插件
   - [Doc](https://github.com/baurine/vscode-pangu)
@@ -152,6 +161,9 @@ VSCode 初始化配置
   - [Doc](https://github.com/OYsun/vscode-VueHelper)
   - vue, vue-router 和 vuex 的代码提示
   - [Install](vscode:extension/oysun.vuehelper)
+- [Vue VSCode Snippets](https://marketplace.visualstudio.com/items?itemName=sdras.vue-vscode-snippets)
+  - vue 代码片段
+  - [Install](vscode:extension/sdras.vue-vscode-snippets)
 - [vscode-element-helper](https://marketplace.visualstudio.com/items?itemName=ElemeFE.vscode-element-helper)
   - [Doc](https://github.com/ElemeFE/vscode-element-helper)
   - 一款 ElementUi 的 VS Code 插件
@@ -188,9 +200,15 @@ VSCode 初始化配置
 - [Settings Sync](https://marketplace.visualstudio.com/items?itemName=Shan.code-settings-sync)
   - 基于 Gist 实现 VSCode 用户配置、快捷键配置、已安装插件列表等的备份和恢复功能
   - [Install](vscode:extension/Shan.code-settings-sync)
+- [Syncing](https://marketplace.visualstudio.com/items?itemName=nonoroazoro.syncing)
+  - 也是一个备份恢复的插件, 据说比上面那个好, 但我目前还没有测试
+  - [Install](vscode:extension/nonoroazoro.syncing)
 - [GitLens — Git supercharged](https://marketplace.visualstudio.com/items?itemName=eamodio.gitlens)
   - Git 可视化工具, 自带 diff 功能, 能让我们在不离开编辑器,不执行任何命令的情况下知晓光标所在位置代码的修改时间、作者信息等
   - [Install](vscode:extension/eamodio.gitlens)
+- [Nasc VSCode Touchbar](https://marketplace.visualstudio.com/items?itemName=felipe.nasc-touchbar)
+  - 支持 MBP 的触摸条, 提供了挺多实用的功能点
+  - [Install](vscode:extension/felipe.nasc-touchbar)
 
 ### 外观增强
 - [Bracket Pair Colorizer](https://marketplace.visualstudio.com/items?itemName=CoenraadS.bracket-pair-colorizer)
@@ -220,27 +238,30 @@ VSCode 初始化配置
 - [Code Spell Checker](https://marketplace.visualstudio.com/items?itemName=streetsidesoftware.code-spell-checker)
   - 这款插件能实时的识别单词拼写是否有误, 并给出提示
   - [Install](vscode:extension/streetsidesoftware.code-spell-checker)
+- [Paste JSON as Code](https://marketplace.visualstudio.com/items?itemName=quicktype.quicktype)
+  - JSON 快速转换为其他语言的类型格式
+  - [Install](vscode:extension/quicktype.quicktype)
 
 ### 其他插件
 
+- [Vue Peek](https://marketplace.visualstudio.com/items?itemName=dariofuzinato.vue-peek)
+  - 跳转到定义, 支持点击 template 里的组件名称, 但只能使用 ../ 引入才能识别跳转
+  - [Install](vscode:extension/dariofuzinato.vue-peek)
+- [Import Cost](https://marketplace.visualstudio.com/items?itemName=wix.vscode-import-cost)
+  - import 一个东西的时候, 可以计算该引入模块的大小
+  - [Install](vscode:extension/wix.vscode-import-cost)
 - [Autoprefixer](https://marketplace.visualstudio.com/items?itemName=mrmlnc.vscode-autoprefixer)
   - 为 css 属性添加浏览器兼容前缀,  webpack PostCSS 也具有相同功能
   - [Install](vscode:extension/mrmlnc.vscode-autoprefixer)
-- [JS-CSS-HTML-Formatter](https://marketplace.visualstudio.com/items?itemName=lonefy.vscode-JS-CSS-HTML-formatter)
-  - 格式化插件, 保存后自动格式, 但会和 vue 脚手架安装的 ESLint 冲突
-  - [Install](vscode:extension/lonefy.vscode-JS-CSS-HTML-formatter)
 - [Live Server](https://marketplace.visualstudio.com/items?itemName=ritwickdey.LiveServer)
   - 启动一个本地服务, 用于测试调试
   - [Install](vscode:extension/ritwickdey.LiveServer)
-- [PostCSS Sorting](https://marketplace.visualstudio.com/items?itemName=mrmlnc.vscode-postcss-sorting)
-  - 对 css 按一定规则属性进行排序
-  - [Install](vscode:extension/mrmlnc.vscode-postcss-sorting)
-- [Prettify JSON](https://marketplace.visualstudio.com/items?itemName=mohsen1.prettify-json)
-  - 格式化 JSON
-  - [Install](vscode:extension/mohsen1.prettify-json)
 - [View In Browser](https://marketplace.visualstudio.com/items?itemName=qinjia.view-in-browser)
   - html 在浏览器打开 html 页面
   - [Install](vscode:extension/qinjia.view-in-browser)
+- [RegExp Preview and Editor](https://marketplace.visualstudio.com/items?itemName=le0zh.vscode-regexp-preivew)
+  - 图形化正则表达式
+  - [Install](vscode:extension/le0zh.vscode-regexp-preivew)
 
 ## 系统设置
 
@@ -517,6 +538,7 @@ VSCode 初始化配置
 - C + DA: 向下复制行
 - O + UA: 向上移动行
 - O + DA: 向下移动行
+- C + S + \\: 匹配括号的闭合处，跳转
 - 查找相关:
 - C + f: 查找
 - O + E: [查找后使用此快捷键可以立即选择所有查找结果](https://code.visualstudio.com/updates/May_2016#_select-all-find-matches)
@@ -543,8 +565,11 @@ VSCode 初始化配置
 - S + O + f: 格式化文件
 - C + k C + f: 格式化选中代码
 - C + k C + x: 剪裁尾随空格
+- C + i: 选中当前行
 - C + ]: 行缩进
 - C + [: 行减少缩进
+- C + k C + [: 折叠所有子区域代码
+- C + k C + ]: 展开所有子区域代码
 - C + O + [: 折叠光标处最内部的未折叠区域
 - C + O + ]: 展开光标处的折叠区域
 - C + k C + 数字 0: 折叠编辑器中的所有区域
@@ -811,3 +836,5 @@ vscode 中集成了 Emmet。 Emmet 可以有效提升输入速度。正常情况
 - [VS Code 折腾记 - (10) 你想发布自己捣鼓的 snippets 到 VSCode 插件市场!](https://juejin.im/post/5a198dd36fb9a04504079336)
 - [VS Code 折腾记 - (11) 再来一波插件推荐!(代码片段,框架,Node,touchbar,TS,Git,数据库,python!!)](https://juejin.im/post/5a1b869351882533d022c7f5)
 - [VS Code 折腾记 - (12) 春节前的最后一波插件推荐(前端/协作/主题)](https://juejin.im/post/5a704d84518825734f5300c8)
+- [VS Code 折腾记 - (13) VS Live Share (可提高效率的代码实时协作插件)的使用姿势](https://juejin.im/post/5afd4f99f265da0b8455a404)
+- [VS Code 折腾记 - (14) 再来推荐一波大前端适用系列 (Node/React/Vue/小程序/主题/代码体验等) 的插件](https://juejin.im/post/5b3d9378f265da0f6012eb65)
