@@ -169,7 +169,7 @@ VSCode 初始化配置
   - 一款 ElementUi 的 VS Code 插件
   - [Install](vscode:extension/ElemeFE.vscode-element-helper)
 - [HTML Snippets](https://marketplace.visualstudio.com/items?itemName=abusaidm.html-snippets)
-  - 各种 HTML 标签片段, 如果你 [Emmet](#Emmet 的应用) 玩的熟, 完全可以忽略这个
+  - 各种 HTML 标签片段, 如果你 [Emmet](#emmet-的应用) 玩的熟, 完全可以忽略这个
   - [Install](vscode:extension/abusaidm.html-snippets)
 
 ### 自动补全
@@ -761,7 +761,7 @@ Suggestions can now be sorted based on their distance to the cursor. Set `"edit
 
 vscode 中集成了 Emmet。 Emmet 可以有效提升输入速度。正常情况下, 编写 HTML 或者 CSS 时, 需要输入很多字符。而现在有了 Emmet, 通过输入简写就行了。
 
-- [Emment 官网](https://emmet.io/)
+- [Emmet 官网](https://emmet.io/)
 - [Emmet in Visual Studio Code](https://code.visualstudio.com/docs/editor/emmet)
 - [Emmet-前端开发神器](https://segmentfault.com/a/1190000007812543)
 
