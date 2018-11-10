@@ -14,7 +14,7 @@ VSCode 初始化配置
 
 ### 片段变量
 
-在自定义代码段中，您现在可以使用变量。变量的语法适用于 `$name` 简单变量和 `${name:default}` 具有默认值的变量。变量计算其值，空字符串或其默认值（如果存在）。当变量未知时，我们将其作为占位符插入。
+在自定义代码段中, 您现在可以使用变量。变量的语法适用于 `$name` 简单变量和 `${name:default}` 具有默认值的变量。变量计算其值, 空字符串或其默认值（如果存在）。当变量未知时, 我们将其作为占位符插入。
 
 可以使用以下变量：
 
@@ -27,15 +27,15 @@ VSCode 初始化配置
   * `TM_DIRECTORY` - 当前文档的目录。
   * `TM_FILEPATH` - 当前文档的完整文件路径。
 
-以下是使用单引号围绕所选文本的代码段示例，或者，如果未选择任何文本，则插入 `type_here` -placeholder。
+以下是使用单引号围绕所选文本的代码段示例, 或者, 如果未选择任何文本, 则插入 `type_here` -placeholder。
 
     "in quotes": { "prefix": "inq", "body": "'${TM_SELECTED_TEXT:${1:type_here}}'" }
 
 示例:
 
-此代码片段默认缩进是 2 个空格，如需要修改为 4 个空格，直接添加空格即可。
+此代码片段默认缩进是 2 个空格, 如需要修改为 4 个空格, 直接添加空格即可。
 
-**注：不支持 tab 缩进，使用 tab 缩进会报错**
+**注：不支持 tab 缩进, 使用 tab 缩进会报错**
 
 ### HTML5 代码片段
 
@@ -114,68 +114,133 @@ VSCode 初始化配置
 
 ## 插件
 
-- Vim
-  - vim 被誉为『编辑器之神』，一旦学会了 vim 的指法，会让你终身受益，至少在你敲代码的年代会收益，毫无夸张, 它会让你摆脱烦人的，在敲代码的时候频繁的移动鼠标，这也是 vim 的设计理念之一 -- 脱离鼠标。
-  - [每日一 Vim 笔记](https://lhajh.github.io/vim/2018/05/08/the-notes-of-a-daily-vim.html)
-  - [每日一 Vim](https://lhajh.github.io/vim/2018/05/08/the-notes-of-a-daily-vim.html)
-- Vetur
-  - Vue 代码片段，语法高亮
-  - [Doc](https://vuejs.github.io/vetur)
-- VueHelper
-  - vue，vue-router 和 vuex 的代码提示
-  - [Doc](https://github.com/OYsun/vscode-VueHelper)
-- ESLint
-  - 语法检查
-- Prettier - Code formatter
+### 风格检查
+
+- [ESLint](https://marketplace.visualstudio.com/items?itemName=dbaeumer.vscode-eslint)
+  - 语法检查工具
+  - [Install](vscode:extension/dbaeumer.vscode-eslint)
+- [TSLint](https://marketplace.visualstudio.com/items?itemName=eg2.tslint)
+  - TypeScript 语法检查工具
+  - [Install](vscode:extension/eg2.tslint)
+- [stylelint](https://marketplace.visualstudio.com/items?itemName=shinnn.stylelint)
+  - style 语法检查工具
+  - [Install](vscode:extension/shinnn.stylelint)
+- [Prettier - Code formatter](https://marketplace.visualstudio.com/items?itemName=esbenp.prettier-vscode)
+  - 实际上已经是代码格式化的工具标准, 支持格式化几乎所有的前端代码
   - [自以为是的代码格式化程序](https://prettier.io/)
   - [prettier 的配置选项（参数）官网直译](https://segmentfault.com/a/1190000012909159)
   - [vscode + prettier 专治代码洁癖](https://juejin.im/post/5a791d566fb9a0634853400e)
   - [在 vscode 中 vue 编码风格统一的方法介绍](http://www.php.cn/js-tutorial-405449.html)
   - [vscode 中编写 vue 项目标签属性如果格式化换行？](https://segmentfault.com/q/1010000012437190)
-- JavaScript (ES6) code snippets
-  - ES6 代码片段
-- vscode-element-helper
-  - 一款 ElementUi 的 VS Code 插件
-  - [Doc](https://github.com/ElemeFE/vscode-element-helper)
-- vscode-pangu
+  - [Install](vscode:extension/esbenp.prettier-vscode)
+- [Vetur](https://marketplace.visualstudio.com/items?itemName=octref.vetur)
+  - Vue 代码片段, 语法高亮, 格式化 .vue 文件, 包括里面的 CSS、JS, 至于模板即 HTML 部分, 官方维护者说没有比较好的工具支持, 默认是不格式化的
+  - [Doc](https://vuejs.github.io/vetur)
+  - [Install](vscode:extension/octref.vetur)
+- [vscode-pangu](https://marketplace.visualstudio.com/items?itemName=baurine.vscode-pangu)
   - 一款给中英文间加空格的 VS Code 插件
   - [Doc](https://github.com/baurine/vscode-pangu)
   - [如何实现一个给中英文间加空格的 VS Code 扩展](https://juejin.im/post/5a43718cf265da43310e1a34)
-- Document This
-  - 为 js 中的函数自动生成注释
-- vscode-fileheader
-  - 文件头部注释
-- GitLens — Git supercharged
-  - Git 可视化工具，自带 diff 功能
-- Path Intellisense
-  - 路径自动补全
-- Bracket Pair Colorizer
-  - 给括号添加对应颜色，利于阅读
-- Date & Time
-  - 编辑器右下角显示时间，Mac 开发有用
-- VSCode Great Icons
-  - 图标
-- Chinese (Simplified) Language Pack for Visual Studio Code
+  - [Install](vscode:extension/baurine.vscode-pangu)
+
+### 代码片段
+
+- [JavaScript (ES6) code snippets](https://marketplace.visualstudio.com/items?itemName=xabikos.JavaScriptSnippets)
+  - ES6 代码片段. 常用的类声明、ES 模块声明、CMD 模块导入等, 支持的缩写不下 20 种
+  - [Install](vscode:extension/xabikos.JavaScriptSnippets)
+- [VueHelper](https://marketplace.visualstudio.com/items?itemName=oysun.vuehelper)
+  - [Doc](https://github.com/OYsun/vscode-VueHelper)
+  - vue, vue-router 和 vuex 的代码提示
+  - [Install](vscode:extension/oysun.vuehelper)
+- [vscode-element-helper](https://marketplace.visualstudio.com/items?itemName=ElemeFE.vscode-element-helper)
+  - [Doc](https://github.com/ElemeFE/vscode-element-helper)
+  - 一款 ElementUi 的 VS Code 插件
+  - [Install](vscode:extension/ElemeFE.vscode-element-helper)
+- [HTML Snippets](https://marketplace.visualstudio.com/items?itemName=abusaidm.html-snippets)
+  - 各种 HTML 标签片段, 如果你 [Emmet](#Emmet 的应用) 玩的熟, 完全可以忽略这个
+  - [Install](vscode:extension/abusaidm.html-snippets)
+
+### 自动补全
+
+- [Path Intellisense](https://marketplace.visualstudio.com/items?itemName=christian-kohler.path-intellisense)
+  - 文件路径补全, 在你用任何方式引入文件系统中的路径时提供智能提示和自动完成
+  - [Install](vscode:extension/christian-kohler.path-intellisense)
+- [Auto Close Tag](https://marketplace.visualstudio.com/items?itemName=formulahendry.auto-close-tag)
+  - 适用于 JSX、Vue、HTML, 在打开标签并且键入 `</` 的时候, 能自动补全要闭合的标签
+  - [Install](vscode:extension/formulahendry.auto-close-tag)
+- [Auto Rename Tag](https://marketplace.visualstudio.com/items?itemName=formulahendry.auto-rename-tag)
+  - 适用于 JSX、Vue、HTML, 在修改标签名时, 能在你修改开始（结束）标签的时候修改对应的结束（开始）标签, 帮你减少 50% 的击键
+  - [Install](vscode:extension/formulahendry.auto-rename-tag)
+- [NPM Intellisense](https://marketplace.visualstudio.com/items?itemName=christian-kohler.npm-intellisense)
+  - NPM 依赖补全, 在你引入任何 node_modules 里面的依赖包时提供智能提示和自动完成
+  - [Install](vscode:extension/christian-kohler.npm-intellisense)
+- [IntelliSense for CSS class names](https://marketplace.visualstudio.com/items?itemName=Zignd.html-css-class-completion)
+  - CSS 类名补全, 会自动扫描整个项目里面的 CSS 类名并在你输入类名时做智能提示
+  - [Install](vscode:extension/Zignd.html-css-class-completion)
+
+### 功能增强
+
+- [Vim](https://marketplace.visualstudio.com/items?itemName=vscodevim.vim)
+  - vim 被誉为『编辑器之神』, 一旦学会了 vim 的指法, 会让你终身受益, 至少在你敲代码的年代会收益, 毫无夸张, 它会让你摆脱烦人的, 在敲代码的时候频繁的移动鼠标, 这也是 vim 的设计理念之一 -- 脱离鼠标。
+  - [每日一 Vim 笔记](https://lhajh.github.io/vim/2018/05/08/the-notes-of-a-daily-vim.html)
+  - [每日一 Vim](https://lhajh.github.io/vim/2018/05/08/the-notes-of-a-daily-vim.html)
+  - [Install](vscode:extension/vscodevim.vim)
+- [Settings Sync](https://marketplace.visualstudio.com/items?itemName=Shan.code-settings-sync)
+  - 基于 Gist 实现 VSCode 用户配置、快捷键配置、已安装插件列表等的备份和恢复功能
+  - [Install](vscode:extension/Shan.code-settings-sync)
+- [GitLens — Git supercharged](https://marketplace.visualstudio.com/items?itemName=eamodio.gitlens)
+  - Git 可视化工具, 自带 diff 功能, 能让我们在不离开编辑器,不执行任何命令的情况下知晓光标所在位置代码的修改时间、作者信息等
+  - [Install](vscode:extension/eamodio.gitlens)
+
+### 外观增强
+- [Bracket Pair Colorizer](https://marketplace.visualstudio.com/items?itemName=CoenraadS.bracket-pair-colorizer)
+  - 识别代码中的各种括号, 并且标记上不同的颜色, 方便你扫视到匹配的括号, 在括号使用非常多的情况下能环节眼部压力
+  - [Install](vscode:extension/CoenraadS.bracket-pair-colorizer)
+- [TODO Highlight](https://marketplace.visualstudio.com/items?itemName=wayou.vscode-todo-highlight)
+  - 高亮各种 TODO、FIXME、HACK 之类的标记. 标记后面必须加冒号, 如 // TODO: 这是一个 todo
+  - [Install](vscode:extension/wayou.vscode-todo-highlight)
+- [Date & Time](https://marketplace.visualstudio.com/items?itemName=rid9.datetime)
+  - 编辑器右下角显示时间, Mac 开发有用
+  - [Install](vscode:extension/rid9.datetime)
+- [VSCode Great Icons](https://marketplace.visualstudio.com/items?itemName=emmanuelbeziat.vscode-great-icons)
+  - 侧边栏文件、文件夹图标
+  - [Install](vscode:extension/emmanuelbeziat.vscode-great-icons)
+- [Chinese (Simplified) Language Pack for Visual Studio Code](https://marketplace.visualstudio.com/items?itemName=MS-CEINTL.vscode-language-pack-zh-hans)
   - 适用于 VS Code 1.23 以后的中文（简体）语言包
+  - [Install](vscode:extension/MS-CEINTL.vscode-language-pack-zh-hans)
 
-以下为一些有点用处的插件
+### 编码效率
 
-- Auto Close Tag
-  - 标签自动闭合
-- Auto Rename Tag
-  - 前后标签同时修改
-- Autoprefixer
-  - 为 css 属性添加浏览器兼容前缀， webpack PostCSS 也具有相同功能
-- JS-CSS-HTML-Formatter
-  - 格式化插件，保存后自动格式，但会和 vue 脚手架安装的 ESLint 冲突
-- Live Server
-  - 启动一个本地服务，用于测试调试
-- PostCSS Sorting
+- [Document This](https://marketplace.visualstudio.com/items?itemName=joelday.docthis)
+  - 一键给代码中的类、函数加上注释, 支持函数声明、函数表达式、箭头函数等
+  - [Install](vscode:extension/joelday.docthis)
+- [vscode-fileheader](https://marketplace.visualstudio.com/items?itemName=mikey.vscode-fileheader)
+  - 一键生成文件头部注释
+  - [Install](vscode:extension/mikey.vscode-fileheader)
+- [Code Spell Checker](https://marketplace.visualstudio.com/items?itemName=streetsidesoftware.code-spell-checker)
+  - 这款插件能实时的识别单词拼写是否有误, 并给出提示
+  - [Install](vscode:extension/streetsidesoftware.code-spell-checker)
+
+### 其他插件
+
+- [Autoprefixer](https://marketplace.visualstudio.com/items?itemName=mrmlnc.vscode-autoprefixer)
+  - 为 css 属性添加浏览器兼容前缀,  webpack PostCSS 也具有相同功能
+  - [Install](vscode:extension/mrmlnc.vscode-autoprefixer)
+- [JS-CSS-HTML-Formatter](https://marketplace.visualstudio.com/items?itemName=lonefy.vscode-JS-CSS-HTML-formatter)
+  - 格式化插件, 保存后自动格式, 但会和 vue 脚手架安装的 ESLint 冲突
+  - [Install](vscode:extension/lonefy.vscode-JS-CSS-HTML-formatter)
+- [Live Server](https://marketplace.visualstudio.com/items?itemName=ritwickdey.LiveServer)
+  - 启动一个本地服务, 用于测试调试
+  - [Install](vscode:extension/ritwickdey.LiveServer)
+- [PostCSS Sorting](https://marketplace.visualstudio.com/items?itemName=mrmlnc.vscode-postcss-sorting)
   - 对 css 按一定规则属性进行排序
-- Prettify jSON
+  - [Install](vscode:extension/mrmlnc.vscode-postcss-sorting)
+- [Prettify JSON](https://marketplace.visualstudio.com/items?itemName=mohsen1.prettify-json)
   - 格式化 JSON
-- View In Browser
+  - [Install](vscode:extension/mohsen1.prettify-json)
+- [View In Browser](https://marketplace.visualstudio.com/items?itemName=qinjia.view-in-browser)
   - html 在浏览器打开 html 页面
+  - [Install](vscode:extension/qinjia.view-in-browser)
 
 ## 系统设置
 
@@ -196,11 +261,11 @@ VSCode 初始化配置
   // ------------------------ 格式化代码 ------------------------
   // 一个制表符等于的空格数
   "editor.tabSize": 2,
-  // 启用后，保存文件时在文件末尾插入一个最终新行。
+  // 启用后, 保存文件时在文件末尾插入一个最终新行。
   "files.insertFinalNewline": true,
-  // 启用后，保存文件时将删除在最终新行后的所有新行。
+  // 启用后, 保存文件时将删除在最终新行后的所有新行。
   "files.trimFinalNewlines": true,
-  // 启用后，将在保存文件时剪裁尾随空格。
+  // 启用后, 将在保存文件时剪裁尾随空格。
   "files.trimTrailingWhitespace": true,
   // eslint 保存自动格式化 插件名: ESLint
   // enables auto fix on save. Please note auto fix on save is only available if VS Code's
@@ -228,7 +293,7 @@ VSCode 初始化配置
   // 换行字符串阈值
   "prettier.printWidth": 100,
   // vetru 设置格式化 html 插件名: Vetur
-  // 目前 vetur 的 template 格式化还没有很好的支持 prettier，应该说目前官方只推荐使用 js-beautify-html
+  // 目前 vetur 的 template 格式化还没有很好的支持 prettier, 应该说目前官方只推荐使用 js-beautify-html
   "vetur.format.defaultFormatter.html": "js-beautify-html",
   // Options for all default formatters
   "vetur.format.defaultFormatterOptions": {
@@ -236,12 +301,12 @@ VSCode 初始化配置
       // 对属性进行换行
       // auto: 仅在超出行长度时才对属性进行换行
       // force: 对除第一个属性外的其他每个属性进行换行
-      // force-aligned: 对除第一个属性外的其他每个属性进行换行，并保持对齐
+      // force-aligned: 对除第一个属性外的其他每个属性进行换行, 并保持对齐
       // force-expand-multiline: 对每个属性进行换行
       "wrap_attributes": "force"
     }
   },
-  // 控制编辑器是否自动格式化粘贴的内容。格式化程序必须可用，并且能针对文档中的某一范围进行格式化。
+  // 控制编辑器是否自动格式化粘贴的内容。格式化程序必须可用, 并且能针对文档中的某一范围进行格式化。
   "editor.formatOnPaste": true,
 
   // ------------------------ 编辑器相关 ------------------------
@@ -315,7 +380,7 @@ VSCode 初始化配置
 
 ## 修改键盘快捷键
 
-注：`+` 表示需要  点击下一个键时，上一个或多个键仍是按下去状态；`空格` 表示点击下一个键时，上一个或多个键可以放开
+注：`+` 表示需要  点击下一个键时, 上一个或多个键仍是按下去状态；`空格` 表示点击下一个键时, 上一个或多个键可以放开
 
 ### Windows
 
@@ -669,22 +734,24 @@ Suggestions can now be sorted based on their distance to the cursor. Set `"edit
 
 ## Emmet 的应用
 
-vscode 中集成了 Emmet。 Emmet 可以有效提升输入速度。正常情况下，编写 HTML 或者 CSS 时，需要输入很多字符。而现在有了 Emmet，通过输入简写就行了。
+vscode 中集成了 Emmet。 Emmet 可以有效提升输入速度。正常情况下, 编写 HTML 或者 CSS 时, 需要输入很多字符。而现在有了 Emmet, 通过输入简写就行了。
 
-[Emmet-前端开发神器](https://segmentfault.com/a/1190000007812543)
+- [Emment 官网](https://emmet.io/)
+- [Emmet in Visual Studio Code](https://code.visualstudio.com/docs/editor/emmet)
+- [Emmet-前端开发神器](https://segmentfault.com/a/1190000007812543)
 
 ### 快速输入 HTML
 
-如果熟悉 CSS 的语法，你会发现 Emmet 就是很容易上手。
+如果熟悉 CSS 的语法, 你会发现 Emmet 就是很容易上手。
 
 - `元素(Elements)`：生成一个 HTML 元素
 - `>` ：生成子元素
 - `+` ：生成元素的兄弟节点
 - `*` ：生成多个相同的元素
 
-你可以 `.` 或者 `#` 来修饰元素，给元素加上 `class` 或者 `id`
+你可以 `.` 或者 `#` 来修饰元素, 给元素加上 `class` 或者 `id`
 
-比如我们输入 `div.test>h3.title+ul>li*3>span.text`，效果如下。
+比如我们输入 `div.test>h3.title+ul>li*3>span.text`, 效果如下。
 
 ```html
 <div class="test">
@@ -699,21 +766,21 @@ vscode 中集成了 Emmet。 Emmet 可以有效提升输入速度。正常情况
 
 ![](/assets/images/posts/vscode/v2-81e8.gif)
 
-有些 HTML 元素有许多的属性，在输入的过程中，通过在标签后面加上 `:属性名` 就指定了元素的属性。
+有些 HTML 元素有许多的属性, 在输入的过程中, 通过在标签后面加上 `:属性名` 就指定了元素的属性。
 
 ![](/assets/images/posts/vscode/v2-e904.gif)
 
 ### 快速输入 CSS
 
-对于一些属性的名称较短的，例如：`display` 与 `visibility`，输入属性首字母与值的首字母即可。比如：`df` 是 `display: block;` ，`dn` 是 `display: none;`。
+对于一些属性的名称较短的, 例如：`display` 与 `visibility`, 输入属性首字母与值的首字母即可。比如：`df` 是 `display: block;` , `dn` 是 `display: none;`。
 
-对于一些属性的值是数值，例如：`padding`，`margin`，`left`，`width` 等，输入属性首字母与值即可。比如，`m1` 是 `margin: 1px;`。单位默认是 `px`，不过你可以指定一下单位，比如：`w2vw` 就是 `width: 2vw;`。当值是百分比时比较特殊，字母 `p` 代表 `%`，比如：`w5p` 就是 `width: 5%;`。
+对于一些属性的值是数值, 例如：`padding`, `margin`, `left`, `width` 等, 输入属性首字母与值即可。比如, `m1` 是 `margin: 1px;`。单位默认是 `px`, 不过你可以指定一下单位, 比如：`w2vw` 就是 `width: 2vw;`。当值是百分比时比较特殊, 字母 `p` 代表 `%`, 比如：`w5p` 就是 `width: 5%;`。
 
-名称较长的属性往往含有连字符（-），输入连字符前后两个单词的首字母再加上值即可。比如：`pt10` 是 `padding-top: 10px;`。
+名称较长的属性往往含有连字符（-）, 输入连字符前后两个单词的首字母再加上值即可。比如：`pt10` 是 `padding-top: 10px;`。
 
 ![](/assets/images/posts/vscode/v2-3f4.gif)
 
-默认情况下，不能在 js 文件中使用 Emmet。在开发 React 项目时，这会带来不便。所以，再调整一下 系统设置。
+默认情况下, 不能在 js 文件中使用 Emmet。在开发 React 项目时, 这会带来不便。所以, 再调整一下 系统设置。
 
 ```json
 {
@@ -723,7 +790,7 @@ vscode 中集成了 Emmet。 Emmet 可以有效提升输入速度。正常情况
 }
 ```
 
-这里只是介绍一部分 Emmet 规则，完整的列表点击[这里](https://docs.emmet.io/cheat-sheet/)。当你觉得有些输入很繁琐，不妨查阅一下文档，看看有无快捷输入的方式。
+这里只是介绍一部分 Emmet 规则, 完整的列表点击[这里](https://docs.emmet.io/cheat-sheet/)。当你觉得有些输入很繁琐, 不妨查阅一下文档, 看看有无快捷输入的方式。
 
 ## 参考资料
 
@@ -733,7 +800,7 @@ vscode 中集成了 Emmet。 Emmet 可以有效提升输入速度。正常情况
 - [能让你开发效率翻倍的 VSCode 插件配置（上）](https://juejin.im/post/5a08d1d6f265da430f31950e)
 - [能让你开发效率翻倍的 VSCode 插件配置（中）](https://juejin.im/post/5ad13d8a6fb9a028ce7c0721)
 - [VS Code 折腾记 - (1) 扯淡](https://juejin.im/post/586cf732128fe10066602d43)
-- [VS Code 折腾记 - (2) 快捷键大全，没有更全](https://juejin.im/post/586e5a5cb123db005d0f2bd1)
+- [VS Code 折腾记 - (2) 快捷键大全, 没有更全](https://juejin.im/post/586e5a5cb123db005d0f2bd1)
 - [VS Code 折腾记 - (3) 多图解 VSCode 基础功能](https://juejin.im/post/5880d3b9128fe10065ccaf27)
 - [VS Code 折腾记 - (4) 常用必备插件推荐【前端】](https://juejin.im/post/58a691f461ff4b006c4981a0)
 - [VS Code 折腾记 - (5) Angular 2+ && Typescript 2+必备插件推荐](https://juejin.im/post/58a6f518ac502e006cc4ee2a)
