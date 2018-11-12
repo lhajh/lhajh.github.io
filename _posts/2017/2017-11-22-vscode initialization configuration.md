@@ -137,15 +137,18 @@ VSCode 初始化配置
   - Vue 代码片段, 语法高亮, 格式化 .vue 文件, 包括里面的 CSS、JS, 至于模板即 HTML 部分, 官方维护者说没有比较好的工具支持, 默认是不格式化的
   - [Doc](https://vuejs.github.io/vetur)
   - [Install](vscode:extension/octref.vetur)
-- [JS-CSS-HTML-Formatter](https://marketplace.visualstudio.com/items?itemName=lonefy.vscode-JS-CSS-HTML-formatter)
-  - 格式化插件, 保存后自动格式
-  - [Install](vscode:extension/lonefy.vscode-JS-CSS-HTML-formatter)
+- [vue-format](https://marketplace.visualstudio.com/items?itemName=febean.vue-format)
+  - 解决 Vetur 格式化 html 标签换行导致缩进异常问题
+  - [Install](vscode:extension/febean.vue-format)
 - [PostCSS Sorting](https://marketplace.visualstudio.com/items?itemName=mrmlnc.vscode-postcss-sorting)
   - 对 css 按一定规则属性进行排序
   - [Install](vscode:extension/mrmlnc.vscode-postcss-sorting)
 - [Prettify JSON](https://marketplace.visualstudio.com/items?itemName=mohsen1.prettify-json)
   - 格式化 JSON
   - [Install](vscode:extension/mohsen1.prettify-json)
+- [JS-CSS-HTML-Formatter](https://marketplace.visualstudio.com/items?itemName=lonefy.vscode-JS-CSS-HTML-formatter)
+  - 格式化插件, 保存后自动格式
+  - [Install](vscode:extension/lonefy.vscode-JS-CSS-HTML-formatter)
 - [vscode-pangu](https://marketplace.visualstudio.com/items?itemName=baurine.vscode-pangu)
   - 一款给中英文间加空格的 VS Code 插件
   - [Doc](https://github.com/baurine/vscode-pangu)
@@ -280,13 +283,15 @@ VSCode 初始化配置
   "workbench.colorTheme": "Monokai Dimmed",
 
   // ------------------------ 格式化代码 ------------------------
+  // 按照下面配置好后, 先右键使用 vue-format 格式化, 再用快捷键(opt/alt + shift + f)格式化
+  // vue-format 格式化 html, 快捷键格式化 js, css
   // 一个制表符等于的空格数
   "editor.tabSize": 2,
-  // 启用后, 保存文件时在文件末尾插入一个最终新行。
+  // 启用后，保存文件时在文件末尾插入一个最终新行。
   "files.insertFinalNewline": true,
-  // 启用后, 保存文件时将删除在最终新行后的所有新行。
+  // 启用后，保存文件时将删除在最终新行后的所有新行。
   "files.trimFinalNewlines": true,
-  // 启用后, 将在保存文件时剪裁尾随空格。
+  // 启用后，将在保存文件时剪裁尾随空格。
   "files.trimTrailingWhitespace": true,
   // eslint 保存自动格式化 插件名: ESLint
   // enables auto fix on save. Please note auto fix on save is only available if VS Code's
@@ -313,21 +318,25 @@ VSCode 初始化配置
   "prettier.singleQuote": true,
   // 换行字符串阈值
   "prettier.printWidth": 100,
+  // 格式化 html 插件名: vue-format
+  // 解决了 vetur 标签换行导致缩进异常问题
+  // tag 的 attrs 大于该数值时，强制 attrs 换行，-1时不换行
+  "vue-format.break_attr_limit": 1,
   // vetru 设置格式化 html 插件名: Vetur
-  // 目前 vetur 的 template 格式化还没有很好的支持 prettier, 应该说目前官方只推荐使用 js-beautify-html
-  "vetur.format.defaultFormatter.html": "js-beautify-html",
-  // Options for all default formatters
-  "vetur.format.defaultFormatterOptions": {
-    "js-beautify-html": {
-      // 对属性进行换行
-      // auto: 仅在超出行长度时才对属性进行换行
-      // force: 对除第一个属性外的其他每个属性进行换行
-      // force-aligned: 对除第一个属性外的其他每个属性进行换行, 并保持对齐
-      // force-expand-multiline: 对每个属性进行换行
-      "wrap_attributes": "force"
-    }
-  },
-  // 控制编辑器是否自动格式化粘贴的内容。格式化程序必须可用, 并且能针对文档中的某一范围进行格式化。
+  // 目前 vetur 的 template 格式化还没有很好的支持 prettier，应该说目前官方只推荐使用 js-beautify-html
+  // "vetur.format.defaultFormatter.html": "js-beautify-html",
+  // // Options for all default formatters
+  // "vetur.format.defaultFormatterOptions": {
+  //   "js-beautify-html": {
+  //     // 对属性进行换行
+  //     // auto: 仅在超出行长度时才对属性进行换行
+  //     // force: 对除第一个属性外的其他每个属性进行换行
+  //     // force-aligned: 对除第一个属性外的其他每个属性进行换行，并保持对齐
+  //     // force-expand-multiline: 对每个属性进行换行
+  //     "wrap_attributes": "force"
+  //   }
+  // },
+  // 控制编辑器是否自动格式化粘贴的内容。格式化程序必须可用，并且能针对文档中的某一范围进行格式化。
   "editor.formatOnPaste": true,
 
   // ------------------------ 编辑器相关 ------------------------
@@ -339,7 +348,9 @@ VSCode 初始化配置
   "files.autoSave": "onFocusChange",
   // 控制键入时是否应自动显示建议
   "editor.quickSuggestions": {
-    "strings": true // 字符串建议
+    "other": true,
+    "comments": true, // 注释
+    "strings": true // 字符串
   },
   // 面包屑导航
   // https://code.visualstudio.com/updates/v1_26#_breadcrumbs
