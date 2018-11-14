@@ -204,7 +204,8 @@ VSCode 初始化配置
   - 基于 Gist 实现 VSCode 用户配置、快捷键配置、已安装插件列表等的备份和恢复功能
   - [Install](vscode:extension/Shan.code-settings-sync)
 - [Syncing](https://marketplace.visualstudio.com/items?itemName=nonoroazoro.syncing)
-  - 也是一个备份恢复的插件, 据说比上面那个好, 但我目前还没有测试
+  - 和上面一样, 但上面对于快捷键没有做处理, Mac 备份只能恢复到 Mac 上, 恢复到 windows 上为空白
+  - 鉴于 VSCode 从 1.27 版本开始提供了 [Platform Specific Keybindings](https://code.visualstudio.com/updates/v1_27#_platform-specific-keybindings) 功能, 如果手动将 Mac 和 windows 快捷键进行合并后, 可以跨平台恢复快捷键
   - [Install](vscode:extension/nonoroazoro.syncing)
 - [GitLens — Git supercharged](https://marketplace.visualstudio.com/items?itemName=eamodio.gitlens)
   - Git 可视化工具, 自带 diff 功能, 能让我们在不离开编辑器,不执行任何命令的情况下知晓光标所在位置代码的修改时间、作者信息等
