@@ -283,7 +283,13 @@ VSCode 初始化配置
   "workbench.colorTheme": "Monokai Dimmed",
 
   // ------------------------ 格式化代码 ------------------------
-  // 按照下面配置好后, 先右键使用 vue-format 格式化, 再用快捷键(opt/alt + shift + f)格式化
+  // 按照下面配置好后, 先使用 vue-format(快捷键 opt/alt + shift + d) 格式化, 再用系统默认格式化快捷键(opt/alt + shift + f)格式
+  // vue-format 默认是没有快捷键的, 需要自己配置
+  // {
+  //     "key": "alt+shift+d",
+  //     "command": "extension.vueFormat",
+  //     "when": "editorFocus"
+  // }
   // vue-format 格式化 html, 快捷键格式化 js, css
   // 一个制表符等于的空格数
   "editor.tabSize": 2,
@@ -414,126 +420,12 @@ VSCode 初始化配置
 
 注：`+` 表示需要  点击下一个键时, 上一个或多个键仍是按下去状态；`空格` 表示点击下一个键时, 上一个或多个键可以放开
 
-### Windows
-
-- C: Ctrl
-- S: Shift
-- A: Alt
-- D: Delete
-- B: Backspace
-- E: Enter
-- UA: UpArrow(上箭头)
-- DA: DownArrow(下箭头)
-
-常用快捷键
-
-- C + S + p or F1: 打开命令面板
-- C + p: [快速打开文件](https://code.visualstudio.com/updates/vJanuary#_file-picker)
-- C + S + /: 切换块注释
-- C + /: 切换行注释
-- C + d: 删除当前行
-- C + UA: 向上复制行
-- C + DA: 向下复制行
-- A + UA: 向上移动行
-- A + DA: 向下移动行
-- C + f: 查找
-- F3: 查找下一个
-- S + F3: 查找上一个
-- C + h: 替换
-- C + S + f: 在文件中查找
-- C + S + h: 在文件中替换
-- C + E: 在下面插入行
-- C + k v: 打开侧边预览
-- S + A + f: 格式化文件
-- C + k C + f: 格式化选中代码
-- C + k C + x: 剪裁尾随空格
-- C + ]: 行缩进
-- C + [: 行减少缩进
-- C + g: 转到行
-- C + b: 切换侧栏可见性
-- C + j: 切换终端面板
-- C + D: 删除右侧字符
-- C + B: 删除左侧字符
-- S + A + O: 删除未使用的导入并对剩余的导入进行排序, 该命令适用于 JavaScript 和 TypeScript 的 ES6 模块。
-- C + 鼠标左键: 多行编辑 (适用于每行编辑位置不一样)
-- C + A + UA / DA: 多行编辑 (适用于每行编辑位置都一样)
-
-![](/assets/images/posts/vscode/ts-organize-imports.gif)
-
-```json
-// 将键绑定放入此文件中以覆盖默认值
-[
-  {
-    "key": "ctrl+shift+oem_2",
-    "command": "editor.action.blockComment",
-    "when": "editorTextFocus && !editorReadonly"
-  },
-  {
-    "key": "shift+alt+a",
-    "command": "-editor.action.blockComment",
-    "when": "editorTextFocus && !editorReadonly"
-  },
-  {
-    "key": "ctrl+d",
-    "command": "editor.action.deleteLines",
-    "when": "editorTextFocus && !editorReadonly"
-  },
-  {
-    "key": "ctrl+shift+k",
-    "command": "-editor.action.deleteLines",
-    "when": "editorTextFocus && !editorReadonly"
-  },
-  {
-    "key": "ctrl+up",
-    "command": "editor.action.copyLinesUpAction",
-    "when": "editorTextFocus && !editorReadonly"
-  },
-  {
-    "key": "shift+alt+up",
-    "command": "-editor.action.copyLinesUpAction",
-    "when": "editorTextFocus && !editorReadonly"
-  },
-  {
-    "key": "alt+up",
-    "command": "editor.action.moveLinesUpAction",
-    "when": "editorTextFocus && !editorReadonly"
-  },
-  {
-    "key": "alt+up",
-    "command": "-editor.action.moveLinesUpAction",
-    "when": "editorTextFocus && !editorReadonly"
-  },
-  {
-    "key": "ctrl+down",
-    "command": "editor.action.copyLinesDownAction",
-    "when": "editorTextFocus && !editorReadonly"
-  },
-  {
-    "key": "shift+alt+down",
-    "command": "-editor.action.copyLinesDownAction",
-    "when": "editorTextFocus && !editorReadonly"
-  },
-  {
-    "key": "alt+down",
-    "command": "editor.action.moveLinesDownAction",
-    "when": "editorTextFocus && !editorReadonly"
-  },
-  {
-    "key": "alt+down",
-    "command": "-editor.action.moveLinesDownAction",
-    "when": "editorTextFocus && !editorReadonly"
-  }
-]
-```
-
-### Mac
-
-- C: command
+- C: command / ctrl
 - S: shift
-- O: option
-- D: Delete(自带键盘没有)
-- B: Backspace(自带键盘的 delete)
-- E: Enter(自带键盘的 return)
+- O: option / alt
+- D: Delete(Mac 自带键盘没有)
+- B: Backspace(Mac 自带键盘的 delete)
+- E: Enter(Mac 自带键盘的 return)
 - UA: UpArrow(上箭头)
 - DA: DownArrow(下箭头)
 - CT: control
@@ -557,9 +449,12 @@ VSCode 初始化配置
 - S + F3: 查找上一个
 - UA: 上一个搜索关键词 history.showPrevious
 - DA: 下一个搜索关键词 history.showNext
-- O + C + 字母 c: 切换是否区分大小写 toggleSearchCaseSensitive
-- O + C + w: 切换是否全字匹配 toggleSearchWholeWord
-- O + C + r: 切换是否正则匹配 toggleSearchRegex
+- O + C + 字母 c: Mac 切换是否区分大小写 toggleSearchCaseSensitive
+- O + C + w: Mac 切换是否全字匹配 toggleSearchWholeWord
+- O + C + r: Mac 切换是否正则匹配 toggleSearchRegex
+- O + 字母 c: windows 切换是否区分大小写 toggleSearchCaseSensitive
+- O + w: windows 切换是否全字匹配 toggleSearchWholeWord
+- O + r: windows 切换是否正则匹配 toggleSearchRegex
 - Esc: 当焦点在查找弹窗组件时, 退出查找
 - S + Esc: 当焦点不在查找弹窗组件时,退出查找
 - C + h: 替换
@@ -585,7 +480,7 @@ VSCode 初始化配置
 - C + O + ]: 展开光标处的折叠区域
 - C + k C + 数字 0: 折叠编辑器中的所有区域
 - C + k C + j: 展开编辑器中的所有区域
-- CT + g: 转到行
+- CT + g / C + g: 转到行
 - C + b: 切换侧栏可见性
 - C + j / CT + `: 切换终端面板
 - C + D: 删除右侧字符
@@ -597,94 +492,223 @@ VSCode 初始化配置
 ```json
 // 将键绑定放入此文件中以覆盖默认值
 [
-    {
-        "key": "shift+alt+/",
-        "command": "editor.action.blockComment",
-        "when": "editorTextFocus && !editorReadonly"
-    },
-    {
-        "key": "shift+alt+a",
-        "command": "-editor.action.blockComment",
-        "when": "editorTextFocus && !editorReadonly"
-    },
-    {
-        "key": "cmd+d",
-        "command": "editor.action.deleteLines",
-        "when": "editorTextFocus && !editorReadonly"
-    },
-    {
-        "key": "shift+cmd+k",
-        "command": "-editor.action.deleteLines",
-        "when": "editorTextFocus && !editorReadonly"
-    },
-    {
-        "key": "cmd+up",
-        "command": "editor.action.copyLinesUpAction",
-        "when": "editorTextFocus && !editorReadonly"
-    },
-    {
-        "key": "shift+alt+up",
-        "command": "-editor.action.copyLinesUpAction",
-        "when": "editorTextFocus && !editorReadonly"
-    },
-    {
-        "key": "alt+up",
-        "command": "editor.action.moveLinesUpAction",
-        "when": "editorTextFocus && !editorReadonly"
-    },
-    {
-        "key": "alt+up",
-        "command": "-editor.action.moveLinesUpAction",
-        "when": "editorTextFocus && !editorReadonly"
-    },
-    {
-        "key": "cmd+down",
-        "command": "editor.action.copyLinesDownAction",
-        "when": "editorTextFocus && !editorReadonly"
-    },
-    {
-        "key": "shift+alt+down",
-        "command": "-editor.action.copyLinesDownAction",
-        "when": "editorTextFocus && !editorReadonly"
-    },
-    {
-        "key": "alt+down",
-        "command": "editor.action.moveLinesDownAction",
-        "when": "editorTextFocus && !editorReadonly"
-    },
-    {
-        "key": "alt+down",
-        "command": "-editor.action.moveLinesDownAction",
-        "when": "editorTextFocus && !editorReadonly"
-    },
-    {
-        "key": "cmd+h",
-        "command": "editor.action.startFindReplaceAction"
-    },
-    {
-        "key": "alt+cmd+f",
-        "command": "-editor.action.startFindReplaceAction"
-    },
-    {
-        "key": "shift+alt+down",
-        "command": "cursorColumnSelectDown",
-        "when": "textInputFocus"
-    },
-    {
-        "key": "shift+alt+cmd+down",
-        "command": "-cursorColumnSelectDown",
-        "when": "textInputFocus"
-    },
-    {
-        "key": "shift+alt+up",
-        "command": "cursorColumnSelectUp",
-        "when": "textInputFocus"
-    },
-    {
-        "key": "shift+alt+cmd+up",
-        "command": "-cursorColumnSelectUp",
-        "when": "textInputFocus"
-    }
+  // 切换块注释
+  {
+    "key": "shift+alt+/",
+    "command": "editor.action.blockComment",
+    "when": "isMac && editorTextFocus && !editorReadonly"
+  },
+  {
+    "key": "shift+alt+oem_2",
+    "command": "editor.action.blockComment",
+    "when": "isWindows && editorTextFocus && !editorReadonly"
+  },
+  {
+    "key": "shift+alt+a",
+    "command": "-editor.action.blockComment",
+    "when": "editorTextFocus && !editorReadonly"
+  },
+  // 删除行
+  {
+    "key": "cmd+d",
+    "command": "editor.action.deleteLines",
+    "when": "isMac && editorTextFocus && !editorReadonly"
+  },
+  {
+    "key": "shift+cmd+k",
+    "command": "-editor.action.deleteLines",
+    "when": "isMac && editorTextFocus && !editorReadonly"
+  },
+  {
+    "key": "ctrl+d",
+    "command": "editor.action.deleteLines",
+    "when": "isWindows && textInputFocus && !editorReadonly"
+  },
+  {
+    "key": "ctrl+shift+k",
+    "command": "-editor.action.deleteLines",
+    "when": "isWindows && textInputFocus && !editorReadonly"
+  },
+  // 向上复制行
+  {
+    "key": "cmd+up",
+    "command": "editor.action.copyLinesUpAction",
+    "when": "isMac && editorTextFocus && !editorReadonly"
+  },
+  {
+    "key": "ctrl+up",
+    "command": "editor.action.copyLinesUpAction",
+    "when": "isWindows && editorTextFocus && !editorReadonly"
+  },
+  {
+    "key": "shift+alt+up",
+    "command": "-editor.action.copyLinesUpAction",
+    "when": "editorTextFocus && !editorReadonly"
+  },
+  // 向下复制行
+  {
+    "key": "cmd+down",
+    "command": "editor.action.copyLinesDownAction",
+    "when": "isMac && editorTextFocus && !editorReadonly"
+  },
+  {
+    "key": "ctrl+down",
+    "command": "editor.action.copyLinesDownAction",
+    "when": "isWindows && editorTextFocus && !editorReadonly"
+  },
+  {
+    "key": "shift+alt+down",
+    "command": "-editor.action.copyLinesDownAction",
+    "when": "editorTextFocus && !editorReadonly"
+  },
+  // 替换
+  {
+    "key": "cmd+h",
+    "command": "editor.action.startFindReplaceAction"
+  },
+  {
+    "key": "alt+cmd+f",
+    "command": "-editor.action.startFindReplaceAction"
+  },
+  // 向下多选多行编辑
+  {
+    "key": "shift+alt+down",
+    "command": "cursorColumnSelectDown",
+    "when": "textInputFocus"
+  },
+  {
+    "key": "shift+alt+cmd+down",
+    "command": "-cursorColumnSelectDown",
+    "when": "textInputFocus"
+  },
+  {
+    "key": "ctrl+shift+alt+down",
+    "command": "-cursorColumnSelectDown",
+    "when": "textInputFocus"
+  },
+  // 向上多选多行编辑
+  {
+    "key": "shift+alt+up",
+    "command": "cursorColumnSelectUp",
+    "when": "textInputFocus"
+  },
+  {
+    "key": "shift+alt+cmd+up",
+    "command": "-cursorColumnSelectUp",
+    "when": "isMac && textInputFocus"
+  },
+  {
+    "key": "ctrl+shift+alt+up",
+    "command": "-cursorColumnSelectUp",
+    "when": "isWindows && textInputFocus"
+  },
+  // 查找当前选中文字, 将查找到的相同文字选中并进入多光标编辑模式
+  {
+    "key": "alt+d",
+    "command": "editor.action.addSelectionToNextFindMatch",
+    "when": "editorFocus"
+  },
+  {
+    "key": "cmd+d",
+    "command": "-editor.action.addSelectionToNextFindMatch",
+    "when": "isMac && editorFocus"
+  },
+  {
+    "key": "ctrl+d",
+    "command": "-editor.action.addSelectionToNextFindMatch",
+    "when": "isWindows && editorFocus"
+  },
+  // vue-format 快捷键
+  {
+    "key": "alt+shift+d",
+    "command": "extension.vueFormat",
+    "when": "editorFocus"
+  },
+  // 切换是否区分大小写
+  {
+    "key": "ctrl+alt+c",
+    "command": "workbench.action.terminal.toggleFindCaseSensitive",
+    "when": "isWindows && terminalFindWidgetFocused"
+  },
+  {
+    "key": "alt+c",
+    "command": "-workbench.action.terminal.toggleFindCaseSensitive",
+    "when": "isWindows && terminalFindWidgetFocused"
+  },
+  {
+    "key": "ctrl+alt+c",
+    "command": "workbench.action.terminal.toggleFindCaseSensitiveTerminalFocus",
+    "when": "isWindows && terminalFocus"
+  },
+  {
+    "key": "alt+c",
+    "command": "-workbench.action.terminal.toggleFindCaseSensitiveTerminalFocus",
+    "when": "isWindows && terminalFocus"
+  },
+  // 切换是否全字匹配
+  {
+    "key": "ctrl+alt+w",
+    "command": "workbench.action.terminal.toggleFindWholeWord",
+    "when": "isWindows && terminalFindWidgetFocused"
+  },
+  {
+    "key": "alt+w",
+    "command": "-workbench.action.terminal.toggleFindWholeWord",
+    "when": "isWindows && terminalFindWidgetFocused"
+  },
+  {
+    "key": "ctrl+alt+w",
+    "command": "workbench.action.terminal.toggleFindWholeWordTerminalFocus",
+    "when": "isWindows && terminalFocus"
+  },
+  {
+    "key": "alt+w",
+    "command": "-workbench.action.terminal.toggleFindWholeWordTerminalFocus",
+    "when": "isWindows && terminalFocus"
+  },
+  // 切换是否正则匹配
+  {
+    "key": "ctrl+alt+r",
+    "command": "workbench.action.terminal.toggleFindRegex",
+    "when": "isWindows && terminalFindWidgetFocused"
+  },
+  {
+    "key": "alt+r",
+    "command": "-workbench.action.terminal.toggleFindRegex",
+    "when": "isWindows && terminalFindWidgetFocused"
+  },
+  {
+    "key": "ctrl+alt+r",
+    "command": "workbench.action.terminal.toggleFindRegexTerminalFocus",
+    "when": "isWindows && terminalFocus"
+  },
+  {
+    "key": "alt+r",
+    "command": "-workbench.action.terminal.toggleFindRegexTerminalFocus",
+    "when": "isWindows && terminalFocus"
+  },
+  // 折叠光标处未折叠区域
+  {
+    "key": "ctrl+alt+oem_4",
+    "command": "editor.fold",
+    "when": "isWindows && editorTextFocus"
+  },
+  {
+    "key": "ctrl+shift+oem_4",
+    "command": "-editor.fold",
+    "when": "editorTextFocus"
+  },
+  // 展开光标处的折叠区域
+  {
+    "key": "ctrl+alt+oem_6",
+    "command": "editor.unfold",
+    "when": "isWindows && editorTextFocus"
+  },
+  {
+    "key": "ctrl+shift+oem_6",
+    "command": "-editor.unfold",
+    "when": "editorTextFocus"
+  }
 ]
 ```
 
@@ -729,7 +753,7 @@ Accept a member property suggestion, and VS Code automatically inserts the requi
 
 ![this. is automatically inserted when you suggest a property suggestion](https://code.visualstudio.com/assets/updates/1_20/ts-this-dot-post.png)
 
-### [特定于平台的键绑定](https://code.visualstudio.com/updates/v1_27#_platform-specific-keybindings)
+### [Platform specific keybindings](https://code.visualstudio.com/updates/v1_27#_platform-specific-keybindings)
 
 It's now possible to enable keyboard shortcuts for specific operating systems using `isLinux`, `isMac` and `isWindows` within a keybinding's `when` clause:
 
