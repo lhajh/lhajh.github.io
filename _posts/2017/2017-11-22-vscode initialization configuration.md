@@ -200,6 +200,9 @@ VSCode 初始化配置
   - [每日一 Vim 笔记](https://lhajh.github.io/vim/2018/05/08/the-notes-of-a-daily-vim.html)
   - [每日一 Vim](https://lhajh.github.io/vim/2018/05/08/the-notes-of-a-daily-vim.html)
   - [Install](vscode:extension/vscodevim.vim)
+- [Code Runner](https://marketplace.visualstudio.com/items?itemName=formulahendry.code-runner)
+  - Run C, C++, Java, JS, PHP, Python, Perl, Ruby, Go, Lua, Groovy, PowerShell, CMD, BASH, F#, C#, VBScript, TypeScript, CoffeeScript, Scala, Swift, Julia, Crystal, OCaml, R, AppleScript, Elixir, VB.NET, Clojure, Haxe, Objective-C, Rust, Racket, AutoHotkey, AutoIt, Kotlin, Dart, Pascal, Haskell, Nim, D
+  - [Install](vscode:extension/formulahendry.code-runner)
 - [Settings Sync](https://marketplace.visualstudio.com/items?itemName=Shan.code-settings-sync)
   - 基于 Gist 实现 VSCode 用户配置、快捷键配置、已安装插件列表等的备份和恢复功能
   - 无法跨平台恢复快捷键
@@ -473,6 +476,7 @@ VSCode 初始化配置
 - S + O + f: 格式化文件
 - C + k C + f: 格式化选中代码
 - C + k C + x: 剪裁尾随空格
+- O + d: 选中当前光标所在字符, 或者选中当前已选择字符的下一个出现位置, 并进入多列编辑模式
 - C + i: 选中当前行
 - C + ]: 行缩进
 - C + [: 行减少缩进
@@ -604,7 +608,7 @@ VSCode 初始化配置
     "command": "-cursorColumnSelectUp",
     "when": "isWindows && textInputFocus"
   },
-  // 查找当前选中文字, 将查找到的相同文字选中并进入多光标编辑模式
+  // 选中当前光标所在字符, 或者选中当前已选择字符的下一个出现位置, 并进入多列编辑模式
   {
     "key": "alt+d",
     "command": "editor.action.addSelectionToNextFindMatch",
