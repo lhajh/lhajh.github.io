@@ -202,9 +202,10 @@ VSCode 初始化配置
   - [Install](vscode:extension/vscodevim.vim)
 - [Settings Sync](https://marketplace.visualstudio.com/items?itemName=Shan.code-settings-sync)
   - 基于 Gist 实现 VSCode 用户配置、快捷键配置、已安装插件列表等的备份和恢复功能
+  - 无法跨平台恢复快捷键
   - [Install](vscode:extension/Shan.code-settings-sync)
 - [Syncing](https://marketplace.visualstudio.com/items?itemName=nonoroazoro.syncing)
-  - 和上面一样, 但上面对于快捷键没有做处理, Mac 备份只能恢复到 Mac 上, 恢复到 windows 上为空白
+  - 基于 Gist 实现 VSCode 用户配置、快捷键配置、已安装插件列表等的备份和恢复功能
   - 鉴于 VSCode 从 1.27 版本开始提供了 [Platform Specific Keybindings](https://code.visualstudio.com/updates/v1_27#_platform-specific-keybindings) 功能, 如果手动将 Mac 和 windows 快捷键进行合并后, 可以跨平台恢复快捷键
   - [Install](vscode:extension/nonoroazoro.syncing)
 - [GitLens — Git supercharged](https://marketplace.visualstudio.com/items?itemName=eamodio.gitlens)

@@ -427,3 +427,11 @@ console.log(unique(arr))
 ```
 
 **对象/数组去重成功, 但函数并没有去重, typeof 判断类型还是差一点**
+
+如果数组里都是 对象/数组, 那么可以使用下面方法
+
+```js
+var strArr = arr.map(item => JSON.stringify(item))
+var uniqueStrArr = [...new Set(strArr)]
+var uniqueArr = uniqueStrArr.map(item => JSON.parse(item))
+```
