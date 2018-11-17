@@ -6,7 +6,7 @@ description: vue props 传多值的问题
 keywords: vue, props
 ---
 
-一般使用 `vue` 父传子值时, 都是 `:a="a" :b="b"`, 但你见过这种吗 `:a="a, b, c, d..."`?
+一般使用 `vue` 父传子值时, 都是 `:a="a" :b="b"`, 但你见过这种 `:a="a, b, c, d..."` 吗?
 
 废话不多说, 直接看代码:
 
@@ -45,7 +45,7 @@ props: ['str', 'num', 'boolean', 'und', 'nul', 'obj', 'arr']
 
 子组件显示值:
 
-```
+```html
 <div>
   str---{{str}}
   num---{{num}}

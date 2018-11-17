@@ -55,6 +55,7 @@ menu: Bookmark
 - [前端 JS 代码规范](https://segmentfault.com/a/1190000012576194)
 - [为什么尽量别用 setInterval](https://www.zcfy.cc/article/why-i-consider-setinterval-to-be-harmful-zetafleet)
 - [DOM 操作成本到底高在哪儿？](https://segmentfault.com/a/1190000014070240#articleHeader0)
+- [为什么我的代码让别人看起来头皮发麻？](https://juejin.im/post/5bd83871f265da0afa3e3204)
 
 ## JavaScript 扩展
 
@@ -92,6 +93,7 @@ menu: Bookmark
 - [Vue.js 最佳实践（五招让你成为 Vue.js 大师）](https://segmentfault.com/a/1190000014085613)
 - [在 VueJS 应用中管理用户权限](https://zcfy.cc/article/managing-user-permissions-in-a-vuejs-app#)
 - [VUE 使用中踩过的坑](https://segmentfault.com/a/1190000013008420)
+- [Vue 使用中的小技巧](https://juejin.im/post/5ae02f39518825672f198ac2)
 - [Vue 之 slot 深度复制](https://cnodejs.org/topic/58c0ad17d282728c0ec4029a)
 - [Vue 超快速学习](https://segmentfault.com/a/1190000015740490)
 - [Vue 项目架构设计与工程化实践](https://github.com/berwin/Blog/issues/14)
@@ -108,6 +110,7 @@ menu: Bookmark
 - [React Native 基础 & 入门教程：以一个 To Do List 小例子，看 props 和 state](https://www.cnblogs.com/powertoolsteam/p/react-native-tutorials3.html)
 - [Redux进阶（一）](https://www.cnblogs.com/constantince/p/9063345.html)
 - [基于 React 的表单解决方案 noForm](https://www.oschina.net/p/noform)
+- [30 分钟精通 React Hooks](https://juejin.im/post/5be3ea136fb9a049f9121014#comment)
 
 ## 微信小程序
 
@@ -139,11 +142,14 @@ menu: Bookmark
 - [妙用 scale 与 transfrom-origin，精准控制动画方向](http://www.cnblogs.com/coco1s/p/8882542.html)
 - [不可思议的纯 CSS 导航栏下划线跟随效果](http://web.jobbole.com/94205/)
 - [你所不知道的 CSS 滤镜技巧与细节](http://web.jobbole.com/92460/)
+- [你所不知道的 CSS 阴影技巧与细节](http://web.jobbole.com/95413/)
 - [使用css 3 制作长投影Long Shadow](https://www.jackpu.com/shi-yong-css-3-zhi-zuo-chang-tou-ying-long-shadow/)
 - [如何用 CSS 实现多行文本的省略号显示](http://web.jobbole.com/90636/)
+- [纯 CSS 实现多行文字截断](https://segmentfault.com/a/1190000016879657)
 - [神奇的选择器 :focus-within](http://web.jobbole.com/95025/)
 - [滚动视差？CSS 不在话下](http://web.jobbole.com/95068/)
 - [灵活的 overflow](https://www.w3cplus.com/css/flexible-overflow.html)
+- [利用CSS改变图片颜色的100种方法！](https://blog.csdn.net/nanhupatar/article/details/82793637)
 - [欲练 JS，必先攻 CSS——前端修行之路](http://www.cnblogs.com/1wen/p/6839779.html)
 - [CSS3 动画卡顿性能优化解决方案](https://segmentfault.com/a/1190000013045035)
 - [前端布局基础概述](https://mp.weixin.qq.com/s/-LcNZWFFty2lWuND6uuNNA)
@@ -239,6 +245,7 @@ menu: Bookmark
 
 - [当你「ping 一下」的时候，你知道它背后的逻辑吗？](https://www.cnblogs.com/jsjwk/p/9639908.html)
 - [chmod 755 究竟是什么鬼？](https://blog.csdn.net/z50L2O08e2u4afToR9A/article/details/82504829)
+- [前后端均适用的网络知识点大全](https://mp.weixin.qq.com/s/uF3bJrjGbGCAzCuCWk18BA)
 
 ## Front-end web UI/Framework
 
