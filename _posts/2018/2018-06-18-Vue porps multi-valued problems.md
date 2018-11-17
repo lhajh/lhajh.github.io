@@ -45,15 +45,16 @@ props: ['str', 'num', 'boolean', 'und', 'nul', 'obj', 'arr']
 
 子组件显示值:
 
-```js
+```html
+<!-- github 渲染不出来 {}, 下面只能使用 [] 代替 {} 了, 意思到了就行 -->
 <div>
-  str---{{str}}
-  num---{{num}}
-  boolean---{{boolean}}
-  und---{{und}}
-  nul---{{nul}}
-  obj---{{obj}}
-  arr---{{arr}}
+  str---[[str]]
+  num---[[num]]
+  boolean---[[boolean]]
+  und---[[und]]
+  nul---[[nul]]
+  obj---[[obj]]
+  arr---[[arr]]
 </div>
 ```
 
