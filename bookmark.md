@@ -56,6 +56,7 @@ menu: Bookmark
 - [为什么尽量别用 setInterval](https://www.zcfy.cc/article/why-i-consider-setinterval-to-be-harmful-zetafleet)
 - [DOM 操作成本到底高在哪儿？](https://segmentfault.com/a/1190000014070240#articleHeader0)
 - [为什么我的代码让别人看起来头皮发麻？](https://juejin.im/post/5bd83871f265da0afa3e3204)
+- [前端小团队建设](https://segmentfault.com/a/1190000016445088)
 
 ## JavaScript 扩展
 
@@ -87,6 +88,8 @@ menu: Bookmark
 ## Vue
 
 - [Vue2.x 源码解析系列](https://github.com/lihongxun945/myblog/issues/22)
+- [Vue.js 技术揭秘](https://ustbhuangyi.github.io/vue-analysis/)
+- [Vue源码阅读](https://juejin.im/post/5b38830de51d455888216675)
 - [Vue 相关开源项目库汇总](https://github.com/opendigg/awesome-github-vue)
 - [一个 Vue 页面的内存泄露分析](https://www.yinchengli.com/2018/06/25/vue-memory-leak/)
 - [Vue 兼容 ie9 的全面解决方案](https://my.oschina.net/u/171860/blog/1831843)
@@ -95,12 +98,14 @@ menu: Bookmark
 - [VUE 使用中踩过的坑](https://segmentfault.com/a/1190000013008420)
 - [Vue 使用中的小技巧](https://juejin.im/post/5ae02f39518825672f198ac2)
 - [Vue 之 slot 深度复制](https://cnodejs.org/topic/58c0ad17d282728c0ec4029a)
+- [Vue.js 父子组件通信的十种方式](https://juejin.im/post/5bd18c72e51d455e3f6e4334)
 - [Vue 超快速学习](https://segmentfault.com/a/1190000015740490)
 - [Vue 项目架构设计与工程化实践](https://github.com/berwin/Blog/issues/14)
 - [Vue 数据响应式原理](http://web.jobbole.com/95168/)
 - [Vue 面试中，经常会被问到的面试题/Vue 知识点整理](https://segmentfault.com/a/1190000016344599#articleHeader0)
 - [Vue 高版本中一些新特性的使用](https://github.com/masterkong/blog/issues/7)
 - [用 Vue 编写一个长按指令](https://github.com/OFED/translation/issues/3)
+- [你不知道的Virtual DOM](https://segmentfault.com/a/1190000016129036)
 
 ## React
 
@@ -111,6 +116,7 @@ menu: Bookmark
 - [Redux进阶（一）](https://www.cnblogs.com/constantince/p/9063345.html)
 - [基于 React 的表单解决方案 noForm](https://www.oschina.net/p/noform)
 - [30 分钟精通 React Hooks](https://juejin.im/post/5be3ea136fb9a049f9121014#comment)
+- [当初要是看了这篇，React高阶组件早会了。](https://mp.weixin.qq.com/s/_zQZ4Gg9WIG-3byL_p13QA?scene=25#wechat_redirect)
 
 ## 微信小程序
 
@@ -152,6 +158,7 @@ menu: Bookmark
 - [利用CSS改变图片颜色的100种方法！](https://blog.csdn.net/nanhupatar/article/details/82793637)
 - [欲练 JS，必先攻 CSS——前端修行之路](http://www.cnblogs.com/1wen/p/6839779.html)
 - [CSS3 动画卡顿性能优化解决方案](https://segmentfault.com/a/1190000013045035)
+- [CSS 中重要的层叠概念](https://segmentfault.com/a/1190000016489078)
 - [前端布局基础概述](https://mp.weixin.qq.com/s/-LcNZWFFty2lWuND6uuNNA)
 - [CSS 布局解决方案（终结版）](https://segmentfault.com/a/1190000013565024)
 - [CSS Grid 中的陷阱和绊脚石](http://www.w3cplus.com/css/css-grid-gotchas-stumbling-blocks.html)
@@ -208,6 +215,12 @@ menu: Bookmark
 
 - [一篇文章了解架构模式：MVC/MVP/MVVM](https://segmentfault.com/a/1190000015310674)
 
+## 安全
+
+- [30 分钟理解 CORB 是什么](https://segmentfault.com/a/1190000016126079)
+- [如何防止 CSRF 攻击？](https://my.oschina.net/meituantech/blog/2243958?origin=wechat)
+
+
 ## 箴言
 
 - [懂得这 40 条编程箴言才称得上优秀程序员](http://www.itboth.com/d/fmyyemZ7zMba)
@@ -233,6 +246,7 @@ menu: Bookmark
 ## Node.js
 
 - [Node 定时器详解](http://www.ruanyifeng.com/blog/2018/02/node-event-loop.html)
+- [从 1 到完美，用 node 写一个命令行工具](https://segmentfault.com/a/1190000016555129)
 - [使用 cross-env 解决跨平台设置 NODE_ENV 的问题](https://segmentfault.com/a/1190000005811347)
 - [utility](https://github.com/node-modules/utility) - A collection of useful utilities
 - [cheerio](https://github.com/cheeriojs/cheerio) - Implementation of core jQuery designed specifically for the server
