@@ -45,7 +45,7 @@ props: ['str', 'num', 'boolean', 'und', 'nul', 'obj', 'arr']
 
 子组件显示值:
 
-```html
+```js
 <div>
   str---{{str}}
   num---{{num}}
