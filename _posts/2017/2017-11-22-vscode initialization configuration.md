@@ -154,6 +154,9 @@ VSCode 初始化配置
   - [Doc](https://github.com/baurine/vscode-pangu)
   - [如何实现一个给中英文间加空格的 VS Code 扩展](https://juejin.im/post/5a43718cf265da43310e1a34)
   - [Install](vscode:extension/baurine.vscode-pangu)
+- [EditorConfig for VS Code](https://marketplace.visualstudio.com/items?itemName=EditorConfig.EditorConfig)
+  - 使用 .editorconfig 文件中的设置覆盖用户/工作区设置, 适合团队统一格式
+  - [Install](vscode:extension/EditorConfig.EditorConfig)
 
 ### 代码片段
 
@@ -200,6 +203,9 @@ VSCode 初始化配置
   - [每日一 Vim 笔记](https://lhajh.github.io/vim/2018/05/08/the-notes-of-a-daily-vim.html)
   - [每日一 Vim](https://lhajh.github.io/vim/2018/05/08/the-notes-of-a-daily-vim.html)
   - [Install](vscode:extension/vscodevim.vim)
+- [File Utils](https://marketplace.visualstudio.com/items?itemName=sleistner.vscode-fileutils)
+  - 创建, 复制, 移动, 重命名和删除文件和目录的便捷方式, 就是不用触摸板完成这些操作
+  - [Install](vscode:extension/sleistner.vscode-fileutils)
 - [Code Runner](https://marketplace.visualstudio.com/items?itemName=formulahendry.code-runner)
   - Run C, C++, Java, JS, PHP, Python, Perl, Ruby, Go, Lua, Groovy, PowerShell, CMD, BASH, F#, C#, VBScript, TypeScript, CoffeeScript, Scala, Swift, Julia, Crystal, OCaml, R, AppleScript, Elixir, VB.NET, Clojure, Haxe, Objective-C, Rust, Racket, AutoHotkey, AutoIt, Kotlin, Dart, Pascal, Haskell, Nim, D
   - [Install](vscode:extension/formulahendry.code-runner)
@@ -217,6 +223,10 @@ VSCode 初始化配置
 - [Nasc VSCode Touchbar](https://marketplace.visualstudio.com/items?itemName=felipe.nasc-touchbar)
   - 支持 MBP 的触摸条, 提供了挺多实用的功能点
   - [Install](vscode:extension/felipe.nasc-touchbar)
+- [macros](https://marketplace.visualstudio.com/items?itemName=geddski.macros)
+  - 自定义宏
+  - [Install](vscode:extension/geddski.macros)
+
 
 ### 外观增强
 - [Bracket Pair Colorizer](https://marketplace.visualstudio.com/items?itemName=CoenraadS.bracket-pair-colorizer)
@@ -237,6 +247,10 @@ VSCode 初始化配置
 
 ### 编码效率
 
+- [htmltagwrap](https://marketplace.visualstudio.com/items?itemName=bradgashler.htmltagwrap)
+  - 给 单个或多个 html标签 或 文本 添加 父标签
+  - 快捷键: alt/opt + w
+  - [Install](vscode:extension/bradgashler.htmltagwrap)
 - [Document This](https://marketplace.visualstudio.com/items?itemName=joelday.docthis)
   - 一键给代码中的类、函数加上注释, 支持函数声明、函数表达式、箭头函数等
   - [Install](vscode:extension/joelday.docthis)
@@ -249,6 +263,14 @@ VSCode 初始化配置
 - [Paste JSON as Code](https://marketplace.visualstudio.com/items?itemName=quicktype.quicktype)
   - JSON 快速转换为其他语言的类型格式
   - [Install](vscode:extension/quicktype.quicktype)
+- [Markdown All in One](https://marketplace.visualstudio.com/items?itemName=yzhang.markdown-all-in-one)
+  - Markdown 最好用的工具, 各种快捷键, 创建表格, 预览, 应有尽有
+- [Nest Comments](https://marketplace.visualstudio.com/items?itemName=philsinatra.nested-comments)
+  - 完美解决需要注释的代码里已有注释代码
+  - 已将快捷键修改为 shift + alt/opt + /
+  - [Install](vscode:extension/philsinatra.nested-comments)
+
+
 
 ### 其他插件
 
@@ -288,13 +310,7 @@ VSCode 初始化配置
   "workbench.colorTheme": "Monokai Dimmed",
 
   // ------------------------ 格式化代码 ------------------------
-  // 按照下面配置好后, 先使用 vue-format(快捷键 opt/alt + shift + d) 格式化, 再用系统默认格式化快捷键(opt/alt + shift + f)格式
-  // vue-format 默认是没有快捷键的, 需要自己配置
-  // {
-  //     "key": "alt+shift+d",
-  //     "command": "extension.vueFormat",
-  //     "when": "editorFocus"
-  // }
+  // 按照下面配置好后, 先右键使用 vue-format 格式化, 再用快捷键(opt/alt + shift + f)格式化
   // vue-format 格式化 html, 快捷键格式化 js, css
   // 一个制表符等于的空格数
   "editor.tabSize": 2,
@@ -357,6 +373,8 @@ VSCode 初始化配置
   "explorer.openEditors.visible": 0,
   // 自动保存（失焦保存）
   "files.autoSave": "onFocusChange",
+  // 控制是否绘制已修改 (存在更新) 的编辑器选项卡的顶部边框。
+  "workbench.editor.highlightModifiedTabs": true,
   // 控制键入时是否应自动显示建议
   "editor.quickSuggestions": {
     "other": true,
@@ -417,7 +435,12 @@ VSCode 初始化配置
   // vim 插件名: Vim
   // Override VSCode's copy command with our own copy command, which works better with VSCodeVim. Turn this off if copying is not working.
   "vim.overrideCopy": false,
-  "vim.startInInsertMode": true
+  "vim.startInInsertMode": true,
+  // 同步配置插件 插件名: Syncing
+  // 通过该配置项，可以决定是否让 Syncing 按照设备操作系统的不同来分开同步您的`快捷键配置`。
+  // 鉴于 VSCode 从 1.27 版本开始提供了 `Platform Specific Keybindings` 功能，您现在可以关闭该功能了。
+  // 注意：在关闭该功能之前，请务必确保您已经手动合并了现有的快捷键配置。
+  "syncing.separateKeybindings": false
 }
 ```
 
@@ -441,6 +464,7 @@ VSCode 初始化配置
 - C + p: [快速打开文件](https://code.visualstudio.com/updates/vJanuary#_file-picker)
 - O + S + /: 切换块注释
 - C + /: 切换行注释
+- O + w: 给 单个或多个 html标签 或 文本 添加 父标签 (需要插件: htmltagwrap)
 - C + d: 删除当前行
 - C + UA: 向上复制行
 - C + DA: 向下复制行
@@ -513,6 +537,28 @@ VSCode 初始化配置
     "key": "shift+alt+a",
     "command": "-editor.action.blockComment",
     "when": "editorTextFocus && !editorReadonly"
+  },
+  // 插件 Nest Comments
+  // 完美解决需要注释的代码里已有注释代码
+  {
+    "key": "shift+alt+/",
+    "command": "extension.nestComments",
+    "when": "isMac && editorHasSelection && editorTextFocus"
+  },
+  {
+    "key": "alt+cmd+/",
+    "command": "-extension.nestComments",
+    "when": "isMac && editorHasSelection && editorTextFocus"
+  },
+  {
+    "key": "shift+alt+oem_2",
+    "command": "extension.nestComments",
+    "when": "isWindows && editorHasSelection && editorTextFocus"
+  },
+  {
+    "key": "ctrl+alt+oem_2",
+    "command": "-extension.nestComments",
+    "when": "isWindows && editorHasSelection && editorTextFocus"
   },
   // 删除行
   {

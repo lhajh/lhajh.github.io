@@ -18,8 +18,8 @@ keywords: js, upper
 
 ```html
 <div>
-   <input type="text" v-model="value">
-   <p>{{value}}</p>
+  <input type="text" v-model="value" />
+  <p>{{value}}</p>
 </div>
 ```
 
@@ -31,8 +31,8 @@ keywords: js, upper
 
 ```html
 <div>
-   <input type="text" v-model.lazy="value">
-   <p>{{value}}</p>
+  <input type="text" v-model.lazy="value" />
+  <p>{{value}}</p>
 </div>
 ```
 
@@ -43,7 +43,7 @@ keywords: js, upper
 在我们的输入框中，我们经常需要过滤一下一些输入完密码不小心多敲了一下空格的兄弟输入的内容。
 
 ```html
-<input type="text" v-model.trim="value">
+<input type="text" v-model.trim="value" />
 ```
 
 ![clipboard.png](/assets/images/posts/vue/bVbiwdV.png)
@@ -71,9 +71,7 @@ keywords: js, upper
 由于事件冒泡的机制，我们给元素绑定点击事件的时候，也会触发父级的点击事件。
 
 ```html
-<div @click="shout(2)">
-  <button @click="shout(1)">ok</button>
-</div>
+<div @click="shout(2)"><button @click="shout(1)">ok</button></div>
 ```
 
 ```js
@@ -88,9 +86,7 @@ shout(e){
 一键阻止事件冒泡，简直方便得不行。相当于调用了 event.stopPropagation() 方法。
 
 ```html
-<div @click="shout(2)">
-  <button @click.stop="shout(1)">ok</button>
-</div>
+<div @click="shout(2)"><button @click.stop="shout(1)">ok</button></div>
 <!-- 只输出 1 -->
 ```
 
@@ -116,9 +112,7 @@ shout(e){
 像下面所示，刚刚我们从 `.stop` 时候知道子元素会冒泡到父元素导致触发父元素的点击事件，当我们加了这个 `.self` 以后，我们点击 button 不会触发父元素的点击事件 shout，只有当点击到父元素的时候（蓝色背景）才会 shout~ 从这个 self 的英文翻译过来就是 '自己，本身' 可以看出这个修饰符的用法
 
 ```html
-<div class="blue" @click.self="shout(2)">
-  <button @click="shout(1)">ok</button>
-</div>
+<div class="blue" @click.self="shout(2)"><button @click="shout(1)">ok</button></div>
 ```
 
 ![clipboard.png](/assets/images/posts/vue/bVbizKd.png)
@@ -147,9 +141,7 @@ shout(e){
     obj2
     <div @click="shout(3)">
       obj3
-      <div @click="shout(4)">
-        obj4
-      </div>
+      <div @click="shout(4)">obj4</div>
     </div>
   </div>
 </div>
@@ -164,7 +156,7 @@ shout(e){
 
 ```html
 <!-- 滚动事件的默认行为 (即滚动行为) 将会立即触发 -->
-<!-- 而不会等待 `onScroll` 完成  -->
+<!-- 而不会等待 `onScroll` 完成 -->
 <!-- 这其中包含 `event.preventDefault()` 的情况 -->
 <div v-on:scroll.passive="onScroll">...</div>
 ```
@@ -206,7 +198,7 @@ shout(e){
 如果不用 keyCode 修饰符，那我们每次按下键盘都会触发 shout，当我们想指定按下某一个键才触发这个 shout 的时候，这个修饰符就有用了，具体键码查看 [键码对应表](https://segmentfault.com/a/1190000005828048)
 
 ```html
-<input type="text" @keyup.enter="shout(4)">
+<input type="text" @keyup.enter="shout(4)" />
 ```
 
 为了方便我们使用，vue 给一些常用的键提供了别名
@@ -241,13 +233,13 @@ Vue.config.keyCodes.f1 = 112
 当我们写如下代码的时候, 我们会发现如果 **仅仅** 使用系统修饰键是无法触发 keyup 事件的。
 
 ```html
-<input type="text" @keyup.ctrl="shout(4)">
+<input type="text" @keyup.ctrl="shout(4)" />
 ```
 
 那该如何呢？我们需要将系统修饰键和其他键码链接起来使用，比如
 
 ```html
-<input type="text" @keyup.ctrl.67="shout(4)">
+<input type="text" @keyup.ctrl.67="shout(4)" />
 ```
 
 这样当我们同时按下 ctrl+c 时，就会触发 keyup 事件。
@@ -255,8 +247,7 @@ Vue.config.keyCodes.f1 = 112
 另，如果是鼠标事件，那就可以单独使用系统修饰符。
 
 ```html
-<button @mouseover.ctrl="shout(1)">ok</button>
-<button @mousedown.ctrl="shout(1)">ok</button>
+<button @mouseover.ctrl="shout(1)">ok</button> <button @mousedown.ctrl="shout(1)">ok</button>
 <button @click.ctrl.67="shout(1)">ok</button>
 ```
 
@@ -271,13 +262,13 @@ Vue.config.keyCodes.f1 = 112
 注意：这个 **只是限制系统修饰键** 的，像下面这样书写以后你还是可以按下 ctrl + c，ctrl+v 或者 ctrl + 普通键 来触发，但是不能按下 ctrl + shift + 普通键来触发。
 
 ```html
-<button type="text" @click.ctrl.exact="shout(4)">ok</button>
+<button type="text" @click.ctrl.exact="shout(4)">ok</button>
 ```
 
 然后下面这个你可以同时按下 enter + 普通键来触发，但是不能按下系统修饰键 + enter 来触发。相信你已经能听懂了 8~
 
 ```html
-<input type="text" @keydown.enter.exact="shout('我被触发了')">
+<input type="text" @keydown.enter.exact="shout('我被触发了')" />
 ```
 
 ## v-bind 修饰符
@@ -305,8 +296,7 @@ func2(){
 现在这个 `.sync` 修饰符就是简化了上面的步骤
 
 ```html
-// 父组件
-<comp :myMessage.sync="bar"></comp>
+// 父组件 <comp :myMessage.sync="bar"></comp>
 ```
 
 ```js
@@ -333,7 +323,7 @@ this.$emit('update:myMessage', params)
 <!-- 这里的 id,value,style 都属于 property -->
 <!-- index 属于 attribute -->
 <!-- id、title 等既是属性，也是特性。修改属性，其对应的特性会发生改变；修改特性，属性也会改变 -->
-<input id="uid" title="title1" value="1" :index="index">
+<input id="uid" title="title1" value="1" :index="index" />
 <!-- input.index === undefined -->
 <!-- input.attributes.index === this.index -->
 ```
@@ -348,7 +338,7 @@ this.$emit('update:myMessage', params)
 我们可以使用这个修饰符，如下
 
 ```html
-<input id="uid" title="title1" value="1" :index.prop="index">
+<input id="uid" title="title1" value="1" :index.prop="index" />
 <!-- input.index === this.index -->
 <!-- input.attributes.index === undefined -->
 ```
@@ -358,13 +348,13 @@ this.$emit('update:myMessage', params)
 由于 HTML 特性是不区分大小写的。
 
 ```html
-<svg :viewBox="viewBox"></svg>
+<svg :viewBox="viewBox"></svg>
 ```
 
 实际上会渲染为
 
 ```html
-<svg viewbox="viewBox"></svg>
+<svg viewbox="viewBox"></svg>
 ```
 
 这将导致渲染失败，因为 SVG 标签只认 viewBox，却不知道 viewbox 是什么。
@@ -374,7 +364,7 @@ this.$emit('update:myMessage', params)
 另，如果你使用字符串模版，则没有这些限制。
 
 ```js
-new Vue({template: '<svg :viewBox="viewBox"></svg>' })
+new Vue({ template: '<svg :viewBox="viewBox"></svg>' })
 ```
 
 参考资料
