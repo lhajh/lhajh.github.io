@@ -23,9 +23,7 @@ keywords: js, upper
 </div>
 ```
 
-![clipboard.png](/assets/images/posts/vue/bVbiwcG.png)
-
-从这里我们可以看到，我们还在输入的时候，光标还在的时候，下面的值就已经出来了，可以说是非常地实时。
+默认情况下，我们还在输入的时候，光标还在输入框里的时候，下面的值就已经出来了，可以说是非常地实时。
 
 但是有时候我们希望，在我们输入完所有东西，光标离开才更新视图。
 
@@ -48,7 +46,7 @@ keywords: js, upper
 
 ![clipboard.png](/assets/images/posts/vue/bVbiwdV.png)
 
-为了让你更清楚的看到，我改了一下样式，不过问题不大，相信你已经清楚看到这个大大的 hello 左右两边没有空格，尽管你在 input 框里敲烂了空格键。
+可以通过下面的表达式判断 trim 是否生效，而且原生会在失焦后自动 trim
 
 需要注意的是，它只能 **过滤首尾的空格**！首尾，中间的是不会过滤的
 
@@ -60,7 +58,7 @@ keywords: js, upper
 
 ![clipboard.png](/assets/images/posts/vue/bVbiztV.png)
 
-如果你先输入数字，那它就会限制你输入的只能是数字。
+如果你先输入数字，那它就会限制你输入的只能是数字，并且在失焦后自动将 value 转成数字
 
 如果你先输入字符串，那它就相当于没有加 `.number`
 
@@ -71,11 +69,12 @@ keywords: js, upper
 由于事件冒泡的机制，我们给元素绑定点击事件的时候，也会触发父级的点击事件。
 
 ```html
-<div @click="shout(2)"><button @click="shout(1)">ok</button></div>
+<div @click="shout(2)">
+  <button @click="shout(1)">ok</button>
+</div>
 ```
 
 ```js
-//js
 shout(e){
   console.log(e)
 }
@@ -86,7 +85,9 @@ shout(e){
 一键阻止事件冒泡，简直方便得不行。相当于调用了 event.stopPropagation() 方法。
 
 ```html
-<div @click="shout(2)"><button @click.stop="shout(1)">ok</button></div>
+<div @click="shout(2)">
+  <button @click.stop="shout(1)">ok</button>
+</div>
 <!-- 只输出 1 -->
 ```
 
@@ -105,14 +106,16 @@ shout(e){
 
 也就是 **从左往右判断~**
 
-###.self
+### .self
 
 只当事件是从事件绑定的元素本身触发时才触发回调。
 
 像下面所示，刚刚我们从 `.stop` 时候知道子元素会冒泡到父元素导致触发父元素的点击事件，当我们加了这个 `.self` 以后，我们点击 button 不会触发父元素的点击事件 shout，只有当点击到父元素的时候（蓝色背景）才会 shout~ 从这个 self 的英文翻译过来就是 '自己，本身' 可以看出这个修饰符的用法
 
 ```html
-<div class="blue" @click.self="shout(2)"><button @click="shout(1)">ok</button></div>
+<div class="blue" @click.self="shout(2)">
+  ****<button @click="shout(1)">ok</button>
+</div>
 ```
 
 ![clipboard.png](/assets/images/posts/vue/bVbizKd.png)
@@ -160,6 +163,8 @@ shout(e){
 <!-- 这其中包含 `event.preventDefault()` 的情况 -->
 <div v-on:scroll.passive="onScroll">...</div>
 ```
+
+不要把 `.passive` 和 `.prevent` 一起使用，因为 `.prevent` 将会被忽略，同时浏览器可能会向你展示一个警告。请记住，`.passive` 会告诉浏览器你_不_想阻止事件的默认行为。
 
 ### .native
 
@@ -221,6 +226,8 @@ shout(e){
 .shift
 ```
 
+注意：在 Mac 系统键盘上，meta 对应 command 键 (⌘)。在 Windows 系统键盘 meta 对应 Windows 徽标键 (⊞)。在 Sun 操作系统键盘上，meta 对应实心宝石键 (◆)。在其他特定键盘上，尤其在 MIT 和 Lisp 机器的键盘、以及其后继产品，比如 Knight 键盘、space-cadet 键盘，meta 被标记为“META”。在 Symbolics 键盘上，meta 被标记为“META”或者“Meta”。
+
 可以通过全局 config.keyCodes 对象自定义按键修饰符别名：
 
 ```js
@@ -236,13 +243,19 @@ Vue.config.keyCodes.f1 = 112
 <input type="text" @keyup.ctrl="shout(4)" />
 ```
 
-那该如何呢？我们需要将系统修饰键和其他键码链接起来使用，比如
+这是因为修饰键与常规按键不同，在和 `keyup` 事件一起用时，事件触发时修饰键必须处于按下状态。换句话说，只有在按住 `ctrl` 的情况下释放其它按键，才能触发 `keyup.ctrl`。而单单释放 `ctrl` 也不会触发事件。如果你想要这样的行为，请为 `ctrl` 换用 `keyCode`：`keyup.17`。
+
+```html
+<input type="text" @keyup.17="shout(4)" />
+```
+
+或者我们可以将系统修饰键和其他键码连接起来使用，比如
 
 ```html
 <input type="text" @keyup.ctrl.67="shout(4)" />
 ```
 
-这样当我们同时按下 ctrl+c 时，就会触发 keyup 事件。
+这样当我们同时按下 ctrl + c 时，就会触发 keyup 事件。
 
 另，如果是鼠标事件，那就可以单独使用系统修饰符。
 
@@ -253,7 +266,8 @@ Vue.config.keyCodes.f1 = 112
 
 大概是什么意思呢，就是你不能 **单手指使用系统修饰键的修饰符**（最少两个手指，可以多个）。
 
-你可以一个手指按住系统修饰键一个手指按住另外一个键来实现键盘事件。也可以用一个手指按住系统修饰键，另一只手按住鼠标来实现鼠标事件。
+1. 要么你将系统修饰键替换成普通键，如 ctrl 替换为 17
+2. 要么一个手指按住系统修饰键一个手指按住另外一个键来实现键盘事件。也可以用一个手指按住系统修饰键，另一只手按住鼠标来实现鼠标事件。
 
 ### .exact (2.5 新增)
 
@@ -269,6 +283,11 @@ Vue.config.keyCodes.f1 = 112
 
 ```html
 <input type="text" @keydown.enter.exact="shout('我被触发了')" />
+```
+
+```html
+<!-- 没有任何系统修饰符被按下的时候才触发 -->
+<button @click.exact="shout(5)">A</button>
 ```
 
 ## v-bind 修饰符
