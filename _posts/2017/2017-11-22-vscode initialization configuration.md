@@ -310,8 +310,14 @@ VSCode 初始化配置
   "workbench.colorTheme": "Monokai Dimmed",
 
   // ------------------------ 格式化代码 ------------------------
-  // 按照下面配置好后, 先右键使用 vue-format 格式化, 再用快捷键(opt/alt + shift + f)格式化
-  // vue-format 格式化 html, 快捷键格式化 js, css
+  // 使用快捷键 (opt/alt + shift + d) 格式化 html, 只对 vue 文件有效, 需要使用插件：vue-format
+  // 给插件 vue-format 配置快捷键
+  // {
+  //   "key": "alt+shift+d",
+  //   "command": "extension.vueFormat",
+  //   "when": "editorFocus"
+  // }
+  // 使用快捷键 (opt/alt + shift + f) 格式化 js/css
   // 一个制表符等于的空格数
   "editor.tabSize": 2,
   // 启用后，保存文件时在文件末尾插入一个最终新行。
@@ -345,10 +351,14 @@ VSCode 初始化配置
   "prettier.singleQuote": true,
   // 换行字符串阈值
   "prettier.printWidth": 100,
-  // 格式化 html 插件名: vue-format
+  // 格式化 vue 的 html 插件名: vue-format
   // 解决了 vetur 标签换行导致缩进异常问题
   // tag 的 attrs 大于该数值时，强制 attrs 换行，-1时不换行
   "vue-format.break_attr_limit": 1,
+  // 需要格式化的语言
+  "vue-format.format_need": [
+    "html"
+  ],
   // vetru 设置格式化 html 插件名: Vetur
   // 目前 vetur 的 template 格式化还没有很好的支持 prettier，应该说目前官方只推荐使用 js-beautify-html
   // "vetur.format.defaultFormatter.html": "js-beautify-html",
