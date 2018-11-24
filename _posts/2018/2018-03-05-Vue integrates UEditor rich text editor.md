@@ -201,6 +201,7 @@ UE.Editor.prototype.getActionUrl = function(action) {
 ```js
 img:    ['src', 'alt', 'title', 'width', 'height', 'id', '_src', '_url', 'loadingclass', 'class', 'data-latex'],
 ```
+
 ```js
 video:  ['autoplay', 'controls', 'loop', 'preload', 'src', 'height', 'width', 'class', 'style'],
 source: ['src', 'type'],
@@ -221,38 +222,24 @@ embed:  ['type', 'class', 'pluginspage', 'src', 'width', 'height', 'align', 'sty
   :close-on-click-modal="false"
   :close-on-press-escape="false"
   :before-close="handleClose"
-  :visible.sync="newsDialogVisible">
+  :visible.sync="newsDialogVisible"
+>
   <div class="dialog-title" ref="title">{{title}}</div>
   <p class="dialog-date" ref="date">发布时间：{{createDate}}</p>
-  <!-- 利用 iframe 可以使 reset.css 不起作用；动态 src 是为了每次弹框都重新加载 html 页面，避免缓存 -->
+  <!--
+    利用 iframe 可以使 reset.css 不起作用；动态 src 是为了每次弹框都重新加载 html 页面，避免缓存
+  -->
   <iframe :src="src" width="100%" :height="iframeHeight" frameborder="0"></iframe>
 </el-dialog>
 
-// 显示新闻详情
-showDetail (data) {
-  this.title = data.title
-  this.createDate = data.createDate
-  // 利用 session 存储内容
-  sessionStorage.setItem('ueContent', data.context)
-  this.src = '/static/news.html'
-  this.newsDialogVisible = true
-  this.$nextTick(() => {
-    this.iframeHeight = document.getElementsByClassName('el-dialog__body')[0].clientHeight -
-    30 * 2 - this.$refs.title.clientHeight - this.$refs.date.clientHeight - 20
-    let videoDom = document.querySelector('.video-js')
-    if (videoDom) {
-      window.videojs(videoDom)
-    }
-  })
-},
-// 关闭新闻详情
-handleClose (done) {
-  this.title = ''
-  this.createDate = ''
-  this.src = ''
-  sessionStorage.removeItem('ueContent')
-  done()
-}
+// 显示新闻详情 showDetail (data) { this.title = data.title this.createDate = data.createDate //
+利用 session 存储内容 sessionStorage.setItem('ueContent', data.context) this.src =
+'/static/news.html' this.newsDialogVisible = true this.$nextTick(() => { this.iframeHeight =
+document.getElementsByClassName('el-dialog__body')[0].clientHeight - 30 * 2 -
+this.$refs.title.clientHeight - this.$refs.date.clientHeight - 20 let videoDom =
+document.querySelector('.video-js') if (videoDom) { window.videojs(videoDom) } }) }, // 关闭新闻详情
+handleClose (done) { this.title = '' this.createDate = '' this.src = ''
+sessionStorage.removeItem('ueContent') done() }
 ```
 
 news.html 文件
@@ -260,17 +247,25 @@ news.html 文件
 ```html
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <title>Document</title>
-</head>
-<body>
-  <div id="newsPreview"></div>
-</body>
-<script>
-  document.getElementById('newsPreview').innerHTML = sessionStorage.getItem('ueContent')
-</script>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Document</title>
+  </head>
+  <body>
+    <div id="newsPreview"></div>
+  </body>
+  <script>
+    document.getElementById('newsPreview').innerHTML = sessionStorage.getItem('ueContent')
+  </script>
 </html>
 ```
+
+## 参考资料
+
+- [vue 集成百度 UEditor 富文本编辑器](https://blog.csdn.net/psd_html/article/details/73312859)
+- [百度富文本编辑器（ueditor）上传配置](http://www.olbids.com/f/topic/view?topic=5)
+- [百度富文本编辑器 UEditor 1.4.3 插入视频后路径被清空问题](https://blog.csdn.net/eunyeon/article/details/52964152)
+- [使用百度编辑器 ueditor 表格无法显示边框以及边框颜色等系列问题解决方案](https://blog.csdn.net/kingqiji01/article/details/65495647#reply)
+- [如何让某一元素内的内容不被 reset.css 重置？](https://segmentfault.com/q/1010000013204367/a-1020000013210136)
