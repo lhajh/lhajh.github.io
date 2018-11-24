@@ -6,22 +6,46 @@ description: vue 集成 UEditor 富文本编辑器
 keywords: vue, UEditor
 ---
 
-vue是前端开发者所追捧的框架，简单易上手，但是基于vue的富文本编辑器大多数太过于精简。于是我将百度富文本编辑器放到vue项目中使用。
+vue 是前端开发者所追捧的框架，简单易上手，但是基于 vue 的富文本编辑器大多数太过于精简。于是我将百度富文本编辑器放到 vue 项目中使用。
 
-[这个是基础设置](http://blog.csdn.net/psd_html/article/details/73312859)
+## 基础配置
+
+1. 下载 UEditor 源码。[UEditor - 下载](https://ueditor.baidu.com/website/download.html)
+2. 把项目复制到 vue 项目的 static 文件下。目的是让服务可以访问到里面的文件。
+3. 在.vue 文件中引入主要 js 文件
+   ```js
+   import '/static/utf8-jsp/ueditor.config'
+   import '/static/utf8-jsp/ueditor.all'
+   import '/static/utf8-jsp/lang/zh-cn/zh-cn'
+   ```
+   引入方式不必局限在上面这一种，上面的引入方式会在组件初始化就执行 ue 编辑器的 js 代码，也可以在需要 ue 时，动态创建 script 标签，再引入上面的 js 文件
+4. 在 data 中声明一个变量存储 UEditor 的实例，方便以后操作 UEditor；然后再声明一个变量用于初始化写入  编辑器的内容和存储编辑器里面的内容
+5. 在 html 部分写一个 div 标签
+   ```html
+   <div id="editor" type="text/plain" style="width:1024px;height:500px;"></div>
+   ```
+6. 在 vue 的 mounted 钩子函数中调用编辑器的方法生成实例存储到刚刚声明的变量中，在实例中传入参数。第一个是 id，id 是生成编辑器的 div 的 id。第二个参数是一个对象。对象内容是对编辑器的配置。如资源访问路径，toolbars 内容配置，具体配置可以在 `ueditor.config.js` 中查找
+   ```js
+   this.ue = window.UE.getEditor('editor', {
+     BaseUrl: '',
+     UEDITOR_HOME_URL: 'static/utf8-jsp/'
+     // 这个UEDITOR_HOME_URL就是配置编辑器自己访问自己所需要的依赖的路径。设置到存放的文件下utf8-jsp是编辑器文件的更目录。目录不一样可自行更改
+   })
+   ```
+7. 然后保存，就可以在界面上显示一个完整的富文本编辑器
+8. 如果要获取编辑器内容则使用 `this.ue.getContent()`
+9. 如果要设置内容则使用 `this.ue.setContent('需要设置的内容')`;
+10. 更多方法参考官方文档。
+
+## 配置上传
 
 按照上述步骤就可以在页面中显示 UEditor，但此时上传仍不能使用
 
-点击上传按钮会提示 `后端配置项没有正常加载，上传插件不能正常使用！`
+点击上传按钮会提示 `后端配置项没有正常加载，上传插件不能正常使用！`，并且控制台报错 `后台配置项返回格式出错，上传功能将不能正常使用！`
 
-需要在 `ueditor.config.js` 中修改 `serverUrl`
+需要修改 `ueditor.config.js` 的 `serverUrl`
 
-例如：
-```
-// 服务器统一请求接口路径
-, serverUrl: window.location.protocol + "//" + window.location.host + "/api/ue/config"
-```
-这个 url 路径是和后台商量好的，保证访问这个接口可以返回 config.json
+出现这种情  况是由于请求没有返回 config.json
 
 注: **本人使用的是 jsp 版本 utf-8 版的, 这个 config.json 在下载文件解压后的 jsp 文件夹里面. 在这个 json 文件中是前后端通信相关的配置, 包括上传路径, 文件格式限制等**
 
@@ -39,18 +63,158 @@ vue是前端开发者所追捧的框架，简单易上手，但是基于vue的�
 "imagePathFormat": "/ueditor/jsp/upload/image/{yyyy}{mm}{dd}/{time}{rand:6}"
 ```
 
-[这是后台上传配置](http://www.olbids.com/f/topic/view?topic=5)
+ 解决这种问题需分两种情况：
 
-下面是一下常见问题：
+1. 我不需要上传文件，而且我也在 toolbars 中将上传所有按钮都干掉了，但控制台还是报错
+2. 我需要上传文件，需要解决这个问题
 
-- [百度富文本编辑器 UEditor 1.4.3 插入视频后路径被清空问题](http://blog.csdn.net/eunyeon/article/details/52964152)
-- [使用百度编辑器ueditor表格无法显示边框以及边框颜色等系列问题解决方案](http://blog.csdn.net/kingqiji01/article/details/65495647#reply)
-- [如何让某一元素内的内容不被reset.css重置？](https://segmentfault.com/q/1010000013204367/a-1020000013210136)
+### 先解决  第一种情况
 
-关于被 reset.css 重置的解决方法(Vue版)：
+要么将 `ueditor.config.js` 的 `serverUrl` 这行代码注释掉
+
+```js
+// 服务器统一请求接口路径
+// serverUrl: URL + 'jsp/controller.jsp',
+```
+
+要么在 vue 初始化 ue 配置项里配置 `serverUrl`，推荐这种，尽量不要修改源码
+
+```js
+this.ue = window.UE.getEditor('editor', {
+  BaseUrl: '',
+  UEDITOR_HOME_URL: 'static/utf8-jsp/',
+  // 这个UEDITOR_HOME_URL就是配置编辑器自己访问自己所需要的依赖的路径。设置到存放的文件下utf8-jsp是编辑器文件的更目录。目录不一样可自行更改
+  serverUrl: ''
+  // serverUrl 可取的值： '', undefined, false 或者指向本地的 json 上传配置文件: '/static/plugin/ue/jsp/config.js'
+})
+```
+
+### 解决第二种情况
+
+这种情况需要后端支持
+
+前端先配置请求接口
+
+例如：
+
+```js
+this.ue = window.UE.getEditor('editor', {
+  BaseUrl: '',
+  UEDITOR_HOME_URL: 'static/utf8-jsp/',
+  // 这个UEDITOR_HOME_URL就是配置编辑器自己访问自己所需要的依赖的路径。设置到存放的文件下utf8-jsp是编辑器文件的更目录。目录不一样可自行更改
+  serverUrl: window.location.protocol + '//' + window.location.host + '/api/ue/config'
+  // 这个 url 路径是和后台商量好的，保证访问这个接口可以返回 config.json
+})
+```
+
+后端配置：
+
+百度富文本编辑器（ueditor）上传配置自定义, 使用 SpringMvc 实现
+
+第一步
+
+config 获取，其实使用他自带的 controller，在初始化时会调用 controller 并且参数 action 为 config 的请求。这个请求主要目的是为了获取 config.json 内的 json 字符串。其实我们可以自己读取并返回，不需要 ueditor 的依赖包。代码如下：
+
+```java
+@RequestMapping("config")
+@ResponseBody
+public String viewConfig(String action, HttpServletRequest request, HttpServletResponse response) {
+  String rootPath = this.getClass().getResource("/").getPath();
+  // return new ActionEnter( request, rootPath ).exec();
+  if ("config".equals(action)) {
+    try {
+      return readFile(rootPath + "ueditor/config.json");
+    } catch (IOException e) {
+      e.printStackTrace();
+      return "{\"state\":\"配置文件不存在\"}";
+    }
+  } else {
+    return "{\"state\":\"功能屏蔽\"}";
+  }
+}
+
+private String readFile(String path) throws IOException {
+  StringBuilder builder = new StringBuilder();
+  try {
+    InputStreamReader reader = new InputStreamReader(new FileInputStream(path), "UTF-8");
+    BufferedReader bfReader = new BufferedReader(reader);
+
+    String tmpContent = null;
+    while ((tmpContent = bfReader.readLine()) != null) {
+      builder.append(tmpContent);
+    }
+    bfReader.close();
+  } catch (UnsupportedEncodingException localUnsupportedEncodingException) {
+  }
+  return filter(builder.toString());
+}
+
+private String filter(String input) {
+  return input.replaceAll("/\\*[\\s\\S]*?\\*/", "");
+}
+```
+
+注意修改 ueditor.config.js 中 serverUrl 为以上自定义的 controller。
+
+```java
+// 服务器统一请求接口路径
+serverUrl: URL + "ueditor/config"
+```
+
+这样就能去掉 ueditor 的依赖包，可以试试插件启动正常。
+
+第二步
+
+接下来就是上传文件了 在引用组件的地方插入以下代码在上传文件时会自动调用以下 action 地址上传：
+
+```java
+UE.Editor.prototype._bkGetActionUrl = UE.Editor.prototype.getActionUrl;
+UE.Editor.prototype.getActionUrl = function(action) {
+  if (action == 'uploadimage' || action == 'uploadscrawl' || action == 'uploadvideo'){
+    return '/file/upload';   //上传文件的action地址
+  } else {
+    return this._bkGetActionUrl.call(this, action);
+  }
+}
+```
+
+。。。。上传文件的 action 这里就不贴代码了，网上很多
+
+好了，至此 ue 都配置完成
+
+## 常见问题
+
+### 百度富文本编辑器 UEditor 1.4.3 插入视频后路径被清空问题
+
+版本：UEditor 1.4.3.3 jsp utf-8
+
+<del>解决方法：把 ueditor.config.js 368 行中的  whitList 修改为 whiteList</del>
+
+解决方法：（感谢 ybzhkz 分享！）
+
+[Update ueditor.config.js by relaxio · Pull Request #2957 · fex-team/ueditor](https://github.com/fex-team/ueditor/pull/2957/commits/d4b875ce165b3225929496c2d85848afbff0deeb?diff=split)
+
+> xssFilter 导致插入视频异常，编辑器在切换源码的过程中过滤掉 img 的\_url 属性（用来存储视频 url）\_src/plugins/video.js 里处理的是\_url，而不是\_src
+
+修改 ueditor.config.js：
+
+```js
+img:    ['src', 'alt', 'title', 'width', 'height', 'id', '_src', '_url', 'loadingclass', 'class', 'data-latex'],
+```
+```js
+video:  ['autoplay', 'controls', 'loop', 'preload', 'src', 'height', 'width', 'class', 'style'],
+source: ['src', 'type'],
+embed:  ['type', 'class', 'pluginspage', 'src', 'width', 'height', 'align', 'style', 'wmode', 'play', 'loop', 'menu', 'allowscriptaccess', 'allowfullscreen']
+```
+
+- [使用百度编辑器 ueditor 表格无法显示边框以及边框颜色等系列问题解决方案](http://blog.csdn.net/kingqiji01/article/details/65495647#reply)
+- [如何让某一元素内的内容不被 reset.css 重置？](https://segmentfault.com/q/1010000013204367/a-1020000013210136)
+
+关于被 reset.css 重置的解决方法(Vue 版)：
 
 .vue 文件
-```
+
+```html
 <el-dialog
   size="large"
   top="5%"
@@ -92,7 +256,8 @@ handleClose (done) {
 ```
 
 news.html 文件
-```
+
+```html
 <!DOCTYPE html>
 <html lang="en">
 <head>
