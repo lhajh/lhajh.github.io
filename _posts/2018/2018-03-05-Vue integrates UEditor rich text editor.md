@@ -269,6 +269,9 @@ methods: {
     this.src = `/static/ueditor.html?id=${this.iframeId}&_t=${Date.now()}`
     this.showIframe = true
   }
+},
+beforeDestroy () {
+  sessionStorage.removeItem(this.iframeId)
 }
 ```
 
