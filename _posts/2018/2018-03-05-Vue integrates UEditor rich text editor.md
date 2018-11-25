@@ -19,7 +19,7 @@ vue 是前端开发者所追捧的框架，简单易上手，但是基于 vue �
    import '/static/utf8-jsp/lang/zh-cn/zh-cn'
    ```
    引入方式不必局限在上面这一种，上面的引入方式会在组件初始化就执行 ue 编辑器的 js 代码，也可以在需要 ue 时，动态创建 script 标签，再引入上面的 js 文件
-4. 在 data 中声明一个变量存储 UEditor 的实例，方便以后操作 UEditor；然后再声明一个变量用于初始化写入  编辑器的内容和存储编辑器里面的内容
+4. 在 data 中声明一个变量存储 UEditor 的实例，方便以后操作 UEditor；然后再声明一个变量用于初始化写入编辑器的内容和存储编辑器里面的内容
 5. 在 html 部分写一个 div 标签
    ```html
    <div id="editor" type="text/plain" style="width:1024px;height:500px;"></div>
@@ -28,8 +28,9 @@ vue 是前端开发者所追捧的框架，简单易上手，但是基于 vue �
    ```js
    this.ue = window.UE.getEditor('editor', {
      BaseUrl: '',
-     UEDITOR_HOME_URL: 'static/utf8-jsp/'
-     // 这个UEDITOR_HOME_URL就是配置编辑器自己访问自己所需要的依赖的路径。设置到存放的文件下utf8-jsp是编辑器文件的更目录。目录不一样可自行更改
+     UEDITOR_HOME_URL: '/static/utf8-jsp/'
+     // 这个 UEDITOR_HOME_URL 就是配置编辑器自己访问自己所需要的依赖的路径。
+     // 设置到存放的文件下，utf8-jsp 是编辑器文件的根目录。目录不一样可自行更改
    })
    ```
 7. 然后保存，就可以在界面上显示一个完整的富文本编辑器
@@ -37,13 +38,13 @@ vue 是前端开发者所追捧的框架，简单易上手，但是基于 vue �
 9. 如果要设置内容则使用 `this.ue.setContent('需要设置的内容')`;
 10. 更多方法参考官方文档 [UEditor Docs](http://fex.baidu.com/ueditor/)
 
-## 配置上传
+## 上传配置
 
 按照上述步骤就可以在页面中显示 UEditor，但此时上传仍不能使用
 
 点击上传按钮会提示 `后端配置项没有正常加载，上传插件不能正常使用！`，并且控制台报错 `后台配置项返回格式出错，上传功能将不能正常使用！`
 
-出现这种情  况是由于请求没有返回 config.json
+出现这种情况是由于请求没有返回 config.json
 
 需要修改 `ueditor.config.js` 的 `serverUrl`
 
@@ -63,12 +64,12 @@ vue 是前端开发者所追捧的框架，简单易上手，但是基于 vue �
 "imagePathFormat": "/ueditor/jsp/upload/image/{yyyy}{mm}{dd}/{time}{rand:6}"
 ```
 
- 解决这种问题需分两种情况：
+ 解决这种问题需分两种情况讨论：
 
-1. 我不需要上传文件，而且我也在 toolbars 中将上传所有按钮都干掉了，但控制台还是报错
+1. 我不需要上传文件，而且我也在 toolbars 中将所有上传按钮都干掉了，但控制台还是报错
 2. 我需要上传文件，需要解决这个问题
 
-### 先解决  第一种情况
+### 先解决第一种情况
 
 要么将 `ueditor.config.js` 的 `serverUrl` 这行代码注释掉
 
@@ -83,7 +84,6 @@ vue 是前端开发者所追捧的框架，简单易上手，但是基于 vue �
 this.ue = window.UE.getEditor('editor', {
   BaseUrl: '',
   UEDITOR_HOME_URL: 'static/utf8-jsp/',
-  // 这个UEDITOR_HOME_URL就是配置编辑器自己访问自己所需要的依赖的路径。设置到存放的文件下utf8-jsp是编辑器文件的更目录。目录不一样可自行更改
   serverUrl: ''
   // serverUrl 可取的值： '', undefined, false 或者指向本地的 json 上传配置文件: '/static/plugin/ue/jsp/config.js'
 })
@@ -101,7 +101,6 @@ this.ue = window.UE.getEditor('editor', {
 this.ue = window.UE.getEditor('editor', {
   BaseUrl: '',
   UEDITOR_HOME_URL: 'static/utf8-jsp/',
-  // 这个UEDITOR_HOME_URL就是配置编辑器自己访问自己所需要的依赖的路径。设置到存放的文件下utf8-jsp是编辑器文件的更目录。目录不一样可自行更改
   serverUrl: window.location.protocol + '//' + window.location.host + '/api/ue/config'
   // 这个 url 路径是和后台商量好的，保证访问这个接口可以返回 config.json
 })
@@ -158,14 +157,16 @@ private String filter(String input) {
 
 ```java
 // 服务器统一请求接口路径
-serverUrl: URL + "ueditor/config"
+serverUrl: URL + "api/ue/config"
 ```
 
 这样就能去掉 ueditor 的依赖包，可以试试插件启动正常。
 
 第二步
 
-接下来就是上传文件了 在引用组件的地方插入以下代码在上传文件时会自动调用以下 action 地址上传：
+接下来就是上传文件了
+
+在引用组件的地方插入以下代码在上传文件时会自动调用以下 action 地址上传：
 
 ```java
 UE.Editor.prototype._bkGetActionUrl = UE.Editor.prototype.getActionUrl;
