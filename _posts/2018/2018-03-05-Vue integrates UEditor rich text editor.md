@@ -272,7 +272,7 @@ methods: {
 }
 ```
 
-news.html 文件
+ueditor.html 文件
 
 ```html
 <!DOCTYPE html>
