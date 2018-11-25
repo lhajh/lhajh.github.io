@@ -208,38 +208,68 @@ source: ['src', 'type'],
 embed:  ['type', 'class', 'pluginspage', 'src', 'width', 'height', 'align', 'style', 'wmode', 'play', 'loop', 'menu', 'allowscriptaccess', 'allowfullscreen']
 ```
 
-- [使用百度编辑器 ueditor 表格无法显示边框以及边框颜色等系列问题解决方案](http://blog.csdn.net/kingqiji01/article/details/65495647#reply)
-- [如何让某一元素内的内容不被 reset.css 重置？](https://segmentfault.com/q/1010000013204367/a-1020000013210136)
+### 使用百度编辑器 ueditor 表格无法显示边框以及边框颜色等系列问题解决方案
+
+**第一步，设置 ueditor.all.js 文件，在如下位置设置边框效果：**
+
+![](/assets/images/posts/vue/sb2cuY3.png)
+
+这样，我们就设置了一个简单的效果。
+
+**第二步，设置 ueditor.config.js 文件，在如下位置设置允许使用属性 cellpadding 和 cellspacing:**
+
+![](/assets/images/posts/vue/R0cDov.png)
+
+这样，整个设置就完成了，这里我们在页面上不需要设置引用什么 ueditor.parse.js 文件
+
+**第三步，我们就需要在使用 ueditor 的页面来使用我们的设置了，过程如下：**
+
+![](/assets/images/posts/vue/wg5j7d.jpg)
+
+![](/assets/images/posts/vue/n6M3g.jpg)
+
+![](/assets/images/posts/vue/WV6d4b.jpg)
+
+ueditor 页面显示效果：
+
+![](/assets/images/posts/vue/nt68s.jpg)
+
+### 如何让某一元素内的内容不被 reset.css 重置？
+
+突然在网上看到说用 iframe，觉得完全可行啊，把富文本编辑器输出的内容嵌入到一个 iframe 中就可以完美解决这个问题啊
 
 关于被 reset.css 重置的解决方法(Vue 版)：
 
 .vue 文件
 
 ```html
-<el-dialog
-  size="large"
-  top="5%"
-  :close-on-click-modal="false"
-  :close-on-press-escape="false"
-  :before-close="handleClose"
-  :visible.sync="newsDialogVisible"
->
-  <div class="dialog-title" ref="title">{{title}}</div>
-  <p class="dialog-date" ref="date">发布时间：{{createDate}}</p>
-  <!--
-    利用 iframe 可以使 reset.css 不起作用；动态 src 是为了每次弹框都重新加载 html 页面，避免缓存
-  -->
-  <iframe :src="src" width="100%" :height="iframeHeight" frameborder="0"></iframe>
-</el-dialog>
+<!-- 利用 iframe 可以使 reset.css 不起作用；动态 src 是为了重新加载 html 页面，避免缓存 -->
+<iframe
+  :id="iframeId"
+  v-if="showIframe"
+  :src="src"
+  width="100%"
+  height="100%"
+  frameborder="0"
+></iframe>
+```
 
-// 显示新闻详情 showDetail (data) { this.title = data.title this.createDate = data.createDate //
-利用 session 存储内容 sessionStorage.setItem('ueContent', data.context) this.src =
-'/static/news.html' this.newsDialogVisible = true this.$nextTick(() => { this.iframeHeight =
-document.getElementsByClassName('el-dialog__body')[0].clientHeight - 30 * 2 -
-this.$refs.title.clientHeight - this.$refs.date.clientHeight - 20 let videoDom =
-document.querySelector('.video-js') if (videoDom) { window.videojs(videoDom) } }) }, // 关闭新闻详情
-handleClose (done) { this.title = '' this.createDate = '' this.src = ''
-sessionStorage.removeItem('ueContent') done() }
+```js
+data () {
+  return {
+    iframeId: `iframe_${Math.random().toString().substr(2)}`,
+    src: '',
+    showIframe: false
+  }
+},
+methods: {
+  // 保存 ue 内容
+  saveValue (value) {
+    sessionStorage.setItem(this.iframeId, value)
+    this.src = `/static/ueditor.html?id=${this.iframeId}&_t=${Date.now()}`
+    this.showIframe = true
+  }
+}
 ```
 
 news.html 文件
@@ -252,12 +282,44 @@ news.html 文件
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
     <title>Document</title>
+    <!-- ue 使用的是 video.js 处理视频播放，这里需要引入 -->
+    <link rel="stylesheet" href="/static/plugin/video-js/video-js.min.css" />
+    <script src="/static/plugin/video-js/video.js"></script>
+    <style type="text/css">
+      html,
+      body {
+        padding: 0;
+        margin: 0;
+      }
+    </style>
   </head>
   <body>
-    <div id="newsPreview"></div>
+    <div id="uePreview"></div>
   </body>
   <script>
-    document.getElementById('newsPreview').innerHTML = sessionStorage.getItem('ueContent')
+    var params = getParams()
+    document.getElementById('uePreview').innerHTML = sessionStorage.getItem(params.id)
+    setTimeout(function() {
+      var videoDom = document.querySelector('.video-js')
+      if (videoDom) {
+        videojs(videoDom)
+      }
+    }, 100)
+    function getParams() {
+      var ret = {},
+        seg = window.location.search.replace(/^\?/, '').split('&'),
+        len = seg.length,
+        i = 0,
+        s
+      for (; i < len; i++) {
+        if (!seg[i]) {
+          continue
+        }
+        s = seg[i].split('=')
+        ret[s[0]] = s[1]
+      }
+      return ret
+    }
   </script>
 </html>
 ```
