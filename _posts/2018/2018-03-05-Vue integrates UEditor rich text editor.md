@@ -328,6 +328,62 @@ ueditor.html 文件
 </html>
 ```
 
+### [让编辑器自适应宽度的解决方案](https://www.cnblogs.com/VAllen/p/UEditor-InitialFrameWidth-Auto.html)
+
+将 initialFrameWidth 的默认值 1000 修改为 100%，即配置 `initialFrameWidth: 100%`
+
+```js
+this.ue = window.UE.getEditor('editor', {
+  BaseUrl: '',
+  UEDITOR_HOME_URL: 'static/utf8-jsp/',
+  serverUrl: window.location.protocol + '//' + window.location.host + '/api/ue/config',
+  initialFrameWidth: '100%'
+})
+```
+
+### 去掉本地保存成功提示
+
+ue 配置项里有这个配置：
+
+`enableAutoSave` {Boolean} [默认值：true] //启用自动保存
+
+但配置为 false 并没有什么卵用。。。
+
+那只能调大自动保存间隔了
+
+`saveInterval` {Number} [默认值：500] //自动保存间隔时间，单位 ms
+
+可以给 saveInterval 一个无限大的数字，这样几乎就解决问题，但你不能保证没有无聊之人 qaq
+
+网上有通过修改源码从而达到效果的：
+
+1. ueditor.config.js，enableAutoSave 的注释去掉并设置成 false，saveInterval 的注释也去掉设置成 0；
+2. 修改 ueditor.all.js，在 'contentchange': function () {函数的第一行添加代码：
+   ```js
+   if (!me.getOpt('enableAutoSave')) {
+     return
+   }
+   ```
+
+或者
+
+找到 ueditor.all.min.js 文件
+
+UE.plugin.register("autosave"………………
+
+这个 autosave 就是自动保存方法。
+
+注释掉这个方法即可！
+
+其实完全可以从 css 角度解决这个问题，只要将提示隐藏不就解决问题了吗？
+
+```css
+/* 去掉本地保存成功提示 */
+.edui-default .edui-editor-messageholder {
+  display: none;
+}
+```
+
 ## 参考资料
 
 - [vue 集成百度 UEditor 富文本编辑器](https://blog.csdn.net/psd_html/article/details/73312859)
