@@ -315,7 +315,7 @@ VSCode 初始化配置
   // {
   //   "key": "alt+shift+d",
   //   "command": "extension.vueFormat",
-  //   "when": "editorFocus"
+  //   "when": "editorTextFocus && editorLangId == 'vue'"
   // }
   // 使用快捷键 (opt/alt + shift + f) 格式化 js/css
   // 一个制表符等于的空格数
@@ -351,28 +351,42 @@ VSCode 初始化配置
   "prettier.singleQuote": true,
   // 换行字符串阈值
   "prettier.printWidth": 100,
+  // JSX 有多个属性时，将 `>` 放在最后一行的末尾，而不是单独放在下一行（不适用于自闭元素）
+  "prettier.jsxBracketSameLine": true,
+  // 格式化 vue 插件名: Vetur
+  "vetur.format.defaultFormatter.html": "none",
+  "vetur.format.defaultFormatterOptions": {
+    "prettier": {
+      "eslintIntegration": true,
+      "semi": false,
+      "singleQuote": true,
+      "printWidth": 100,
+      "jsxBracketSameLine": true
+    },
+    // 对属性进行换行
+    // auto: 仅在超出行长度时才对属性进行换行
+    // force: 对除第一个属性外的其他每个属性进行换行
+    // force-aligned: 对除第一个属性外的其他每个属性进行换行，并保持对齐
+    // force-expand-multiline: 对每个属性进行换行
+    "js-beautify-html": {
+      "wrap_attributes": "force-aligned"
+    },
+    "prettyhtml": {
+      "printWidth": 80,
+      "singleQuote": false,
+      "wrapAttributes": true,
+      "sortAttributes": false,
+      "bracketSameLine": false
+    }
+  },
   // 格式化 vue 的 html 插件名: vue-format
-  // 解决了 vetur 标签换行导致缩进异常问题
+  // 解决了 vetur 属性换行后开始标签的 ">" 另起一行而不是跟随在最后一个属性后面
   // tag 的 attrs 大于该数值时，强制 attrs 换行，-1时不换行
   "vue-format.break_attr_limit": 1,
   // 需要格式化的语言
   "vue-format.format_need": [
     "html"
   ],
-  // vetru 设置格式化 html 插件名: Vetur
-  // 目前 vetur 的 template 格式化还没有很好的支持 prettier，应该说目前官方只推荐使用 js-beautify-html
-  // "vetur.format.defaultFormatter.html": "js-beautify-html",
-  // // Options for all default formatters
-  // "vetur.format.defaultFormatterOptions": {
-  //   "js-beautify-html": {
-  //     // 对属性进行换行
-  //     // auto: 仅在超出行长度时才对属性进行换行
-  //     // force: 对除第一个属性外的其他每个属性进行换行
-  //     // force-aligned: 对除第一个属性外的其他每个属性进行换行，并保持对齐
-  //     // force-expand-multiline: 对每个属性进行换行
-  //     "wrap_attributes": "force"
-  //   }
-  // },
   // 控制编辑器是否自动格式化粘贴的内容。格式化程序必须可用，并且能针对文档中的某一范围进行格式化。
   "editor.formatOnPaste": true,
 
@@ -419,22 +433,6 @@ VSCode 初始化配置
   "docthis.includeAuthorTag": true,
   "docthis.authorName": "lhajh",
 
-  // gitlens 指定应该禁止哪些消息 插件名: GitLens — Git supercharged
-  "gitlens.advanced.messages": {
-    "suppressCommitHasNoPreviousCommitWarning": false,
-    "suppressCommitNotFoundWarning": false,
-    "suppressFileNotUnderSourceControlWarning": false,
-    "suppressGitVersionWarning": false,
-    "suppressLineUncommittedWarning": false,
-    "suppressNoRepositoryWarning": false,
-    "suppressResultsExplorerNotice": false,
-    "suppressShowKeyBindingsNotice": true,
-    "suppressUpdateNotice": false,
-    "suppressWelcomeNotice": true
-  },
-  // Specifies whether to show avatar images instead of status icons in the `GitLens File History` explorer
-  "gitlens.historyExplorer.enabled": false,
-
   // element-helper 版本 插件名: vscode-element-helper
   "element-helper.version": "2.4",
 
@@ -442,19 +440,29 @@ VSCode 初始化配置
   "emmet.includeLanguages": {
     "vue-html": "html"
   },
+
   // vim 插件名: Vim
   // Override VSCode's copy command with our own copy command, which works better with VSCodeVim. Turn this off if copying is not working.
   "vim.overrideCopy": false,
   "vim.startInInsertMode": true,
+
   // 同步配置插件 插件名: Syncing
   // 通过该配置项，可以决定是否让 Syncing 按照设备操作系统的不同来分开同步您的`快捷键配置`。
   // 鉴于 VSCode 从 1.27 版本开始提供了 `Platform Specific Keybindings` 功能，您现在可以关闭该功能了。
   // 注意：在关闭该功能之前，请务必确保您已经手动合并了现有的快捷键配置。
-  "syncing.separateKeybindings": false
+  "syncing.separateKeybindings": false,
+  // 不同步的插件
+  // 如果你想公开自己的配置，可以防止将 Github 的 token 公开，并且防止别人修改你的配置
+  "syncing.excludedExtensions": [
+    "nonoroazoro.syncing"
+  ],
+
+  // 使用 htmltagwrap 要插入的默认 HTML 标签 插件名: htmltagwrap
+  "htmltagwrap.tag": "div"
 }
 ```
 
-## 修改键盘快捷键
+## 快捷键
 
 注：`+` 表示需要  点击下一个键时, 上一个或多个键仍是按下去状态；`空格` 表示点击下一个键时, 上一个或多个键可以放开
 
