@@ -70,6 +70,7 @@ Command 是 Mac 里最重要的修饰键，在大多数情况下相当于 Window
 - O + RA: 光标移到下一个单词末尾
 - O + LA: 光标移到上一个单词开头
 - CT + a: 光标移到行或段落开头
+- C + CT + SB: emoji
 
 ## Finder
 
@@ -85,11 +86,14 @@ Command 是 Mac 里最重要的修饰键，在大多数情况下相当于 Window
 - C + S + D: 清倒废纸篓
 - SB: 预览
 - C + S + .: 显示／隐藏 隐藏的文件
+- 在保存文件的时候，按 C + d 可以快速跳到桌面。其他几个默认文件夹同理，快捷键都显示在 『菜单 - 前往』 里
+- C + CT + n: 选中多个文件，可以直接把它们放到一个新建文件夹中
 
 ## Chrome
 
 - C + t: 打开空白页
 - S + C + t: 重新打开关闭的标签页
+- C + l: 聚焦到地址栏
 - C + S + D: 清空缓存
 - C + d: 为此页添加书签
 - C + y: 打开历史纪录
@@ -111,3 +115,4 @@ Command 是 Mac 里最重要的修饰键，在大多数情况下相当于 Window
 
 - [Mac 键盘快捷键](https://support.apple.com/zh-cn/HT201236)
 - [macOS (OS X) 有哪些常用的快捷键？](https://www.zhihu.com/question/20021861)
+- [Mac OS X 有哪些你相见恨晚的技巧？ - 知乎](https://www.zhihu.com/question/28776013)
