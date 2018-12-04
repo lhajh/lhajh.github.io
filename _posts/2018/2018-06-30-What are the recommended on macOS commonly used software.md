@@ -30,10 +30,9 @@ Visual Studio Code 是一个轻量级但功能强大的源代码编辑器，可�
 
 ## Karabiner-Elements: 改键神器
 
-由于 Mac 的键盘和主流布局不一致，许多人都会遇到外接键盘布局不适应的情况；即便是 Mac 的内置键盘，也有人觉得其设计不够合理，不符合自己的工作习惯。好在键盘和使用者之间是可以磨合的，[Karabiner-Elements](https://pqrs.org/osx/karabiner/) 就是 Mac 上一款非常好用的开源改键利器，能让键盘顺着你的意愿来工作。
+由于 Mac 的键盘和主流布局不一致，许多人都会遇到外接键盘布局不适应的情况；即便是 Mac 的内置键盘，也有人觉得其设计不够合理，不符合自己的工作习惯。好在键盘和使用者之间是可以磨合的，[Karabiner-Elements](https://pqrs.org/osx/karabiner/)  就是 Mac 上一款非常好用的开源改键利器，能让键盘顺着你的意愿来工作。
 
 ![](https://lhajh.github.io/assets/images/posts/mac/808112241.png)
-
 
 [Karabiner-Elements 使用介绍](https://lhajh.github.io/mac/2018/06/23/Karabiner-Elements.html)
 
@@ -41,16 +40,16 @@ Visual Studio Code 是一个轻量级但功能强大的源代码编辑器，可�
 
 ## Alfred 3: 启动器
 
-但凡初入 Mac 的新用户，在建立起自己的工作流前，大抵都会经历一段被疯狂安利 [Alfred](http://www.alfredapp.com/) 的时光。这种长期口碑积累所达到的效果，也使得 Alfred 经常出现在各自 Mac 「装机必备」清单中。
+但凡初入 Mac 的新用户，在建立起自己的工作流前，大抵都会经历一段被疯狂安利  [Alfred](http://www.alfredapp.com/)  的时光。这种长期口碑积累所达到的效果，也使得 Alfred 经常出现在各自 Mac 「装机必备」清单中。
 
 什么是启动器？顾名思义，就是通过键盘输入来执行相应动作，从而提高工作效率的软件。例如 macOS 自带的聚焦搜索（Spotlight），就能将文稿、邮件、应用等整合在一起，通过关键词匹配展示。
 
 而本文要介绍的 Alfred，也可以看成是 Spotlight 的增强版，但它更多的高级功能，比如：
 
-  * 添加自定义网络搜索引擎；
-  * 指定规则精准定位本地文件；
-  * 在命令框内使用计算器、词典等实用工具;
-  * ……
+- 添加自定义网络搜索引擎；
+- 指定规则精准定位本地文件；
+- 在命令框内使用计算器、词典等实用工具;
+- ……
 
 总之， Alfred 的一切设计都以提高效率为本，帮助你建立一套更高效的工作体系。
 
@@ -62,7 +61,7 @@ Visual Studio Code 是一个轻量级但功能强大的源代码编辑器，可�
 
 ## PopClip: 选中小工具
 
-PopClip 是一款在 Mac 上人尽皆知的小工具，它简单高效，具有强大的拓展功能. PopClip 最基本的功能即用鼠标选中一段文字就可以做复制粘贴的动作，省去了我们平时 Command+C or V 的麻烦，除此之外，再无拓展支持的情况下，根据鼠标选中的内容，PopClip 还自身支持链接的跳转打开、自带词典的翻译、邮件地址跳转、搜索引擎搜索、单词纠正等功能。但这个工具真正强大之处在于它的拓展功能 PopClip Extensions 的使用。
+PopClip 是一款在 Mac 上人尽皆知的小工具，它简单高效，具有强大的拓展功能. PopClip 最基本的功能即用鼠标选中一段文字就可以做复制粘贴的动作，省去了我们平时 Command+C or V 的麻烦，除此之外，再无拓展支持的情况下，根据鼠标选中的内容，PopClip 还自身支持链接的跳转打开、自带词典的翻译、邮件地址跳转、搜索引擎搜索、单词纠正等功能。但这个工具真正强大之处在于它的拓展功能  PopClip Extensions  的使用。
 
 ![](https://cdn.sspai.com/attachment/origin/2014/06/14/75481.jpg?imageView2/2/w/1120/q/90/interlace/1/ignore-error/1)
 
@@ -121,6 +120,56 @@ Mac 上的卸载方式有很多，在 MAS 上安装的软件可以进入 Launchp
 关联阅读：[圈点之后，试试腾讯出品的免费 Mac 截图软件：截图 Jietu](https://sspai.com/post/33021)
 
 下载地址：[Jietu](https://itunes.apple.com/cn/app/jie-tu-jietu/id1059334054?mt=12)
+
+## Dash: API 文档查询
+
+Dash 对自身的定位是一款面向开发人员的文档查询工具。而事实上，无论是从易用性还是实用性上，Dash 都是极其强大的。简略概括如下：
+
+- **离线文档查阅**：快速方便的 API 索引，包含 JavaScript、iOS、React、Haskell 等语言及库的文档及官方入门。
+- **第三方工具集成**：与各个工具及编辑器 、IDE 无缝集成，还有 jetBrain 家族、Xcode、Alfred 等等，你用的都在里面。
+- **自定义数据来源**：已经包含 Google、Stack Overflow，你还可以自定义来自诸如 Medium、Quora 等任何你需要的网站。
+- **注释功能**：方便快速的注释、标记功能。
+
+可以说，Dash 绝对对得起它给自己的定位。用过之后，很可能就离不开它了。
+
+[程序员的 API 文档查询利器：Dash - 少数派](https://sspai.com/post/45786)
+
+下载地址: [Dash for macOS - API Documentation Browser, Snippet Manager - Kapeli](https://kapeli.com/dash)
+
+Dash 本身可以免费使用，但免费版本在查找一个新文档的时候（不是每次查询）会有 10 秒的延迟时间。如果不想等待, 请[下载此文件](https://github.com/lhajh/licenses.dash-license/blob/master/licenses.dash-license)
+
+## ShowyEdge: 根据输入源切换不同颜色
+
+作为一个对工具有绝对掌控欲的强迫症程序员来说，无法得心应手的切换中英文输入法一直让我耿耿于怀。我想实现的是**不用看通知栏就能知道当前输入法的状态，一键切换到自己需要的输入法，做到对输入法的绝对掌控。**
+
+目前的输入模式是:
+
+- 中文: 百度输入法
+- 英文: 系统自带
+
+本来一开始打算中英文全部使用百度的, 无奈系统自带的英文无法删除, 而且就算你使用 shift 切换百度的中英文, 系统有时候莫名其妙会切换到系统的英文; 每次输入都需要查看顶部状态栏, 而且有的软件全屏后会隐藏顶部状态栏, 这时要不先随便输入一下查看输入源, 要不鼠标滑到顶部查看输入源, 极其影响效率
+
+解决方法:
+
+1. 放弃百度的英文输入, 在百度输入法设置中将 `中/英文切换` 设置为 `无`(也可以防止误触 Shift), 并将初始模式设置为中文
+2. 英文还是使用系统自带
+3. 利用 `Karabiner-Elements` 将 `caps_lock` 映射为 `f13`, 在系统设置/键盘/快捷键/输入法中将 `切换上一个输入法` 映射为 `f13`
+4. 如果是外置键盘, 右面的 `Ctrl` 一般没用, 可以映射为 `caps_lock`
+5. 使用 ShowyEdge 给输入源添加不同颜色
+
+注: ShowyEdge 推荐是在顶部状态栏, 但我们一般输入位置是在屏幕中下部的, 这样查看当前输入源还是不方便, 所以本人将 ShowyEdge 放置在屏幕左侧靠下位置 
+
+具体配置看下图:
+
+![](/assets/images/posts/mac/81203265.png)
+
+注: 英文输入源的颜色是透明的, 因为常用英文, 透明不影响视觉; 中文输入源的颜色是蓝色的, 这是本人征求设计同学的意见而选择的, 因为蓝色在白色和黑色背景下都显眼
+
+![](/assets/images/posts/mac/812032728.png)
+
+注: 这个图主要是调整 ShowyEdge 的位置(好像直接输入  位置无效, 只能点击右面的按钮一点一点移动)
+
+下载地址: [ShowyEdge - Software for macOS](https://pqrs.org/osx/ShowyEdge/)
 
 ## Aria2GUI：下载工具
 
@@ -234,7 +283,6 @@ PinTab 是一个超级强大的 **免费资源集合库**。实际上它是一�
 
 - [Knock](http://www.knocktounlock.com/) - 当 iPhone 和 Mac 在一起的时候，轻巧 iPhone 即可为 Mac 解锁（实际上是用了加速度感应器，我一般不敲，而是摇两下）。
 - [坚果云官网-网盘/云盘/云服务/团队协作软件/同步共享文件夹](https://www.jianguoyun.com/)
-
 
 具体下载链接（附带破解版地址）已经在此制作成表格[下载地址](https://github.com/itgoyo/MacApp)，有需要的朋友可以看。
 
