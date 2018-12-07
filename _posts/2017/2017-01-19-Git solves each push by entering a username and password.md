@@ -54,7 +54,7 @@ and the repository exists.
 
     - 如果正常运行的话，会出现:`Enter passphrase (empty for no passphrase):`，这说明你是第一次生成 SSH Key，然后我们直接回车
     - 有的时候我们可能会出现:
-    ```
+    ```bash
     /c/Users/Administrator/.ssh/id_rsa already exists.
     Overwrite (y/n)?
     ```
@@ -83,7 +83,7 @@ and the repository exists.
 
 	执行 `git clone url` 或任何可以和 GitHub 关联的命令就可以激活了。当然 url 是 SSH 格式的路径，如 `git@github.com:lhajh/lhajh.github.io.git`，而不是 HTTPS 格式的路径
 
-## 使用 `HTTPS` 克隆
+## 使用 `HTTPS` 克隆
 
 [Git 配置 credential helper，并使用 Http/Https 传输](https://blog.csdn.net/u012163684/article/details/52433645)
 
