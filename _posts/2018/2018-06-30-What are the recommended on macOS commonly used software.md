@@ -8,7 +8,8 @@ keywords: mac
 
 对于一台全新的 Mac ，我们除了欣赏它奇妙的工业设计之外，还有一件非常重要的事情，就是装上 Mac 上的第一批软件。一般，这第一批软件会一直伴随着我们日常生活、办公、娱乐，所以能在最开始就装上这些优秀的应用，绝对是提升幸福感的不错途径。
 
-## [Mac 终端软件安装利器：Homebrew](https://lhajh.github.io/mac/2018/10/27/Mac-terminal-software-installation-tool-Homebrew.html)
+## Mac 终端软件安装利器：[Homebrew](https://lhajh.github.io/mac/2018/10/27/Mac-terminal-software-installation-tool-Homebrew.html) 和 [Homebrew Cask](https://lhajh.github.io/mac/2018/11/07/With-Homebrew-Cask,-you-can-quickly-download-and-install-new-poses-for-your-Mac-App.html)
+
 
 强烈推荐先安装 Homebrew, 因为 Mac 端几乎所有软件都可以通过它来安装. 这种方法只需在终端输入一行命令，就可以解决包括查找、下载和安装软件的一系列步骤。
 

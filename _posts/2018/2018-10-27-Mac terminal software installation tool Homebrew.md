@@ -121,7 +121,7 @@ epichrome                                                    homebrew/cask-versi
 
 那此时我们就需要使用 `brew cask google-chrome` 来安装 chrome 浏览器了
 
-若想了解更多关于 cask 的内容，请阅读：
+若想了解更多关于 cask 的内容，请阅读：[借助 Homebrew Cask，教你快速下载安装 Mac App 新姿势](https://lhajh.github.io/mac/2018/11/07/With-Homebrew-Cask,-you-can-quickly-download-and-install-new-poses-for-your-Mac-App.html)
 
 ### 更新应用和清理旧版
 
