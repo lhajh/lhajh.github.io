@@ -18,6 +18,8 @@ keywords: mac
 
     xcode-select --install
 
+在弹出的窗口选择 Install 以安装 `Command Line Tools`，路径为 `/Library/Developer/CommandLineTools`，如要卸载，删除此文件夹即可。
+
 安装 Homebrew. 打开终端，输入以下代码，稍等片刻，输入密码，等待安装完成
 
     /usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
