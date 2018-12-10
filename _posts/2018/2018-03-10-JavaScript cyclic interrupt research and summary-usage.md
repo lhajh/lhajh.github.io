@@ -11,7 +11,7 @@ keywords: JavaScript, 循环
 ## 结论
 
 1. for，for...in，for...of：当没有 label 标记时候，break 跳出本次循环并执行循环体后的代码，continue 结束本次循环执行下一次循环。没有 return。
-2. Array.forEach：遍历整个数组，return false 或者 true 都是结束本次循环执行下一次循环。没有 break 或 continue。
+2. Array.forEach：遍历整个数组，return false 或者 true 都是结束本次循环执行下一次循环。没有 break 或 continue。我想你可能需要[跳出 forEach](https://lhajh.github.io/js/2018/11/25/Jump-out-of-the-forEach.html)
 3. Array.map：map 和 forEach 类似，有返回值，返回结果是 return 值组成的数组。
 4. jQuery.each： return false 跳出本次循环并执行循环体后的代码；return true 结束本次循环执行下一次循环。没有break 或 continue。
 
