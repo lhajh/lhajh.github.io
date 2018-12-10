@@ -51,7 +51,7 @@ keywords: vue
 
 ## [`v-for` on a `template`](https://cn.vuejs.org/v2/guide/list.html#v-for-on-a-lt-template-gt)
 
-类似于 `v-if`，你也可以利用带有 `v-for` 的 `<template>` 渲染多个元素。比如：
+类似于 `v-if`，你也可以利用带有 `v-for`  的 `<template>`  渲染多个元素。比如：
 
 ```html
 <ul>
@@ -261,8 +261,9 @@ computed: {
 在计算属性不适用的情况下 (例如，在嵌套  `v-for`  循环中) 你可以使用一个 method 方法：
 
 ```html
- <li v-for="n in even(numbers)">{{ n }}</li>
+<li v-for="n in even(numbers)">{{ n }}</li>
 ```
+
 ```js
 data: {
   numbers: [ 1, 2, 3, 4, 5 ]
@@ -274,4 +275,116 @@ methods: {
     })
   }
 }
- ```
+```
+
+## [vue 修饰符](https://lhajh.github.io/vue/2018/09/10/Vue-Modifiers.html)
+
+## [在组件上使用  `v-model`](https://cn.vuejs.org/v2/guide/components.html#%E5%9C%A8%E7%BB%84%E4%BB%B6%E4%B8%8A%E4%BD%BF%E7%94%A8-v-model)
+
+自定义事件也可以用于创建支持  `v-model`  的自定义输入组件。记住：
+
+```html
+<input v-model="searchText" />
+```
+
+等价于：
+
+```html
+<input v-bind:value="searchText" v-on:input="searchText = $event.target.value" />
+```
+
+当用在组件上时，`v-model`  则会这样：
+
+```html
+<custom-input v-bind:value="searchText" v-on:input="searchText = $event"></custom-input>
+```
+
+为了让它正常工作，这个组件内的  `<input>`  必须：
+
+- 将其  `value`  特性绑定到一个名叫  `value`  的 prop 上
+- 在其  `input`  事件被触发时，将新的值通过自定义的  `input`  事件抛出
+
+写成代码之后是这样的：
+
+```js
+Vue.component('custom-input', {
+  props: ['value'],
+  template: `
+    <input
+      v-bind:value="value"
+      v-on:input="$emit('input', $event.target.value)"
+    >
+  `
+})
+```
+
+现在  `v-model`  就应该可以在这个组件上完美地工作起来了：
+
+```html
+<custom-input v-model="searchText"></custom-input>
+```
+
+## is 特性
+
+### [动态组件](https://cn.vuejs.org/v2/guide/components.html#%E5%8A%A8%E6%80%81%E7%BB%84%E4%BB%B6)
+
+```html
+<template lang="html">
+  <div class="hello">
+    <p :is="diff"></p>
+    <button @click="click">button</button>
+  </div>
+</template>
+
+<script>
+  import a from '@/components/a'
+  import b from '@/components/b'
+  export default {
+    components: {
+      'com-a': a,
+      'com-b': b
+    },
+    data() {
+      return {
+        diff: 'com-a'
+      }
+    },
+    methods: {
+      click() {
+        this.diff = this.diff === 'com-b' ? 'com-a' : 'com-b'
+      }
+    }
+  }
+</script>
+```
+
+在上述示例中，`diff`  可以包括
+
+- 已注册组件的名字，或
+- 一个组件的选项对象
+
+### [解析 DOM 模板时的注意事项](https://cn.vuejs.org/v2/guide/components.html#%E8%A7%A3%E6%9E%90-DOM-%E6%A8%A1%E6%9D%BF%E6%97%B6%E7%9A%84%E6%B3%A8%E6%84%8F%E4%BA%8B%E9%A1%B9)
+
+有些 HTML 元素，诸如  `<ul>`、`<ol>`、`<table>`  和  `<select>`，对于哪些元素可以出现在其内部是有严格限制的。而有些元素，诸如  `<li>`、`<tr>`  和  `<option>`，只能出现在其它某些特定的元素内部。
+
+这会导致我们使用这些有约束条件的元素时遇到一些问题。例如：
+
+```html
+<table>
+  <blog-post-row></blog-post-row>
+</table>
+```
+
+这个自定义组件  `<blog-post-row>`  会被作为无效的内容提升到外部，并导致最终渲染结果出错。幸好这个特殊的  `is`  特性给了我们一个变通的办法：
+
+```html
+<table>
+  <tr is="blog-post-row"></tr>
+</table>
+```
+
+需要注意的是**如果我们从以下来源使用模板的话，这条限制是*不存在*的**：
+
+- 字符串 (例如：`template: '...'`)
+- [单文件组件 (`.vue`)](https://cn.vuejs.org/v2/guide/single-file-components.html)
+- [`<script type="text/x-template">`](https://cn.vuejs.org/v2/guide/components-edge-cases.html#X-Templates)
