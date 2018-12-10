@@ -35,7 +35,7 @@ keywords: vue
 
 这样写只会渲染数组中最后一个被浏览器支持的值。在本例中，如果浏览器支持不带浏览器前缀的 flexbox，那么就只会渲染  `display: flex`。
 
-## [在  `<template>`  元素上使用  `v-if`  条件渲染分组](https://cn.vuejs.org/v2/guide/conditional.html#%E5%9C%A8-lt-template-gt-%E5%85%83%E7%B4%A0%E4%B8%8A%E4%BD%BF%E7%94%A8-v-if-%E6%9D%A1%E4%BB%B6%E6%B8%B2%E6%9F%93%E5%88%86%E7%BB%84)
+## [在  \<template\>  元素上使用  `v-if`  条件渲染分组](https://cn.vuejs.org/v2/guide/conditional.html#%E5%9C%A8-lt-template-gt-%E5%85%83%E7%B4%A0%E4%B8%8A%E4%BD%BF%E7%94%A8-v-if-%E6%9D%A1%E4%BB%B6%E6%B8%B2%E6%9F%93%E5%88%86%E7%BB%84)
 
 具体例子请点击上面标题链接查看
 
@@ -49,7 +49,7 @@ keywords: vue
 </template>
 ```
 
-## [`v-for` on a `<template>`](https://cn.vuejs.org/v2/guide/list.html#v-for-on-a-lt-template-gt)
+## [`v-for` on a \<template\>](https://cn.vuejs.org/v2/guide/list.html#v-for-on-a-lt-template-gt)
 
 类似于 `v-if`，你也可以利用带有 `v-for` 的 `<template>` 渲染多个元素。比如：
 
