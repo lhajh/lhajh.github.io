@@ -202,5 +202,5 @@ a.some(function(item, index, arr) {
 ## 参考资料
 
 - [3 things you didn’t know about the forEach loop in JS](https://medium.com/@tiboprea/3-things-you-didnt-know-about-the-foreach-loop-in-js-ff02cec465b1)
-- [Array.prototype.forEach() | MDN](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/forEach)
+- [Array.prototype.forEach()](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/forEach)
 - [如何在 Array.forEach 的循环里 break](http://jser.me/2014/04/02/%E5%A6%82%E4%BD%95%E5%9C%A8Array.forEach%E7%9A%84%E5%BE%AA%E7%8E%AF%E9%87%8Cbreak.html)
