@@ -6,31 +6,31 @@ description: JavaScript 循环中断研究与总结-用法篇
 keywords: JavaScript, 循环
 ---
 
-[上篇](https://lhajh.github.io/js/2018/03/10/JavaScript-cyclic-interrupt-research-and-summary-keyword.html)我们讲了 break ,continue, return 这三个常用的关键字，本篇讲一下在具体循环或函数中的用法
+[上篇](https://lhajh.github.io/js/2018/03/10/JavaScript-cyclic-interrupt-research-and-summary-keyword.html)我们讲了 `break`, `continue`, `return` 这三个常用的关键字，本篇讲一下在具体循环或函数中的用法
 
 ## 结论
 
-1. for，for...in，for...of：当没有 label 标记时候，break 跳出本次循环并执行循环体后的代码，continue 结束本次循环执行下一次循环。没有 return。
-2. Array.forEach：遍历整个数组，return false 或者 true 都是结束本次循环执行下一次循环。没有 break 或 continue。我想你可能需要[跳出 forEach](https://lhajh.github.io/js/2018/11/25/Jump-out-of-the-forEach.html)
-3. Array.map：map 和 forEach 类似，有返回值，返回结果是 return 值组成的数组。
-4. jQuery.each： return false 跳出本次循环并执行循环体后的代码；return true 结束本次循环执行下一次循环。没有break 或 continue。
+1. `for`，`for...in`，`for...of`：当没有 `label` 标记时候，`break` 跳出本次循环并执行循环体后的代码，`continue` 结束本次循环执行下一次循环。没有 `return`。
+2. `Array.forEach`：遍历整个数组，`return false` 或者 `return true` 都是结束本次循环执行下一次循环。没有 `break` 或 `continue`。我想你可能需要[跳出 forEach](https://lhajh.github.io/js/2018/11/25/Jump-out-of-the-forEach.html)
+3. `Array.map`：`map` 和 `forEach` 类似，有返回值，返回结果是 `return` 值组成的数组。
+4. `jQuery.each`： `return false` 跳出本次循环并执行循环体后的代码；`return true` 结束本次循环执行下一次循环。没有 `break` 或 `continue`。
 
-## for
+## `for`
 
-### 1.break:
+### 1.`break`:
 
-```
-var arr = [1,2,3];
-var len = arr.length;
+```js
+var arr = [1, 2, 3]
+var len = arr.length
 
 // for break
-for(var i = 0; i < len; i += 1){
-  for(var j = 0; j < 3; j++){
-    console.log(arr[i] + '-' + j);
-    if(j === 1){
-      break;
+for (var i = 0; i < len; i++) {
+  for (var j = 0; j < 3; j++) {
+    console.log(arr[i] + '-' + j)
+    if (j === 1) {
+      break
     }
-    console.log(arr[i] + '-' + j);
+    console.log(arr[i] + '-' + j)
   }
 }
 
@@ -45,22 +45,23 @@ for(var i = 0; i < len; i += 1){
 // 3-0
 // 3-1
 ```
-:)如果不加 label 标记，break 跳出本次循环并执行循环体后的代码，也就是本例的第二层循环。
 
-### 2.continue:
+:)如果不加 `label` 标记，`break` 跳出本次循环并执行循环体后的代码，也就是本例的第二层循环。
 
-```
-var arr = [1,2,3];
-var len = arr.length;
+### 2.`continue`:
+
+```js
+var arr = [1, 2, 3]
+var len = arr.length
 
 // for continue
-for(var i = 0; i < len; i += 1){
-  for(var j = 0; j < 3; j++){
-    console.log(arr[i]+'-'+j);
-    if(j === 1){
-      continue;
+for (var i = 0; i < len; i++) {
+  for (var j = 0; j < 3; j++) {
+    console.log(arr[i] + '-' + j)
+    if (j === 1) {
+      continue
     }
-    console.log(arr[i]+'-'+j);
+    console.log(arr[i] + '-' + j)
   }
 }
 
@@ -81,24 +82,25 @@ for(var i = 0; i < len; i += 1){
 // 3-2
 // 3-2
 ```
-:)如果不加 label 标记，continue 结束本次循环执行下一次循环（都是针对第二层）
 
-tips:for 循环里不能有 return！
+:)如果不加 `label` 标记，`continue` 结束本次循环执行下一次循环（都是针对第二层）
 
-## forEach
+tips: `for` 循环里不能有 `return`！
 
-### 1.return false:
+## `forEach`
 
-```
-var arr = [1,2,3];
+### 1.`return false`:
 
-arr.forEach(function(value,index) {
+```js
+var arr = [1, 2, 3]
+
+arr.forEach(function(value, index) {
   console.log(arr[index])
-  if(index === 1){
-    return false;
+  if (index === 1) {
+    return false
   }
   console.log(arr[index])
-});
+})
 
 // 输出
 // 1
@@ -107,20 +109,21 @@ arr.forEach(function(value,index) {
 // 3
 // 3
 ```
+
 :)结束本次循环执行下一次循环
 
-### 2.return true:
+### 2.`return true`:
 
-```
-var arr = [1,2,3];
+```js
+var arr = [1, 2, 3]
 
-arr.forEach(function(value,index) {
+arr.forEach(function(value, index) {
   console.log(arr[index])
-  if(index === 1){
-    return true;
+  if (index === 1) {
+    return true
   }
   console.log(arr[index] + 10)
-});
+})
 
 // 输出
 // 1
@@ -129,27 +132,28 @@ arr.forEach(function(value,index) {
 // 3
 // 3
 ```
+
 forEach return true
 
 :)结束本次循环执行下一次循环
 
-tips:forEach循环里不能有break 或 continue！
+tips:`forEach` 循环里不能有 `break` 或 `continue`！
 
-## Array.map
+## `Array.map`
 
-map 和 forEach 差不多，区别是 map 的返回值是一个数组
+`map` 和 `forEach` 差不多，区别是 `map` 的返回值是一个数组
 
-## for...in
+## `for...in`
 
-### 1.break
+### 1.`break`
 
-```
-var arr = [1,2,3];
+```js
+var arr = [1, 2, 3]
 
-for(var i in arr){
+for (var i in arr) {
   console.log(typeof i)
   console.log(arr[i])
-  if(i == 1){
+  if (i == 1) {
     break
   }
   console.log(arr[i])
@@ -163,16 +167,16 @@ for(var i in arr){
 // 12
 ```
 
-:)for...in break 跳出本次循环并执行循环体后的代码，和 for 一样
+:)`for...in` `break` 跳出本次循环并执行循环体后的代码，和 `for` 一样
 
-### 2.continue
+### 2.`continue`
 
-```
-var arr = [1,2,3];
+```js
+var arr = [1, 2, 3]
 
-for(var i in arr){
+for (var i in arr) {
   console.log(arr[i])
-  if(i == 1){
+  if (i == 1) {
     continue
   }
   console.log(arr[i])
@@ -186,21 +190,21 @@ for(var i in arr){
 // 3
 ```
 
-:)for...in continue 结束本次循环执行下一次循环，和 for 一样
+:)`for...in` `continue` 结束本次循环执行下一次循环，和 `for` 一样
 
-tips：当有 return 时会报错
+tips：当有 `return` 时会报错
 
-## for...of
+## `for...of`
 
-### 1.break
+### 1.`break`
 
-```
-var arr = [1,2,3];
+```js
+var arr = [1, 2, 3]
 
-for(var i of arr){
+for (var i of arr) {
   console.log(typeof i)
   console.log(i)
-  if(i === 2){
+  if (i === 2) {
     break
   }
   console.log(i)
@@ -214,18 +218,18 @@ for(var i of arr){
 // 2
 ```
 
-:)for...of break 跳出本次循环并执行循环体后的代码，和 for 一样
+:)`for...of` `break` 跳出本次循环并执行循环体后的代码，和 `for` 一样
 
-需要注意的是这里的 i 是 arr 的 value 而不是 index
+需要注意的是这里的 `i` 是 `arr` 的 `value` 而不是 `index`
 
-### 2.continue
+### 2.`continue`
 
-```
-var arr = [1,2,3];
+```js
+var arr = [1, 2, 3]
 
-for(var i of arr){
+for (var i of arr) {
   console.log(i)
-  if(i === 2){
+  if (i === 2) {
     continue
   }
   console.log(i)
@@ -238,23 +242,24 @@ for(var i of arr){
 // 3
 // 3
 ```
-:)for...of continue 结束本次循环执行下一次循环，和 for 一样
 
-tips:for...of 循环里不能有 return！第一个参数是数组的值不是索引
+:)`for...of` `continue` 结束本次循环执行下一次循环，和 `for` 一样
 
-## $.each
+tips: `for...of` 循环里不能有 `return`！第一个参数是数组的值不是索引
 
-### 1.return false
+## `$.each`
 
-```
-var arr = [1,2,3];
+### 1.`return false`
 
-$.each(arr,function(index,value){
-  console.log(value);
-  if(index === 1){
-    return false;
+```js
+var arr = [1, 2, 3]
+
+$.each(arr, function(index, value) {
+  console.log(value)
+  if (index === 1) {
+    return false
   }
-  console.log(value);
+  console.log(value)
 })
 
 // 输出
@@ -266,17 +271,17 @@ $.each(arr,function(index,value){
 
 :)跳出本次循环并执行循环体后的代码
 
-### 2.return true
+### 2.`return true`
 
-```
-var arr = [1,2,3];
+```js
+var arr = [1, 2, 3]
 
-$.each(arr,function(index,value){
-  console.log(value);
-  if(index === 1){
-    return true;
+$.each(arr, function(index, value) {
+  console.log(value)
+  if (index === 1) {
+    return true
   }
-  console.log(value);
+  console.log(value)
 })
 
 // 输出
@@ -290,4 +295,4 @@ $.each(arr,function(index,value){
 
 :)结束本次循环执行下一次循环
 
-tips:$.each循环里不能有 break 或 continue！
+tips: `$.each` 循环里不能有 `break` 或 `continue`！
