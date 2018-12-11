@@ -27,6 +27,8 @@ Term2 是 mac 系统下的一款非常好用的终端工具，它比系统自带
 
 [iTerm2 用法与技巧](https://lhajh.github.io/mac/2018/04/25/Iterm2-usage-and-skills.html)
 
+Install: `$ brew cask install iterm2`
+
 下载地址: [iTerm2](https://www.iterm2.com/downloads.html)
 
 ## VS Code: 编辑器
@@ -37,6 +39,8 @@ Visual Studio Code 是一个轻量级但功能强大的源代码编辑器，可�
 
 [VSCode 初始化配置](https://lhajh.github.io/vscode/2017/11/22/vscode-initialization-configuration.html)
 
+Install: `$ brew cask install visual-studio-code`
+
 下载地址: [VS Code](https://code.visualstudio.com/)
 
 ## Karabiner-Elements: 改键神器
@@ -46,6 +50,8 @@ Visual Studio Code 是一个轻量级但功能强大的源代码编辑器，可�
 ![](https://lhajh.github.io/assets/images/posts/mac/808112241.png)
 
 [Karabiner-Elements 使用介绍](https://lhajh.github.io/mac/2018/06/23/Karabiner-Elements.html)
+
+Install: `$ brew cask install karabiner-elements`
 
 下载地址: [Karabiner-Elements](https://pqrs.org/osx/karabiner/)
 
@@ -68,6 +74,8 @@ Visual Studio Code 是一个轻量级但功能强大的源代码编辑器，可�
 
 [Alfred 上手指南](https://lhajh.github.io/mac/2018/06/01/Alfred.html)
 
+Install: `$ brew cask install alfred`
+
 下载地址: [Alfred](http://www.alfredapp.com/)
 
 ## PopClip: 选中小工具
@@ -77,6 +85,8 @@ PopClip 是一款在 Mac 上人尽皆知的小工具，它简单高效，具有�
 ![](https://cdn.sspai.com/attachment/origin/2014/06/14/75481.jpg?imageView2/2/w/1120/q/90/interlace/1/ignore-error/1)
 
 [少数派 PopClip 专栏](https://sspai.com/search/article?q=popclip)
+
+Install: `$ brew cask install popclip`
 
 下载地址: [PopClip](https://itunes.apple.com/cn/app/popclip/id445189367?mt=12)
 
@@ -88,6 +98,8 @@ BetterTouchTool 是一款可以用来代替默认的系统操作方式（组合�
 
 [少数派 BetterTouchTool 专栏](https://sspai.com/search/article?q=BetterTouchTool)
 
+Install: `$ brew cask install bettertouchtool`
+
 下载地址: [BetterTouchTool](http://www.boastr.de/)
 
 ## The Unarchive：解压缩工具
@@ -95,6 +107,8 @@ BetterTouchTool 是一款可以用来代替默认的系统操作方式（组合�
 macOS 对于压缩文件的处理不是很好。如果你没有安装任何软件，你只能选择压缩成 `.zip` 或者解压 `.zip` 文件，可能听起来有点鸡肋。而 The Unarchiver 作为 Mac 上一款相当良心的解压工具，支持解压 `RAR`、`7-zip`、`Tar` 等常用压缩格式的文件，同时也可以打开 `ISO`、`EXE` 等类型的文件，功能齐全并且免费。
 
 ![](/assets/images/posts/mac/v2-d0737003a5047f1c6fb3caeb3c050092_hd.jpg)
+
+Install: `$ brew cask install the-unarchiver`
 
 下载地址：[The Unarchiver](https://itunes.apple.com/cn/app/the-unarchiver/id425424353?mt=12)
 
@@ -104,6 +118,8 @@ macOS 对于压缩文件的处理不是很好。如果你没有安装任何软�
 
 ![](/assets/images/posts/mac/v2-09a9e6ff1ff989754f89d4224cb52312_hd.jpg)
 
+Install: `$ brew cask install cheatsheet`
+
 下载地址：[CheatSheet](https://www.mediaatelier.com/CheatSheet/)
 
 ## IINA：视频播放器
@@ -112,6 +128,8 @@ macOS 对于压缩文件的处理不是很好。如果你没有安装任何软�
 
 ![](/assets/images/posts/mac/v2-520254edf502befa1301dc6abae30a76_hd.jpg)
 
+Install: `$ brew cask install iina`
+
 下载地址：[IINA](https://lhc70000.github.io/iina/)
 
 ## AppCleaner：卸载工具
@@ -119,6 +137,8 @@ macOS 对于压缩文件的处理不是很好。如果你没有安装任何软�
 Mac 上的卸载方式有很多，在 MAS 上安装的软件可以进入 Launchpad 长按删除。如果是其他来源安装的软件，可以在 Finder 里的应用程序一栏使用 `Command + Delete` 进行删除。但是有人会考虑到会不会有残留在其他的地方的文件没有删除干净，这时你就可以选择一款卸载器来卸载你的所有软件。为大家推荐的 AppCleaner 一款轻量级卸载软件，只需要将所需卸载软件拖拽至 AppCleaner 的空白处即可以自动检查相关的所有文件并清除。
 
 ![](/assets/images/posts/mac/v2-927c180e8d19697c4f8223dc62d83443_hd.jpg)
+
+Install: `$ brew cask install appcleaner`
 
 下载地址：[AppCleaner](https://freemacsoft.net/appcleaner/)
 
@@ -129,6 +149,8 @@ Mac 上的卸载方式有很多，在 MAS 上安装的软件可以进入 Launchp
 ![](/assets/images/posts/mac/v2-b1b0630d192bc0bc0bfe4670fc7e538f_hd.jpg)
 
 关联阅读：[圈点之后，试试腾讯出品的免费 Mac 截图软件：截图 Jietu](https://sspai.com/post/33021)
+
+Install: `$ brew cask install jietu`
 
 下载地址：[Jietu](https://itunes.apple.com/cn/app/jie-tu-jietu/id1059334054?mt=12)
 
@@ -144,6 +166,8 @@ Dash 对自身的定位是一款面向开发人员的文档查询工具。而事
 可以说，Dash 绝对对得起它给自己的定位。用过之后，很可能就离不开它了。
 
 [程序员的 API 文档查询利器：Dash - 少数派](https://sspai.com/post/45786)
+
+Install: `$ brew cask install dash`
 
 下载地址: [Dash for macOS - API Documentation Browser, Snippet Manager - Kapeli](https://kapeli.com/dash)
 
@@ -180,6 +204,8 @@ Dash 本身可以免费使用，但免费版本在查找一个新文档的时候
 
 注: 这个图主要是调整 ShowyEdge 的位置(好像直接输入  位置无效, 只能点击右面的按钮一点一点移动)
 
+Install: `$ brew cask install showyedge`
+
 下载地址: [ShowyEdge - Software for macOS](https://pqrs.org/osx/ShowyEdge/)
 
 ## Aria2GUI：下载工具
@@ -187,6 +213,8 @@ Dash 本身可以免费使用，但免费版本在查找一个新文档的时候
 其实迅雷在 Mac 上的使用体验还算不错，尤其是在对应用进行一定处理除去广告。但是迅雷下载文件时长会出现速度上不去，没有资源或者无法下载的问题，不如尝试一下是用 Aria2 作为你的下载器，不仅可以下载一般的文件，结合相关插件还可以直接下载百度网盘的内容。在少数派介绍 Aria2 配置的 [《Mac 上使用百度网盘很烦躁？花点时间配置 aria2 吧》](https://sspai.com/post/32167) 中所使用只是它的网页版，操作起来可能也没有那么方便，而 Aria2GUI 则是一款拥有了独立界面的软件，除开集成了多线程下载和 Aria2c 之外，还可以对未下载完成的任务自动保存以及相关任务完成时发送提示，比起网页版更加人性化了许多。
 
 ![](/assets/images/posts/mac/v2-6ba511ca257ec630ffcc572690ab6150_hd.jpg)
+
+Install: `$ brew cask install aria2gui`
 
 下载地址：[Aria2GUI](https://github.com/yangshun1029/aria2gui)
 
@@ -204,6 +232,8 @@ Mac 的原生词典是包含《现代汉语规范词典》和《牛津英汉汉�
 
 ![](/assets/images/posts/mac/v2-5311a773f6195f6b29c9c4f919319de4_hd.jpg)
 
+Install: `$ brew cask install youdaodict`
+
 下载地址：[有道词典](https://itunes.apple.com/cn/app/you-dao-ci-dian/id491854842?mt=12)
 
 ## 网易云音乐
@@ -211,6 +241,8 @@ Mac 的原生词典是包含《现代汉语规范词典》和《牛津英汉汉�
 与 `B 站` 有着不可告人的 PY 交易的音乐播放器你确定不来 `一发` 吗?
 
 ![](/assets/images/posts/mac/812173720.png)
+
+Install: `$ brew cask install neteasemusic`
 
 下载地址: [网易云音乐](http://music.163.com/#/download)
 
@@ -225,6 +257,8 @@ Mac 的原生词典是包含《现代汉语规范词典》和《牛津英汉汉�
 说了这么多你还不卸载你所有的浏览器然后投入到 Chrome 的怀抱?
 
 不好意思, 我也是前端!!! [捂脸]
+
+Install: `$ brew cask install google-chrome`
 
 下载地址: [Chrome](https://www.google.com/chrome/)
 
@@ -241,6 +275,8 @@ Mac 的原生词典是包含《现代汉语规范词典》和《牛津英汉汉�
 ![](/assets/images/posts/mac/v2-4c864bff09f3016f26e36aa3fd52450a_b.gif)
 
 [如原生般，却更好用：最好的 Mac 日历应用 Fantastical 2 for Mac 评测](https://sspai.com/post/30287)
+
+Install: `$ brew cask install fantastical`
 
 下载地址: [Fantastical](https://flexibits.com/fantastical)
 
