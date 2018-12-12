@@ -425,3 +425,110 @@ post: {
 ```html
 <blog-post v-bind:id="post.id" v-bind:title="post.title"></blog-post>
 ```
+
+## [非 Prop 的特性](https://cn.vuejs.org/v2/guide/components-props.html#%E9%9D%9E-Prop-%E7%9A%84%E7%89%B9%E6%80%A7)
+
+一个非 prop 特性是指传向一个组件，但是该组件并没有相应 prop 定义的特性。
+
+因为显式定义的 prop 适用于向一个子组件传入信息，然而组件库的作者并不总能预见组件会被用于怎样的场景。这也是为什么组件可以接受任意的特性，而这些特性会被添加到这个组件的根元素上。
+
+例如，想象一下你通过一个 Bootstrap 插件使用了一个第三方的  `<bootstrap-date-input>`  组件，这个插件需要在其  `<input>`  上用到一个  `data-date-picker`  特性。我们可以将这个特性添加到你的组件实例上：
+
+```html
+<bootstrap-date-input data-date-picker="activated"></bootstrap-date-input>
+```
+
+然后这个  `data-date-picker="activated"`  特性就会自动添加到  `<bootstrap-date-input>`  的根元素上。
+
+### [替换 / 合并已有的特性](https://cn.vuejs.org/v2/guide/components-props.html#%E6%9B%BF%E6%8D%A2-%E5%90%88%E5%B9%B6%E5%B7%B2%E6%9C%89%E7%9A%84%E7%89%B9%E6%80%A7)
+
+想象一下  `<bootstrap-date-input>`  的模板是这样的：
+
+```html
+<input type="date" class="form-control" />
+```
+
+为了给我们的日期选择器插件定制一个主题，我们可能需要像这样添加一个特别的类名：
+
+```html
+<bootstrap-date-input
+  data-date-picker="activated"
+  class="date-picker-theme-dark"
+></bootstrap-date-input>
+```
+
+在这种情况下，我们定义了两个不同的  `class`  的值：
+
+- `form-control`，这是在组件的模板内设置好的
+- `date-picker-theme-dark`，这是从组件的父级传入的
+
+对于绝大多数特性来说，从外部提供给组件的值会替换掉组件内部设置好的值。所以如果传入  `type="text"`  就会替换掉  `type="date"`  并把它破坏！庆幸的是，`class` 和 `style`  特性会稍微智能一些，即两边的值会被合并起来，从而得到最终的值：`form-control date-picker-theme-dark`。
+
+### [禁用特性继承](https://cn.vuejs.org/v2/guide/components-props.html#%E7%A6%81%E7%94%A8%E7%89%B9%E6%80%A7%E7%BB%A7%E6%89%BF)
+
+如果你**不**希望组件的根元素继承特性，你可以在组件的选项中设置  `inheritAttrs: false`。例如：
+
+```js
+Vue.component('my-component', {
+  inheritAttrs: false
+  // ...
+})
+```
+
+这尤其适合配合实例的  `$attrs`  属性使用，该属性包含了传递给一个组件的特性名和特性值，例如：
+
+```js
+{
+  class: 'username-input',
+  placeholder: 'Enter your username'
+}
+```
+
+有了  `inheritAttrs: false`  和  `$attrs`，你就可以手动决定这些特性会被赋予哪个元素。在撰写[基础组件](https://cn.vuejs.org/v2/style-guide/#%E5%9F%BA%E7%A1%80%E7%BB%84%E4%BB%B6%E5%90%8D-%E5%BC%BA%E7%83%88%E6%8E%A8%E8%8D%90)的时候是常会用到的：
+
+```js
+Vue.component('base-input', {
+  inheritAttrs: false,
+  props: ['label', 'value'],
+  template: `
+    <label>
+      {{ label }}
+      <input
+        v-bind="$attrs"
+        v-bind:value="value"
+        v-on:input="$emit('input', $event.target.value)"
+      >
+    </label>
+  `
+})
+```
+
+这个模式允许你在使用基础组件的时候更像是使用原始的 HTML 元素，而不会担心哪个元素是真正的根元素：
+
+```html
+<base-input
+  v-model="username"
+  class="username-input"
+  placeholder="Enter your username"
+></base-input>
+```
+
+# [自定义事件 — Vue.js](https://cn.vuejs.org/v2/guide/components-custom-events.html)
+
+## [事件名](https://cn.vuejs.org/v2/guide/components-custom-events.html#%E4%BA%8B%E4%BB%B6%E5%90%8D)
+
+不同于组件和 prop，事件名不存在任何自动化的大小写转换。而是触发的事件名需要完全匹配监听这个事件所用的名称。举个例子，如果触发一个 camelCase 名字的事件：
+
+```js
+this.$emit('myEvent')
+```
+
+则监听这个名字的 kebab-case 版本是不会有任何效果的：
+
+```html
+<my-component v-on:my-event="doSomething"></my-component>
+```
+
+不同于组件和 prop，事件名不会被用作一个 JavaScript 变量名或属性名，所以就没有理由使用 camelCase 或 PascalCase 了。并且  `v-on`  事件监听器在 DOM 模板中会被自动转换为全小写 (因为 HTML 是大小写不敏感的)，所以  `v-on:myEvent`  将会变成  `v-on:myevent`——导致  `myEvent`  不可能被监听到。
+
+因此，我们推荐你**始终使用 kebab-case 的事件名**。

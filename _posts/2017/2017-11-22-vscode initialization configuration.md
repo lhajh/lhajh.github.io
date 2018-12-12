@@ -1,14 +1,26 @@
 ---
 layout: post
-title: VSCode 初始化配置
+title: VS Code 初始化配置
 categories: [vscode]
-description: VSCode 初始化配置
-keywords: vscode
+description: VS Code 初始化配置
+keywords: vs-code
 ---
 
-VSCode 初始化配置
+VS Code 初始化配置
 
 在官网 [Visual Studio Code](https://code.visualstudio.com/) 可以查看介绍和下载
+
+如果你喜欢我的配置, 可以通过 [Syncing](https://marketplace.visualstudio.com/items?itemName=nonoroazoro.syncing) 这个插件同步到你本地, 当然这会**覆盖**你本地的配置, 请慎重选择
+
+以下是同步的过程:
+
+1. [安装 Syncing 插件](vscode:extension/nonoroazoro.syncing)
+2. 使用快捷键 `ctrl/cmd + shift + p` 或 `f1` 调出命令面板
+3. 输入 `Syncing: Download Settings` 回车
+4. 此时需要输入 `GitHub Personal Access Token`, 如果你以前没有上传配置到 `Gist` 或你想使用我的配置, 留空回车即可
+5. 输入一个 `Gist ID`, 我的是 `e4881a8e307f3186e80cc4aea54011df`, 当然你也可以输入一个`公开的 Gist ID` (比如你朋友共享给你的 `Gist`)
+6. VS Code 会自动从云端下载配置
+7. 重复一遍, 此操作会**覆盖**本地配置, 请慎重
 
 ## 代码片段
 
@@ -354,7 +366,8 @@ VSCode 初始化配置
   // JSX 有多个属性时，将 `>` 放在最后一行的末尾，而不是单独放在下一行（不适用于自闭元素）
   "prettier.jsxBracketSameLine": true,
   // 格式化 vue 插件名: Vetur
-  "vetur.format.defaultFormatter.html": "none",
+  // 如果你喜欢属性换行后开始标签的 ">" 另起一行而不是跟随在最后一个属性后面
+  // "vetur.format.defaultFormatter.html": "none",
   "vetur.format.defaultFormatterOptions": {
     "prettier": {
       "eslintIntegration": true,
@@ -445,6 +458,9 @@ VSCode 初始化配置
   // Override VSCode's copy command with our own copy command, which works better with VSCodeVim. Turn this off if copying is not working.
   "vim.overrideCopy": false,
   "vim.startInInsertMode": true,
+  // Enable some vim ctrl key commands that override otherwise common operations, like ctrl+c
+  // If your operating system is Windows, please set to false
+  // "vim.useCtrlKeys": false,
 
   // 同步配置插件 插件名: Syncing
   // 通过该配置项，可以决定是否让 Syncing 按照设备操作系统的不同来分开同步您的`快捷键配置`。
