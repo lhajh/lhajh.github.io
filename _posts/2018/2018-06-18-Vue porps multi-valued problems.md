@@ -17,7 +17,7 @@ data () {
   return {
     str: 'str',
     num: 123,
-    boolean: true,
+    boo: true,
     und: undefined,
     nul: null,
     obj: {
@@ -32,15 +32,15 @@ data () {
 给子组件传值:
 
 ```html
-<cockpit-ceair
-  :str="str, num, boolean, und, nul, obj, arr"
-></cockpit-ceair>
+<child-props
+  :str="str, num, boo, und, nul, obj, arr"
+></child-props>
 ```
 
 子组件 `props` 接受值:
 
 ```js
-props: ['str', 'num', 'boolean', 'und', 'nul', 'obj', 'arr']
+props: ['str', 'num', 'boo', 'und', 'nul', 'obj', 'arr']
 ```
 
 子组件显示值:
@@ -50,9 +50,9 @@ props: ['str', 'num', 'boolean', 'und', 'nul', 'obj', 'arr']
 <div>
   str---[[str]]
   num---[[num]]
-  boolean---[[boolean]]
-  und---[[und]]
-  nul---[[nul]]
+  boo---[[boo]]
+  und---[[und + '']]
+  nul---[[nul + '']]
   obj---[[obj]]
   arr---[[arr]]
 </div>
@@ -62,7 +62,7 @@ props: ['str', 'num', 'boolean', 'und', 'nul', 'obj', 'arr']
 
 ![](/assets/images/posts/vue/803185001.png)
 
-`undefined` 和 `null` 浏览器渲染为空值就不具体多说了, 但值也传过来了, 如果转换成字符串也可以显示
+`undefined` 和 `null` 浏览器渲染为空值页面无法显示, 这里转换成字符串显示
 
 是不是很震惊. 居然只要一个变量就可以传递多个变量
 
@@ -75,7 +75,7 @@ props: {
     default: ''
   },
   num: Number,
-  boolean: {
+  boo: {
     type: Boolean,
     default: false
   },
@@ -99,4 +99,88 @@ props: {
 }
 ```
 
-这个具体原因目前还没有搞清楚, 而且 `vue` 官方关于 `props` 传值也没有这种写法, 可能得需要阅读 `vue` 源码来看看 `props` 到底是如何解析传过来的值后才可能知道原理了吧
+这里我们稍微修改一下给子组件传值的 `v-bind` 的变量
+
+```html
+<child-props
+  :num="str, num, boo, und, nul, obj, arr"
+></child-props>
+```
+
+![](/assets/images/posts/vue/8121210532.png)
+
+发现 `str` 没有值了, 但后面的都有值
+
+难道传递的参数可以根据 `v-bind` 自动截取? 实际上变成下面这样了?
+
+```html
+<child-props
+  :num="num, boo, und, nul, obj, arr"
+></child-props>
+```
+
+那试试 `boo`
+
+```html
+<child-props
+  :boo="str, num, boo, und, nul, obj, arr"
+></child-props>
+```
+
+发现还是和上图一样, 说明上面的猜测是错误的, 传递的参数并没有变化
+
+那 `v-bind` 取别的值呢?
+
+```html
+<child-props
+  :aaa="str, num, boo, und, nul, obj, arr"
+></child-props>
+```
+
+还是和上面一样.
+
+这时我有一个大胆的想法, vue 其实将上面的写法转换成下面这种了:
+
+```html
+<child-props
+  :aaa="str"
+  :num="num"
+  :boo="boo"
+  :und="und"
+  :obj="obj"
+  :arr="arr"
+></child-props>
+```
+
+所以并没有给子组件传递 `str` 这个变量, 所以 `str` 没有值了, 那试试修改子组件的 props 和 html:
+
+```js
+props: ['aaa', 'num', 'boo', 'und', 'nul', 'obj', 'arr']
+```
+
+```html
+<!-- github 渲染不出来 {}, 下面只能使用 [] 代替 {} 了, 意思到了就行 -->
+<div>
+  str---[[aaa]]
+  num---[[num]]
+  boo---[[boo]]
+  und---[[und + '']]
+  nul---[[nul + '']]
+  obj---[[obj]]
+  arr---[[arr]]
+</div>
+```
+
+![](/assets/images/posts/vue/803185001.png)
+
+`str` 又正常显示了
+
+至此, 终于知道了这个写法的原理了, 但 vue 官方并没有给出这种示例, 应该是不提倡这种写法吧, 但官网提供了这种写法: [传入一个对象的所有属性](https://cn.vuejs.org/v2/guide/components-props.html#%E4%BC%A0%E5%85%A5%E4%B8%80%E4%B8%AA%E5%AF%B9%E8%B1%A1%E7%9A%84%E6%89%80%E6%9C%89%E5%B1%9E%E6%80%A7), 我们完全可以将我们这个 "民间写法" 改成 "官方写法"
+
+```html
+<child-props
+  v-bind="{str, num, boo, und, nul, obj, arr}"
+></child-props>
+```
+
+既优雅又符合官方规定

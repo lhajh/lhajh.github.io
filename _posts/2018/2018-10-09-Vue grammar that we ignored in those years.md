@@ -25,6 +25,8 @@ keywords: vue
 
 好，正片开始！！！
 
+# [Class 与 Style 绑定 — Vue.js](https://cn.vuejs.org/v2/guide/class-and-style.html)
+
 ## [多重值](https://cn.vuejs.org/v2/guide/class-and-style.html#%E5%A4%9A%E9%87%8D%E5%80%BC)
 
 从 2.3.0 起你可以为  `style`  绑定中的属性提供一个包含多个值的数组，常用于提供多个带前缀的值，例如：
@@ -34,6 +36,8 @@ keywords: vue
 ```
 
 这样写只会渲染数组中最后一个被浏览器支持的值。在本例中，如果浏览器支持不带浏览器前缀的 flexbox，那么就只会渲染  `display: flex`。
+
+# [条件渲染 — Vue.js](https://cn.vuejs.org/v2/guide/conditional.html)
 
 ## [在 `template` 元素上使用  `v-if`  条件渲染分组](https://cn.vuejs.org/v2/guide/conditional.html#%E5%9C%A8-lt-template-gt-%E5%85%83%E7%B4%A0%E4%B8%8A%E4%BD%BF%E7%94%A8-v-if-%E6%9D%A1%E4%BB%B6%E6%B8%B2%E6%9F%93%E5%88%86%E7%BB%84)
 
@@ -115,6 +119,8 @@ Vue 会尽可能高效地渲染元素，通常会复用已有元素而不是从�
 相比之下，`v-show`  就简单得多——不管初始条件是什么，元素总是会被渲染，并且只是简单地基于 CSS 进行切换。
 
 一般来说，`v-if`  有更高的切换开销，而  `v-show`  有更高的初始渲染开销。因此，如果需要非常频繁地切换，则使用  `v-show`  较好；如果在运行时条件很少改变，则使用  `v-if`  较好。
+
+# [列表渲染 — Vue.js](https://cn.vuejs.org/v2/guide/list.html)
 
 ## [用  `v-for`  把一个数组对应为一组元素](https://cn.vuejs.org/v2/guide/list.html#%E7%94%A8-v-for-%E6%8A%8A%E4%B8%80%E4%B8%AA%E6%95%B0%E7%BB%84%E5%AF%B9%E5%BA%94%E4%B8%BA%E4%B8%80%E7%BB%84%E5%85%83%E7%B4%A0)
 
@@ -279,6 +285,8 @@ methods: {
 
 ## [vue 修饰符](https://lhajh.github.io/vue/2018/09/10/Vue-Modifiers.html)
 
+# [组件基础 — Vue.js](https://cn.vuejs.org/v2/guide/components.html)
+
 ## [在组件上使用  `v-model`](https://cn.vuejs.org/v2/guide/components.html#%E5%9C%A8%E7%BB%84%E4%BB%B6%E4%B8%8A%E4%BD%BF%E7%94%A8-v-model)
 
 自定义事件也可以用于创建支持  `v-model`  的自定义输入组件。记住：
@@ -388,3 +396,32 @@ Vue.component('custom-input', {
 - 字符串 (例如：`template: '...'`)
 - [单文件组件 (`.vue`)](https://cn.vuejs.org/v2/guide/single-file-components.html)
 - [`<script type="text/x-template">`](https://cn.vuejs.org/v2/guide/components-edge-cases.html#X-Templates)
+
+# [组件注册 — Vue.js](https://cn.vuejs.org/v2/guide/components-registration.html#%E5%9F%BA%E7%A1%80%E7%BB%84%E4%BB%B6%E7%9A%84%E8%87%AA%E5%8A%A8%E5%8C%96%E5%85%A8%E5%B1%80%E6%B3%A8%E5%86%8C)
+
+## [基础组件的自动化全局注册](https://cn.vuejs.org/v2/guide/components-registration.html#%E5%9F%BA%E7%A1%80%E7%BB%84%E4%BB%B6%E7%9A%84%E8%87%AA%E5%8A%A8%E5%8C%96%E5%85%A8%E5%B1%80%E6%B3%A8%E5%86%8C)
+
+# [Prop — Vue.js](https://cn.vuejs.org/v2/guide/components-props.html)
+
+## [传入一个对象的所有属性](https://cn.vuejs.org/v2/guide/components-props.html#%E4%BC%A0%E5%85%A5%E4%B8%80%E4%B8%AA%E5%AF%B9%E8%B1%A1%E7%9A%84%E6%89%80%E6%9C%89%E5%B1%9E%E6%80%A7)
+
+如果你想要将一个对象的所有属性都作为 prop 传入，你可以使用不带参数的  `v-bind`(取代  `v-bind:prop-name`)。例如，对于一个给定的对象  `post`：
+
+```js
+post: {
+  id: 1,
+  title: 'My Journey with Vue'
+}
+```
+
+下面的模板：
+
+```html
+<blog-post v-bind="post"></blog-post>
+```
+
+等价于：
+
+```html
+<blog-post v-bind:id="post.id" v-bind:title="post.title"></blog-post>
+```
