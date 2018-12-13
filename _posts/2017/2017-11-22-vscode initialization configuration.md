@@ -10,6 +10,8 @@ VS Code 初始化配置
 
 在官网 [Visual Studio Code](https://code.visualstudio.com/) 可以查看介绍和下载
 
+## 同步设置
+
 如果你喜欢我的配置, 可以通过 [Syncing](https://marketplace.visualstudio.com/items?itemName=nonoroazoro.syncing) 这个插件同步到你本地, 当然这会**覆盖**你本地的配置, 请慎重选择
 
 以下是同步的过程:
@@ -38,6 +40,7 @@ VS Code 初始化配置
   * `TM_FILENAME` - 当前文档的文件名。
   * `TM_DIRECTORY` - 当前文档的目录。
   * `TM_FILEPATH` - 当前文档的完整文件路径。
+  * `$BLOCK_COMMENT_START ${1:comment} $BLOCK_COMMENT_END` - 使用当前语言的规则添加注释
 
 以下是使用单引号围绕所选文本的代码段示例, 或者, 如果未选择任何文本, 则插入 `type_here` -placeholder。
 
@@ -215,6 +218,9 @@ VS Code 初始化配置
   - [每日一 Vim 笔记](https://lhajh.github.io/vim/2018/05/08/the-notes-of-a-daily-vim.html)
   - [每日一 Vim](https://lhajh.github.io/vim/2018/05/08/the-notes-of-a-daily-vim.html)
   - [Install](vscode:extension/vscodevim.vim)
+- [MetaGo](https://marketplace.visualstudio.com/items?itemName=metaseed.metago#overview)
+  - 快速移动光标到指定位置
+  - [Install](vscode:extension/metaseed.metago)
 - [File Utils](https://marketplace.visualstudio.com/items?itemName=sleistner.vscode-fileutils)
   - 创建, 复制, 移动, 重命名和删除文件和目录的便捷方式, 就是不用触摸板完成这些操作
   - [Install](vscode:extension/sleistner.vscode-fileutils)
@@ -235,6 +241,9 @@ VS Code 初始化配置
 - [Nasc VSCode Touchbar](https://marketplace.visualstudio.com/items?itemName=felipe.nasc-touchbar)
   - 支持 MBP 的触摸条, 提供了挺多实用的功能点
   - [Install](vscode:extension/felipe.nasc-touchbar)
+- [Bookmarks](https://marketplace.visualstudio.com/items?itemName=alefragnani.Bookmarks&WT.mc_id=marketplace-pack-sdras)
+  - 给代码添加书签
+  - [Install](vscode:extension/alefragnani.Bookmarks)
 - [macros](https://marketplace.visualstudio.com/items?itemName=geddski.macros)
   - 自定义宏
   - [Install](vscode:extension/geddski.macros)
@@ -474,7 +483,15 @@ VS Code 初始化配置
   ],
 
   // 使用 htmltagwrap 要插入的默认 HTML 标签 插件名: htmltagwrap
-  "htmltagwrap.tag": "div"
+  "htmltagwrap.tag": "div",
+
+  // 光标快速跳转到指定位置 插件名: metaGo
+  "metaGo.decoration.fontSize": 20,
+  "metaGo.decoration.height": 22,
+  "metaGo.decoration.width": 13,
+  "metaGo.decoration.y": 15,
+  "metaGo.decoration.backgroundColor": "white,yellow",
+  "metaGo.decoration.backgroundOpacity": "0.9"
 }
 ```
 
