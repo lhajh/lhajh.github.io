@@ -567,3 +567,145 @@ Vue.component('base-checkbox', {
 这里的  `lovingVue`  的值将会传入这个名为  `checked`  的 prop。同时当  `<base-checkbox>`  触发一个  `change`  事件并附带一个新的值的时候，这个  `lovingVue`  的属性将会被更新。
 
 注意你仍然需要在组件的  `props`  选项里声明  `checked`  这个 prop。
+
+## [将原生事件绑定到组件](https://cn.vuejs.org/v2/guide/components-custom-events.html#%E5%B0%86%E5%8E%9F%E7%94%9F%E4%BA%8B%E4%BB%B6%E7%BB%91%E5%AE%9A%E5%88%B0%E7%BB%84%E4%BB%B6)
+
+你可能有很多次想要在一个组件的根元素上直接监听一个原生事件。这时，你可以使用  `v-on`  的  `.native`  修饰符：
+
+```html
+<base-input v-on:focus.native="onFocus"></base-input>
+```
+
+在有的时候这是很有用的，不过在你尝试监听一个类似  `<input>`  的非常特定的元素时，这并不是个好主意。比如上述  `<base-input>`  组件可能做了如下重构，所以根元素实际上是一个  `<label>`  元素：
+
+```html
+<label>
+  {{ label }}
+  <input v-bind="$attrs" v-bind:value="value" v-on:input="$emit('input', $event.target.value)" />
+</label>
+```
+
+这时，父级的  `.native`  监听器将静默失败。它不会产生任何报错，但是  `onFocus`  处理函数不会如你预期地被调用。
+
+为了解决这个问题，Vue 提供了一个  `$listeners`  属性，它是一个对象，里面包含了作用在这个组件上的所有监听器。例如：
+
+```js
+{
+  focus: function (event) { /_ ... _/ }
+  input: function (value) { /_ ... _/ },
+}
+```
+
+有了这个  `$listeners`  属性，你就可以配合  `v-on="$listeners"`  将所有的事件监听器指向这个组件的某个特定的子元素。对于类似  `<input>`  的你希望它也可以配合  `v-model`  工作的组件来说，为这些监听器创建一个类似下述  `inputListeners`  的计算属性通常是非常有用的：
+
+```js
+Vue.component('base-input', {
+  inheritAttrs: false,
+  props: ['label', 'value'],
+  computed: {
+    inputListeners: function() {
+      var vm = this
+      // `Object.assign` 将所有的对象合并为一个新对象
+      return Object.assign(
+        {},
+        // 我们从父级添加所有的监听器
+        this.$listeners,
+        // 然后我们添加自定义监听器，
+        // 或覆写一些监听器的行为
+        {
+          // 这里确保组件配合 `v-model` 的工作
+          input: function(event) {
+            vm.$emit('input', event.target.value)
+          }
+        }
+      )
+    }
+  },
+  template: `
+    <label>
+      {{ label }}
+      <input
+        v-bind="$attrs"
+        v-bind:value="value"
+        v-on="inputListeners"
+      >
+    </label>
+  `
+})
+```
+
+现在  `<base-input>`  组件是一个**完全透明的包裹器**了，也就是说它可以完全像一个普通的  `<input>`  元素一样使用了：所有跟它相同的特性和监听器的都可以工作。
+
+# [插槽 — Vue.js](https://cn.vuejs.org/v2/guide/components-slots.html)
+
+## [编译作用域](https://cn.vuejs.org/v2/guide/components-slots.html#%E7%BC%96%E8%AF%91%E4%BD%9C%E7%94%A8%E5%9F%9F)
+
+当你想在插槽内使用数据时，例如：
+
+```html
+<navigation-link url="/profile"> Logged in as {{ user.name }} </navigation-link>
+```
+
+该插槽可以访问跟这个模板的其它地方相同的实例属性 (也就是说“作用域”是相同的)。但这个插槽**不能**访问  `<navigation-link>`  的作用域。例如尝试访问  `url`  是不会工作的。牢记一条准则：
+
+> 父组件模板的所有东西都会在父级作用域内编译；子组件模板的所有东西都会在子级作用域内编译。
+
+## [作用域插槽](https://cn.vuejs.org/v2/guide/components-slots.html#%E4%BD%9C%E7%94%A8%E5%9F%9F%E6%8F%92%E6%A7%BD)
+
+> 2.1.0+ 新增
+
+有的时候你希望提供的组件带有一个可从子组件获取数据的可复用的插槽。例如一个简单的  `<todo-list>`  组件的模板可能包含了如下代码：
+
+```html
+<ul>
+  <li v-for="todo in todos" v-bind:key="todo.id">{{ todo.text }}</li>
+</ul>
+```
+
+但是在我们应用的某些部分，我们希望每个独立的待办项渲染出和  `todo.text`  不太一样的东西。这也是作用域插槽的用武之地。
+
+为了让这个特性成为可能，你需要做的全部事情就是将待办项内容包裹在一个  `<slot>`  元素上，然后将所有和其上下文相关的数据传递给这个插槽：在这个例子中，这个数据是  `todo`  对象：
+
+```html
+<ul>
+  <li v-for="todo in todos" v-bind:key="todo.id">
+    <!-- 我们为每个 todo 准备了一个插槽， -->
+    <!-- 将 `todo` 对象作为一个插槽的 prop 传入。 -->
+    <slot v-bind:todo="todo">
+      <!-- 回退的内容 -->
+      {{ todo.text }}
+    </slot>
+  </li>
+</ul>
+```
+
+现在当我们使用  `<todo-list>`  组件的时候，我们可以选择为待办项定义一个不一样的  `<template>`  作为替代方案，并且可以通过  `slot-scope`  特性从子组件获取数据：
+
+```html
+<todo-list v-bind:todos="todos">
+  <!-- 将 `slotProps` 定义为插槽作用域的名字 -->
+  <template slot-scope="slotProps">
+    <!-- 为待办项自定义一个模板， -->
+    <!-- 通过 `slotProps` 定制每个待办项。 -->
+    <span v-if="slotProps.todo.isComplete">✓</span> {{ slotProps.todo.text }}
+  </template>
+</todo-list>
+```
+
+> 在 2.5.0+，`slot-scope`  不再限制在  `<template>`  元素上使用，而可以用在插槽内的任何元素或组件上。
+
+### [解构  `slot-scope`](https://cn.vuejs.org/v2/guide/components-slots.html#%E8%A7%A3%E6%9E%84-slot-scope)
+
+如果一个 JavaScript 表达式在一个函数定义的参数位置有效，那么这个表达式实际上就可以被  `slot-scope`  接受。也就是说你可以在支持的环境下 ([单文件组件](https://cn.vuejs.org/v2/guide/single-file-components.html)或[现代浏览器](https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Operators/Destructuring_assignment#%E6%B5%8F%E8%A7%88%E5%99%A8%E5%85%BC%E5%AE%B9))，在这些表达式中使用  [ES2015 解构语法](https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Operators/Destructuring_assignment#%E8%A7%A3%E6%9E%84%E5%AF%B9%E8%B1%A1)。例如：
+
+```html
+<todo-list v-bind:todos="todos">
+  <template slot-scope="{ todo }">
+    <span v-if="todo.isComplete">✓</span> {{ todo.text }}
+  </template>
+</todo-list>
+```
+
+这会使作用域插槽变得更干净一些。
+
+# [动态组件 & 异步组件 — Vue.js](https://cn.vuejs.org/v2/guide/components-dynamic-async.html)
