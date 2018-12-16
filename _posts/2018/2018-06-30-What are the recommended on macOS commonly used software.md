@@ -102,16 +102,6 @@ Install: `$ brew cask install bettertouchtool`
 
 下载地址: [BetterTouchTool](http://www.boastr.de/)
 
-## The Unarchive：解压缩工具
-
-macOS 对于压缩文件的处理不是很好。如果你没有安装任何软件，你只能选择压缩成 `.zip` 或者解压 `.zip` 文件，可能听起来有点鸡肋。而 The Unarchiver 作为 Mac 上一款相当良心的解压工具，支持解压 `RAR`、`7-zip`、`Tar` 等常用压缩格式的文件，同时也可以打开 `ISO`、`EXE` 等类型的文件，功能齐全并且免费。
-
-![](/assets/images/posts/mac/v2-d0737003a5047f1c6fb3caeb3c050092_hd.jpg)
-
-Install: `$ brew cask install the-unarchiver`
-
-下载地址：[The Unarchiver](https://itunes.apple.com/cn/app/the-unarchiver/id425424353?mt=12)
-
 ## CheatSheet：快捷键提示
 
 如果你想在电脑上进行那种行云流水的操作，快捷键的利用一定是最重要的。但是别说其他软件的快捷键，可能就连自带的 Safari 的快捷键都不知道一两个。如果你还在搜索「XXX 的快捷键是什么？」，那一定是没有遇到过 CheatSheet 。这款软件在使用前需要在「系统偏好设置 - 安全性与隐私 - 隐私 - 辅助功能」中勾选 CheatSheet 一项，即可在大多数 App 界面中长按 `Command-⌘` 直接呼出该软件的全部快捷键，可以说是非常的方便了。
@@ -121,6 +111,28 @@ Install: `$ brew cask install the-unarchiver`
 Install: `$ brew cask install cheatsheet`
 
 下载地址：[CheatSheet](https://www.mediaatelier.com/CheatSheet/)
+
+## BetterAndBetter: Mac手势神器，不仅仅是手势
+
+一款功能强大的效率神器，包括触摸板手势/鼠标手势/蓝牙解锁/四角触发/自动跳窗等效率工具集合，不仅仅是手势,还包含更多快捷功能等你探索，更多功能不断完善中...
+
+![](/assets/images/posts/mac/8121671902.png)
+
+`BetterAndBetter` 的功能基本涵盖了上面 `PopClip` / `BetterTouchTool` / `CheatSheet`, 只是相对于 `PopClip` 没有那么多的功能, 但可以满足日常轻度使用; 快捷键提示和 `CheatSheet` 平分秋色; 在触摸板方面是强于 `BetterTouchTool` 的. 如果不是重度使用以上三款产品的话, 完全可以考虑只安装 `BetterAndBetter`
+
+[BetterAndBetter - 使用文档](http://www.qijishow.com/helpbab.html)
+
+下载地址: [BetterAndBetter - 奇迹秀](http://www.qijishow.com/bab.html)
+
+## The Unarchive：解压缩工具
+
+macOS 对于压缩文件的处理不是很好。如果你没有安装任何软件，你只能选择压缩成 `.zip` 或者解压 `.zip` 文件，可能听起来有点鸡肋。而 The Unarchiver 作为 Mac 上一款相当良心的解压工具，支持解压 `RAR`、`7-zip`、`Tar` 等常用压缩格式的文件，同时也可以打开 `ISO`、`EXE` 等类型的文件，功能齐全并且免费。
+
+![](/assets/images/posts/mac/v2-d0737003a5047f1c6fb3caeb3c050092_hd.jpg)
+
+Install: `$ brew cask install the-unarchiver`
+
+下载地址：[The Unarchiver](https://itunes.apple.com/cn/app/the-unarchiver/id425424353?mt=12)
 
 ## IINA：视频播放器
 
