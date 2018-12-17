@@ -117,6 +117,7 @@ menu: Bookmark
 - [基于 React 的表单解决方案 noForm](https://www.oschina.net/p/noform)
 - [30 分钟精通 React Hooks](https://juejin.im/post/5be3ea136fb9a049f9121014#comment)
 - [当初要是看了这篇，React高阶组件早会了。](https://mp.weixin.qq.com/s/_zQZ4Gg9WIG-3byL_p13QA?scene=25#wechat_redirect)
+- [200行代码实现简版react🔥 - 掘金](https://juejin.im/post/5c0c7304f265da613e22106c)
 
 ## 微信小程序
 
@@ -134,6 +135,7 @@ menu: Bookmark
 - [小程序构建骨架屏的探索](https://segmentfault.com/a/1190000015876164)
 - [H5 页面在微信端的分享](https://segmentfault.com/a/1190000016199418)
 - [微信小程序之圆形进度条](https://segmentfault.com/a/1190000013219501)
+- [微信小程序-自定义下拉刷新 - 【艾伦】 - 博客园](http://www.cnblogs.com/aaronjs/p/9982708.html)
 
 ## CSS
 
@@ -196,6 +198,10 @@ menu: Bookmark
 - [牛客网](https://www.nowcoder.com/)
 - [10 秒抓人眼球的“技术类简历”怎么写？](https://blog.csdn.net/z50L2O08e2u4afToR9A/article/details/82731495)
 - [新鲜出炉的 8 月前端面试题](https://segmentfault.com/a/1190000015916686)
+- [一年半经验，百度、有赞、阿里前端面试总结 - 麦乐 - SegmentFault 思否](https://segmentfault.com/a/1190000017049146)
+- [FEGuide/vue.md at master · FEGuideTeam/FEGuide](https://github.com/FEGuideTeam/FEGuide/blob/master/%E6%A1%86%E6%9E%B6/vue.md)
+
+
 
 ## 移动端
 

@@ -120,6 +120,8 @@ Install: `$ brew cask install cheatsheet`
 
 `BetterAndBetter` 的功能基本涵盖了上面 `PopClip` / `BetterTouchTool` / `CheatSheet`, 只是相对于 `PopClip` 没有那么多的功能, 但可以满足日常轻度使用; 快捷键提示和 `CheatSheet` 平分秋色; 在触摸板方面是强于 `BetterTouchTool` 的. 如果不是重度使用以上三款产品的话, 完全可以考虑只安装 `BetterAndBetter`
 
+注: 目前版本是 `1.6.07`, 如果同时使用 `BetterAndBetter` 和 `PopClip`, 会在部分软件中出现选中即复制的效果, 如果不想要这个效果, 可以在 `自动跳窗` 的 `黑名单` 中添加软件
+
 [BetterAndBetter - 使用文档](http://www.qijishow.com/helpbab.html)
 
 下载地址: [BetterAndBetter - 奇迹秀](http://www.qijishow.com/bab.html)
