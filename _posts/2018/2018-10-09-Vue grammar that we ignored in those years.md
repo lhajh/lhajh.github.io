@@ -709,3 +709,87 @@ Vue.component('base-input', {
 这会使作用域插槽变得更干净一些。
 
 # [动态组件 & 异步组件 — Vue.js](https://cn.vuejs.org/v2/guide/components-dynamic-async.html)
+
+# [处理边界情况 — Vue.js](https://cn.vuejs.org/v2/guide/components-edge-cases.html)
+
+## [访问元素 & 组件](https://cn.vuejs.org/v2/guide/components-edge-cases.html#%E8%AE%BF%E9%97%AE%E5%85%83%E7%B4%A0-amp-%E7%BB%84%E4%BB%B6)
+
+## [程序化的事件侦听器](https://cn.vuejs.org/v2/guide/components-edge-cases.html#%E7%A8%8B%E5%BA%8F%E5%8C%96%E7%9A%84%E4%BA%8B%E4%BB%B6%E4%BE%A6%E5%90%AC%E5%99%A8)
+
+现在，你已经知道了  `$emit`  的用法，它可以被  `v-on`  侦听，但是 Vue 实例同时在其事件接口中提供了其它的方法。我们可以：
+
+- 通过  `$on(eventName, eventHandler)`  侦听一个事件
+- 通过  `$once(eventName, eventHandler)`  一次性侦听一个事件
+- 通过  `$off(eventName, eventHandler)`  停止侦听一个事件
+
+你通常不会用到这些，但是当你需要在一个组件实例上手动侦听事件时，它们是派得上用场的。它们也可以用于代码组织工具。例如，你可能经常看到这种集成一个第三方库的模式：
+
+```js
+// 一次性将这个日期选择器附加到一个输入框上
+// 它会被挂载到 DOM 上。
+mounted: function () {
+   // Pikaday 是一个第三方日期选择器的库
+  this.picker = new Pikaday({
+  field: this.$refs.input,
+  format: 'YYYY-MM-DD'
+  })
+},
+// 在组件被销毁之前，
+// 也销毁这个日期选择器。
+beforeDestroy: function () {
+  this.picker.destroy()
+}
+```
+
+这里有两个潜在的问题：
+
+- 它需要在这个组件实例中保存这个  `picker`，如果可以的话最好只有生命周期钩子可以访问到它。这并不算严重的问题，但是它可以被视为杂物。
+- 我们的建立代码独立于我们的清理代码，这使得我们比较难于程序化地清理我们建立的所有东西。
+
+你应该通过一个程序化的侦听器解决这两个问题：
+
+```js
+mounted: function () {
+  var picker = new Pikaday({
+  field: this.$refs.input,
+  format: 'YYYY-MM-DD'
+  })
+
+  this.$once('hook:beforeDestroy', function () {
+  picker.destroy()
+  })
+}
+```
+
+使用了这个策略，我甚至可以让多个输入框元素同时使用不同的 Pikaday，每个新的实例都程序化地在后期清理它自己：
+
+```js
+mounted: function () {
+  this.attachDatepicker('startDateInput')
+  this.attachDatepicker('endDateInput')
+},
+methods: {
+  attachDatepicker: function (refName) {
+    var picker = new Pikaday({
+      field: this.$refs[refName],
+      format: 'YYYY-MM-DD'
+    })
+
+    this.$once('hook:beforeDestroy', function () {
+      picker.destroy()
+    })
+  }
+}
+```
+
+查阅[这个 fiddle](https://jsfiddle.net/chrisvfritz/1Leb7up8/)  可以了解到完整的代码。注意，即便如此，如果你发现自己不得不在单个组件里做很多建立和清理的工作，最好的方式通常还是创建更多的模块化组件。在这个例子中，我们推荐创建一个可复用的  `<input-datepicker>`  组件。
+
+想了解更多程序化侦听器的内容，请查阅[实例方法 / 事件](https://cn.vuejs.org/v2/api/#%E5%AE%9E%E4%BE%8B%E6%96%B9%E6%B3%95-%E4%BA%8B%E4%BB%B6)相关的 API。
+
+注意 Vue 的事件系统不同于浏览器的  [EventTarget API](https://developer.mozilla.org/zh-CN/docs/Web/API/EventTarget)。尽管它们工作起来是相似的，但是  `$emit`、`$on`, 和  `$off`  并不是  `dispatchEvent`、`addEventListener`  和  `removeEventListener`  的别名。
+
+## [循环引用](https://cn.vuejs.org/v2/guide/components-edge-cases.html#%E5%BE%AA%E7%8E%AF%E5%BC%95%E7%94%A8)
+
+## [模板定义的替代品](https://cn.vuejs.org/v2/guide/components-edge-cases.html#%E6%A8%A1%E6%9D%BF%E5%AE%9A%E4%B9%89%E7%9A%84%E6%9B%BF%E4%BB%A3%E5%93%81)
+
+## [控制更新](https://cn.vuejs.org/v2/guide/components-edge-cases.html#%E6%8E%A7%E5%88%B6%E6%9B%B4%E6%96%B0)
