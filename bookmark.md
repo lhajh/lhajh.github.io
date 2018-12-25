@@ -78,6 +78,7 @@ menu: Bookmark
 - [JSON Web Token 入门教程](http://www.ruanyifeng.com/blog/2018/07/json_web_token-tutorial.html)
 - [如何精确统计页面停留时长](https://techblog.toutiao.com/2018/06/05/ru-he-jing-que-tong-ji-ye-mian-ting-liu-shi-chang/)
 - [JavaScript 反调试技巧](http://www.freebuf.com/articles/system/163579.html)
+- [AST抽象语法树——最基础的javascript重点知识，99%的人根本不了解 - node.js优雅之道 - SegmentFault 思否](https://segmentfault.com/a/1190000016231512)
 
 ## ES6
 
@@ -106,6 +107,7 @@ menu: Bookmark
 - [Vue 高版本中一些新特性的使用](https://github.com/masterkong/blog/issues/7)
 - [用 Vue 编写一个长按指令](https://github.com/OFED/translation/issues/3)
 - [你不知道的Virtual DOM](https://segmentfault.com/a/1190000016129036)
+- [加快Vue项目的开发速度 - 掘金](https://juejin.im/post/5c106485e51d450e657571a6)
 
 ## React
 
@@ -136,6 +138,7 @@ menu: Bookmark
 - [H5 页面在微信端的分享](https://segmentfault.com/a/1190000016199418)
 - [微信小程序之圆形进度条](https://segmentfault.com/a/1190000013219501)
 - [微信小程序-自定义下拉刷新 - 【艾伦】 - 博客园](http://www.cnblogs.com/aaronjs/p/9982708.html)
+- [从入门到上线一个天气小程序 - 个人文章 - SegmentFault 思否](https://segmentfault.com/a/1190000017388333)
 
 ## CSS
 
@@ -200,8 +203,6 @@ menu: Bookmark
 - [新鲜出炉的 8 月前端面试题](https://segmentfault.com/a/1190000015916686)
 - [一年半经验，百度、有赞、阿里前端面试总结 - 麦乐 - SegmentFault 思否](https://segmentfault.com/a/1190000017049146)
 - [FEGuide/vue.md at master · FEGuideTeam/FEGuide](https://github.com/FEGuideTeam/FEGuide/blob/master/%E6%A1%86%E6%9E%B6/vue.md)
-
-
 
 ## 移动端
 

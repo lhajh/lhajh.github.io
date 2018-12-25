@@ -290,8 +290,10 @@ VS Code 初始化配置
   - 完美解决需要注释的代码里已有注释代码
   - 已将快捷键修改为 shift + alt/opt + /
   - [Install](vscode:extension/philsinatra.nested-comments)
-
-
+- [Codelf](https://marketplace.visualstudio.com/items?itemName=unbug.codelf)
+  - 给变量或函数命名
+  - [中国程序员开发的神奇网站：变量命名神器！ - AI科技大本营 - CSDN博客](https://blog.csdn.net/dQCFKyQDXYm3F8rB0/article/details/85219501)
+  - [Install](vscode:extension/unbug.codelf)
 
 ### 其他插件
 
