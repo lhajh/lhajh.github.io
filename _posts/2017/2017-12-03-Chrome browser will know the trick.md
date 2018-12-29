@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Chrome 浏览器必知必会的小技巧
-categories: [Chrome, Google]
+categories: [Chrome]
 description: Chrome 浏览器必知必会的小技巧
 keywords: Chrome
 ---
@@ -60,7 +60,7 @@ Mac 快捷键有很多和 Windows 不同，如果需要修改为和 Windows 一�
 |控制台	|windows	|Mac
 |:---|:---|:---|:---|
 |聚焦到控制台	|Ctrl+\`	|同 Windows
-|清除控制台	|Ctrl+L	|Cmd+K、Ctrl+L	
+|清除控制台	|Ctrl+L	|Cmd+K、Ctrl+L
 |多行输入	|Shift+Enter	|Shift+Return
 
 ### 快速切换文件
@@ -111,54 +111,54 @@ chrome 控制台有一个可以模拟 CSS 状态的功能，例如元素的 hove
 
 ## 区域截屏
 
-选取页面中的一部分，保存为图片 
+选取页面中的一部分，保存为图片
 
 1. 打开开发者工具
 
-    使用 快捷键 F12 (Windows) 或 Cmd+Opt+I (Mac) 
+    使用 快捷键 F12 (Windows) 或 Cmd+Opt+I (Mac)
 2. 选择左上角的元素选择按钮，图标颜色变为蓝色即表示选中了
 
     ![](/assets/images/posts/chrome/3724810944-5a1798222f377_articlex.png)
 3. Windows 下按住 Ctrl，Mac 就按住 Command，然后点击鼠标左键在页面选择区域即可，松开鼠标后，截图自动下载。
-4. 图片自动下载好后，点击图片后面的箭头，可以在文件夹中显示 
+4. 图片自动下载好后，点击图片后面的箭头，可以在文件夹中显示
 
 ## 节点截图
 
-选中页面中某一元素，保存为图片 
+选中页面中某一元素，保存为图片
 
-1. 打开开发者工具 
+1. 打开开发者工具
 
     使用 快捷键 F12 (Windows) 或 Cmd+Opt+I (Mac)
-2. 选中任意元素节点 
+2. 选中任意元素节点
 
     ![](/assets/images/posts/chrome/3141943530-5a1798220affc_articlex.png)
 3. 打开命令工具
 
-    使用快捷键 Ctrl + Shift + p (Windows) 或 Cmd + Shift + p (Mac) 
+    使用快捷键 Ctrl + Shift + p (Windows) 或 Cmd + Shift + p (Mac)
 
     ![](/assets/images/posts/chrome/4174394162-5a17982205f1e_articlex.png)
-4. 点击 Capture node screenshot，或者输入这行中任意的关键字，比如输入 node，也会出来这个选项，然后点击这个选项，图片会自动下载。 
+4. 点击 Capture node screenshot，或者输入这行中任意的关键字，比如输入 node，也会出来这个选项，然后点击这个选项，图片会自动下载。
 
     ![](/assets/images/posts/chrome/4197825486-5a17982202f10_articlex.png)
-5. 图片自动下载好后，点击图片后面的箭头，可以在文件夹中显示 
+5. 图片自动下载好后，点击图片后面的箭头，可以在文件夹中显示
 
 ## 截全屏
 
-保存完整网页为图片 
+保存完整网页为图片
 
 ### 第一种方式
 
-1. 打开开发者工具 
+1. 打开开发者工具
 
     使用 快捷键 F12 (Windows) 或 Cmd+Opt+I (Mac)
 2. 打开命令工具
 
-    使用快捷键 Ctrl + Shift + p (Windows) 或 Cmd + Shift + p (Mac) 
-3. 点击 Capture full size screenshot，或者输入这行中任意的关键字，比如输入full，也会出来这个选项 
-4. 图片自动下载好后，点击图片后面的箭头，可以在文件夹中显示 
+    使用快捷键 Ctrl + Shift + p (Windows) 或 Cmd + Shift + p (Mac)
+3. 点击 Capture full size screenshot，或者输入这行中任意的关键字，比如输入full，也会出来这个选项
+4. 图片自动下载好后，点击图片后面的箭头，可以在文件夹中显示
 
 ### 第二种方式
-1. 打开开发者工具 
+1. 打开开发者工具
 
     使用 快捷键 F12 (Windows) 或 Cmd+Opt+I (Mac)
 2. 选中 切换开发模式按钮，图标颜色变为蓝色即表示选中了
@@ -196,10 +196,10 @@ chrome 控制台有一个可以模拟 CSS 状态的功能，例如元素的 hove
 
 ## 快速添加样式规则
 
-1. 在 Styles 边栏，鼠标放在每一小块样式规则上，右下方都会有三个小点 
+1. 在 Styles 边栏，鼠标放在每一小块样式规则上，右下方都会有三个小点
 
     ![](/assets/images/posts/chrome/3095904712-5a17982158445_articlex.png)
-2. 鼠标放在这三个小点上，会出现5个小图标，每个小图标都有作用 
+2. 鼠标放在这三个小点上，会出现5个小图标，每个小图标都有作用
 
     ![](/assets/images/posts/chrome/1854119425-5a1798215724c_articlex.png)
 3. 他们从左到右分别代表
@@ -211,17 +211,17 @@ chrome 控制台有一个可以模拟 CSS 状态的功能，例如元素的 hove
 
 ## 增加移动设备
 
-1. 打开开发者工具 
-2. 点击右上方的三个小点，然后选择 Settings 
+1. 打开开发者工具
+2. 点击右上方的三个小点，然后选择 Settings
 
     ![](/assets/images/posts/chrome/4262851757-5a1798215d2ee_articlex.png)
-3. 选择 Devices，然后在需要添加的设备前面打上勾就可以了 
+3. 选择 Devices，然后在需要添加的设备前面打上勾就可以了
 
     ![](/assets/images/posts/chrome/752007610-5a1798215531f_articlex.png)
 
 ## 总结
 
-这些小技巧，很简单，希望对大家有所帮助，不过对于有办法、有时间的朋友还是建议去官网看看吧，毕竟那里才更加全面。 
+这些小技巧，很简单，希望对大家有所帮助，不过对于有办法、有时间的朋友还是建议去官网看看吧，毕竟那里才更加全面。
 
 [Chrome 开发者工具](https://developers.google.com/web/tools/chrome-devtools/?hl=zh-cn)
 
@@ -230,3 +230,4 @@ chrome 控制台有一个可以模拟 CSS 状态的功能，例如元素的 hove
 - [简单说 chrome 浏览器 必知必会的小技巧](https://segmentfault.com/a/1190000012143176)
 - [Chrome 使用技巧](https://www.cnblogs.com/tester-l/p/6018067.html)
 - [Chrome 有哪些不易发现的功能或使用技巧？](https://www.zhihu.com/question/20309902)
+- [【译】你不知道的Chrome调试工具技巧](https://juejin.im/post/5c09a80151882521c81168a2)

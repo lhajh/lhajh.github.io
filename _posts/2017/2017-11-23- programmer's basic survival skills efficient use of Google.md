@@ -1,8 +1,8 @@
 ---
 layout: post
-title: 程序员的基础生存技能：高效用 Google
-categories: [Google, Chrome]
-description: 程序员的基础生存技能：高效用 Google
+title: 程序员的基础生存技能：高效用 Chrome
+categories: [Chrome]
+description: 程序员的基础生存技能：高效用 Chrome
 keywords: Google
 ---
 

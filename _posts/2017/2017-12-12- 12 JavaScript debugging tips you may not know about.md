@@ -1,7 +1,7 @@
 ---
 layout: post
 title: 你可能不知道的 12 个 JavaScript 调试技巧
-categories: [JS, Google]
+categories: [JS, Chrome]
 description: 你可能不知道的 12 个 JavaScript 调试技巧
 keywords: JavaScript, js, 调试技巧
 ---
@@ -372,3 +372,4 @@ DOM 是个有趣的东西。有时候它发生了变化，但你却并不知道�
 - [The 14 JavaScript debugging tips you probably didn't know](https://raygun.com/javascript-debugging-tips)
 - [[译]14 个你可能不知道的 JavaScript 调试技巧](https://segmentfault.com/a/1190000011857058)
 - [Chrome 控制台不完全指南](http://www.open-open.com/lib/view/open1421130008671.html)
+- [【译】你不知道的Chrome调试工具技巧](https://juejin.im/post/5c09a80151882521c81168a2)
