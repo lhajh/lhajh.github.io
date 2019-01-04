@@ -793,3 +793,28 @@ methods: {
 ## [模板定义的替代品](https://cn.vuejs.org/v2/guide/components-edge-cases.html#%E6%A8%A1%E6%9D%BF%E5%AE%9A%E4%B9%89%E7%9A%84%E6%9B%BF%E4%BB%A3%E5%93%81)
 
 ## [控制更新](https://cn.vuejs.org/v2/guide/components-edge-cases.html#%E6%8E%A7%E5%88%B6%E6%9B%B4%E6%96%B0)
+
+# [混入 — Vue.js](https://cn.vuejs.org/v2/guide/mixins.html)
+
+## [全局混入](https://cn.vuejs.org/v2/guide/mixins.html#%E5%85%A8%E5%B1%80%E6%B7%B7%E5%85%A5)
+
+也可以全局注册混入对象。注意使用！ 一旦使用全局混入对象，将会影响到  **所有**  之后创建的 Vue 实例。使用恰当时，可以为自定义对象注入处理逻辑。
+
+```js
+// 为自定义的选项 'myOption' 注入一个处理器。
+Vue.mixin({
+  created: function() {
+    var myOption = this.$options.myOption
+    if (myOption) {
+      console.log(myOption)
+    }
+  }
+})
+
+new Vue({
+  myOption: 'hello!'
+})
+// => "hello!"
+```
+
+谨慎使用全局混入对象，因为会影响到每个单独创建的 Vue 实例 (包括第三方模板)。大多数情况下，只应当应用于自定义选项，就像上面示例一样。也可以将其用作 [Plugins](https://cn.vuejs.org/v2/guide/plugins.html)  以避免产生重复应用
