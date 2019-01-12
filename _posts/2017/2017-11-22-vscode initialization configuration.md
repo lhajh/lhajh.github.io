@@ -253,6 +253,9 @@ VS Code 初始化配置
 - [Bracket Pair Colorizer](https://marketplace.visualstudio.com/items?itemName=CoenraadS.bracket-pair-colorizer)
   - 识别代码中的各种括号, 并且标记上不同的颜色, 方便你扫视到匹配的括号, 在括号使用非常多的情况下能环节眼部压力
   - [Install](vscode:extension/CoenraadS.bracket-pair-colorizer)
+- [Bracket Pair Colorizer 2](https://marketplace.visualstudio.com/items?itemName=CoenraadS.bracket-pair-colorizer-2)
+  - 与 v1 区别: v2 使用与 VSCode 相同的括号解析引擎，大大提高了速度和准确性。
+  - [Install](vscode:extension/CoenraadS.bracket-pair-colorizer-2)
 - [TODO Highlight](https://marketplace.visualstudio.com/items?itemName=wayou.vscode-todo-highlight)
   - 高亮各种 TODO、FIXME、HACK 之类的标记. 标记后面必须加冒号, 如 // TODO: 这是一个 todo
   - [Install](vscode:extension/wayou.vscode-todo-highlight)
@@ -315,6 +318,12 @@ VS Code 初始化配置
 - [RegExp Preview and Editor](https://marketplace.visualstudio.com/items?itemName=le0zh.vscode-regexp-preivew)
   - 图形化正则表达式
   - [Install](vscode:extension/le0zh.vscode-regexp-preivew)
+- [file-tree-generator](https://marketplace.visualstudio.com/items?itemName=Shinotatwu-DS.file-tree-generator)
+  - 将文件夹及其中的文件转换树文本。
+  - [Install](vscode:extension/Shinotatwu-DS.file-tree-generator)
+- [JSON Tree View](https://marketplace.visualstudio.com/items?itemName=ChaunceyKiwi.json-tree-view)
+  - 用于将 JSON 文件生成 JSON 树视图的工具，与 JSON 模式验证和自定义树视图配置集成。
+  - [Install](vscode:extension/ChaunceyKiwi.json-tree-view)
 
 ## 系统设置
 
@@ -978,3 +987,4 @@ vscode 中集成了 Emmet。 Emmet 可以有效提升输入速度。正常情况
 - [VS Code 折腾记 - (12) 春节前的最后一波插件推荐(前端/协作/主题)](https://juejin.im/post/5a704d84518825734f5300c8)
 - [VS Code 折腾记 - (13) VS Live Share (可提高效率的代码实时协作插件)的使用姿势](https://juejin.im/post/5afd4f99f265da0b8455a404)
 - [VS Code 折腾记 - (14) 再来推荐一波大前端适用系列 (Node/React/Vue/小程序/主题/代码体验等) 的插件](https://juejin.im/post/5b3d9378f265da0f6012eb65)
+- [VS Code 折腾记 - (15) 再来一波大前端适用系列的插件(主打编码体验改善)](https://juejin.im/post/5c356b106fb9a049ef26c368)
