@@ -6,6 +6,8 @@ description: Mac 使用 技巧
 keywords: mac
 ---
 
+记录一下 Mac 常用的技巧
+
 ## 在 macOS 上也可以用 Tab 键切换对话框的焦点
 
 ### 修改设置
