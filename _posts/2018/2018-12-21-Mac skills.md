@@ -25,4 +25,4 @@ keywords: mac
 ### 参考资料
 
 - [技巧：在 macOS 上也可以用 Tab 键切换对话框的焦点 - 知乎](https://zhuanlan.zhihu.com/p/27586949)
-- [使用 Tab 键快速切换对话框按钮 | 一日一技 · Mac - 少数派](https://sspai.com/post/39113)
+- [使用 Tab 键快速切换对话框按钮 一日一技 · Mac - 少数派](https://sspai.com/post/39113)
