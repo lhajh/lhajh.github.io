@@ -10,19 +10,25 @@ keywords: chrome, extensions
 
 ## 扩展
 
+- [Astrolabe - Chrome 网上应用店](https://chrome.google.com/webstore/detail/astrolabe/lienonopcegannlgdkgonpofbhgmclcc): 生成当前打开的所有标签页的缩略图
 - [Auto Copy - Chrome 网上应用店](https://chrome.google.com/webstore/detail/auto-copy/bijpdibkloghppkbmhcklkogpjaenfkg): 选中即复制
 - [AutoPagerize - Chrome 网上应用店](https://chrome.google.com/webstore/detail/autopagerize/igiofjhpmpihnifddepnpngfjhkfenbp): 自动翻页
 - [Awesome Autocomplete for GitHub - Chrome 网上应用店](https://chrome.google.com/webstore/detail/awesome-autocomplete-for/djkfdjpoelphhdclfjhnffmnlnoknfnd): 加强版的 GitHub 搜索
 - [Chrono下载管理器 - Chrome 网上应用店](https://chrome.google.com/webstore/detail/chrono-download-manager/mciiogijehkdemklbdcbfkefimifhecn): Chrome浏览器中最好的下载管理器
+- [Color by Fardos - Chrome 网上应用店](https://chrome.google.com/webstore/detail/color-by-fardos/iibpgpkhpfggipbacjfeijkloidhmiei): 色彩搭配
+- [Enhanced Image Viewer - Chrome 网上应用店](https://chrome.google.com/webstore/detail/enhanced-image-viewer/gefiaaeadjbmhjndnhedfccdjjlgjhho): 替换原生图片查看器
 - [GITHUBER - 开发者的新标签页 - Chrome 网上应用店](https://chrome.google.com/webstore/detail/githuber-%E5%BC%80%E5%8F%91%E8%80%85%E7%9A%84%E6%96%B0%E6%A0%87%E7%AD%BE%E9%A1%B5/janmcneaglgklfljjcpihkkomeghljnf): New Tab 展示 Github Trending 所有编程语言的每日、每周、每月热门 Repo
+- [GoogleGIFs - Chrome 网上应用店](https://chrome.google.com/webstore/detail/googlegifs/ommpbgoliokoijimalcokhciffhapkdf)
 - [Incognito-Filter - Chrome 网上应用店](https://chrome.google.com/webstore/detail/incognito-filter/cifilbmpnkjinlkchohdfcpdkmpngiik): 访问特定网址(已经在扩展中设置好的)自动使用隐身模式打开
 - [Octo Mate - Chrome 网上应用店](https://chrome.google.com/webstore/detail/octo-mate/baggcehellihkglakjnmnhpnjmkbmpkf): 下载 GitHub 项目的单文件
 - [Octotree - Chrome 网上应用店](https://chrome.google.com/webstore/detail/octotree/bkhaagjahfmjljalopjnoealnfndnagc): GitHub 的代码树
 - [pakku：哔哩哔哩弹幕过滤器 - Chrome 网上应用店](https://chrome.google.com/webstore/detail/pakku%EF%BC%9A%E5%93%94%E5%93%A9%E5%93%94%E5%93%A9%E5%BC%B9%E5%B9%95%E8%BF%87%E6%BB%A4%E5%99%A8/jklfcpboamajpiikgkbjcnnnnooefbhh)
-- [Steward Lite - Chrome 网上应用店](https://chrome.google.com/webstore/detail/steward-lite/jglmompgeddkbcdamdknmebaimldkkbl): 类似 Mac 的 Alfred 的一款启动器
+- [Session Buddy - Chrome 网上应用店](https://chrome.google.com/webstore/detail/session-buddy/edacconmaakjimmfgnblocblbcdcpbko): 保存 / 打开一组标签页
+- [Steward Lite - Chrome 网上应用店](https://chrome.google.com/webstore/detail/steward-lite/jglmompgeddkbcdamdknmebaimldkkbl): 类似 Mac 的 Alfred 的一款启动器
 - [Surfingkeys - Chrome 网上应用店](https://chrome.google.com/webstore/detail/surfingkeys/gfbliohnnapiefjpjlpjnehglfpaknnc): 类 Vim 语法, 使用键盘代替鼠标
 - [Tampermonkey - Chrome 网上应用店](https://chrome.google.com/webstore/detail/tampermonkey/dhdgffkkebhmkfjojejmpbldmpobfkfo): 脚本管理库
-- [uBlock Adblocker Plus - Chrome 网上应用店](https://chrome.google.com/webstore/detail/ublock-adblocker-plus/pnhflmgomffaphmnbcogleagmloijbkd): 去广告
+- [uBlock Adblocker Plus - Chrome 网上应用店](https://chrome.google.com/webstore/detail/ublock-adblocker-plus/pnhflmgomffaphmnbcogleagmloijbkd): 去广告
+- [View Image - Chrome 网上应用店](https://chrome.google.com/webstore/detail/view-image/jpcmhcelnjdmblfmjabdeclccemkghjk/related): 重新实现 Google 图片的“查看图片”和“以图搜图”按钮
 - [Vue.js devtools - Chrome 网上应用店](https://chrome.google.com/webstore/detail/vuejs-devtools/nhdogjmejiglipccpnnnanhbledajbpd): Vue 开发
 - [WEB前端助手(FeHelper) - Chrome 网上应用店](https://chrome.google.com/webstore/detail/web%E5%89%8D%E7%AB%AF%E5%8A%A9%E6%89%8Bfehelper/pkgccpejnmalmdinmhkkfafefagiiiad)
 - [Window Resizer - Chrome 网上应用店](https://chrome.google.com/webstore/detail/window-resizer/kkelicaakdanhinjdeammmilcgefonfh): 调整浏览器尺寸
@@ -34,6 +40,7 @@ keywords: chrome, extensions
 - [京价保 - 京东价保助手 - Chrome 网上应用店](https://chrome.google.com/webstore/detail/%E4%BA%AC%E4%BB%B7%E4%BF%9D-%E4%BA%AC%E4%B8%9C%E4%BB%B7%E4%BF%9D%E5%8A%A9%E6%89%8B/gfgkebiommjpiaomalcbfefimhhanlfd): 京东每日签到, 价格保护
 - [哔哩哔哩·猜你喜欢 - Chrome 网上应用店](https://chrome.google.com/webstore/detail/%E5%93%94%E5%93%A9%E5%93%94%E5%93%A9%C2%B7%E7%8C%9C%E4%BD%A0%E5%96%9C%E6%AC%A2/ngjddnobeppdekpmimhiamkoonoaccdf)
 - [哔哩哔哩助手：bilibili.com 综合辅助扩展 - Chrome 网上应用店](https://chrome.google.com/webstore/detail/%E5%93%94%E5%93%A9%E5%93%94%E5%93%A9%E5%8A%A9%E6%89%8B%EF%BC%9Abilibilicom-%E7%BB%BC%E5%90%88%E8%BE%85%E5%8A%A9%E6%89%A9%E5%B1%95/kpbnombpnpcffllnianjibmpadjolanh)
+- [图片助手(ImageAssistant) 批量图片下载器 - Chrome 网上应用店](https://chrome.google.com/webstore/detail/imageassistant-batch-imag/dbjbempljhcmhlfpfacalomonjpalpko)
 - [惠惠购物助手 - Chrome 网上应用店](https://chrome.google.com/webstore/detail/%E6%83%A0%E6%83%A0%E8%B4%AD%E7%89%A9%E5%8A%A9%E6%89%8B/ohjkicjidmohhfcjjlahfppkdblibkkb)
 - [极简图床 - Chrome 网上应用店](https://chrome.google.com/webstore/detail/%E6%9E%81%E7%AE%80%E5%9B%BE%E5%BA%8A/heebflcbemenefckkgfnnklbhdbdkagg): 帮你快速下载页面中的图片
 - [每日限免精选 - Chrome 网上应用店](https://chrome.google.com/webstore/detail/%E6%AF%8F%E6%97%A5%E9%99%90%E5%85%8D%E7%B2%BE%E9%80%89/neambpcjkehpbfgkipkcaigkndfllgbh)
@@ -51,4 +58,6 @@ keywords: chrome, extensions
 
 ## 参考资料
 
-[你极力推荐的 Chrome 扩展有哪些？ - 知乎](https://www.zhihu.com/question/19594682)
+- [你极力推荐的 Chrome 扩展有哪些？ - 知乎](https://www.zhihu.com/question/19594682)
+- [用上这 9 款 Chrome 扩展，看图变得更加方便 - 少数派](https://sspai.com/post/52235)
+- [读文章、剪藏网页、新标签页增强…… 这 10 个扩展让你的 Chrome 更好用 - 少数派](https://sspai.com/post/52310)
