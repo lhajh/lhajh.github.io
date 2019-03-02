@@ -10,6 +10,7 @@ keywords: chrome, extensions
 
 ## 扩展
 
+- [30 Seconds of Knowledge - Chrome 网上应用店](https://chrome.google.com/webstore/detail/30-seconds-of-knowledge/mmgplondnjekobonklacmemikcnhklla?hl=zh-CN)
 - [Astrolabe - Chrome 网上应用店](https://chrome.google.com/webstore/detail/astrolabe/lienonopcegannlgdkgonpofbhgmclcc): 生成当前打开的所有标签页的缩略图
 - [Auto Copy - Chrome 网上应用店](https://chrome.google.com/webstore/detail/auto-copy/bijpdibkloghppkbmhcklkogpjaenfkg): 选中即复制
 - [AutoPagerize - Chrome 网上应用店](https://chrome.google.com/webstore/detail/autopagerize/igiofjhpmpihnifddepnpngfjhkfenbp): 自动翻页
@@ -28,6 +29,7 @@ keywords: chrome, extensions
 - [Surfingkeys - Chrome 网上应用店](https://chrome.google.com/webstore/detail/surfingkeys/gfbliohnnapiefjpjlpjnehglfpaknnc): 类 Vim 语法, 使用键盘代替鼠标
 - [Tampermonkey - Chrome 网上应用店](https://chrome.google.com/webstore/detail/tampermonkey/dhdgffkkebhmkfjojejmpbldmpobfkfo): 脚本管理库
 - [uBlock Adblocker Plus - Chrome 网上应用店](https://chrome.google.com/webstore/detail/ublock-adblocker-plus/pnhflmgomffaphmnbcogleagmloijbkd): 去广告
+- [url render - Chrome 网上应用店](https://chrome.google.com/webstore/detail/url-render/flhclpkhoiajoikkabbfbinnjapaflog?hl=zh-CN): 使用 Google 搜索后, 鼠标悬停到链接即可预览
 - [View Image - Chrome 网上应用店](https://chrome.google.com/webstore/detail/view-image/jpcmhcelnjdmblfmjabdeclccemkghjk/related): 重新实现 Google 图片的“查看图片”和“以图搜图”按钮
 - [Vue.js devtools - Chrome 网上应用店](https://chrome.google.com/webstore/detail/vuejs-devtools/nhdogjmejiglipccpnnnanhbledajbpd): Vue 开发
 - [WEB前端助手(FeHelper) - Chrome 网上应用店](https://chrome.google.com/webstore/detail/web%E5%89%8D%E7%AB%AF%E5%8A%A9%E6%89%8Bfehelper/pkgccpejnmalmdinmhkkfafefagiiiad)
@@ -45,6 +47,7 @@ keywords: chrome, extensions
 - [极简图床 - Chrome 网上应用店](https://chrome.google.com/webstore/detail/%E6%9E%81%E7%AE%80%E5%9B%BE%E5%BA%8A/heebflcbemenefckkgfnnklbhdbdkagg): 帮你快速下载页面中的图片
 - [每日限免精选 - Chrome 网上应用店](https://chrome.google.com/webstore/detail/%E6%AF%8F%E6%97%A5%E9%99%90%E5%85%8D%E7%B2%BE%E9%80%89/neambpcjkehpbfgkipkcaigkndfllgbh)
 - [沙拉查词-聚合词典专业划词翻译 - Chrome 网上应用店](https://chrome.google.com/webstore/detail/%E6%B2%99%E6%8B%89%E6%9F%A5%E8%AF%8D-%E8%81%9A%E5%90%88%E8%AF%8D%E5%85%B8%E4%B8%93%E4%B8%9A%E5%88%92%E8%AF%8D%E7%BF%BB%E8%AF%91/cdonnmffkdaoajfknoeeecmchibpmkmg)
+- [新浪微博图床 - Chrome 网上应用店](https://chrome.google.com/webstore/detail/%E6%96%B0%E6%B5%AA%E5%BE%AE%E5%8D%9A%E5%9B%BE%E5%BA%8A/fdfdnfpdplfbbnemmmoklbfjbhecpnhf)
 - [琉神转 - Chrome 网上应用店](https://chrome.google.com/webstore/detail/hacg-god-turn/dbheplacgeefjnhdacijldhfliehnhka)
 - [百度截图翻译插件 - Chrome 网上应用店](https://chrome.google.com/webstore/detail/baidu-screenshot-translat/obhlofkljphbenhcjnimfcdlknkdilcm)
 - [百度药丸 Baidu Capsule - Chrome 网上应用店](https://chrome.google.com/webstore/detail/%E7%99%BE%E5%BA%A6%E8%8D%AF%E4%B8%B8-baidu-capsule/ngiclcoldiplnjcafhjkacjcmdidcmjp): 使用更纯净的百度

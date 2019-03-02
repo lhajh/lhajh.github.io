@@ -35,6 +35,7 @@ menu: Bookmark
 - [一篇文章理解 JS 继承](https://segmentfault.com/a/1190000015727237)
 - [如何继承 Date 对象？由一道题彻底弄懂 JS 继承](http://www.dailichun.com/2018/01/15/howtoextenddate.html)
 - [JavaScript 创建对象的七种方式](https://xxxgitone.github.io/2017/06/10/JavaScript%E5%88%9B%E5%BB%BA%E5%AF%B9%E8%B1%A1%E7%9A%84%E4%B8%83%E7%A7%8D%E6%96%B9%E5%BC%8F/)
+- [九种跨域方式实现原理（完整版） - 掘金](https://juejin.im/post/5c23993de51d457b8c1f4ee1)
 - [不要再问我跨域的问题了](https://segmentfault.com/a/1190000015597029)
 - [ajax 跨域，这应该是最全的解决方案了](https://segmentfault.com/a/1190000012469713)
 - [用信鸽来解释 HTTPS](https://www.oschina.net/translate/https-explained-with-carrier-pigeons)
@@ -80,6 +81,11 @@ menu: Bookmark
 - [JavaScript 反调试技巧](http://www.freebuf.com/articles/system/163579.html)
 - [AST抽象语法树——最基础的javascript重点知识，99%的人根本不了解 - node.js优雅之道 - SegmentFault 思否](https://segmentfault.com/a/1190000016231512)
 
+## TypeScript
+
+- [深入理解 TypeScript](https://jkchao.github.io/typescript-book-chinese/)
+- [TypeScript 入门教程](https://ts.xcatliu.com/)
+
 ## ES6
 
 - [ES6 javascript 实用开发技巧](https://my.oschina.net/u/171860/blog/1794697)
@@ -88,6 +94,7 @@ menu: Bookmark
 
 ## Vue
 
+- [Vue技术内幕](http://hcysun.me/vue-design/)
 - [Vue2.x 源码解析系列](https://github.com/lihongxun945/myblog/issues/22)
 - [Vue.js 技术揭秘](https://ustbhuangyi.github.io/vue-analysis/)
 - [Vue源码阅读](https://juejin.im/post/5b38830de51d455888216675)
@@ -203,6 +210,8 @@ menu: Bookmark
 - [新鲜出炉的 8 月前端面试题](https://segmentfault.com/a/1190000015916686)
 - [一年半经验，百度、有赞、阿里前端面试总结 - 麦乐 - SegmentFault 思否](https://segmentfault.com/a/1190000017049146)
 - [FEGuide/vue.md at master · FEGuideTeam/FEGuide](https://github.com/FEGuideTeam/FEGuide/blob/master/%E6%A1%86%E6%9E%B6/vue.md)
+- [前端面试重难点](https://github.com/yygmind/blog)
+
 
 ## 移动端
 

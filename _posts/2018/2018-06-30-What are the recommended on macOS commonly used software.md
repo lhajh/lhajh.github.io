@@ -136,6 +136,14 @@ Install: `$ brew cask install the-unarchiver`
 
 下载地址：[The Unarchiver](https://itunes.apple.com/cn/app/the-unarchiver/id425424353?mt=12)
 
+## eZip: 专为 macOS 而设计的压缩软件！
+
+填补了 The Unarchive 没有预览和压缩的功能
+
+![](/assets/images/posts/mac/image-preview-main.png)
+
+下载地址: [eZip](https://ezip.awehunt.com/download?s=web)
+
 ## IINA：视频播放器
 
 如果是原来，大多数人推荐给你的第一款视频播放器大概会是 MplayerX，但是这款软件在安装时大多数情况下富含了各类「垃圾软件」，并且也太久没有更新了。但 Mac 上不安装一个视频播放器，可能你的观影的日子就到头了。IINA 作为一款开源的视频播放器，却很好的的做到了「干净、流畅、美观」等诸多要点。高度定制的快捷键绝对可以为你带来更顺手的操作环境，对视频格式的支持也做的更加完美，一定是 [《macOS 上最好的现代视频播放器：IINA》](https://sspai.com/post/40870)。

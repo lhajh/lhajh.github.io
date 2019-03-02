@@ -224,6 +224,12 @@ VS Code 初始化配置
 - [File Utils](https://marketplace.visualstudio.com/items?itemName=sleistner.vscode-fileutils)
   - 创建, 复制, 移动, 重命名和删除文件和目录的便捷方式, 就是不用触摸板完成这些操作
   - [Install](vscode:extension/sleistner.vscode-fileutils)
+- [Can I Use - Visual Studio Marketplace](https://marketplace.visualstudio.com/items?itemName=akamud.vscode-caniuse)
+  - 基于 http://caniuse.com/ 直接从 Visual Studio Code 对 HTML5，CSS3，SVG，New JS API 进行兼容性检查
+  - [Install](vscode:extension/akamud.vscode-caniuse)
+- [REST Client - Visual Studio Marketplace](https://marketplace.visualstudio.com/items?itemName=humao.rest-client)
+  - REST Client 允许您直接发送 HTTP 请求并在 Visual Studio 代码中查看响应。
+  - [Install](vscode:extension/humao.rest-client)
 - [Code Runner](https://marketplace.visualstudio.com/items?itemName=formulahendry.code-runner)
   - Run C, C++, Java, JS, PHP, Python, Perl, Ruby, Go, Lua, Groovy, PowerShell, CMD, BASH, F#, C#, VBScript, TypeScript, CoffeeScript, Scala, Swift, Julia, Crystal, OCaml, R, AppleScript, Elixir, VB.NET, Clojure, Haxe, Objective-C, Rust, Racket, AutoHotkey, AutoIt, Kotlin, Dart, Pascal, Haskell, Nim, D
   - [Install](vscode:extension/formulahendry.code-runner)
@@ -293,6 +299,9 @@ VS Code 初始化配置
   - 完美解决需要注释的代码里已有注释代码
   - 已将快捷键修改为 shift + alt/opt + /
   - [Install](vscode:extension/philsinatra.nested-comments)
+- [change-case](https://marketplace.visualstudio.com/items?itemName=wmaurer.change-case)
+  - 快速更改当前选择或当前单词的大小写（camelCase，CONSTANT_CASE，snake_case等）
+  - [Install](vscode:extension/wmaurer.change-case)
 - [Codelf](https://marketplace.visualstudio.com/items?itemName=unbug.codelf)
   - 给变量或函数命名
   - [中国程序员开发的神奇网站：变量命名神器！ - AI科技大本营 - CSDN博客](https://blog.csdn.net/dQCFKyQDXYm3F8rB0/article/details/85219501)

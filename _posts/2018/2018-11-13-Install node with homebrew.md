@@ -136,6 +136,18 @@ already exists. You may want to remove it:
 
     `sudo chown -R $(whoami) /usr/local/lib/dtrace`
 
+## 安装指定版本的 node
+
+mac 环境下,使用 homebrew 安装的 node, 默认是最高版本
+
+那么使用 homebrew 如何安装指定版本的 node 呢?
+
+  1. 如果之前使用 `brew install node` 安装过 node, 需要先执行 `brew unlink node` 来'解绑' node
+  2. 查找可用的node版本 `brew search node`
+  3. 安装你需要的版本, 比如 `brew install node@8`
+  4. 然后 `brew link node@8`, 这一步可能会报错, 按照提示执行命令就 ok 了, 比如我最后执行的是 `brew link --overwrite --force node@8`. 还遇到过在 `~/.zshrc` 中添加环境变量: `export PATH="/usr/local/opt/node@8/bin:$PATH"`
+  5. `node -v` 不出意外, 就安装好了你想要的 node 版本
+
 好了, 关于 node 和 brew 本人目前就踩坑这么多了, 如有不足之处还望不吝赐教
 
 ## 参考资料
@@ -143,3 +155,4 @@ already exists. You may want to remove it:
 - [Mac 下彻底卸载 node 和 npm - Room - CSDN 博客](https://blog.csdn.net/shiquanqq/article/details/78032943)
 - [Mac 卸载 node 并使用 brew 重新安装 - 简书](https://www.jianshu.com/p/78032a310ca6)
 - [brew link node 失败 - xinghuowuzhao 的博客 - CSDN 博客](https://blog.csdn.net/xinghuowuzhao/article/details/77509327)
+- [homebrew 安装指定版本 node - 简书](https://www.jianshu.com/p/c5c298486dbd)
