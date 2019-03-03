@@ -211,6 +211,8 @@ menu: Bookmark
 - [一年半经验，百度、有赞、阿里前端面试总结 - 麦乐 - SegmentFault 思否](https://segmentfault.com/a/1190000017049146)
 - [FEGuide/vue.md at master · FEGuideTeam/FEGuide](https://github.com/FEGuideTeam/FEGuide/blob/master/%E6%A1%86%E6%9E%B6/vue.md)
 - [前端面试重难点](https://github.com/yygmind/blog)
+- [前端笔试之手写代码(一)](https://juejin.im/post/5c71434a6fb9a049fa10633c)
+- [总结了17年初到18年初百场前端面试的面试经验(含答案) ](https://juejin.im/post/5b44a485e51d4519945fb6b7)
 
 
 ## 移动端

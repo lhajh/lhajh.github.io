@@ -309,6 +309,9 @@ VS Code 初始化配置
 
 ### 其他插件
 
+- [PicGo](https://marketplace.visualstudio.com/items?itemName=Spades.vs-picgo)
+  - 图床神器
+  - [Install](vscode:extension/Spades.vs-picgo)
 - [Vue Peek](https://marketplace.visualstudio.com/items?itemName=dariofuzinato.vue-peek)
   - 跳转到定义, 支持点击 template 里的组件名称, 但只能使用 ../ 引入才能识别跳转
   - [Install](vscode:extension/dariofuzinato.vue-peek)
