@@ -137,6 +137,26 @@ source ~/.zshrc
 
 ![](/assets/images/posts/mac/aoe56.png)
 
+## 快速切换历史路径
+
+[autojump](https://github.com/wting/autojump)
+
+安装了 autojump 之后，zsh 会自动记录你访问过的目录，通过 `j + 目录名` 可以直接进行目录跳转，而且目录名支持模糊匹配和自动补全，例如你访问过 hadoop-2.0.0 目录，输入 `j hado` 即可正确跳转。`j –s` 可以看你的历史路径库。
+
+首先安装 autojump，在 macOS 中可以使用 brew 安装：
+
+  * brew install autojump
+
+如果是 Linux，去下载 autojump 的最新版本，比如：
+
+  * git clone git://github.com/wting/autojump.git
+
+解压缩后进入目录，执行
+
+  * ./install.sh
+
+然后编辑 `vim ~/.zshrc` 文件，找到 plugins 配置，增加 autojump 插件。
+
 ## 命令别名 Git
 
 Oh My Zsh 提供了一套系统别名（alias），来达到相同的功能。比如 `gst` 作为 `git status` 的别名。而且 Git 插件是 Oh My Zsh 默认启用的，相当于你使用了 Oh My Zsh，你就拥有了一套高效率的别名，而且还是全球通用的。
@@ -231,6 +251,12 @@ iTerm2 有 2 种好用的选中即复制模式。
 5. 点击文件夹：在 finder 中打开该文件夹；
 6. 同时按住 opt 键，可以以矩形选中。
 
+### 搜索历史命令
+
+可以用 `!!` 来执行上一条命令，但最常用还是使用 `ctrl+r` 来搜索命令历史记录
+
+![](/assets/images/posts/mac/6941baebgw1es07q4qxb9g20hd072gmg.gif)
+
 ### Tab 窗口面板管理
 
 Tab 纵向分割：`⌘+d`
@@ -273,9 +299,21 @@ Tab 切换：`⌘ + arrow` 或者 `⌘ + shift + [`
 
 跳转到上个标记：`⌘ + shift + j`
 
+### 目录浏览和跳转
+
+输入 `d`，就显示在会话里访问的目录列表，输入列表前的序号，即可以跳转
+
+![](/assets/images/posts/mac/6941baebgw1es07ps8r2fj20wi09gmzn.jpg)
+
+进入目录可以省略前面的 `cd` 命令
+
+输入 `..` 可以返回到上级目录
+
 ## 参考资料
 
 - [Mac OS 终端利器 iTerm2](https://www.cnblogs.com/xishuai/p/mac-iterm2.html)
 - [关于 iTerm2 你不知道的一些事](https://www.jianshu.com/p/3436bcb17a03)
 - [MAC 下使用 iTerm2 和 zsh](https://blog.csdn.net/u014102846/article/details/77964493)
+- [macOS 上的终极 Shell](https://mp.weixin.qq.com/s?__biz=MjM5ODQ2MDIyMA==&mid=2650715589&idx=1&sn=4c64c737d7304a9fc5373681f065df84&chksm=bec07b9689b7f280c7d574e3c6696635f633a079e3b0cf5ad0f197f4d556aa078eb8c7273806&scene=0#rd)
 - [zsh 全程指南](https://wdxtub.com/2016/02/18/oh-my-zsh/)
+- [Shell（一）：功能、配置和插件 - 文章 - 伯乐在线](http://blog.jobbole.com/86820/)
