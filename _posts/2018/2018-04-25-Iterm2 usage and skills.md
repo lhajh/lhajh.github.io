@@ -309,6 +309,48 @@ Tab 切换：`⌘ + arrow` 或者 `⌘ + shift + [`
 
 输入 `..` 可以返回到上级目录
 
+## 在 Finder 里如何打开 iTerm2 并定位到当前目录？
+
+### 方法一: Alfred
+
+Alfred有个很合适的插件符合需求，[TerminalFinder](http://www.packal.org/workflow/terminalfinder) 。
+ 
+`fi` 从 finder 开到 iTerm
+
+`if` 从 iTerm 开到finder
+
+### 方法二: iTerm 自带的服务
+
+安装 iTerm 后, 会在系统设置的服务中自动生成两条服务, 如下图一:
+
+![](/assets/images/posts/mac/904025502.png)
+
+在文件夹-右键-服务中可以找到:
+
+![](/assets/images/posts/mac/9040235935.png)
+
+这样, 只要点击这个服务就可以在 iTerm 中打开当前路径
+
+为了避免每次都要右键选择服务, 可以为这个服务设置一个快捷键. 如上图一所示, 我设置的快捷键是 `Ctrl + Opt + i`, 这样只需要选中文件夹, 再执行快捷键, 就可以在 iTerm 中打开当前路径
+
+注意事项:
+
+1. 这个服务必须选中文件夹或文件才能执行. 选中文件夹会在 iTerm 中打开该文件夹的路径; 选中文件, 会打开该文件所在的文件夹的路径
+2. 快捷键在重启系统或 Finder 后, 需要手动激活才能生效. 手动激活方法:
+
+    ![](/assets/images/posts/mac/9040245751.png)
+
+    点击一下需要激活的服务即可
+
+### 方法三: Go2Shell
+
+Go2Shell.app 很好使, 图标也萌萌哒. 作为一个 Finder 常驻图标, `>_<` 这个就是. 在你想进的目录里点击直接会启动终端并进入到当前目录. 同时支持 Terminal, iTerm, xterm. 传送门: [Mac App Store-Go2Shell](https://itunes.apple.com/cn/app/go2shell/id445770608?mt=12)
+
+### 参考资料
+
+- [在 Finder 里如何打开 iTerm2 并定位到当前目录？ - 知乎](https://www.zhihu.com/question/27520658)
+- [Mac 配置 Finder 当前目录打开 iTerm2 - 简书](https://www.jianshu.com/p/445d3f754c4d)
+
 ## 参考资料
 
 - [Mac OS 终端利器 iTerm2](https://www.cnblogs.com/xishuai/p/mac-iterm2.html)
