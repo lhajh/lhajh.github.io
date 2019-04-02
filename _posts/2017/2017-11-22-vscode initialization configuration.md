@@ -310,8 +310,9 @@ VS Code 初始化配置
 ### 其他插件
 
 - [Open in Finder](https://marketplace.visualstudio.com/items?itemName=fabiospampinato.vscode-open-in-finder)
-  - 在 Finder 中打开当前文件或文件夹
+  - 使用 Finder 打开 VSCode 中的文件或文件夹
   - [Install](vscode:extension/fabiospampinato.vscode-open-in-finder)
+  - [使用 VSCode 打开 Finder 中的文件或文件夹](https://lhajh.github.io/vscode/2019/01/11/Open-With-VSCode-In-Finder.html)
 - [Code Time](https://marketplace.visualstudio.com/items?itemName=softwaredotcom.swdc-vscode)
   - 统计编码时长
   - [Install](vscode:extension/softwaredotcom.swdc-vscode)

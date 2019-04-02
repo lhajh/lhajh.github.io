@@ -23,7 +23,7 @@ keywords: vs-code
     do
         open -a "Visual Studio Code" "$f"
     done
-    ```r
+    ```
 
     如下图:
 
@@ -33,4 +33,6 @@ keywords: vs-code
 
 6. 选择电脑上任意一个文件或文件夹, 点击右键 `服务`, 就可以看到 `Open With VSCode` 菜单
 
-7. 为了避免每次都要右键选择服务, 可以为这个服务设置一个快捷键.
+7. 为了避免每次都要右键选择服务, 可以为这个服务设置一个快捷键. 具体设置看[这里](https://lhajh.github.io/mac/2018/04/25/Iterm2-usage-and-skills.html#%E6%96%B9%E6%B3%95%E4%BA%8C-iterm-%E8%87%AA%E5%B8%A6%E7%9A%84%E6%9C%8D%E5%8A%A1)
+
+8. 参考资料: [Open With VSCode](https://blog.csdn.net/u013069892/article/details/83147239)
