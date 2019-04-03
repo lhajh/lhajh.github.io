@@ -318,7 +318,7 @@ VS Code 初始化配置
 - [Open in Terminal](https://marketplace.visualstudio.com/items?itemName=fabiospampinato.vscode-open-in-terminal#overview)
   - 使用 Terminal 打开 VSCode 中的文件夹路径
   - [Install](vscode:extension/fabiospampinato.vscode-open-in-terminal)
-  - 使用 VSCode 打开 Terminal 中的文件或文件夹
+  - [使用 VSCode 打开 Terminal 中的文件或文件夹](https://lhajh.github.io/vscode/2019/01/15/Open-With-VSCode-In-Terminal.html)
 - [Code Time](https://marketplace.visualstudio.com/items?itemName=softwaredotcom.swdc-vscode)
   - 统计编码时长
   - [Install](vscode:extension/softwaredotcom.swdc-vscode)
