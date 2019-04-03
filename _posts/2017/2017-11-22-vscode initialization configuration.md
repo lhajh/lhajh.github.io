@@ -10,6 +10,8 @@ VS Code 初始化配置
 
 在官网 [Visual Studio Code](https://code.visualstudio.com/) 可以查看介绍和下载
 
+也可以看看这篇文章: [Visual Studio Code入门(译) - 简书](https://www.jianshu.com/p/3dda4756eca5)
+
 ## 同步设置
 
 如果你喜欢我的配置, 可以通过 [Syncing](https://marketplace.visualstudio.com/items?itemName=nonoroazoro.syncing) 这个插件同步到你本地, 当然这会**覆盖**你本地的配置, 请慎重选择
@@ -316,6 +318,7 @@ VS Code 初始化配置
 - [Open in Terminal](https://marketplace.visualstudio.com/items?itemName=fabiospampinato.vscode-open-in-terminal#overview)
   - 使用 Terminal 打开 VSCode 中的文件夹路径
   - [Install](vscode:extension/fabiospampinato.vscode-open-in-terminal)
+  - 使用 VSCode 打开 Terminal 中的文件或文件夹
 - [Code Time](https://marketplace.visualstudio.com/items?itemName=softwaredotcom.swdc-vscode)
   - 统计编码时长
   - [Install](vscode:extension/softwaredotcom.swdc-vscode)
@@ -364,14 +367,6 @@ VS Code 初始化配置
   "workbench.colorTheme": "Monokai Dimmed",
 
   // ------------------------ 格式化代码 ------------------------
-  // 使用快捷键 (opt/alt + shift + d) 格式化 html, 只对 vue 文件有效, 需要使用插件：vue-format
-  // 给插件 vue-format 配置快捷键
-  // {
-  //   "key": "alt+shift+d",
-  //   "command": "extension.vueFormat",
-  //   "when": "editorTextFocus && editorLangId == 'vue'"
-  // }
-  // 使用快捷键 (opt/alt + shift + f) 格式化 js/css
   // 一个制表符等于的空格数
   "editor.tabSize": 2,
   // 启用后，保存文件时在文件末尾插入一个最终新行。
@@ -396,9 +391,6 @@ VS Code 初始化配置
       "autoFix": true
     }
   ],
-  // prettier 设置 插件名: Prettier - Code formatter
-  // 使用 'prettier-eslint' 而不是 'prettier'。其他设置只有在无法从 eslint 规则中推断时才会是后备选择。仅限 JavaScript 和 TypeScript
-  "prettier.eslintIntegration": true,
   // 是否在每行末尾加一个分号
   "prettier.semi": false,
   // 使用单引号
@@ -408,8 +400,7 @@ VS Code 初始化配置
   // JSX 有多个属性时，将 `>` 放在最后一行的末尾，而不是单独放在下一行（不适用于自闭元素）
   "prettier.jsxBracketSameLine": true,
   // 格式化 vue 插件名: Vetur
-  // 如果你喜欢属性换行后开始标签的 ">" 另起一行而不是跟随在最后一个属性后面
-  // "vetur.format.defaultFormatter.html": "none",
+  "vetur.format.defaultFormatter.html": "prettier",
   "vetur.format.defaultFormatterOptions": {
     "prettier": {
       "eslintIntegration": true,
@@ -434,14 +425,6 @@ VS Code 初始化配置
       "bracketSameLine": false
     }
   },
-  // 格式化 vue 的 html 插件名: vue-format
-  // 解决了 vetur 属性换行后开始标签的 ">" 另起一行而不是跟随在最后一个属性后面
-  // tag 的 attrs 大于该数值时，强制 attrs 换行，-1时不换行
-  "vue-format.break_attr_limit": 1,
-  // 需要格式化的语言
-  "vue-format.format_need": [
-    "html"
-  ],
   // 控制编辑器是否自动格式化粘贴的内容。格式化程序必须可用，并且能针对文档中的某一范围进行格式化。
   "editor.formatOnPaste": true,
 
@@ -452,6 +435,9 @@ VS Code 初始化配置
   "explorer.openEditors.visible": 0,
   // 自动保存（失焦保存）
   "files.autoSave": "onFocusChange",
+  // 控制编辑器是否显示控制字符。
+  // [Mac 上的 VSCode 编写 Markdown 总是出现隐藏字符？ - 知乎](https://www.zhihu.com/question/61638859/answer/277721225)
+  "editor.renderControlCharacters": true,
   // 控制是否绘制已修改 (存在更新) 的编辑器选项卡的顶部边框。
   "workbench.editor.highlightModifiedTabs": true,
   // 控制键入时是否应自动显示建议
@@ -471,6 +457,8 @@ VS Code 初始化配置
   "editor.minimap.maxColumn": 80,
   // 控制是否显示工作台底部状态栏中的 Twitter 反馈 (笑脸图标)。
   "workbench.statusBar.feedback.visible": false,
+  // 若窗口在处于全屏模式时退出，控制其在恢复时是否还原到全屏模式。
+  "window.restoreFullscreen": true,
 
   // ------------------------ 插件相关 ------------------------
   // 文件头部注释 插件名：vscode-fileheader 快捷键：control + option + i
@@ -511,9 +499,7 @@ VS Code 初始化配置
   "syncing.separateKeybindings": false,
   // 不同步的插件
   // 如果你想公开自己的配置，可以防止将 Github 的 token 公开，并且防止别人修改你的配置
-  "syncing.excludedExtensions": [
-    "nonoroazoro.syncing"
-  ],
+  "syncing.excludedExtensions": ["nonoroazoro.syncing"],
 
   // 使用 htmltagwrap 要插入的默认 HTML 标签 插件名: htmltagwrap
   "htmltagwrap.tag": "div",
@@ -524,7 +510,25 @@ VS Code 初始化配置
   "metaGo.decoration.width": 13,
   "metaGo.decoration.y": 15,
   "metaGo.decoration.backgroundColor": "white,yellow",
-  "metaGo.decoration.backgroundOpacity": "0.9"
+  "metaGo.decoration.backgroundOpacity": "0.9",
+
+  // markdown 兼容 GitHub 插件名: Markdown All in One
+  "markdown.extension.toc.githubCompatibility": true,
+
+  // Touchbar 设置 插件名: Nasc VSCode Touchbar
+  "nasc-touchbar.addCursorBelow": false,
+  "nasc-touchbar.settings": true,
+  "nasc-touchbar.rename": false,
+  "nasc-touchbar.jumpToBracket": true,
+  "nasc-touchbar.togglePanel": false,
+  "nasc-touchbar.goToNext": true,
+  "showMusicMetrics": false,
+  "showGitMetrics": false,
+  "showWeeklyRanking": false,
+
+  // 在 Terminal 打开当前路径 插件名: Open in Terminal
+  // The name of your terminal app
+  "openInTerminal.app": "iTerm"
 }
 ```
 
@@ -544,11 +548,12 @@ VS Code 初始化配置
 
 常用快捷键
 
+系统:
+
 - C + S + p or F1: 打开命令面板
 - C + p: [快速打开文件](https://code.visualstudio.com/updates/vJanuary#_file-picker)
 - O + S + /: 切换块注释
 - C + /: 切换行注释
-- O + w: 给 单个或多个 html标签 或 文本 添加 父标签 (需要插件: htmltagwrap)
 - C + d: 删除当前行
 - C + UA: 向上复制行
 - C + DA: 向下复制行
@@ -578,7 +583,7 @@ VS Code 初始化配置
 - F4: 无论焦点是否在搜索结果, 跳转到下一个搜索结果
 - S + F4: 无论焦点是否在搜索结果, 跳转到上一个搜索结果
 - C + S + h: 在文件中替换
-- C + E: 在下面插入行
+- C + E: 在光标下面插入行
 - F8: 跳转到下一个 Error 或 Warning
 - C + k v: 打开侧边预览
 - S + O + f: 格式化文件
@@ -602,6 +607,13 @@ VS Code 初始化配置
 - S + O + 字母 O: 删除未使用的导入并对剩余的导入进行排序, 该命令适用于 JavaScript 和 TypeScript 的 ES6 模块。
 - O + 鼠标左键: 多行编辑 (适用于每行编辑位置不一样)
 - S + O + UA / DA: 多行编辑 (适用于每行编辑位置都一样)
+
+插件:
+
+- O + w: 给 单个或多个 html标签 或 文本 添加 父标签 (需要插件: htmltagwrap)
+- C + k f: 在 Finder 中打开当前文件夹 (需要插件: Open in Finder)
+- C + k i: 在 iTerm 中打开当前文件夹 (需要插件: Open in Terminal)
+- C + k r: 在 iTerm 中打开当前项目根目录 (需要插件: Open in Terminal)
 
 ```json
 // 将键绑定放入此文件中以覆盖默认值
@@ -754,12 +766,6 @@ VS Code 初始化配置
     "command": "-editor.action.addSelectionToNextFindMatch",
     "when": "isWindows && editorFocus"
   },
-  // vue-format 快捷键
-  {
-    "key": "alt+shift+d",
-    "command": "extension.vueFormat",
-    "when": "editorFocus"
-  },
   // 切换是否区分大小写
   {
     "key": "ctrl+alt+c",
@@ -844,6 +850,24 @@ VS Code 初始化配置
     "key": "ctrl+shift+oem_6",
     "command": "-editor.unfold",
     "when": "editorTextFocus"
+  },
+  // Open in Finder
+  {
+    "key": "cmd+k f",
+    "command": "workbench.action.files.revealActiveFileInWindows"
+  },
+  {
+    "key": "cmd+k r",
+    "command": "-workbench.action.files.revealActiveFileInWindows"
+  },
+  // open in terminal
+  {
+    "key": "cmd+k i",
+    "command": "openInTerminal.open"
+  },
+  {
+    "key": "cmd+k r",
+    "command": "openInTerminal.openRoot"
   }
 ]
 ```
