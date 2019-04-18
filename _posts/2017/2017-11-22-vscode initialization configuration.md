@@ -24,7 +24,8 @@ VS Code 初始化配置
 4. 此时需要输入 `GitHub Personal Access Token`, 如果你以前没有上传配置到 `Gist` 或你想使用我的配置, 留空回车即可
 5. 输入一个 `Gist ID`, 我的是 `e4881a8e307f3186e80cc4aea54011df`, 当然你也可以输入一个`公开的 Gist ID` (比如你朋友共享给你的 `Gist`)
 6. VS Code 会自动从云端下载配置
-7. 重复一遍, 此操作会**覆盖**本地配置, 请慎重
+7. 如果提示: `下载失败, 请检测网络设置`, 很可能是被墙了, 此时需要[如何科学使用 GitHub 服务](https://lhajh.github.io/github/2019/02/03/Scientific-use-of-GitHub.html)
+8. 重复一遍, 此操作会**覆盖**本地配置, 请慎重
 
 ## 代码片段
 
