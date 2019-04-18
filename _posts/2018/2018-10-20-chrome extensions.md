@@ -28,6 +28,7 @@ keywords: chrome, extensions
 - [Steward Lite - Chrome 网上应用店](https://chrome.google.com/webstore/detail/steward-lite/jglmompgeddkbcdamdknmebaimldkkbl): 类似 Mac 的 Alfred 的一款启动器
 - [Surfingkeys - Chrome 网上应用店](https://chrome.google.com/webstore/detail/surfingkeys/gfbliohnnapiefjpjlpjnehglfpaknnc): 类 Vim 语法, 使用键盘代替鼠标
 - [Tampermonkey - Chrome 网上应用店](https://chrome.google.com/webstore/detail/tampermonkey/dhdgffkkebhmkfjojejmpbldmpobfkfo): 脚本管理库
+- [The Fucking Github - Chrome 网上应用店](https://chrome.google.com/webstore/detail/the-fucking-github/agajobpbaphiohkbkjigcalebbfmofdo): 很方便地查看、整理、搜索你已经 Star 过的项目
 - [uBlock Adblocker Plus - Chrome 网上应用店](https://chrome.google.com/webstore/detail/ublock-adblocker-plus/pnhflmgomffaphmnbcogleagmloijbkd): 去广告
 - [url render - Chrome 网上应用店](https://chrome.google.com/webstore/detail/url-render/flhclpkhoiajoikkabbfbinnjapaflog?hl=zh-CN): 使用 Google 搜索后, 鼠标悬停到链接即可预览
 - [View Image - Chrome 网上应用店](https://chrome.google.com/webstore/detail/view-image/jpcmhcelnjdmblfmjabdeclccemkghjk/related): 重新实现 Google 图片的“查看图片”和“以图搜图”按钮

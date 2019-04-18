@@ -279,6 +279,9 @@ VS Code 初始化配置
 
 ### 编码效率
 
+- [Turbo Console Log](https://marketplace.visualstudio.com/itemdetails?itemName=ChakrounAnas.turbo-console-log)
+  - 在当前选中的变量下面利用 console 输出该变量
+  - [Install](vscode:extension/ChakrounAnas.turbo-console-log)
 - [htmltagwrap](https://marketplace.visualstudio.com/items?itemName=bradgashler.htmltagwrap)
   - 给 单个或多个 html标签 或 文本 添加 父标签
   - 快捷键: alt/opt + w
