@@ -227,6 +227,9 @@ VS Code 初始化配置
 - [File Utils](https://marketplace.visualstudio.com/items?itemName=sleistner.vscode-fileutils)
   - 创建, 复制, 移动, 重命名和删除文件和目录的便捷方式, 就是不用触摸板完成这些操作
   - [Install](vscode:extension/sleistner.vscode-fileutils)
+- [Comment Translate](https://marketplace.visualstudio.com/items?itemName=intellsmi.comment-translate)
+  - 使用 Google Translate API 翻译 VSCode 的编程语言的注释
+  - [Install](vscode:extension/intellsmi.comment-translate)
 - [Can I Use - Visual Studio Marketplace](https://marketplace.visualstudio.com/items?itemName=akamud.vscode-caniuse)
   - 基于 http://caniuse.com/ 直接从 Visual Studio Code 对 HTML5，CSS3，SVG，New JS API 进行兼容性检查
   - [Install](vscode:extension/akamud.vscode-caniuse)
