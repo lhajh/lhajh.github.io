@@ -222,7 +222,7 @@ GBPduHjWfJU1mZqcPM3BikjYKF6xKhlKIys3i1MU2eJHqWGImDHzWdD6xhMNLGVpbP2M5SN6bnxn2kSE
 
 **注：前面数字可以不按顺序来**
 
-### 列表嵌套
+### 列表嵌套
 
 ```
 1. 列出所有元素：
