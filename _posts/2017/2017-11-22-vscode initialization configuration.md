@@ -10,7 +10,7 @@ VS Code 初始化配置
 
 在官网 [Visual Studio Code](https://code.visualstudio.com/) 可以查看介绍和下载
 
-也可以看看这篇文章: [Visual Studio Code入门(译) - 简书](https://www.jianshu.com/p/3dda4756eca5)
+也可以看看这篇文章: [Visual Studio Code 入门(译) - 简书](https://www.jianshu.com/p/3dda4756eca5)
 
 ## 同步设置
 
@@ -22,7 +22,7 @@ VS Code 初始化配置
 2. 使用快捷键 `ctrl/cmd + shift + p` 或 `f1` 调出命令面板
 3. 输入 `Syncing: Download Settings` 回车
 4. 此时需要输入 `GitHub Personal Access Token`, 如果你以前没有上传配置到 `Gist` 或你想使用我的配置, 留空回车即可
-5. 输入一个 `Gist ID`, 我的是 `e4881a8e307f3186e80cc4aea54011df`, 当然你也可以输入一个`公开的 Gist ID` (比如你朋友共享给你的 `Gist`)
+5. 输入一个 `Gist ID`, 我的是 `e4881a8e307f3186e80cc4aea54011df`, 当然你也可以输入一个`公开的 Gist ID` (比如你朋友共享给你的  `Gist`)
 6. VS Code 会自动从云端下载配置
 7. 如果提示: `下载失败, 请检测网络设置`, 很可能是被墙了, 此时需要[如何科学使用 GitHub 服务](https://lhajh.github.io/github/2019/02/03/Scientific-use-of-GitHub.html)
 8. 重复一遍, 此操作会**覆盖**本地配置, 请慎重
@@ -35,15 +35,15 @@ VS Code 初始化配置
 
 可以使用以下变量：
 
-  * `TM_SELECTED_TEXT` - 当前选定的文本或空字符串。
-  * `TM_CURRENT_LINE` - 当前行的内容。
-  * `TM_CURRENT_WORD` - 光标下的单词或空字符串的内容。
-  * `TM_LINE_INDEX` - 基于零索引的行号。
-  * `TM_LINE_NUMBER` - 基于单索引的行号。
-  * `TM_FILENAME` - 当前文档的文件名。
-  * `TM_DIRECTORY` - 当前文档的目录。
-  * `TM_FILEPATH` - 当前文档的完整文件路径。
-  * `$BLOCK_COMMENT_START ${1:comment} $BLOCK_COMMENT_END` - 使用当前语言的规则添加注释
+- `TM_SELECTED_TEXT` - 当前选定的文本或空字符串。
+- `TM_CURRENT_LINE` - 当前行的内容。
+- `TM_CURRENT_WORD` - 光标下的单词或空字符串的内容。
+- `TM_LINE_INDEX` - 基于零索引的行号。
+- `TM_LINE_NUMBER` - 基于单索引的行号。
+- `TM_FILENAME` - 当前文档的文件名。
+- `TM_DIRECTORY` - 当前文档的目录。
+- `TM_FILEPATH` - 当前文档的完整文件路径。
+- `$BLOCK_COMMENT_START ${1:comment} $BLOCK_COMMENT_END` - 使用当前语言的规则添加注释
 
 以下是使用单引号围绕所选文本的代码段示例, 或者, 如果未选择任何文本, 则插入 `type_here` -placeholder。
 
@@ -260,8 +260,8 @@ VS Code 初始化配置
   - 自定义宏
   - [Install](vscode:extension/geddski.macros)
 
-
 ### 外观增强
+
 - [Bracket Pair Colorizer](https://marketplace.visualstudio.com/items?itemName=CoenraadS.bracket-pair-colorizer)
   - 识别代码中的各种括号, 并且标记上不同的颜色, 方便你扫视到匹配的括号, 在括号使用非常多的情况下能环节眼部压力
   - [Install](vscode:extension/CoenraadS.bracket-pair-colorizer)
@@ -287,7 +287,7 @@ VS Code 初始化配置
   - 在当前选中的变量下面利用 console 输出该变量
   - [Install](vscode:extension/ChakrounAnas.turbo-console-log)
 - [htmltagwrap](https://marketplace.visualstudio.com/items?itemName=bradgashler.htmltagwrap)
-  - 给 单个或多个 html标签 或 文本 添加 父标签
+  - 给 单个或多个 html 标签 或 文本 添加 父标签
   - 快捷键: alt/opt + w
   - [Install](vscode:extension/bradgashler.htmltagwrap)
 - [Document This](https://marketplace.visualstudio.com/items?itemName=joelday.docthis)
@@ -309,11 +309,11 @@ VS Code 初始化配置
   - 已将快捷键修改为 shift + alt/opt + /
   - [Install](vscode:extension/philsinatra.nested-comments)
 - [change-case](https://marketplace.visualstudio.com/items?itemName=wmaurer.change-case)
-  - 快速更改当前选择或当前单词的大小写（camelCase，CONSTANT_CASE，snake_case等）
+  - 快速更改当前选择或当前单词的大小写（camelCase，CONSTANT_CASE，snake_case 等）
   - [Install](vscode:extension/wmaurer.change-case)
 - [Codelf](https://marketplace.visualstudio.com/items?itemName=unbug.codelf)
   - 给变量或函数命名
-  - [中国程序员开发的神奇网站：变量命名神器！ - AI科技大本营 - CSDN博客](https://blog.csdn.net/dQCFKyQDXYm3F8rB0/article/details/85219501)
+  - [中国程序员开发的神奇网站：变量命名神器！ - AI 科技大本营 - CSDN 博客](https://blog.csdn.net/dQCFKyQDXYm3F8rB0/article/details/85219501)
   - [Install](vscode:extension/unbug.codelf)
 
 ### 其他插件
@@ -339,7 +339,7 @@ VS Code 初始化配置
   - import 一个东西的时候, 可以计算该引入模块的大小
   - [Install](vscode:extension/wix.vscode-import-cost)
 - [Autoprefixer](https://marketplace.visualstudio.com/items?itemName=mrmlnc.vscode-autoprefixer)
-  - 为 css 属性添加浏览器兼容前缀,  webpack PostCSS 也具有相同功能
+  - 为 css 属性添加浏览器兼容前缀, webpack PostCSS 也具有相同功能
   - [Install](vscode:extension/mrmlnc.vscode-autoprefixer)
 - [Live Server](https://marketplace.visualstudio.com/items?itemName=ritwickdey.LiveServer)
   - 启动一个本地服务, 用于测试调试
@@ -541,9 +541,9 @@ VS Code 初始化配置
 
 ## 快捷键
 
-注：`+` 表示需要  点击下一个键时, 上一个或多个键仍是按下去状态；`空格` 表示点击下一个键时, 上一个或多个键可以放开
+注：`+` 表示需要点击下一个键时, 上一个或多个键仍是按下去状态；`空格` 表示点击下一个键时, 上一个或多个键可以放开
 
-- C: command / ctrl
+- C: cmd / ctrl
 - S: shift
 - O: option / alt
 - D: Delete(Mac 自带键盘没有)
@@ -551,76 +551,128 @@ VS Code 初始化配置
 - E: Enter(Mac 自带键盘的 return)
 - UA: UpArrow(上箭头)
 - DA: DownArrow(下箭头)
+- LA: LeftArrow(左箭头)
+- RA: RightArrow(右箭头)
 - CT: control
-
-常用快捷键
 
 系统:
 
-- C + S + p or F1: 打开命令面板
-- C + p: [快速打开文件](https://code.visualstudio.com/updates/vJanuary#_file-picker)
-- O + S + /: 切换块注释
-- C + /: 切换行注释
-- C + d: 删除当前行
-- C + UA: 向上复制行
-- C + DA: 向下复制行
-- O + UA: 向上移动行
-- O + DA: 向下移动行
-- C + S + \\: 匹配括号的闭合处，跳转
-- 查找相关:
-- C + f: 查找
-- O + E: [查找后使用此快捷键可以立即选择所有查找结果](https://code.visualstudio.com/updates/May_2016#_select-all-find-matches)
-- F3: 查找下一个
-- S + F3: 查找上一个
-- UA: 上一个搜索关键词 history.showPrevious
-- DA: 下一个搜索关键词 history.showNext
-- O + C + 字母 c: Mac 切换是否区分大小写 toggleSearchCaseSensitive
-- O + C + w: Mac 切换是否全字匹配 toggleSearchWholeWord
-- O + C + r: Mac 切换是否正则匹配 toggleSearchRegex
-- O + 字母 c: windows 切换是否区分大小写 toggleSearchCaseSensitive
-- O + w: windows 切换是否全字匹配 toggleSearchWholeWord
-- O + r: windows 切换是否正则匹配 toggleSearchRegex
-- Esc: 当焦点在查找弹窗组件时, 退出查找
-- S + Esc: 当焦点不在查找弹窗组件时,退出查找
-- C + h: 替换
-- C + S + f: 在文件中查找
-- [跳转搜索结果](https://code.visualstudio.com/updates/v1_9#_search-result-navigation)
-- UA: 当焦点在搜索结果时, 跳转到上一个搜索结果
-- DA: 当焦点在搜索结果时, 跳转到下一个搜索结果
-- F4: 无论焦点是否在搜索结果, 跳转到下一个搜索结果
-- S + F4: 无论焦点是否在搜索结果, 跳转到上一个搜索结果
-- C + S + h: 在文件中替换
-- C + E: 在光标下面插入行
-- F8: 跳转到下一个 Error 或 Warning
-- C + k v: 打开侧边预览
-- S + O + f: 格式化文件
-- C + k C + f: 格式化选中代码
-- C + k C + x: 剪裁尾随空格
-- O + d: 选中当前光标所在字符, 或者选中当前已选择字符的下一个出现位置, 并进入多列编辑模式
-- C + i: 选中当前行
-- C + ]: 行缩进
-- C + [: 行减少缩进
-- C + k C + [: 折叠所有子区域代码
-- C + k C + ]: 展开所有子区域代码
-- C + O + [: 折叠光标处最内部的未折叠区域
-- C + O + ]: 展开光标处的折叠区域
-- C + k C + 数字 0: 折叠编辑器中的所有区域
-- C + k C + j: 展开编辑器中的所有区域
-- CT + g / C + g: 转到行
-- C + b: 切换侧栏可见性
-- C + j / CT + `: 切换终端面板
-- C + D: 删除右侧字符
-- C + B: 删除左侧字符
-- S + O + 字母 O: 删除未使用的导入并对剩余的导入进行排序, 该命令适用于 JavaScript 和 TypeScript 的 ES6 模块。
-- O + 鼠标左键: 多行编辑 (适用于每行编辑位置不一样)
-- S + O + UA / DA: 多行编辑 (适用于每行编辑位置都一样)
+### 移动光标
+
+| 快捷键         | 作用                           |
+| -------------- | ------------------------------ |
+| C + LA         | 将光标定位到当前行的最左侧     |
+| C + RA         | 将光标定位到当前行的最右侧     |
+| O + LA         | 将光标定位到当前单词的左侧单词 |
+| O + RA         | 将光标定位到当前单词的右侧单词 |
+| C + S + \\     | 在代码块之间移动光标           |
+| CT + g / C + g | 转到行                         |
+| C + u          | 将光标的移动回退到上一个位置   |
+| C + S + 字母 O | 转到文件中的符号               |
+
+### 删除
+
+| 快捷键 | 作用                   |
+| ------ | ---------------------- |
+| C + D  | 删除光标之前的整行内容 |
+| C + B  | 删除光标之后的整行内容 |
+| O + D  | 删除光标之前的一个单词 |
+| O + B  | 删除光标之后的一个单词 |
+| C + d  | 删除整行               |
+
+### 编辑
+
+| 快捷键          | 作用                                                                             |
+| --------------- | -------------------------------------------------------------------------------- |
+| C + UA          | 向上复制行                                                                       |
+| C + DA          | 向下复制行                                                                       |
+| O + UA          | 向上移动行                                                                       |
+| O + DA          | 向下移动行                                                                       |
+| C + E           | 在光标下面插入行                                                                 |
+| C + ]           | 行缩进                                                                           |
+| C + [           | 行减少缩进                                                                       |
+| O + 鼠标左键    | 多行编辑 (适用于每行编辑位置不一样)                                              |
+| S + O + UA / DA | 多行编辑 (适用于每行编辑位置都一样)                                              |
+| O + d           | 选中当前光标所在字符, 或者选中当前已选择字符的下一个出现位置, 并进入多列编辑模式 |
+| O + S + i       | 选中一堆文本后, 即可在每一行的末尾都创建一个光标                                 |
+| C + i           | 选中当前行                                                                       |
+
+### 查找替换
+
+| 快捷键              | 作用                                                                                                                          |
+| ------------------- | ----------------------------------------------------------------------------------------------------------------------------- |
+| C + f               | 查找(光标在搜索框里)                                                                                                          |
+| O + E               | [查找后使用此快捷键可以立即选择所有查找结果](https://code.visualstudio.com/updates/May_2016#_select-all-find-matches)         |
+| F3 or C + g         | 查找下一个(如果使用 C + f 查找后再用此快捷键查找, 光标在搜索框里; 如果直接使用此快捷键, 默认查找上一个关键字, 光标在编辑器里) |
+| S + F3 or C + S + g | 查找上一个(备注同上)                                                                                                          |
+| UA                  | 上一个搜索关键词 history.showPrevious                                                                                         |
+| DA                  | 下一个搜索关键词 history.showNext                                                                                             |
+| O + C + 字母 c      | Mac 切换是否区分大小写 toggleSearchCaseSensitive                                                                              |
+| O + C + w           | Mac 切换是否全字匹配 toggleSearchWholeWord                                                                                    |
+| O + C + r           | Mac 切换是否正则匹配 toggleSearchRegex                                                                                        |
+| O + 字母 c          | windows 切换是否区分大小写 toggleSearchCaseSensitive                                                                          |
+| O + w               | windows 切换是否全字匹配 toggleSearchWholeWord                                                                                |
+| O + r               | windows 切换是否正则匹配 toggleSearchRegex                                                                                    |
+| Esc                 | 当焦点在查找弹窗组件时, 退出查找                                                                                              |
+| S + Esc             | 当焦点不在查找弹窗组件时,退出查找                                                                                             |
+| C + h               | 替换                                                                                                                          |
+| C + S + f           | 在文件中查找                                                                                                                  |
+|                     | [跳转搜索结果](https://code.visualstudio.com/updates/v1_9#_search-result-navigation)                                          |
+| UA                  | 当焦点在搜索结果时, 跳转到上一个搜索结果                                                                                      |
+| DA                  | 当焦点在搜索结果时, 跳转到下一个搜索结果                                                                                      |
+| F4                  | 无论焦点是否在搜索结果, 跳转到下一个搜索结果                                                                                  |
+| S + F4              | 无论焦点是否在搜索结果, 跳转到上一个搜索结果                                                                                  |
+| C + S + h           | 在文件中替换                                                                                                                  |
+
+### 格式化
+
+| 快捷键      | 作用           |
+| ----------- | -------------- |
+| S + O + f   | 格式化文件     |
+| C + k C + f | 格式化选中代码 |
+| C + k C + x | 剪裁尾随空格   |
+
+### 折叠展开
+
+| 快捷键           | 作用                         |
+| ---------------- | ---------------------------- |
+| C + k C + [      | 折叠所有子区域代码           |
+| C + k C + ]      | 展开所有子区域代码           |
+| C + O + [        | 折叠光标处最内部的未折叠区域 |
+| C + O + ]        | 展开光标处的折叠区域         |
+| C + k C + 数字 0 | 折叠编辑器中的所有区域       |
+| C + k C + j      | 展开编辑器中的所有区域       |
+
+### js 相关
+
+| 快捷键         | 作用                                                                                        |
+| -------------- | ------------------------------------------------------------------------------------------- |
+| O + S + /      | 切换块注释                                                                                  |
+| C + /          | 切换行注释                                                                                  |
+| F8             | 跳转到下一个 Error 或 Warning                                                               |
+| S + O + 字母 O | 删除未使用的导入并对剩余的导入进行排序, 该命令适用于 JavaScript 和 TypeScript 的 ES6 模块。 |
+| CT + j         | 将多行代码合并为一行                                                                        |
+
+### 其他
+
+| 快捷键          | 作用                                                                        |
+| --------------- | --------------------------------------------------------------------------- |
+| C + S + p or F1 | 打开命令面板                                                                |
+| C + p           | [快速打开文件](https://code.visualstudio.com/updates/vJanuary#_file-picker) |
+| C + k v         | 打开侧边预览                                                                |
+| C + b           | 切换侧栏可见性                                                              |
+| C + j / CT + `  | 切换终端面板                                                                |
 
 插件:
 
-- O + w: 给 单个或多个 html标签 或 文本 添加 父标签 (需要插件: htmltagwrap)
-- C + k f: 在 Finder 中打开当前文件夹 (需要插件: Open in Finder)
-- C + k i: 在 iTerm 中打开当前文件夹 (需要插件: Open in Terminal)
-- C + k r: 在 iTerm 中打开当前项目根目录 (需要插件: Open in Terminal)
+| 快捷键      | 作用                                                                |
+| ----------- | ------------------------------------------------------------------- |
+| O + w       | 给 单个或多个 html 标签 或 文本 添加 父标签 (需要插件: htmltagwrap) |
+| C + k f     | 在 Finder 中打开当前文件夹 (需要插件: Open in Finder)               |
+| C + k C + f | 在 Finder 中打开当前项目根目录 (需要插件: Open in Finder)           |
+| C + k i     | 在 iTerm 中打开当前文件夹 (需要插件: Open in Terminal)              |
+| C + k r     | 在 iTerm 中打开当前项目根目录 (需要插件: Open in Terminal)          |
+| CT + O + n  | 运行代码(需要插件: Run Code)                                        |
 
 ```json
 // 将键绑定放入此文件中以覆盖默认值
@@ -883,24 +935,27 @@ VS Code 初始化配置
 
 ### [region](https://code.visualstudio.com/updates/v1_17#_folding-regions)
 
-* TypeScript/JavaScript: `//#region` and `//#endregion` and `//region` and `//endregion`
+- TypeScript/JavaScript: `//#region` and `//#endregion` and `//region` and `//endregion`
 
-    ![Region Folding](https://code.visualstudio.com/assets/updates/1_17/region-folding.gif)
-* C#: `#region` and `#endregion`
-* C/C++: `#pragma region` and `#pragma endregion`
-* F#: `//#region` and `//#endregion`
-* Powershell: `#region` and `#endregion`
-* VB: `#Region` and `#End Region`
-* [CSS/SCSS/Less](https://code.visualstudio.com/updates/v1_23#_css-region-folding): `/* #region */` and `/* #endregion */`
-* [SCSS/Less](https://code.visualstudio.com/updates/v1_23#_css-region-folding): `// #region` and `// #endregion`
+  ![Region Folding](https://code.visualstudio.com/assets/updates/1_17/region-folding.gif)
 
-    ![css-folding](/assets/images/posts/vscode/css-folding.gif)
-* Markdown: 标题
+- C#: `#region` and `#endregion`
+- C/C++: `#pragma region` and `#pragma endregion`
+- F#: `//#region` and `//#endregion`
+- Powershell: `#region` and `#endregion`
+- VB: `#Region` and `#End Region`
+- [CSS/SCSS/Less](https://code.visualstudio.com/updates/v1_23#_css-region-folding): `/* #region */` and `/* #endregion */`
+- [SCSS/Less](https://code.visualstudio.com/updates/v1_23#_css-region-folding): `// #region` and `// #endregion`
 
-    ![](/assets/images/posts/vscode/34ftg.gif)
-* Coffeescript: `#region` and `#endregion`
-* PHP: `#region` and `#endregion`
-* Bat: `::#region` and `::#endregion`
+  ![css-folding](/assets/images/posts/vscode/css-folding.gif)
+
+- Markdown: 标题
+
+  ![](/assets/images/posts/vscode/34ftg.gif)
+
+- Coffeescript: `#region` and `#endregion`
+- PHP: `#region` and `#endregion`
+- Bat: `::#region` and `::#endregion`
 
 Note: If you don't remember a folding marker, type `#` at the beginning of a line and you will get IntelliSense suggestions. Each language proposes completion proposals or snippets.
 
@@ -925,7 +980,7 @@ Accept a member property suggestion, and VS Code automatically inserts the requi
 It's now possible to enable keyboard shortcuts for specific operating systems using `isLinux`, `isMac` and `isWindows` within a keybinding's `when` clause:
 
 ```json
-{
+({
   "key": "ctrl+o",
   "command": "workbench.action.files.openFolder",
   "when": "!isMac"
@@ -934,7 +989,7 @@ It's now possible to enable keyboard shortcuts for specific operating systems us
   "key": "cmd+o",
   "command": "workbench.action.files.openFolder",
   "when": "isMac"
-}
+})
 ```
 
 This makes it much easier to share your `keybindings.json` file across different machines.
@@ -958,6 +1013,20 @@ The new command **Save without Formatting** (`workbench.action.files.saveWitho
 Suggestions can now be sorted based on their distance to the cursor. Set `"editor.suggest.localityBonus": true` and you'll see, for example, function parameters showing up at the top of the IntelliSense list.
 
 ![Locality bonus](https://code.visualstudio.com/assets/updates/1_28/locality-bonus.png)
+
+### 查找某个函数在哪些地方被调用了
+
+比如我已经在 `a.js` 文件里调用了 `foo()` 函数。那么，如果我想知道 `foo()` 函数在其他文件中是否也被调用了，该怎么做呢？
+
+做法如下：在 `a.js` 文件里，选中 `foo()` 函数（或者将光标放置在 `foo()` 函数上），然后按住快捷键「Shift + F12」，就能看到 `foo()` 函数在哪些地方被调用了，比较实用。
+
+### 鼠标操作
+
+- 在当前行的位置，鼠标三击，可以选中当前行。
+
+- 用鼠标单击文件的**行号**，可以选中当前行。
+
+- 在某个**行号**的位置，**上下移动鼠标，可以选中多行**。
 
 ## Emmet 的应用
 
@@ -1021,9 +1090,10 @@ vscode 中集成了 Emmet。 Emmet 可以有效提升输入速度。正常情况
 
 ## 参考资料
 
-- [VsCode 中使用 Emmet 神器快速编写 HTML 代码](https://www.cnblogs.com/summit7ca/p/6944215.html)
 - [微软 VS Code 开发技巧集锦](https://zhuanlan.zhihu.com/p/34989844)
 - [VS Code Tips and Tricks](https://github.com/Microsoft/vscode-tips-and-tricks)
+- [第一次使用 VS Code 时你应该知道的一切配置 - 掘金](https://juejin.im/post/5cb87c6e6fb9a068a03af93a)
+- [VsCode 中使用 Emmet 神器快速编写 HTML 代码](https://www.cnblogs.com/summit7ca/p/6944215.html)
 - [能让你开发效率翻倍的 VSCode 插件配置（上）](https://juejin.im/post/5a08d1d6f265da430f31950e)
 - [能让你开发效率翻倍的 VSCode 插件配置（中）](https://juejin.im/post/5ad13d8a6fb9a028ce7c0721)
 - [VS Code 折腾记 - (1) 扯淡](https://juejin.im/post/586cf732128fe10066602d43)
