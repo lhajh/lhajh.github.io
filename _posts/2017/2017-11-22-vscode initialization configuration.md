@@ -296,6 +296,9 @@ VS Code 初始化配置
 - [vscode-fileheader](https://marketplace.visualstudio.com/items?itemName=mikey.vscode-fileheader)
   - 一键生成文件头部注释
   - [Install](vscode:extension/mikey.vscode-fileheader)
+- [koroFileHeader](https://marketplace.visualstudio.com/items?itemName=OBKoro1.korofileheader)
+  - 通过快捷键添加文件头部注释、在光标处添加函数注释的 VS Code 插件
+  - [Install](vscode:extension/OBKoro1.korofileheader)
 - [Code Spell Checker](https://marketplace.visualstudio.com/items?itemName=streetsidesoftware.code-spell-checker)
   - 这款插件能实时的识别单词拼写是否有误, 并给出提示
   - [Install](vscode:extension/streetsidesoftware.code-spell-checker)
@@ -359,7 +362,7 @@ VS Code 初始化配置
 
 ## 系统设置
 
-```js
+```json
 {
   // ------------------------ 样式 ------------------------
   // 字体
@@ -553,7 +556,7 @@ VS Code 初始化配置
 - DA: DownArrow(下箭头)
 - LA: LeftArrow(左箭头)
 - RA: RightArrow(右箭头)
-- CT: control
+- CT: control / ctrl
 
 系统:
 
@@ -665,14 +668,18 @@ VS Code 初始化配置
 
 插件:
 
-| 快捷键      | 作用                                                                |
-| ----------- | ------------------------------------------------------------------- |
-| O + w       | 给 单个或多个 html 标签 或 文本 添加 父标签 (需要插件: htmltagwrap) |
-| C + k f     | 在 Finder 中打开当前文件夹 (需要插件: Open in Finder)               |
-| C + k C + f | 在 Finder 中打开当前项目根目录 (需要插件: Open in Finder)           |
-| C + k i     | 在 iTerm 中打开当前文件夹 (需要插件: Open in Terminal)              |
-| C + k r     | 在 iTerm 中打开当前项目根目录 (需要插件: Open in Terminal)          |
-| CT + O + n  | 运行代码(需要插件: Run Code)                                        |
+| 快捷键                           | 作用                                        | 插件名            |
+| -------------------------------- | ------------------------------------------- | ----------------- |
+| O + w                            | 给 单个或多个 html 标签 或 文本 添加 父标签 | htmltagwrap       |
+| C + k f                          | 在 Finder 中打开当前文件夹                  | Open in Finder    |
+| C + k C + f                      | 在 Finder 中打开当前项目根目录              | Open in Finder    |
+| C + k i                          | 在 iTerm 中打开当前文件夹                   | Open in Terminal  |
+| C + k r                          | 在 iTerm 中打开当前项目根目录               | Open in Terminal  |
+| CT + O + i                       | 文件头部注释                                | vscode-fileheader |
+| CT + O + d CT + O + d            | 函数注释                                    | Document This     |
+| win：CT + O + i, mac：CT + C + i | 文件头部注释                                | koroFileHeader    |
+| win：CT + O + t, mac：CT + C + t | 函数注释                                    | koroFileHeader    |
+| CT + O + n                       | 运行代码                                    | Run Code          |
 
 ```json
 // 将键绑定放入此文件中以覆盖默认值
