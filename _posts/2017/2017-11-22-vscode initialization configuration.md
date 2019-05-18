@@ -250,6 +250,9 @@ VS Code 初始化配置
 - [GitLens — Git supercharged](https://marketplace.visualstudio.com/items?itemName=eamodio.gitlens)
   - Git 可视化工具, 自带 diff 功能, 能让我们在不离开编辑器,不执行任何命令的情况下知晓光标所在位置代码的修改时间、作者信息等
   - [Install](vscode:extension/eamodio.gitlens)
+- [Git File History](https://marketplace.visualstudio.com/items?itemName=pomber.git-file-history)
+  - 快速浏览 git 仓库的文件历史
+  - [Install](vscode:extension/pomber.git-file-history)
 - [Nasc VSCode Touchbar](https://marketplace.visualstudio.com/items?itemName=felipe.nasc-touchbar)
   - 支持 MBP 的触摸条, 提供了挺多实用的功能点
   - [Install](vscode:extension/felipe.nasc-touchbar)
@@ -268,6 +271,9 @@ VS Code 初始化配置
 - [Bracket Pair Colorizer 2](https://marketplace.visualstudio.com/items?itemName=CoenraadS.bracket-pair-colorizer-2)
   - 与 v1 区别: v2 使用与 VSCode 相同的括号解析引擎，大大提高了速度和准确性。
   - [Install](vscode:extension/CoenraadS.bracket-pair-colorizer-2)
+- [indent-rainbow](https://marketplace.visualstudio.com/items?itemName=oderwat.indent-rainbow)
+  - 这个扩展为文本前面的缩进着色，在每个步骤中交替使用四种不同的颜色
+  - [Install](vscode:extension/oderwat.indent-rainbow)
 - [TODO Highlight](https://marketplace.visualstudio.com/items?itemName=wayou.vscode-todo-highlight)
   - 高亮各种 TODO、FIXME、HACK 之类的标记. 标记后面必须加冒号, 如 // TODO: 这是一个 todo
   - [Install](vscode:extension/wayou.vscode-todo-highlight)
@@ -341,6 +347,9 @@ VS Code 初始化配置
 - [Import Cost](https://marketplace.visualstudio.com/items?itemName=wix.vscode-import-cost)
   - import 一个东西的时候, 可以计算该引入模块的大小
   - [Install](vscode:extension/wix.vscode-import-cost)
+- [Polacode](https://marketplace.visualstudio.com/items?itemName=pnp.polacode)
+  - 带有定制字体和主题的代码截屏
+  - [Install](vscode:extension/pnp.polacode)
 - [Autoprefixer](https://marketplace.visualstudio.com/items?itemName=mrmlnc.vscode-autoprefixer)
   - 为 css 属性添加浏览器兼容前缀, webpack PostCSS 也具有相同功能
   - [Install](vscode:extension/mrmlnc.vscode-autoprefixer)
@@ -559,6 +568,19 @@ VS Code 初始化配置
 - CT: control / ctrl
 
 系统:
+
+### 资源管理器 Explorer
+
+| 快捷键                            | 作用                                         |
+| --------------------------------- | -------------------------------------------- |
+| C + S + e                         | 切换到资源管理器                             |
+|                                   | 注: 以下快捷键只有切换到资源管理器才可以生效 |
+| CT + R                            | 最近文件列表                                 |
+| C + O + r (Mac) / O + S + r (win) | 打开所在文件夹                               |
+| C + S + t                         | 重新打开已关闭的文件并编辑                   |
+| C + k f                           | 关闭文件夹                                   |
+| C + k p                           | 复制文件路径                                 |
+| CT + q                            | 快速打开视图                                 |
 
 ### 移动光标
 
@@ -1092,6 +1114,21 @@ vscode 中集成了 Emmet。 Emmet 可以有效提升输入速度。正常情况
   }
 }
 ```
+
+### Tag Wrapping
+
+先选中需要添加父元素的子元素, 使用快捷键 `ctrl/cmd + shift + p` 或 `f1` 调出命令面板, 输入 `wrap`, 选择 `Emmet: Wrap Individual Lines with Abbreviation`, 输入父元素即可. 这个方法是对当前选中的文本添加父元素, 如果只对光标所在行添加, 选择 `Emmet: Wrap with Abbreviation` 即可
+
+![](/assets/images/posts/vscode/491639698-5c406668974ae_articlex.gif)
+
+### 内外平衡
+
+这条建议来自 [https://vscodecandothat.com/](https://vscodecandothat.com/)，作者非常推荐它。
+
+你可以使用 `balance inward` 和 `balance outward` 的 Emmet 命令在 VS 代码中选择整个标记。 将这些命令绑定到键盘快捷键是有帮助的，例如 `Ctrl + Shift + 向上箭头` 用于平衡向外，而 `Ctrl + Shift +向下箭头` 用于平衡向内。
+
+![](/assets/images/posts/vscode/499821751-5c40b002ca055_articlex.gif)
+
 
 这里只是介绍一部分 Emmet 规则, 完整的列表点击[这里](https://docs.emmet.io/cheat-sheet/)。当你觉得有些输入很繁琐, 不妨查阅一下文档, 看看有无快捷输入的方式。
 
