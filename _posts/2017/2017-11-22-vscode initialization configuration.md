@@ -198,6 +198,9 @@ VS Code 初始化配置
 
 ### 自动补全
 
+- [Visual Studio IntelliCode](https://marketplace.visualstudio.com/items?itemName=VisualStudioExptTeam.vscodeintellicode)
+  - 微软官方出品的基于人工智能的代码补全提示
+  - [Install](vscode:extension/VisualStudioExptTeam.vscodeintellicode)
 - [Path Intellisense](https://marketplace.visualstudio.com/items?itemName=christian-kohler.path-intellisense)
   - 文件路径补全, 在你用任何方式引入文件系统中的路径时提供智能提示和自动完成
   - [Install](vscode:extension/christian-kohler.path-intellisense)
@@ -313,6 +316,10 @@ VS Code 初始化配置
   - [Install](vscode:extension/quicktype.quicktype)
 - [Markdown All in One](https://marketplace.visualstudio.com/items?itemName=yzhang.markdown-all-in-one)
   - Markdown 最好用的工具, 各种快捷键, 创建表格, 预览, 应有尽有
+  - [Install](vscode:extension/yzhang.markdown-all-in-one)
+- [markdown-formatter](https://marketplace.visualstudio.com/items?itemName=mervin.markdown-formatter)
+  - Markdown 格式化插件
+  - [Install](vscode:extension/mervin.markdown-formatter)
 - [Nest Comments](https://marketplace.visualstudio.com/items?itemName=philsinatra.nested-comments)
   - 完美解决需要注释的代码里已有注释代码
   - 已将快捷键修改为 shift + alt/opt + /
@@ -444,6 +451,23 @@ VS Code 初始化配置
       "bracketSameLine": false
     }
   },
+  // 各个类型文件的默认格式化工具
+  "[javascript]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[markdown]": {
+    "editor.defaultFormatter": "mervin.markdown-formatter" // 插件: markdown-formatter
+  },
+  // markdown 格式化配置 插件名: markdown-formatter
+  // js 代码格式化
+  "markdownFormatter.formatOpt": {
+    "indent_size": 2,
+    "end_with_newline": false,
+    "space_after_anon_function": true,
+    "space_after_named_function": true
+  },
+  // 自动将以下全角字符转换为半角字符
+  "markdownFormatter.charactersTurnHalf": "，：；！“”‘’（）？。",
   // 控制编辑器是否自动格式化粘贴的内容。格式化程序必须可用，并且能针对文档中的某一范围进行格式化。
   "editor.formatOnPaste": true,
 
@@ -541,13 +565,19 @@ VS Code 初始化配置
   "nasc-touchbar.jumpToBracket": true,
   "nasc-touchbar.togglePanel": false,
   "nasc-touchbar.goToNext": true,
-  "showMusicMetrics": false,
-  "showGitMetrics": false,
-  "showWeeklyRanking": false,
 
   // 在 Terminal 打开当前路径 插件名: Open in Terminal
   // The name of your terminal app
-  "openInTerminal.app": "iTerm"
+  "openInTerminal.app": "iTerm",
+
+  // 在当前选中的变量下面利用 console 输出该变量 插件名: Turbo Console Log
+  // 使用单引号
+  "turboConsoleLog.quote": "'",
+
+  // 人工智能提示 插件名: Visual Studio IntelliCode
+  "vsintellicode.modify.editor.suggestSelection": "automaticallyOverrodeDefaultValue",
+  // Control whether Visual Studio IntelliCode will modify editor.suggestSelection if it is set to a value (recentlyUsed) that will result in IntelliCode suggested completion items not being visible.
+  "editor.suggestSelection": "first"
 }
 ```
 
