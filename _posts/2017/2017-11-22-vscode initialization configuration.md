@@ -195,17 +195,17 @@ VS Code 初始化配置
   - [如何实现一个给中英文间加空格的 VS Code 扩展](https://juejin.im/post/5a43718cf265da43310e1a34)
   - [Install](vscode:extension/baurine.vscode-pangu)
 
-- [EditorConfig for VS Code](https://marketplace.visualstudio.com/items?itemName=EditorConfig.EditorConfig)
+- [EditorConfig for VS Code](https://marketplace.visualstudio.com/items?itemName=EditorConfig.editorConfig)
 
   - 使用 .editorconfig 文件中的设置覆盖用户/工作区设置, 适合团队统一格式
-  - [Install](vscode:extension/EditorConfig.EditorConfig)
+  - [Install](vscode:extension/EditorConfig.editorConfig)
 
 ### 代码片段
 
-- [JavaScript (ES6) code snippets](https://marketplace.visualstudio.com/items?itemName=xabikos.JavaScriptSnippets)
+- [JavaScript (ES6) code snippets](https://marketplace.visualstudio.com/items?itemName=xabikos.javaScriptSnippets)
 
   - ES6 代码片段. 常用的类声明、 ES 模块声明、 CMD 模块导入等, 支持的缩写不下 20 种
-  - [Install](vscode:extension/xabikos.JavaScriptSnippets)
+  - [Install](vscode:extension/xabikos.javaScriptSnippets)
 
 - [VueHelper](https://marketplace.visualstudio.com/items?itemName=oysun.vuehelper)
 
@@ -327,10 +327,10 @@ VS Code 初始化配置
   - 支持 MBP 的触摸条, 提供了挺多实用的功能点
   - [Install](vscode:extension/felipe.nasc-touchbar)
 
-- [Bookmarks](https://marketplace.visualstudio.com/items?itemName=alefragnani.Bookmarks&WT.mc_id=marketplace-pack-sdras)
+- [Bookmarks](https://marketplace.visualstudio.com/items?itemName=alefragnani.bookmarks&WT.mc_id=marketplace-pack-sdras)
 
   - 给代码添加书签
-  - [Install](vscode:extension/alefragnani.Bookmarks)
+  - [Install](vscode:extension/alefragnani.bookmarks)
 
 - [macros](https://marketplace.visualstudio.com/items?itemName=geddski.macros)
 
@@ -483,10 +483,10 @@ VS Code 初始化配置
   - 为 css 属性添加浏览器兼容前缀, webpack PostCSS 也具有相同功能
   - [Install](vscode:extension/mrmlnc.vscode-autoprefixer)
 
-- [Live Server](https://marketplace.visualstudio.com/items?itemName=ritwickdey.LiveServer)
+- [Live Server](https://marketplace.visualstudio.com/items?itemName=ritwickdey.liveServer)
 
   - 启动一个本地服务, 用于测试调试
-  - [Install](vscode:extension/ritwickdey.LiveServer)
+  - [Install](vscode:extension/ritwickdey.liveServer)
 
 - [View In Browser](https://marketplace.visualstudio.com/items?itemName=qinjia.view-in-browser)
 
@@ -606,7 +606,7 @@ VS Code 初始化配置
   // ------------------------ 编辑器相关 ------------------------
   // 执行文字相关的导航或操作时将用作文字分隔符的字符(比如双击选中文字, 只会选中下面分隔符中的文字)
   "editor.wordSeparators": "`~!！@#$￥%^……&*(（)）=+[【{]】}\\、|;；:：'‘\"”,，.。<《>》/、?？",
-  // 在 "打开的编辑器" 窗格中显示的编辑器数量。将其设置为 0 可隐藏窗格。
+  // 在 "打开的编辑器" 窗格中显示的编辑器数量. 将其设置为 0 可隐藏窗格.
   "explorer.openEditors.visible": 0,
   // 自动保存(失焦保存)
   "files.autoSave": "onFocusChange",
@@ -801,7 +801,7 @@ VS Code 初始化配置
 | O + w               | windows 切换是否全字匹配 toggleSearchWholeWord                                                                                |
 | O + r               | windows 切换是否正则匹配 toggleSearchRegex                                                                                    |
 | Esc                 | 当焦点在查找弹窗组件时, 退出查找                                                                                              |
-| S + Esc             | 当焦点不在查找弹窗组件时, 退出查找                                                                                             |
+| S + Esc             | 当焦点不在查找弹窗组件时, 退出查找                                                                                            |
 | C + h               | 替换                                                                                                                          |
 | C + S + f           | 在文件中查找                                                                                                                  |
 |                     | [跳转搜索结果](https://code.visualstudio.com/updates/v1_9#_search-result-navigation)                                          |
@@ -832,23 +832,26 @@ VS Code 初始化配置
 
 ### js 相关
 
-| 快捷键         | 作用                                                                                        |
-| -------------- | ------------------------------------------------------------------------------------------- |
-| O + S + /      | 切换块注释                                                                                  |
-| C + /          | 切换行注释                                                                                  |
-| F8             | 跳转到下一个 Error 或 Warning                                                               |
+| 快捷键         | 作用                                                                                       |
+| -------------- | ------------------------------------------------------------------------------------------ |
+| O + S + /      | 切换块注释                                                                                 |
+| C + /          | 切换行注释                                                                                 |
+| F8             | 跳转到下一个 Error 或 Warning                                                              |
+| F12            | 跳转到变量或者函数定义处                                                                   |
+| O + F12        | 在缩略图中显示变量或者函数的定义和引用                                                     |
+| S + O + F12    | 在左侧 References 中显示变量或者函数的定义和引用                                           |
 | S + O + 字母 O | 删除未使用的导入并对剩余的导入进行排序, 该命令适用于 JavaScript 和 TypeScript 的 ES6 模块. |
-| CT + j         | 将多行代码合并为一行                                                                        |
+| CT + j         | 将多行代码合并为一行                                                                       |
 
 ### 其他
 
-| 快捷键          | 作用                                                                        |
-| --------------- | --------------------------------------------------------------------------- |
-| C + S + p or F1 | 打开命令面板                                                                |
-| C + p           | [快速打开文件](https://code.visualstudio.com/updates/vJanuary#_file-picker) |
-| C + k v         | 打开侧边预览                                                                |
-| C + b           | 切换侧栏可见性                                                              |
-| C + j / CT + `  | 切换终端面板                                                                |
+| 快捷键                        | 作用                                                                        |
+| ----------------------------- | --------------------------------------------------------------------------- |
+| C + S + p or F1               | 打开命令面板                                                                |
+| C + p                         | [快速打开文件](https://code.visualstudio.com/updates/vJanuary#_file-picker) |
+| C + k v                       | 打开侧边预览                                                                |
+| C + b                         | 切换侧栏可见性                                                              |
+| C + j / CT + ` | 切换终端面板 |
 
 插件:
 
@@ -1291,9 +1294,9 @@ vscode 中集成了 Emmet. Emmet 可以有效提升输入速度. 正常情况下
 
 ### 内外平衡
 
-这条建议来自 [https://vscodecandothat.com/](https://vscodecandothat.com/), 作者非常推荐它.
+这条建议来自  [https://vscodecandothat.com/](https://vscodecandothat.com/), 作者非常推荐它.
 
-你可以使用  `balance inward`  和  `balance outward`  的 Emmet 命令在 VS 代码中选择整个标记. 将这些命令绑定到键盘快捷键是有帮助的, 例如  `Ctrl + Shift + 向上箭头` 用于平衡向外, 而  `Ctrl + Shift +向下箭头`  用于平衡向内.
+你可以使用   `balance inward`   和   `balance outward`   的 Emmet 命令在 VS 代码中选择整个标记. 将这些命令绑定到键盘快捷键是有帮助的, 例如   `Ctrl + Shift + 向上箭头` 用于平衡向外, 而   `Ctrl + Shift +向下箭头`   用于平衡向内.
 
 ![](/assets/images/posts/vscode/499821751-5c40b002ca055_articlex.gif)
 
