@@ -152,6 +152,8 @@ function parseURL(url) {
   }
 </script>
 
+如果需要处理复杂的 URL, 请看[这篇](https://lhajh.github.io/js/2019/03/14/How-does-JS-get-the-parameters-in-the-URL.html)
+
 ## Location 对象方法
 
 | 属性      | 描述                     |

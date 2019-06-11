@@ -1,8 +1,8 @@
 ---
 layout: post
-title: JS如何取得URL里的参数
+title: JS 如何取得 URL 里的参数
 categories: [js]
-description: JS如何取得URL里的参数
+description: JS 如何取得 URL 里的参数
 keywords: js
 ---
 
