@@ -6,11 +6,11 @@ description: 8 个实用的 JavaScript 技巧
 keywords: js
 ---
 
-每种编程语言都它独特的技巧。其中很多都是为开发人员所熟知的，但其中一些相当的 hackish。在这边篇文章中，我将向你展示一些我觉得有用的技巧。其中一些我在实践中使用过，而另一些则是解决老问题的新方法。Enjoy！
+每种编程语言都它独特的技巧. 其中很多都是为开发人员所熟知的, 但其中一些相当的 hackish. 在这边篇文章中, 我将向你展示一些我觉得有用的技巧. 其中一些我在实践中使用过, 而另一些则是解决老问题的新方法. Enjoy!
 
 ## 1. 确保数组的长度
 
-不知道你是否遇见过这样的情况，在处理网格结构的时候，如果原始数据每行的长度不相等，就需要重新创建该数据。好吧，我遇到过！为了确保每行的数据长度相等，你可以使用 `Array.fill` 方法。
+不知道你是否遇见过这样的情况, 在处理网格结构的时候, 如果原始数据每行的长度不相等, 就需要重新创建该数据. 好吧, 我遇到过! 为了确保每行的数据长度相等, 你可以使用 `Array.fill` 方法.
 
 ```js
 let array = Array(5).fill('');
@@ -19,7 +19,7 @@ console.log(array); // 输出（5）["", "", "", "", ""]
 
 ## 2. 数组去重
 
-ES6 提供了几种非常简洁的数组去重的方法。但不幸的是，它们并不适合处理非基本类型的数组。稍后你可以在[棘手的数组去重](https://devinduct.com/blogpost/17/handling-array-duplicates-can-be-tricky)一文中读到更多有关它的信息。这里我们只关注基本类型的数组去重。
+ES6 提供了几种非常简洁的数组去重的方法. 但不幸的是, 它们并不适合处理非基本类型的数组. 稍后你可以在[棘手的数组去重](https://devinduct.com/blogpost/17/handling-array-duplicates-can-be-tricky)一文中读到更多有关它的信息. 这里我们只关注基本类型的数组去重.
 
 ```js
 const cars = [
@@ -33,34 +33,73 @@ const uniqueWithArrayFrom = Array.from(new Set(cars));
 console.log(uniqueWithArrayFrom); // 输出 ["Mazda", "Ford", "Renault", "Opel"]
 
 const uniqueWithSpreadOperator = [...new Set(cars)];
-console.log(uniqueWithSpreadOperator);// 输出 ["Mazda", "Ford", "Renault", "Opel"]
+console.log(uniqueWithSpreadOperator); // 输出 ["Mazda", "Ford", "Renault", "Opel"]
 ```
 
 ## 3. 用扩展运算符合并对象和对象数组
 
-合并对象并不是一个罕见的问题，你很有可能已经遇到过这个问题，并且在不远的未来还会再次遇到。不同的是，在过去你手动完成了大部分工作，但从现在开始，你将使用 ES6 的新功能。
+合并对象并不是一个罕见的问题, 你很有可能已经遇到过这个问题, 并且在不远的未来还会再次遇到. 不同的是, 在过去你手动完成了大部分工作, 但从现在开始, 你将使用 ES6 的新功能.
 
 ```js
 // 合并对象
-const product = { name: 'Milk', packaging: 'Plastic', price: '5$' }
-const manufacturer = { name: 'Company Name', address: 'The Company Address' }
+const product = {
+  name: 'Milk',
+  packaging: 'Plastic',
+  price: '5'
+}
+const manufacturer = {
+  name: 'Company Name',
+  address: 'The Company Address'
+}
 
-const productManufacturer = { ...product, ...manufacturer };
+const productManufacturer = { ...product,
+  ...manufacturer
+};
 console.log(productManufacturer);
-// 输出 { name: "Company Name", packaging: "Plastic", price: "5$", address: "The Company Address" }
+// 输出 { name: "Company Name", packaging: "Plastic", price: "5", address: "The Company Address" }
 
 // 将对象数组合并成一个对象
 const cities = [
-  { name: 'Paris', visited: 'no' },
-  { name: 'Lyon', visited: 'no' },
-  { name: 'Marseille', visited: 'yes' },
-  { name: 'Rome', visited: 'yes' },
-  { name: 'Milan', visited: 'no' },
-  { name: 'Palermo', visited: 'yes' },
-  { name: 'Genoa', visited: 'yes' },
-  { name: 'Berlin', visited: 'no' },
-  { name: 'Hamburg', visited: 'yes' },
-  { name: 'New York', visited: 'yes' }
+  {
+    name: 'Paris',
+    visited: 'no'
+  },
+  {
+    name: 'Lyon',
+    visited: 'no'
+  },
+  {
+    name: 'Marseille',
+    visited: 'yes'
+  },
+  {
+    name: 'Rome',
+    visited: 'yes'
+  },
+  {
+    name: 'Milan',
+    visited: 'no'
+  },
+  {
+    name: 'Palermo',
+    visited: 'yes'
+  },
+  {
+    name: 'Genoa',
+    visited: 'yes'
+  },
+  {
+    name: 'Berlin',
+    visited: 'no'
+  },
+  {
+    name: 'Hamburg',
+    visited: 'yes'
+  },
+  {
+    name: 'New York',
+    visited: 'yes'
+  }
 ];
 
 const result = cities.reduce((accumulator, item) => {
@@ -87,39 +126,73 @@ console.log(result);
 */
 ```
 
-## 4. 数组映射（不使用 `Array.map`）
+## 4. 数组映射(不使用 `Array.map` )
 
-你知道这里有另外一种方法可以实现数组映射，而不使用 `Array.map` 吗？如果不知道，请继续往下看。
+你知道这里有另外一种方法可以实现数组映射, 而不使用 `Array.map` 吗? 如果不知道, 请继续往下看.
 
 ```js
 const cities = [
-  { name: 'Paris', visited: 'no' },
-  { name: 'Lyon', visited: 'no' },
-  { name: 'Marseille', visited: 'yes' },
-  { name: 'Rome', visited: 'yes' },
-  { name: 'Milan', visited: 'no' },
-  { name: 'Palermo', visited: 'yes' },
-  { name: 'Genoa', visited: 'yes' },
-  { name: 'Berlin', visited: 'no' },
-  { name: 'Hamburg', visited: 'yes' },
-  { name: 'New York', visited: 'yes' }
+  {
+    name: 'Paris',
+    visited: 'no'
+  },
+  {
+    name: 'Lyon',
+    visited: 'no'
+  },
+  {
+    name: 'Marseille',
+    visited: 'yes'
+  },
+  {
+    name: 'Rome',
+    visited: 'yes'
+  },
+  {
+    name: 'Milan',
+    visited: 'no'
+  },
+  {
+    name: 'Palermo',
+    visited: 'yes'
+  },
+  {
+    name: 'Genoa',
+    visited: 'yes'
+  },
+  {
+    name: 'Berlin',
+    visited: 'no'
+  },
+  {
+    name: 'Hamburg',
+    visited: 'yes'
+  },
+  {
+    name: 'New York',
+    visited: 'yes'
+  }
 ];
 
-const cityNames = Array.from(cities, ({ name}) => name);
+const cityNames = Array.from(cities, ({
+  name
+}) => name);
 console.log(cityNames);
 // 输出 ["Paris", "Lyon", "Marseille", "Rome", "Milan", "Palermo", "Genoa", "Berlin", "Hamburg", "New York"]
 ```
 
 ## 5. 根据条件添加对象属性
 
-现在，你不再需要根据条件创建两个不同的对象，以使其具有特定属性。扩展操作符将是一个完美的选择。
+现在, 你不再需要根据条件创建两个不同的对象, 以使其具有特定属性. 扩展操作符将是一个完美的选择.
 
 ```js
 const getUser = (emailIncluded) => {
   return {
     name: 'John',
     surname: 'Doe',
-    ...(emailIncluded ? { email : 'john@doe.com' } : null)
+    ...(emailIncluded ? {
+      email: 'john@doe.com'
+    } : null)
   }
 }
 
@@ -132,7 +205,7 @@ console.log(userWithoutEmail); // 输出 { name: "John", surname: "Doe" }
 
 ## 6. 解构原始数据
 
-你曾经有处理过拥有非常多属性的对象吗？我相信你一定有过。可能最常见的情况是我们有一个用户对象，它包含了所有的数据和细节。这里，我们可以调用新的 ES 解构方法来处理这个大麻烦。让我们看看下面的例子。
+你曾经有处理过拥有非常多属性的对象吗? 我相信你一定有过. 可能最常见的情况是我们有一个用户对象, 它包含了所有的数据和细节. 这里, 我们可以调用新的 ES 解构方法来处理这个大麻烦. 让我们看看下面的例子.
 
 ```js
 const rawUser = {
@@ -146,11 +219,16 @@ const rawUser = {
 }
 ```
 
-通过把上面的对象分成两个，我们可以用更能传递上下文含义的方式来表示这个对象，如下所示：
+通过把上面的对象分成两个, 我们可以用更能传递上下文含义的方式来表示这个对象, 如下所示:
 
 ```js
-let user = {}, userDetails = {};
-({ name: user.name, surname: user.surname, ...userDetails } = rawUser);
+let user = {},
+  userDetails = {};
+({
+  name: user.name,
+  surname: user.surname,
+  ...userDetails
+} = rawUser);
 
 console.log(user); // 输出 { name: "John", surname: "Doe" }
 console.log(userDetails); // 输出 { email: "john@doe.com", displayName: "SuperCoolJohn", joined: "2016-05-05", image: "path-to-the-image", followers: 45 }
@@ -158,7 +236,7 @@ console.log(userDetails); // 输出 { email: "john@doe.com", displayName: "Super
 
 ## 7. 动态设置对象属性名
 
-在过去，如果我们需要动态设置对象的属性名，我们必须首先声明一个对象，然后再给它分配一个属性。这不可能以单纯声明的方式实现。今时不同往日，现在我们可以通过 ES6 的功能实现这一目标。
+在过去, 如果我们需要动态设置对象的属性名, 我们必须首先声明一个对象, 然后再给它分配一个属性. 这不可能以单纯声明的方式实现. 今时不同往日, 现在我们可以通过 ES6 的功能实现这一目标.
 
 ```js
 const dynamic = 'email';
@@ -171,7 +249,7 @@ console.log(user); // 输出 { name: "John", email: "john@doe.com" }
 
 ## 8. 字符串插值
 
-最后尤为重要的是拼接字符串的新方法。如果你想在一个辅助程序中构建模版字符串，这会非常有用。它使动态连接字符串模版变得更简单了。
+最后尤为重要的是拼接字符串的新方法. 如果你想在一个辅助程序中构建模版字符串, 这会非常有用. 它使动态连接字符串模版变得更简单了.
 
 ```js
 const user = {
@@ -197,7 +275,7 @@ printUserInfo(user);
 
 ## 总结
 
-JavaScript 的世界正在迅速扩展。这里有许多很酷的功能，可以随时使用。棘手和耗时的问题正逐渐淡出过去，而且借助 ES6 的新功能，我们有了很多开箱即用的新解决方案。
+JavaScript 的世界正在迅速扩展. 这里有许多很酷的功能, 可以随时使用. 棘手和耗时的问题正逐渐淡出过去, 而且借助 ES6 的新功能, 我们有了很多开箱即用的新解决方案.
 
 ## 参考资料
 
