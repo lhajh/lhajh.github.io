@@ -1,7 +1,7 @@
 ---
 layout: post
 title: 如何实现一个深拷贝
-categories: [js]
+categories: [JS]
 description: 如何实现一个深拷贝
 keywords: js
 ---

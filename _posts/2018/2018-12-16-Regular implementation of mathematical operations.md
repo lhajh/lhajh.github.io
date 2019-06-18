@@ -1,7 +1,7 @@
 ---
 layout: post
 title: 正则实现数学运算
-categories: [js]
+categories: [JS]
 description: 正则实现数学运算
 keywords: js, reg
 ---

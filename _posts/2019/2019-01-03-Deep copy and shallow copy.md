@@ -1,7 +1,7 @@
 ---
 layout: post
 title: 深入浅出深拷贝与浅拷贝
-categories: [js]
+categories: [JS]
 description: 深入浅出深拷贝与浅拷贝
 keywords: js
 ---

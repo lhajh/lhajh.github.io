@@ -1,7 +1,7 @@
 ---
 layout: post
 title: js 怎么去掉前后两边的双引号
-categories: [js]
+categories: [JS]
 description: js 怎么去掉前后两边的双引号
 keywords: js
 ---

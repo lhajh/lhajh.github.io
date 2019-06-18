@@ -2,7 +2,7 @@
 layout: post
 title: ES5 和 ES6 中, 都怎么判断变量是否为数组
 categories:
-  - js
+  - JS
 description: ES5 和 ES6 中, 都怎么判断变量是否为数组
 keywords: js
 ---

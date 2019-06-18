@@ -1,7 +1,7 @@
 ---
 layout: post
 title: input 框 type=file 设置 cursor:pointer 的问题
-categories: [js]
+categories: [JS]
 description: input 框 type=file 设置 cursor:pointer 的问题
 keywords: js
 ---

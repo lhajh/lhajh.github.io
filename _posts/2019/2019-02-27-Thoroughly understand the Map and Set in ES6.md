@@ -1,7 +1,7 @@
 ---
 layout: post
 title: 彻底弄懂 ES6 中的 Map 和 Set
-categories: [js]
+categories: [JS]
 description: 彻底弄懂 ES6 中的 Map 和 Set
 keywords: js
 ---

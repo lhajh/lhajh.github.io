@@ -1,7 +1,7 @@
 ---
 layout: post
 title: 8 个实用的 JavaScript 技巧
-categories: [js]
+categories: [JS]
 description: 8 个实用的 JavaScript 技巧
 keywords: js
 ---

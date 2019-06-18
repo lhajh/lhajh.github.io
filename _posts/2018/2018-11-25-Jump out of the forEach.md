@@ -1,7 +1,7 @@
 ---
 layout: post
 title: 跳出 forEach
-categories: [js]
+categories: [JS]
 description: 跳出 forEach
 keywords: js, terms
 ---

@@ -1,7 +1,7 @@
 ---
 layout: post
 title: 程序专业术语
-categories: [js]
+categories: [JS]
 description: 程序专业术语
 keywords: js, terms
 ---
