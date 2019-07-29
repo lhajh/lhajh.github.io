@@ -6,12 +6,22 @@ description: axios post 请求中下载文件流
 keywords: js
 ---
 
+下面看一下下载文件流注意事项：
+
+> 1、首先确保后端的是输出流格式
+
+> 2、axios 的服务器响应的数据类型为 responseType:blob
+
+> 3、返回的数据流占用 response.data 字段
+
+## 简单使用
+
 // NodeJS
 
-```js
+``` js
 var express = require('express')
 var app = express()
-app.post('/download', function(req, res, next) {
+app.post('/download', function (req, res, next) {
   res.setHeader('Content-Type', 'application/vnd.ms-excel')
   res.write('123456')
   res.end()
@@ -20,28 +30,158 @@ app.post('/download', function(req, res, next) {
 
 // WEB 端代码：
 
-```js
+``` js
 axios({
-  url: 'http://localhost:3000/users/download',
-  method: 'post',
-  responseType: 'blob'
+  method: 'post', // 请求方式
+  url: 'http://localhost:3000/download',
+  data: {
+    id: 1
+  }, // 请求参数
+  responseType: 'blob' // 服务器返回的数据类型
+}).then(response => {
+  const content = response.data // 返回的内容
+  const fileName = '文件.xls' // 下载文件名
+  download(content, fileName)
 })
-  .then(function(res) {
-    var blob = new Blob([res.data], {
-      type: res.headers['content-type']
+//处理下载流
+function download (content, fileName) {
+  const blob = new Blob([content]) // 创建一个类文件对象：Blob 对象表示一个不可变的、原始数据的类文件对象
+  const url = window.URL.createObjectURL(blob) // URL.createObjectURL(object) 表示生成一个 File 对象或 Blob 对象
+  let dom = document.createElement('a') // 设置一个隐藏的 a 标签，href 为输出流，设置 download
+  dom.style.display = 'none'
+  dom.href = url
+  dom.setAttribute('download', fileName) // 指示浏览器下载 url,而不是导航到它；因此将提示用户将其保存为本地文件
+  document.body.appendChild(dom)
+  dom.click()
+  document.body.removeChild(dom) // 下载完成移除元素
+  window.URL.revokeObjectURL(url) // 释放掉 blob 对象
+}
+```
+
+## 工程化
+
+### requestDownload.js
+
+``` js
+import axios from 'axios'
+import {
+  Message
+} from 'element-ui'
+import store from '@/store'
+
+// create an axios instance
+const service = axios.create({
+  baseURL: '请求地址', // process.env.VUE_APP_BASE_API; url = base url + request url;
+  withCredentials: true, // 表示跨域请求时是否需要使用凭证
+  responseType: 'blob' // 接收返回的类型
+})
+/**
+ * HTTP方法
+ */
+
+// request interceptor
+service.interceptors.request.use(
+  config => {
+    // do something before request is sent
+    if (store.getters.token) {
+      // let each request carry token --['X-Token'] as a custom key.
+      // please modify it according to the actual situation.
+      config.headers['token'] = store.getters.token
+    }
+    return config
+  },
+  error => {
+    // do something with request error
+    Message({
+      message: '文件不存在',
+      type: 'error',
+      duration: 5 * 1000
+    }) // for debug
+    return Promise.reject(error)
+  }
+)
+
+// response interceptor
+service.interceptors.response.use(
+  /**
+   * If you want to get information such as headers or status
+   * Please return  response => response
+   */
+
+  /**
+   * Determine the request status by custom code
+   * Here is just an example
+   * You can also judge the status by HTTP Status Code.
+   */
+  response => {
+    if (!response.data) {
+      return Promise.reject('文件不存在')
+    } else {
+      return response.data
+    }
+  },
+  error => {
+    // console.log('err' + error) // for debug
+    Message({
+      message: error.message,
+      type: 'error',
+      duration: 5 * 1000
     })
-    var downloadElement = document.createElement('a')
-    var href = window.URL.createObjectURL(blob) //创建下载的链接
-    downloadElement.href = href
-    downloadElement.download = 'xxx.xlsx' //下载后文件名
-    document.body.appendChild(downloadElement)
-    downloadElement.click() //点击下载
-    document.body.removeChild(downloadElement) //下载完成移除元素
-    window.URL.revokeObjectURL(href) //释放掉blob对象
+    return Promise.reject(error)
+  }
+)
+
+export default service
+```
+
+### 处理流的方法
+
+``` js
+// 处理下载流
+export function download (content, fileName) {
+  const blob = new Blob([content]) // 创建一个类文件对象：Blob 对象表示一个不可变的、原始数据的类文件对象
+  const url = window.URL.createObjectURL(blob) // URL.createObjectURL(object) 表示生成一个 File 对象或 Blob 对象
+  let dom = document.createElement('a') // 设置一个隐藏的 a 标签，href 为输出流，设置 download
+  dom.style.display = 'none'
+  dom.href = url
+  dom.setAttribute('download', fileName) // 指示浏览器下载 url,而不是导航到它；因此将提示用户将其保存为本地文件
+  document.body.appendChild(dom)
+  dom.click()
+  document.body.removeChild(dom) // 下载完成移除元素
+  window.URL.revokeObjectURL(url) // 释放掉 blob 对象
+}
+```
+
+### 接口示例
+
+``` js
+import requestDownload from '@/utils/requestDownload'
+export function exportFile (data) {
+  return requestDownload({
+    url: '/excel/excelDownLoad',
+    method: 'post',
+    data: data
   })
-  .catch(function() {})
+}
+```
+
+### 使用示例
+
+``` js
+import {
+  exportFile
+} from '@/api/**.js'
+import {
+  download
+} from '@/utils/index.js'
+exportFile({
+  id: 1
+}).then(result => {
+  download(result, '模板文件.xlsx')
+})
 ```
 
 ## 参考资料
 
-- [axios post请求中下载~文件流 - 知乎](https://zhuanlan.zhihu.com/p/34961387)
+* [axios post 请求中下载~文件流 - 知乎](https://zhuanlan.zhihu.com/p/34961387)
+* [axios 下载文件流，请求时携带token,并工程化配置 - 掘金](https://juejin.im/post/5d3e5a776fb9a07f091beb3c)
