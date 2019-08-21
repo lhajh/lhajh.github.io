@@ -132,6 +132,7 @@ VS Code 初始化配置
 	"description": "initVue"
 }
 ```
+可以在这个网址生成代码片段: [snippet generator](https://snippet-generator.app/)
 
 ## 插件
 
