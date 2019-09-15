@@ -134,6 +134,8 @@ VS Code 初始化配置
 ```
 可以在这个网址生成代码片段: [snippet generator](https://snippet-generator.app/)
 
+详细介绍可以看这篇文章: [跟我一起在 Visual Studio Code 添加自定义 snippet（代码段），附详细配置 - 猫科龙 - CSDN博客](https://blog.csdn.net/maokelong95/article/details/54379046)
+
 ## 插件
 
 ### 风格检查
